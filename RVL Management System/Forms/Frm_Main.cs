@@ -83,7 +83,7 @@ namespace RVL_Management_System
 
         private void Frm_Main_Load(object sender, EventArgs e)
         {
-            lbl_Usertype.Text = Frm_Login.UserType;
+            lbl_Usertype.Text = Frm_Login.UserTypeParam;
         }
 
         private void metroTile5_Click(object sender, EventArgs e)

@@ -16,7 +16,11 @@ namespace RVL_Management_System
 {
     public partial class Frm_Login : MetroForm
     {
+        public static string UserTypeParam = "";
         public static string UserType = "";
+        public static string Username = "";
+        public static string Password = "";
+
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         public Frm_Login()
@@ -24,7 +28,7 @@ namespace RVL_Management_System
             InitializeComponent();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -35,24 +39,24 @@ namespace RVL_Management_System
             conn.Open();
             cmd.Connection = conn;
             string LOGIN = "SELECT A.Account, L.UN, L.PW FROM tblUser AS U LEFT JOIN tblAccount AS A ON A.AcctID = U.AcctID LEFT JOIN tblLogin AS L ON L.AcctID = U.AcctID WHERE L.UN = @un AND L.PW = @pw AND A.Account = @ut";
-            cmd.Parameters.AddWithValue("un", txt_un.Text);
-            cmd.Parameters.AddWithValue("pw", txt_pw.Text);
-            cmd.Parameters.AddWithValue("ut", cBoxUsertype.Text);
+            cmd.Parameters.AddWithValue("un", Frm_Login.Username);
+            cmd.Parameters.AddWithValue("pw", Frm_Login.Password);
+            cmd.Parameters.AddWithValue("ut", Frm_Login.UserType);
             cmd.CommandText = LOGIN;
             cmd.ExecuteNonQuery();
             SqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.HasRows)
             {
-                MetroMessageBox.Show(this, "Welcome!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Welcome!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
                 UserType = cBoxUsertype.Text;
                 Frm_Main fmain = new Frm_Main();
                 fmain.Show();
-                Hide();
             }
             else
             {
-                MetroMessageBox.Show(this, "Wrong username or password!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Wrong username or password!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
             conn.Close();
