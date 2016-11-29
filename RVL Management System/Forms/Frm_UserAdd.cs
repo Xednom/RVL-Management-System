@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace RVL_Management_System
 {
@@ -27,6 +28,7 @@ namespace RVL_Management_System
         public Frm_UserAdd()
         {
             InitializeComponent();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
         }
         public void loadUserype()
         {
@@ -45,9 +47,26 @@ namespace RVL_Management_System
             conn.Close();
         }
 
+        public void loadUID()
+        {
+            conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT IDENT_CURRENT('tblLogin')+1[UID]";
+            cmd.CommandType = CommandType.Text;
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string gUid = reader.GetDecimal(reader.GetOrdinal("UID")).ToString();
+                txt_userID.Text = gUid;
+            }
+            conn.Close();
+        }
+
         private void Frm_UserAdd_Load(object sender, EventArgs e)
         {
-
+            loadUID();
         }
 
         private void metroButton2_Click(object sender, EventArgs e)

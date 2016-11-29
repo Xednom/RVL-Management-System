@@ -30,6 +30,8 @@
         {
             this.txt_userID = new System.Windows.Forms.TextBox();
             this.GroupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_level = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cBoxRole = new System.Windows.Forms.ComboBox();
             this.txt_confirmPw = new System.Windows.Forms.TextBox();
             this.Label9 = new System.Windows.Forms.Label();
@@ -49,8 +51,6 @@
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.txt_level = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.GroupBox3.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,7 @@
             // txt_userID
             // 
             this.txt_userID.BackColor = System.Drawing.Color.White;
+            this.txt_userID.Enabled = false;
             this.txt_userID.Location = new System.Drawing.Point(101, 41);
             this.txt_userID.Name = "txt_userID";
             this.txt_userID.Size = new System.Drawing.Size(165, 21);
@@ -82,6 +83,24 @@
             this.GroupBox3.TabIndex = 9;
             this.GroupBox3.TabStop = false;
             this.GroupBox3.Text = "User Information";
+            // 
+            // txt_level
+            // 
+            this.txt_level.BackColor = System.Drawing.Color.White;
+            this.txt_level.Enabled = false;
+            this.txt_level.Location = new System.Drawing.Point(110, 82);
+            this.txt_level.Name = "txt_level";
+            this.txt_level.Size = new System.Drawing.Size(25, 21);
+            this.txt_level.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Privilege level:";
             // 
             // cBoxRole
             // 
@@ -215,7 +234,7 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(43, 94);
+            this.Label3.Location = new System.Drawing.Point(43, 89);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(49, 13);
             this.Label3.TabIndex = 4;
@@ -268,24 +287,6 @@
             this.metroButton1.Text = "Save";
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // txt_level
-            // 
-            this.txt_level.BackColor = System.Drawing.Color.White;
-            this.txt_level.Enabled = false;
-            this.txt_level.Location = new System.Drawing.Point(110, 82);
-            this.txt_level.Name = "txt_level";
-            this.txt_level.Size = new System.Drawing.Size(25, 21);
-            this.txt_level.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Privilege level:";
             // 
             // Frm_UserAdd
             // 

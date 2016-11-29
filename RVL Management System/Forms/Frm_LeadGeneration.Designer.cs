@@ -111,9 +111,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 8F);
-            this.groupBox1.Location = new System.Drawing.Point(10, 85);
+            this.groupBox1.Location = new System.Drawing.Point(8, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(736, 618);
+            this.groupBox1.Size = new System.Drawing.Size(707, 618);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lead Generation Information";
@@ -833,7 +833,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(765, 85);
+            this.metroButton1.Location = new System.Drawing.Point(721, 39);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(88, 64);
             this.metroButton1.TabIndex = 1;
@@ -842,7 +842,7 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(765, 155);
+            this.metroButton2.Location = new System.Drawing.Point(721, 109);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(88, 64);
             this.metroButton2.TabIndex = 2;
@@ -851,7 +851,7 @@
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(765, 225);
+            this.metroButton3.Location = new System.Drawing.Point(721, 179);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(88, 64);
             this.metroButton3.TabIndex = 3;
@@ -862,7 +862,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 718);
+            this.ClientSize = new System.Drawing.Size(822, 671);
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);

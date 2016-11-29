@@ -39,9 +39,9 @@ namespace RVL_Management_System
             conn.Open();
             cmd.Connection = conn;
             string LOGIN = "SELECT A.Account, L.UN, L.PW FROM tblUser AS U LEFT JOIN tblAccount AS A ON A.AcctID = U.AcctID LEFT JOIN tblLogin AS L ON L.AcctID = U.AcctID WHERE L.UN = @un AND L.PW = @pw AND A.Account = @ut";
-            cmd.Parameters.AddWithValue("un", Frm_Login.Username);
-            cmd.Parameters.AddWithValue("pw", Frm_Login.Password);
-            cmd.Parameters.AddWithValue("ut", Frm_Login.UserType);
+            cmd.Parameters.AddWithValue("un", txt_un.Text);
+            cmd.Parameters.AddWithValue("pw", txt_pw.Text);
+            cmd.Parameters.AddWithValue("ut", cBoxUsertype.Text);
             cmd.CommandText = LOGIN;
             cmd.ExecuteNonQuery();
             SqlDataReader reader = cmd.ExecuteReader();
