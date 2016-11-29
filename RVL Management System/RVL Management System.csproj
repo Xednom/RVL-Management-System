@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -56,78 +71,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frm_LeadGeneration.cs">
+    <Compile Include="Forms\Frm_LeadGeneration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_LeadGeneration.Designer.cs">
+    <Compile Include="Forms\Frm_LeadGeneration.Designer.cs">
       <DependentUpon>Frm_LeadGeneration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Login.cs">
+    <Compile Include="Forms\Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Login.Designer.cs">
+    <Compile Include="Forms\Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Main.cs">
+    <Compile Include="Forms\Frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Main.Designer.cs">
+    <Compile Include="Forms\Frm_Main.Designer.cs">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Tasks.cs">
+    <Compile Include="Forms\Frm_Tasks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Tasks.Designer.cs">
+    <Compile Include="Forms\Frm_Tasks.Designer.cs">
       <DependentUpon>Frm_Tasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_UserAdd.cs">
+    <Compile Include="Forms\Frm_UserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_UserAdd.Designer.cs">
+    <Compile Include="Forms\Frm_UserAdd.Designer.cs">
       <DependentUpon>Frm_UserAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_UserEdit.cs">
+    <Compile Include="Forms\Frm_UserEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_UserEdit.Designer.cs">
+    <Compile Include="Forms\Frm_UserEdit.Designer.cs">
       <DependentUpon>Frm_UserEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_UserMenu.cs">
+    <Compile Include="Forms\Frm_UserMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_UserMenu.Designer.cs">
+    <Compile Include="Forms\Frm_UserMenu.Designer.cs">
       <DependentUpon>Frm_UserMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_UserView.cs">
+    <Compile Include="Forms\Frm_UserView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_UserView.Designer.cs">
+    <Compile Include="Forms\Frm_UserView.Designer.cs">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_LeadGeneration.resx">
+    <EmbeddedResource Include="Forms\Frm_LeadGeneration.resx">
       <DependentUpon>Frm_LeadGeneration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Login.resx">
+    <EmbeddedResource Include="Forms\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Main.resx">
+    <EmbeddedResource Include="Forms\Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Tasks.resx">
+    <EmbeddedResource Include="Forms\Frm_Tasks.resx">
       <DependentUpon>Frm_Tasks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_UserAdd.resx">
+    <EmbeddedResource Include="Forms\Frm_UserAdd.resx">
       <DependentUpon>Frm_UserAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_UserEdit.resx">
+    <EmbeddedResource Include="Forms\Frm_UserEdit.resx">
       <DependentUpon>Frm_UserEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_UserMenu.resx">
+    <EmbeddedResource Include="Forms\Frm_UserMenu.resx">
       <DependentUpon>Frm_UserMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_UserView.resx">
+    <EmbeddedResource Include="Forms\Frm_UserView.resx">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -155,6 +170,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\blue_sky_green_field.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
