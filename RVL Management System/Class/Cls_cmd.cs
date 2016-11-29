@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,8 +55,28 @@ namespace RVL_Management_System.Class
             conn.Close();
 
             cmd.Parameters.Clear();
-
-            
         }
+
+        public static void taskAssign()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "UPDATE tblUser SET TaskAssign=@taskAssign WHERE UID = @uid";
+            cmd.Parameters.AddWithValue("TaskAssign", Frm_Tasks.taskAssign);
+            cmd.Parameters.AddWithValue("UID", Frm_Tasks.uID);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Task assign to this person.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            conn.Close();
+
+            cmd.Parameters.Clear();
+        }
+        
     }
 }
