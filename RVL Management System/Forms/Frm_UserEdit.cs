@@ -18,6 +18,7 @@ namespace RVL_Management_System
     public partial class Frm_UserEdit : MetroForm
     {
         public static string userID = "";
+        public static string loginID = "";
         public static string lastName = "";
         public static string firstName = "";
         public static string middleName = "";
@@ -38,7 +39,7 @@ namespace RVL_Management_System
         {
             conn.Open();
             cmd.Connection = conn;
-            string Show = "SELECT U.UID, U.Last_Name, U.First_Name, U.Middle_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.UID=@uid";
+            string Show = "SELECT L.LID, U.UID, U.Last_Name, U.First_Name, U.Middle_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.UID=@uid";
             cmd.Parameters.AddWithValue("uid", txt_userID.Text);
             cmd.CommandText = Show;
 
@@ -94,12 +95,14 @@ namespace RVL_Management_System
             if (cell != null)
             {
                 DataGridViewRow row = cell.OwningRow;
-                txt_ln.Text = row.Cells[1].Value.ToString();
-                txt_fn.Text = row.Cells[2].Value.ToString();
-                txt_mn.Text = row.Cells[3].Value.ToString();
-                txt_un.Text = row.Cells[4].Value.ToString();
-                txt_pw.Text = row.Cells[5].Value.ToString();
-                cBoxRole.Text = row.Cells[6].Value.ToString();
+                txt_lid.Text = row.Cells[0].Value.ToString();
+                txt_uid.Text = row.Cells[1].Value.ToString();
+                txt_ln.Text = row.Cells[2].Value.ToString();
+                txt_fn.Text = row.Cells[3].Value.ToString();
+                txt_mn.Text = row.Cells[4].Value.ToString();
+                txt_un.Text = row.Cells[5].Value.ToString();
+                txt_pw.Text = row.Cells[6].Value.ToString();
+                cBoxRole.Text = row.Cells[7].Value.ToString();
             }
         }
     }

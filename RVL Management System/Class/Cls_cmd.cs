@@ -67,7 +67,7 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string InsertLogin = "UPDATE FROM tblLogin SET AcctID=@acctID, UID=@uid, UN =@un, PW=@Pw";
+            string InsertLogin = "UPDATE tblLogin SET AcctID=@acctID, UID=@uid, UN =@un, PW=@Pw WHERE LID =@lid";
             cmd.Parameters.AddWithValue("acctID", Frm_UserAdd.acctID);
             cmd.Parameters.AddWithValue("uid", Frm_UserAdd.uID);
             cmd.Parameters.AddWithValue("un", Frm_UserAdd.userName);
@@ -89,7 +89,7 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string UPDATE = "UPDATE tblUser SET AcctID = @acctID, Last_Name=@ln, First_Name = @fn, Middle_Name=@mn";
+            string UPDATE = "UPDATE tblUser SET AcctID = @acctID, Last_Name=@ln, First_Name = @fn, Middle_Name=@mn WHERE UID = @uid";
             cmd.Parameters.AddWithValue("acctID", Frm_UserAdd.acctID);
             cmd.Parameters.AddWithValue("ln", Frm_UserAdd.lastName);
             cmd.Parameters.AddWithValue("fn", Frm_UserAdd.firstName);
