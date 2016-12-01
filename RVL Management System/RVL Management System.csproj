@@ -96,6 +96,12 @@
     <Compile Include="Forms\Frm_Tasks.Designer.cs">
       <DependentUpon>Frm_Tasks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_TrainingMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_TrainingMaterials.Designer.cs">
+      <DependentUpon>Frm_TrainingMaterials.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_UserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Tasks.resx">
       <DependentUpon>Frm_Tasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_TrainingMaterials.resx">
+      <DependentUpon>Frm_TrainingMaterials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_UserAdd.resx">
       <DependentUpon>Frm_UserAdd.cs</DependentUpon>
