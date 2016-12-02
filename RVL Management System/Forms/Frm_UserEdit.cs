@@ -135,5 +135,17 @@ namespace RVL_Management_System
                 txt_level.Text = "2";
             }
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            txt_ln.Enabled = true;
+            txt_fn.Enabled = true;
+            txt_mn.Enabled = true;
+            txt_un.Enabled = true;
+            txt_pw.Enabled = true;
+            txt_confirmPw.Enabled = true;
+            cBoxRole.Enabled = true;
+            btn_edit.Hide();
+        }
     }
 }
