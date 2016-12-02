@@ -17,6 +17,7 @@ namespace RVL_Management_System
 {
     public partial class Frm_UserEdit : MetroForm
     {
+        public static string acctID = "";
         public static string userID = "";
         public static string loginID = "";
         public static string lastName = "";
@@ -52,18 +53,35 @@ namespace RVL_Management_System
 
             cmd.Parameters.Clear();
         }
+        public void loadUserype()
+        {
+            conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT * FROM tblAccount";
+            cmd.CommandType = CommandType.Text;
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
 
+            while (reader.Read())
+            {
+                string gCategory = reader.GetString(reader.GetOrdinal("Account"));
+                cBoxRole.Items.Add(gCategory);
+            }
+            conn.Close();
+        }
 
         private void Frm_UserEdit_Load(object sender, EventArgs e)
         {
-
+            loadUserype();
         }
 
         private void metroButton3_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to update this information?", "Sample System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                acctID = txt_level.Text;
                 userID = txt_userID.Text;
+                loginID = txt_lid.Text;
                 lastName = txt_ln.Text;
                 firstName = txt_fn.Text;
                 middleName = txt_mn.Text;
@@ -103,6 +121,18 @@ namespace RVL_Management_System
                 txt_un.Text = row.Cells[5].Value.ToString();
                 txt_pw.Text = row.Cells[6].Value.ToString();
                 cBoxRole.Text = row.Cells[7].Value.ToString();
+            }
+        }
+
+        private void cBoxRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBoxRole.Text == "Admin")
+            {
+                txt_level.Text = "1";
+            }
+            else
+            {
+                txt_level.Text = "2";
             }
         }
     }

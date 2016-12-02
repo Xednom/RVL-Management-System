@@ -28,42 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_userID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_uid = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_lid = new System.Windows.Forms.TextBox();
+            this.GridView = new MetroFramework.Controls.MetroGrid();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.cBoxRole = new System.Windows.Forms.ComboBox();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.txt_userID = new System.Windows.Forms.TextBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.txt_confirmPw = new System.Windows.Forms.TextBox();
             this.Label9 = new System.Windows.Forms.Label();
+            this.Label12 = new System.Windows.Forms.Label();
             this.Label7 = new System.Windows.Forms.Label();
+            this.Label11 = new System.Windows.Forms.Label();
             this.txt_pw = new System.Windows.Forms.TextBox();
+            this.Label10 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
             this.txt_un = new System.Windows.Forms.TextBox();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label12 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.txt_mn = new System.Windows.Forms.TextBox();
+            this.Label5 = new System.Windows.Forms.Label();
             this.txt_fn = new System.Windows.Forms.TextBox();
             this.txt_ln = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
-            this.GridView = new MetroFramework.Controls.MetroGrid();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_lid = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_uid = new System.Windows.Forms.TextBox();
+            this.txt_level = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox1
             // 
+            this.GroupBox1.Controls.Add(this.txt_level);
+            this.GroupBox1.Controls.Add(this.label4);
             this.GroupBox1.Controls.Add(this.label2);
             this.GroupBox1.Controls.Add(this.txt_uid);
             this.GroupBox1.Controls.Add(this.label1);
@@ -98,6 +102,126 @@
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "User Information";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(271, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 12);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "User ID";
+            // 
+            // txt_uid
+            // 
+            this.txt_uid.BackColor = System.Drawing.Color.White;
+            this.txt_uid.Location = new System.Drawing.Point(273, 89);
+            this.txt_uid.Name = "txt_uid";
+            this.txt_uid.Size = new System.Drawing.Size(165, 21);
+            this.txt_uid.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(100, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 12);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Login ID";
+            // 
+            // txt_lid
+            // 
+            this.txt_lid.BackColor = System.Drawing.Color.White;
+            this.txt_lid.Location = new System.Drawing.Point(102, 89);
+            this.txt_lid.Name = "txt_lid";
+            this.txt_lid.Size = new System.Drawing.Size(165, 21);
+            this.txt_lid.TabIndex = 14;
+            // 
+            // GridView
+            // 
+            this.GridView.AllowUserToAddRows = false;
+            this.GridView.AllowUserToDeleteRows = false;
+            this.GridView.AllowUserToResizeRows = false;
+            this.GridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.GridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridView.DefaultCellStyle = dataGridViewCellStyle8;
+            this.GridView.EnableHeadersVisualStyles = false;
+            this.GridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.GridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GridView.Location = new System.Drawing.Point(6, 274);
+            this.GridView.Name = "GridView";
+            this.GridView.ReadOnly = true;
+            this.GridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.GridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.GridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridView.Size = new System.Drawing.Size(625, 155);
+            this.GridView.TabIndex = 13;
+            this.GridView.SelectionChanged += new System.EventHandler(this.GridView_SelectionChanged);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(221, 460);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(98, 49);
+            this.metroButton2.TabIndex = 4;
+            this.metroButton2.Text = "Edit";
+            this.metroButton2.UseSelectable = true;
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.Location = new System.Drawing.Point(533, 460);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(98, 49);
+            this.metroButton4.TabIndex = 6;
+            this.metroButton4.Text = "Cancel";
+            this.metroButton4.UseSelectable = true;
+            // 
+            // cBoxRole
+            // 
+            this.cBoxRole.FormattingEnabled = true;
+            this.cBoxRole.Location = new System.Drawing.Point(102, 195);
+            this.cBoxRole.Name = "cBoxRole";
+            this.cBoxRole.Size = new System.Drawing.Size(165, 21);
+            this.cBoxRole.TabIndex = 1;
+            this.cBoxRole.SelectedIndexChanged += new System.EventHandler(this.cBoxRole_SelectedIndexChanged);
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(429, 460);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(98, 49);
+            this.metroButton3.TabIndex = 5;
+            this.metroButton3.Text = "Update";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            // 
             // txt_userID
             // 
             this.txt_userID.BackColor = System.Drawing.Color.White;
@@ -106,16 +230,15 @@
             this.txt_userID.Size = new System.Drawing.Size(165, 21);
             this.txt_userID.TabIndex = 10;
             // 
-            // cBoxRole
+            // metroButton1
             // 
-            this.cBoxRole.FormattingEnabled = true;
-            this.cBoxRole.Items.AddRange(new object[] {
-            "Admin",
-            "Cashier"});
-            this.cBoxRole.Location = new System.Drawing.Point(102, 195);
-            this.cBoxRole.Name = "cBoxRole";
-            this.cBoxRole.Size = new System.Drawing.Size(165, 21);
-            this.cBoxRole.TabIndex = 1;
+            this.metroButton1.Location = new System.Drawing.Point(325, 460);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(98, 49);
+            this.metroButton1.TabIndex = 3;
+            this.metroButton1.Text = "Search";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // txt_confirmPw
             // 
@@ -135,6 +258,16 @@
             this.Label9.TabIndex = 12;
             this.Label9.Text = "Confirm Password :";
             // 
+            // Label12
+            // 
+            this.Label12.AutoSize = true;
+            this.Label12.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label12.Location = new System.Drawing.Point(444, 113);
+            this.Label12.Name = "Label12";
+            this.Label12.Size = new System.Drawing.Size(19, 12);
+            this.Label12.TabIndex = 8;
+            this.Label12.Text = "MI";
+            // 
             // Label7
             // 
             this.Label7.AutoSize = true;
@@ -144,6 +277,16 @@
             this.Label7.TabIndex = 11;
             this.Label7.Text = "Role :";
             // 
+            // Label11
+            // 
+            this.Label11.AutoSize = true;
+            this.Label11.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label11.Location = new System.Drawing.Point(271, 113);
+            this.Label11.Name = "Label11";
+            this.Label11.Size = new System.Drawing.Size(55, 12);
+            this.Label11.TabIndex = 8;
+            this.Label11.Text = "Firstname";
+            // 
             // txt_pw
             // 
             this.txt_pw.BackColor = System.Drawing.Color.White;
@@ -152,6 +295,16 @@
             this.txt_pw.PasswordChar = '*';
             this.txt_pw.Size = new System.Drawing.Size(165, 21);
             this.txt_pw.TabIndex = 2;
+            // 
+            // Label10
+            // 
+            this.Label10.AutoSize = true;
+            this.Label10.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label10.Location = new System.Drawing.Point(100, 113);
+            this.Label10.Name = "Label10";
+            this.Label10.Size = new System.Drawing.Size(54, 12);
+            this.Label10.TabIndex = 8;
+            this.Label10.Text = "Lastname";
             // 
             // Label8
             // 
@@ -170,6 +323,14 @@
             this.txt_un.Size = new System.Drawing.Size(165, 21);
             this.txt_un.TabIndex = 0;
             // 
+            // txt_mn
+            // 
+            this.txt_mn.BackColor = System.Drawing.Color.White;
+            this.txt_mn.Location = new System.Drawing.Point(444, 128);
+            this.txt_mn.Name = "txt_mn";
+            this.txt_mn.Size = new System.Drawing.Size(39, 21);
+            this.txt_mn.TabIndex = 2;
+            // 
             // Label5
             // 
             this.Label5.AutoSize = true;
@@ -178,82 +339,6 @@
             this.Label5.Size = new System.Drawing.Size(74, 13);
             this.Label5.TabIndex = 8;
             this.Label5.Text = "Username :";
-            // 
-            // Label12
-            // 
-            this.Label12.AutoSize = true;
-            this.Label12.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label12.Location = new System.Drawing.Point(444, 113);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(19, 12);
-            this.Label12.TabIndex = 8;
-            this.Label12.Text = "MI";
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label11.Location = new System.Drawing.Point(271, 113);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(55, 12);
-            this.Label11.TabIndex = 8;
-            this.Label11.Text = "Firstname";
-            // 
-            // Label10
-            // 
-            this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.Location = new System.Drawing.Point(100, 113);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(54, 12);
-            this.Label10.TabIndex = 8;
-            this.Label10.Text = "Lastname";
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.Location = new System.Drawing.Point(533, 460);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(98, 49);
-            this.metroButton4.TabIndex = 6;
-            this.metroButton4.Text = "Cancel";
-            this.metroButton4.UseSelectable = true;
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(429, 460);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(98, 49);
-            this.metroButton3.TabIndex = 5;
-            this.metroButton3.Text = "Update";
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(221, 460);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(98, 49);
-            this.metroButton2.TabIndex = 4;
-            this.metroButton2.Text = "Edit";
-            this.metroButton2.UseSelectable = true;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(325, 460);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(98, 49);
-            this.metroButton1.TabIndex = 3;
-            this.metroButton1.Text = "Search";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // txt_mn
-            // 
-            this.txt_mn.BackColor = System.Drawing.Color.White;
-            this.txt_mn.Location = new System.Drawing.Point(444, 128);
-            this.txt_mn.Name = "txt_mn";
-            this.txt_mn.Size = new System.Drawing.Size(39, 21);
-            this.txt_mn.TabIndex = 2;
             // 
             // txt_fn
             // 
@@ -289,88 +374,23 @@
             this.Label6.TabIndex = 3;
             this.Label6.Text = "Search User No. :";
             // 
-            // GridView
+            // txt_level
             // 
-            this.GridView.AllowUserToAddRows = false;
-            this.GridView.AllowUserToDeleteRows = false;
-            this.GridView.AllowUserToResizeRows = false;
-            this.GridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.GridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.GridView.EnableHeadersVisualStyles = false;
-            this.GridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.GridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GridView.Location = new System.Drawing.Point(6, 274);
-            this.GridView.Name = "GridView";
-            this.GridView.ReadOnly = true;
-            this.GridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.GridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.GridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridView.Size = new System.Drawing.Size(625, 155);
-            this.GridView.TabIndex = 13;
-            this.GridView.SelectionChanged += new System.EventHandler(this.GridView_SelectionChanged);
+            this.txt_level.BackColor = System.Drawing.Color.White;
+            this.txt_level.Enabled = false;
+            this.txt_level.Location = new System.Drawing.Point(108, 228);
+            this.txt_level.Name = "txt_level";
+            this.txt_level.Size = new System.Drawing.Size(25, 21);
+            this.txt_level.TabIndex = 18;
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 12);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Login ID";
-            // 
-            // txt_lid
-            // 
-            this.txt_lid.BackColor = System.Drawing.Color.White;
-            this.txt_lid.Location = new System.Drawing.Point(102, 89);
-            this.txt_lid.Name = "txt_lid";
-            this.txt_lid.Size = new System.Drawing.Size(165, 21);
-            this.txt_lid.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(271, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 12);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "User ID";
-            // 
-            // txt_uid
-            // 
-            this.txt_uid.BackColor = System.Drawing.Color.White;
-            this.txt_uid.Location = new System.Drawing.Point(273, 89);
-            this.txt_uid.Name = "txt_uid";
-            this.txt_uid.Size = new System.Drawing.Size(165, 21);
-            this.txt_uid.TabIndex = 16;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 231);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Privilege level:";
             // 
             // Frm_UserEdit
             // 
@@ -421,5 +441,7 @@
         internal System.Windows.Forms.TextBox txt_uid;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.TextBox txt_lid;
+        internal System.Windows.Forms.TextBox txt_level;
+        internal System.Windows.Forms.Label label4;
     }
 }

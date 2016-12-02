@@ -68,10 +68,11 @@ namespace RVL_Management_System.Class
 
             cmd.Connection = conn;
             string InsertLogin = "UPDATE tblLogin SET AcctID=@acctID, UID=@uid, UN =@un, PW=@Pw WHERE LID =@lid";
-            cmd.Parameters.AddWithValue("acctID", Frm_UserAdd.acctID);
-            cmd.Parameters.AddWithValue("uid", Frm_UserAdd.uID);
-            cmd.Parameters.AddWithValue("un", Frm_UserAdd.userName);
-            cmd.Parameters.AddWithValue("pw", Frm_UserAdd.Password);
+            cmd.Parameters.AddWithValue("acctID", Frm_UserEdit.acctID);
+            cmd.Parameters.AddWithValue("uid", Frm_UserEdit.userID);
+            cmd.Parameters.AddWithValue("un", Frm_UserEdit.userName);
+            cmd.Parameters.AddWithValue("pw", Frm_UserEdit.passWord);
+            cmd.Parameters.AddWithValue("lid", Frm_UserEdit.loginID);
             cmd.CommandText = InsertLogin;
             cmd.ExecuteNonQuery();
 
@@ -90,10 +91,11 @@ namespace RVL_Management_System.Class
 
             cmd.Connection = conn;
             string UPDATE = "UPDATE tblUser SET AcctID = @acctID, Last_Name=@ln, First_Name = @fn, Middle_Name=@mn WHERE UID = @uid";
-            cmd.Parameters.AddWithValue("acctID", Frm_UserAdd.acctID);
-            cmd.Parameters.AddWithValue("ln", Frm_UserAdd.lastName);
-            cmd.Parameters.AddWithValue("fn", Frm_UserAdd.firstName);
-            cmd.Parameters.AddWithValue("mn", Frm_UserAdd.middleName);
+            cmd.Parameters.AddWithValue("acctID", Frm_UserEdit.acctID);
+            cmd.Parameters.AddWithValue("ln", Frm_UserEdit.lastName);
+            cmd.Parameters.AddWithValue("fn", Frm_UserEdit.firstName);
+            cmd.Parameters.AddWithValue("mn", Frm_UserEdit.middleName);
+            cmd.Parameters.AddWithValue("uid", Frm_UserEdit.userID);
             cmd.CommandText = UPDATE;
             cmd.ExecuteNonQuery();
 

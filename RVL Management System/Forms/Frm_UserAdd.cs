@@ -67,6 +67,7 @@ namespace RVL_Management_System
         private void Frm_UserAdd_Load(object sender, EventArgs e)
         {
             loadUID();
+            loadUserype();
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
