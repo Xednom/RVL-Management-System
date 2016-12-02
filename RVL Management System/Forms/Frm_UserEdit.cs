@@ -90,6 +90,7 @@ namespace RVL_Management_System
                 role = cBoxRole.Text;
                 Class.Cls_cmd.updateLogin();
                 Class.Cls_cmd.updateUser();
+                btn_edit.Show();
             }
             else
             {

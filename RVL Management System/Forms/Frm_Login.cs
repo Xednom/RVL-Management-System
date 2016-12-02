@@ -49,10 +49,10 @@ namespace RVL_Management_System
             if (reader.HasRows)
             {
                 MessageBox.Show("Welcome!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
                 UserType = cBoxUsertype.Text;
                 Frm_Main fmain = new Frm_Main();
                 fmain.Show();
+                Hide();
             }
             else
             {

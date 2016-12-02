@@ -102,7 +102,6 @@ namespace RVL_Management_System.Class
             MessageBox.Show("Successfully updated the User Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             conn.Close();
-
             cmd.Parameters.Clear();
         }
 
