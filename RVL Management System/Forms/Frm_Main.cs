@@ -108,5 +108,11 @@ namespace RVL_Management_System
         {
             Application.Exit();
         }
+
+        private void metroTile7_Click(object sender, EventArgs e)
+        {
+            Forms.Frm_TrainingMaterials ftrain = new Forms.Frm_TrainingMaterials();
+            ftrain.ShowDialog();
+        }
     }
 }

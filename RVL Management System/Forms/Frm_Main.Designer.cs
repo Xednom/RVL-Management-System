@@ -40,6 +40,7 @@
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
+            this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,7 +129,7 @@
             this.metroTile5.Size = new System.Drawing.Size(119, 67);
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTile5.TabIndex = 8;
-            this.metroTile5.Text = "Task Listing";
+            this.metroTile5.Text = "Task Assigning";
             this.metroTile5.UseSelectable = true;
             this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
@@ -143,6 +144,18 @@
             this.metroTile6.Text = "Admin And Accounting";
             this.metroTile6.UseSelectable = true;
             // 
+            // metroTile7
+            // 
+            this.metroTile7.ActiveControl = null;
+            this.metroTile7.Location = new System.Drawing.Point(148, 160);
+            this.metroTile7.Name = "metroTile7";
+            this.metroTile7.Size = new System.Drawing.Size(156, 67);
+            this.metroTile7.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTile7.TabIndex = 12;
+            this.metroTile7.Text = "Training Materials";
+            this.metroTile7.UseSelectable = true;
+            this.metroTile7.Click += new System.EventHandler(this.metroTile7_Click);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +163,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(857, 542);
+            this.Controls.Add(this.metroTile7);
             this.Controls.Add(this.metroTile6);
             this.Controls.Add(this.metroTile5);
             this.Controls.Add(this.metroTile4);
@@ -191,6 +205,7 @@
         private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile metroTile6;
         private System.Windows.Forms.ToolStripStatusLabel lbl_Usertype;
+        private MetroFramework.Controls.MetroTile metroTile7;
     }
 }
 
