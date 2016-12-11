@@ -41,6 +41,7 @@
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
+            this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,6 +157,18 @@
             this.metroTile7.UseSelectable = true;
             this.metroTile7.Click += new System.EventHandler(this.metroTile7_Click);
             // 
+            // metroTile8
+            // 
+            this.metroTile8.ActiveControl = null;
+            this.metroTile8.Location = new System.Drawing.Point(148, 233);
+            this.metroTile8.Name = "metroTile8";
+            this.metroTile8.Size = new System.Drawing.Size(156, 67);
+            this.metroTile8.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTile8.TabIndex = 14;
+            this.metroTile8.Text = "Email";
+            this.metroTile8.UseSelectable = true;
+            this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +176,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(857, 542);
+            this.Controls.Add(this.metroTile8);
             this.Controls.Add(this.metroTile7);
             this.Controls.Add(this.metroTile6);
             this.Controls.Add(this.metroTile5);
@@ -206,6 +220,7 @@
         private MetroFramework.Controls.MetroTile metroTile6;
         private System.Windows.Forms.ToolStripStatusLabel lbl_Usertype;
         private MetroFramework.Controls.MetroTile metroTile7;
+        private MetroFramework.Controls.MetroTile metroTile8;
     }
 }
 

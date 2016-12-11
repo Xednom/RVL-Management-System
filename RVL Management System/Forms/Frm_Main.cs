@@ -114,5 +114,11 @@ namespace RVL_Management_System
             Forms.Frm_TrainingMaterials ftrain = new Forms.Frm_TrainingMaterials();
             ftrain.ShowDialog();
         }
+
+        private void metroTile8_Click(object sender, EventArgs e)
+        {
+            Forms.Frm_Email femail = new Forms.Frm_Email();
+            femail.ShowDialog();
+        }
     }
 }

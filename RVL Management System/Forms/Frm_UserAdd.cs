@@ -20,6 +20,7 @@ namespace RVL_Management_System
         public static string lastName = "";
         public static string firstName = "";
         public static string middleName = "";
+        public static string email = "";
         public static string userName = "";
         public static string Password = "";
         public static string role = "";
@@ -97,6 +98,7 @@ namespace RVL_Management_System
             lastName = txt_ln.Text;
             firstName = txt_fn.Text;
             middleName = txt_mi.Text;
+            email = txt_email.Text;
             Class.Cls_cmd.userAdd();
             Class.Cls_cmd.userLogin();
         }
