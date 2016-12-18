@@ -49,10 +49,10 @@
             this.Label3 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.GroupBox3.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -107,9 +107,6 @@
             // cBoxRole
             // 
             this.cBoxRole.FormattingEnabled = true;
-            this.cBoxRole.Items.AddRange(new object[] {
-            "Admin",
-            "Cashier"});
             this.cBoxRole.Location = new System.Drawing.Point(110, 55);
             this.cBoxRole.Name = "cBoxRole";
             this.cBoxRole.Size = new System.Drawing.Size(165, 21);
@@ -272,6 +269,24 @@
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Staff Information";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.label2.Location = new System.Drawing.Point(49, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Email:";
+            // 
+            // txt_email
+            // 
+            this.txt_email.BackColor = System.Drawing.Color.White;
+            this.txt_email.Location = new System.Drawing.Point(101, 96);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(165, 21);
+            this.txt_email.TabIndex = 11;
+            // 
             // metroButton2
             // 
             this.metroButton2.Location = new System.Drawing.Point(566, 359);
@@ -291,24 +306,6 @@
             this.metroButton1.Text = "Save";
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label2.Location = new System.Drawing.Point(49, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Email:";
-            // 
-            // txt_email
-            // 
-            this.txt_email.BackColor = System.Drawing.Color.White;
-            this.txt_email.Location = new System.Drawing.Point(101, 96);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(165, 21);
-            this.txt_email.TabIndex = 11;
             // 
             // Frm_UserAdd
             // 

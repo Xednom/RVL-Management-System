@@ -35,6 +35,7 @@ namespace RVL_Management_System.Class
             conn.Close();
             cmd.Parameters.Clear();
         }
+
         public static void userAdd()
         {
             SqlConnection conn = new SqlConnection();
@@ -44,12 +45,12 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string INSERT = "INSERT INTO tblUser(AcctID,Last_Name,First_Name,Middle_Name,Email)VALUES(@acctID,@ln,@fn,@mn)";
+            string INSERT = "INSERT INTO tblUser(AcctID,Last_Name,First_Name,Middle_Name,Email)VALUES(@acctID,@ln,@fn,@mn,@email)";
             cmd.Parameters.AddWithValue("acctID", Frm_UserAdd.acctID);
             cmd.Parameters.AddWithValue("ln", Frm_UserAdd.lastName);
             cmd.Parameters.AddWithValue("fn", Frm_UserAdd.firstName);
             cmd.Parameters.AddWithValue("mn", Frm_UserAdd.middleName);
-            cmd.Parameters.AddWithValue("mn", Frm_UserAdd.email);
+            cmd.Parameters.AddWithValue("email", Frm_UserAdd.email);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -82,6 +83,7 @@ namespace RVL_Management_System.Class
             conn.Close();
             cmd.Parameters.Clear();
         }
+
         public static void updateUser()
         {
             SqlConnection conn = new SqlConnection();

@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
-namespace RVL_Management_System
+namespace RVL_Management_System.Panel
 {
-    public partial class Frm_LeadGeneration : MetroForm
+    public partial class PnlUserAdd : UserControl
     {
-        public Frm_LeadGeneration()
+        public PnlUserAdd()
         {
             InitializeComponent();
         }
 
-        private void Frm_LeadGeneration_Load(object sender, EventArgs e)
+        private void metroButton1_Click(object sender, EventArgs e)
         {
 
         }

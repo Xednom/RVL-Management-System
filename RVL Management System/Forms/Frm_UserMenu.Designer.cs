@@ -36,7 +36,7 @@
             // metroTile1
             // 
             this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(11, 82);
+            this.metroTile1.Location = new System.Drawing.Point(225, 78);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(133, 73);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Lime;
@@ -48,7 +48,7 @@
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(150, 82);
+            this.metroTile2.Location = new System.Drawing.Point(364, 78);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(133, 73);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Lime;
@@ -60,7 +60,7 @@
             // metroTile3
             // 
             this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(289, 82);
+            this.metroTile3.Location = new System.Drawing.Point(503, 78);
             this.metroTile3.Name = "metroTile3";
             this.metroTile3.Size = new System.Drawing.Size(133, 73);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Lime;
@@ -73,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 204);
+            this.ClientSize = new System.Drawing.Size(875, 472);
             this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.metroTile2);
             this.Controls.Add(this.metroTile1);

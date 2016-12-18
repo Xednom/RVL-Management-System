@@ -26,6 +26,7 @@ namespace RVL_Management_System
         public static string role = "";
         public static string acctID = "";
         public static string uID = "";
+
         public Frm_UserAdd()
         {
             InitializeComponent();

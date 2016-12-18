@@ -101,6 +101,10 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Zlib.Portable, Version=1.11.0.0, Culture=neutral, PublicKeyToken=431cba815f6a8b5b, processorArchitecture=MSIL">
       <HintPath>..\packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll</HintPath>
       <Private>True</Private>
@@ -114,11 +118,11 @@
     <Compile Include="Forms\Frm_Email.Designer.cs">
       <DependentUpon>Frm_Email.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_LeadGeneration.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Forms\Frm_Marketing.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_LeadGeneration.Designer.cs">
-      <DependentUpon>Frm_LeadGeneration.cs</DependentUpon>
+    <Compile Include="Forms\Frm_Marketing.Designer.cs">
+      <DependentUpon>Frm_Marketing.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Login.cs">
       <SubType>Form</SubType>
@@ -168,13 +172,31 @@
     <Compile Include="Forms\Frm_UserView.Designer.cs">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\PnlMarketing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\PnlMarketing.Designer.cs">
+      <DependentUpon>PnlMarketing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\PnlSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\PnlSlider.Designer.cs">
+      <DependentUpon>PnlSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\PnlUserAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\PnlUserAdd.Designer.cs">
+      <DependentUpon>PnlUserAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Frm_Email.resx">
       <DependentUpon>Frm_Email.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_LeadGeneration.resx">
-      <DependentUpon>Frm_LeadGeneration.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_Marketing.resx">
+      <DependentUpon>Frm_Marketing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
@@ -199,6 +221,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_UserView.resx">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\PnlMarketing.resx">
+      <DependentUpon>PnlMarketing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\PnlSlider.resx">
+      <DependentUpon>PnlSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\PnlUserAdd.resx">
+      <DependentUpon>PnlUserAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

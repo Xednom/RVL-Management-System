@@ -25,8 +25,7 @@ namespace RVL_Management_System
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            Frm_UserAdd fadd = new Frm_UserAdd();
-            fadd.ShowDialog();
+           
         }
 
         private void metroTile2_Click(object sender, EventArgs e)

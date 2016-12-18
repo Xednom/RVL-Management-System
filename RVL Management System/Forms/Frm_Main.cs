@@ -1,4 +1,6 @@
 ﻿using System;
+using RVL_Management_System.Panel;
+using RVL_Management_System.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -100,10 +102,22 @@ namespace RVL_Management_System
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-            Frm_LeadGeneration flead = new Frm_LeadGeneration();
-            flead.ShowDialog();
+            Frm_LeadGeneration _pnlone = new Frm_LeadGeneration(this);
+            _pnlone.Closed += _pnlone_Closed;
+            _pnlone.Shown += _pnlone_Shown;
+            _pnlone.swipe(true);
+            metroTile3.Enabled = false;
         }
 
+        void _pnlone_Shown(object sender, EventArgs e)
+        {
+
+        }
+
+        void _pnlone_Closed(object sender, EventArgs e)
+        {
+            metroTile3.Enabled = true;
+        }
         private void Frm_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

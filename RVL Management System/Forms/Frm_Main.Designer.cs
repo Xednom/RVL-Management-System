@@ -107,7 +107,7 @@
             this.metroTile3.Size = new System.Drawing.Size(119, 67);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTile3.TabIndex = 6;
-            this.metroTile3.Text = "Lead Generation";
+            this.metroTile3.Text = "Marketing";
             this.metroTile3.UseSelectable = true;
             this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
