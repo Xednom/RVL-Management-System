@@ -17,6 +17,7 @@ namespace RVL_Management_System
     public partial class Frm_Main : MetroForm
     {
         private int childFormNumber = 0;
+        public static string task = "";
 
         public Frm_Main()
         {
@@ -87,6 +88,8 @@ namespace RVL_Management_System
         private void Frm_Main_Load(object sender, EventArgs e)
         {
             lbl_Usertype.Text = Frm_Login.UserType;
+
+            
             
         }
 
@@ -120,7 +123,7 @@ namespace RVL_Management_System
         }
         private void Frm_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void metroTile7_Click(object sender, EventArgs e)
@@ -171,6 +174,11 @@ namespace RVL_Management_System
             _pnlone.Closed += _pnlone_Closed;
             _pnlone.Shown += _pnlone_Shown;
             _pnlone.swipe(true);
+        }
+
+        private void Frm_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

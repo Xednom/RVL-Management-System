@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Transitions;
 using System.Windows.Forms;
+using MetroFramework.Controls;  
 
 namespace RVL_Management_System.Panel
 {
-    public partial class PnlSlider : UserControl
+    public partial class PnlSlider : MetroUserControl
     {
         //variables
         Form _owner = null;
@@ -84,8 +85,6 @@ namespace RVL_Management_System.Panel
             _transasition.add(this, "Top", show ? 100 : this.Height);
             _transasition.run();
 
-            
-
             while (this.Left != (show ? 0 : this.Width))
             {
                 Application.DoEvents();
@@ -96,7 +95,7 @@ namespace RVL_Management_System.Panel
                 closed(new EventArgs());
                 _owner.Resize -= owner_Resize;
                 _owner.Controls.Remove(this);
-                this.Dispose();
+                Hide();
             }
             else
             {

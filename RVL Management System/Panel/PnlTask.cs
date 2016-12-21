@@ -49,15 +49,17 @@ namespace RVL_Management_System.Panel
             owner.Controls.Add(this);
             this.BringToFront();
             owner.Resize += owner_Resize;
-            //this.Click += pnlSlider_Click;
+            //this.Click += pnlTask_Click;
             ResizeForm();
         }
         //when the form is clicked
         //it will close
-        //void pnlSlider_Click(object sender, EventArgs e)
-        //{
-        //    swipe(false);
-        //}
+
+        void pnlTask_Click(object sender, EventArgs e)
+        {
+            Frm_Main fmain = new Frm_Main();
+            fmain.btn_task.Enabled = true;
+        }
 
         void owner_Resize(object sender, EventArgs e)
         {

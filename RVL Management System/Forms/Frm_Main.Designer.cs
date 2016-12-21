@@ -179,12 +179,12 @@
             // 
             // btn_task
             // 
-            this.btn_task.Image = global::RVL_Management_System.Properties.Resources.cart_11;
+            this.btn_task.Image = global::RVL_Management_System.Properties.Resources.clipboard_1;
             this.btn_task.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_task.ImageSize = 32;
             this.btn_task.Location = new System.Drawing.Point(24, 379);
             this.btn_task.Name = "btn_task";
-            this.btn_task.NoFocusImage = global::RVL_Management_System.Properties.Resources.cart1;
+            this.btn_task.NoFocusImage = global::RVL_Management_System.Properties.Resources.clipboard;
             this.btn_task.Size = new System.Drawing.Size(118, 67);
             this.btn_task.TabIndex = 22;
             this.btn_task.Text = "Task Assigning";
@@ -221,6 +221,7 @@
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Main_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Main_FormClosed);
             this.Load += new System.EventHandler(this.Frm_Main_Load);
             this.statusStrip.ResumeLayout(false);
@@ -245,7 +246,7 @@
         private MetroFramework.Controls.MetroTile metroTile8;
         private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroLink btn_marketing;
-        private MetroFramework.Controls.MetroLink btn_task;
+        public MetroFramework.Controls.MetroLink btn_task;
     }
 }
 

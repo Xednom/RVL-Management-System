@@ -53,7 +53,6 @@ namespace RVL_Management_System
         public Frm_LeadGeneration(Form owner) : base(owner)
         {
             InitializeComponent();
-            
         }
 
         public void clear()
