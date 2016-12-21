@@ -6,14 +6,13 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Transitions;
 using System.Windows.Forms;
+using Transitions;
 
 namespace RVL_Management_System.Panel
 {
-    public partial class PnlSlider : UserControl
+    public partial class PnlTask : UserControl
     {
-        //variables
         Form _owner = null;
         bool _loaded = false;
 
@@ -37,12 +36,12 @@ namespace RVL_Management_System.Panel
         }
         #endregion
 
-        public PnlSlider()
+        public PnlTask()
         {
             InitializeComponent();
         }
 
-        public PnlSlider(Form owner) : this()
+        public PnlTask(Form owner) : this()
 {
             this.Visible = false;
 
@@ -73,7 +72,7 @@ namespace RVL_Management_System.Panel
             //this.Width = _owner.Width;
             //this.Height = _owner.Height;
             this.Location = new Point(_loaded ? 0 : _owner.Width, 40);
-            
+
         }
 
         public void swipe(bool show = true)
@@ -84,7 +83,7 @@ namespace RVL_Management_System.Panel
             _transasition.add(this, "Top", show ? 100 : this.Height);
             _transasition.run();
 
-            
+
 
             while (this.Left != (show ? 0 : this.Width))
             {
@@ -107,10 +106,9 @@ namespace RVL_Management_System.Panel
             }
         }
 
-        private void PnlSlider_Load(object sender, EventArgs e)
+        private void PnlTask_Load(object sender, EventArgs e)
         {
 
         }
     }
 }
-

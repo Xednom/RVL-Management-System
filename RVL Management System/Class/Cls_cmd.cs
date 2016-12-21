@@ -59,6 +59,37 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void marketingAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblMarketing(Lead_Received,Last_Name,First_Name,Middle_Name,Phone_Number,Email_Address,Issue_Description,Lead_Source,Lead_Status,Priority,Memo,Lead_Assigned)VALUES(@leadReceived,@ln,@fn,@mn,@pNum,@eAdd,@issueDes,@leadSource,@leadStats,@priority,@memo,@leadAssigned)";
+            cmd.Parameters.AddWithValue("leadReceived", Frm_LeadGeneration.leadReceived);
+            cmd.Parameters.AddWithValue("ln", Frm_LeadGeneration.lastName);
+            cmd.Parameters.AddWithValue("fn", Frm_LeadGeneration.firstName);
+            cmd.Parameters.AddWithValue("mn", Frm_LeadGeneration.middleName);
+            cmd.Parameters.AddWithValue("pNum", Frm_LeadGeneration.phoneNumber);
+            cmd.Parameters.AddWithValue("eAdd", Frm_LeadGeneration.emailAddress);
+            cmd.Parameters.AddWithValue("issueDes", Frm_LeadGeneration.issueDescription);
+            cmd.Parameters.AddWithValue("leadSource", Frm_LeadGeneration.leadSource);
+            cmd.Parameters.AddWithValue("leadStats", Frm_LeadGeneration.leadStat);
+            cmd.Parameters.AddWithValue("priority", Frm_LeadGeneration.priority);
+            cmd.Parameters.AddWithValue("memo", Frm_LeadGeneration.memo);
+            cmd.Parameters.AddWithValue("leadAssigned", Frm_LeadGeneration.leadAssigned);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully saved this Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
         public static void updateLogin()
         {
             SqlConnection conn = new SqlConnection();

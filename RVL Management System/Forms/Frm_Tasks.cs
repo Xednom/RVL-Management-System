@@ -10,10 +10,11 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
 using MetroFramework.Forms;
+using System.Runtime.InteropServices;
 
 namespace RVL_Management_System
 {
-    public partial class Frm_Tasks : MetroForm
+    public partial class Frm_Tasks : Panel.PnlTask
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
@@ -21,7 +22,24 @@ namespace RVL_Management_System
         public static string uID = "";
         public static string taskAssign = "";
 
-        public Frm_Tasks()
+        //dragging of form
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        const int AW_SLIDE = 0X40000;
+
+        const int AW_HOR_POSITIVE = 0X1;
+
+        const int AW_HOR_NEGATIVE = 0X2;
+
+        const int AW_BLEND = 0X80000;
+
+        public Frm_Tasks(Form owner) : base(owner)
         {
             InitializeComponent();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
@@ -103,6 +121,20 @@ namespace RVL_Management_System
             uID = txt_uid.Text;
             taskAssign = cBoxTask.Text;
             Class.Cls_cmd.taskAssign();
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            swipe(false);
+        }
+
+        private void Frm_Tasks_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }

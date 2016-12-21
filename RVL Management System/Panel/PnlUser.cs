@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace RVL_Management_System.Panel
 {
-    public partial class PnlUserAdd : UserControl
+    public partial class PnlUser : UserControl
     {
-        public PnlUserAdd()
+        public PnlUser()
         {
             InitializeComponent();
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

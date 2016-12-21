@@ -137,7 +137,7 @@
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Tasks.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Frm_Tasks.Designer.cs">
       <DependentUpon>Frm_Tasks.cs</DependentUpon>
@@ -161,7 +161,7 @@
       <DependentUpon>Frm_UserEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_UserMenu.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Frm_UserMenu.Designer.cs">
       <DependentUpon>Frm_UserMenu.cs</DependentUpon>
@@ -184,11 +184,17 @@
     <Compile Include="Panel\PnlSlider.Designer.cs">
       <DependentUpon>PnlSlider.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\PnlUserAdd.cs">
+    <Compile Include="Panel\PnlTask.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\PnlUserAdd.Designer.cs">
-      <DependentUpon>PnlUserAdd.cs</DependentUpon>
+    <Compile Include="Panel\PnlTask.Designer.cs">
+      <DependentUpon>PnlTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\PnlUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\PnlUser.Designer.cs">
+      <DependentUpon>PnlUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -228,8 +234,8 @@
     <EmbeddedResource Include="Panel\PnlSlider.resx">
       <DependentUpon>PnlSlider.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\PnlUserAdd.resx">
-      <DependentUpon>PnlUserAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Panel\PnlTask.resx">
+      <DependentUpon>PnlTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -270,7 +276,39 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-arrow-27-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-x-mark-7-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using MetroFramework;
 
 namespace RVL_Management_System
 {
@@ -86,27 +87,26 @@ namespace RVL_Management_System
         private void Frm_Main_Load(object sender, EventArgs e)
         {
             lbl_Usertype.Text = Frm_Login.UserType;
+            
         }
 
         private void metroTile5_Click(object sender, EventArgs e)
         {
-            Frm_Tasks ftask = new Frm_Tasks();
-            ftask.ShowDialog();
+            
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            Frm_UserMenu fmenu = new Frm_UserMenu();
-            fmenu.ShowDialog();
+            metroTile1.Enabled = false;
+            Frm_UserMenu _pnlone = new Frm_UserMenu(this);
+            //_pnlone.Closed += _pnlone_Closed;
+            //_pnlone.Shown += _pnlone_Shown;
+            _pnlone.swipe(true);
         }
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-            Frm_LeadGeneration _pnlone = new Frm_LeadGeneration(this);
-            _pnlone.Closed += _pnlone_Closed;
-            _pnlone.Shown += _pnlone_Shown;
-            _pnlone.swipe(true);
-            metroTile3.Enabled = false;
+
         }
 
         void _pnlone_Shown(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace RVL_Management_System
 
         void _pnlone_Closed(object sender, EventArgs e)
         {
-            metroTile3.Enabled = true;
+            btn_marketing.Enabled = true;
         }
         private void Frm_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -133,6 +133,44 @@ namespace RVL_Management_System
         {
             Forms.Frm_Email femail = new Forms.Frm_Email();
             femail.ShowDialog();
+        }
+
+        private void btn_marketing_Click(object sender, EventArgs e)
+        {
+          
+            
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            if (MetroMessageBox.Show(this, "Do you want to logout?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Frm_Login flogin = new Frm_Login();
+                flogin.Show();
+                this.Hide();
+            }
+            else
+            {
+                //TODO:NOTHING
+            }
+        }
+
+        private void metroLink2_Click(object sender, EventArgs e)
+        {
+            btn_marketing.Enabled = false;
+            Frm_LeadGeneration _pnlone = new Frm_LeadGeneration(this);
+            _pnlone.Closed += _pnlone_Closed;
+            _pnlone.Shown += _pnlone_Shown;
+            _pnlone.swipe(true);
+        }
+
+        private void btn_task_Click(object sender, EventArgs e)
+        {
+            btn_task.Enabled = false;
+            Frm_Tasks _pnlone = new Frm_Tasks(this);
+            _pnlone.Closed += _pnlone_Closed;
+            _pnlone.Shown += _pnlone_Shown;
+            _pnlone.swipe(true);
         }
     }
 }

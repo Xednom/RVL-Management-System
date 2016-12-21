@@ -1,5 +1,4 @@
 ﻿using System;
-using RVL_Management_System.Panel;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -11,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RVL_Management_System.Panel
 {
-    public partial class PnlMarketing : PnlSlider
+    public partial class PnlMarketing : UserControl
     {
-        public PnlMarketing(Form owner) : base(owner)
+        public PnlMarketing()
         {
             InitializeComponent();
         }

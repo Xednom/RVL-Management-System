@@ -1,6 +1,6 @@
 ﻿namespace RVL_Management_System.Panel
 {
-    partial class PnlSlider
+    partial class PnlUser
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,17 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // PnlSlider
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "PnlSlider";
-            this.Size = new System.Drawing.Size(288, 255);
-            this.Load += new System.EventHandler(this.PnlSlider_Load);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

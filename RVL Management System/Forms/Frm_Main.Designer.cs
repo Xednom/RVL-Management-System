@@ -36,12 +36,13 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.btn_marketing = new MetroFramework.Controls.MetroLink();
+            this.btn_task = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // 
             this.menuStrip.Location = new System.Drawing.Point(20, 60);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(817, 24);
+            this.menuStrip.Size = new System.Drawing.Size(957, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -58,9 +59,9 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel,
             this.lbl_Usertype});
-            this.statusStrip.Location = new System.Drawing.Point(20, 500);
+            this.statusStrip.Location = new System.Drawing.Point(20, 610);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(817, 22);
+            this.statusStrip.Size = new System.Drawing.Size(957, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -99,18 +100,6 @@
             this.metroTile2.Text = "Listing";
             this.metroTile2.UseSelectable = true;
             // 
-            // metroTile3
-            // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(23, 233);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(119, 67);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile3.TabIndex = 6;
-            this.metroTile3.Text = "Marketing";
-            this.metroTile3.UseSelectable = true;
-            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
-            // 
             // metroTile4
             // 
             this.metroTile4.ActiveControl = null;
@@ -121,18 +110,6 @@
             this.metroTile4.TabIndex = 7;
             this.metroTile4.Text = "Accounting";
             this.metroTile4.UseSelectable = true;
-            // 
-            // metroTile5
-            // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(23, 379);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(119, 67);
-            this.metroTile5.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile5.TabIndex = 8;
-            this.metroTile5.Text = "Task Assigning";
-            this.metroTile5.UseSelectable = true;
-            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
             // metroTile6
             // 
@@ -169,19 +146,66 @@
             this.metroTile8.UseSelectable = true;
             this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
             // 
+            // metroLink1
+            // 
+            this.metroLink1.BackColor = System.Drawing.Color.Olive;
+            this.metroLink1.Image = global::RVL_Management_System.Properties.Resources.logout;
+            this.metroLink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLink1.ImageSize = 32;
+            this.metroLink1.Location = new System.Drawing.Point(24, 452);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.NoFocusImage = global::RVL_Management_System.Properties.Resources.logout_1;
+            this.metroLink1.Size = new System.Drawing.Size(118, 67);
+            this.metroLink1.TabIndex = 18;
+            this.metroLink1.Text = "Logout";
+            this.metroLink1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            // 
+            // btn_marketing
+            // 
+            this.btn_marketing.Image = global::RVL_Management_System.Properties.Resources.cart_1;
+            this.btn_marketing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_marketing.ImageSize = 32;
+            this.btn_marketing.Location = new System.Drawing.Point(24, 233);
+            this.btn_marketing.Name = "btn_marketing";
+            this.btn_marketing.NoFocusImage = global::RVL_Management_System.Properties.Resources.cart;
+            this.btn_marketing.Size = new System.Drawing.Size(118, 67);
+            this.btn_marketing.TabIndex = 20;
+            this.btn_marketing.Text = "Marketing";
+            this.btn_marketing.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_marketing.UseSelectable = true;
+            this.btn_marketing.Click += new System.EventHandler(this.metroLink2_Click);
+            // 
+            // btn_task
+            // 
+            this.btn_task.Image = global::RVL_Management_System.Properties.Resources.cart_11;
+            this.btn_task.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_task.ImageSize = 32;
+            this.btn_task.Location = new System.Drawing.Point(24, 379);
+            this.btn_task.Name = "btn_task";
+            this.btn_task.NoFocusImage = global::RVL_Management_System.Properties.Resources.cart1;
+            this.btn_task.Size = new System.Drawing.Size(118, 67);
+            this.btn_task.TabIndex = 22;
+            this.btn_task.Text = "Task Assigning";
+            this.btn_task.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_task.UseSelectable = true;
+            this.btn_task.Click += new System.EventHandler(this.btn_task_Click);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(857, 542);
+            this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.btn_task);
+            this.Controls.Add(this.btn_marketing);
+            this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.metroTile8);
             this.Controls.Add(this.metroTile7);
             this.Controls.Add(this.metroTile6);
-            this.Controls.Add(this.metroTile5);
             this.Controls.Add(this.metroTile4);
-            this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.metroTile2);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.statusStrip);
@@ -214,13 +238,14 @@
         private System.Windows.Forms.ToolTip toolTip;
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile metroTile6;
         private System.Windows.Forms.ToolStripStatusLabel lbl_Usertype;
         private MetroFramework.Controls.MetroTile metroTile7;
         private MetroFramework.Controls.MetroTile metroTile8;
+        private MetroFramework.Controls.MetroLink metroLink1;
+        private MetroFramework.Controls.MetroLink btn_marketing;
+        private MetroFramework.Controls.MetroLink btn_task;
     }
 }
 
