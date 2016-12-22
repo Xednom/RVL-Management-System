@@ -166,7 +166,8 @@
             this.cBoxUsertype.ItemHeight = 23;
             this.cBoxUsertype.Items.AddRange(new object[] {
             "Admin",
-            "User"});
+            "GPG Staff",
+            "Luke"});
             this.cBoxUsertype.Location = new System.Drawing.Point(140, 135);
             this.cBoxUsertype.Name = "cBoxUsertype";
             this.cBoxUsertype.Size = new System.Drawing.Size(166, 29);

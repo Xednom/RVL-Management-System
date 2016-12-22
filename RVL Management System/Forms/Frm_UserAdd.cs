@@ -17,9 +17,7 @@ namespace RVL_Management_System
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
-        public static string lastName = "";
-        public static string firstName = "";
-        public static string middleName = "";
+        public static string fullName = "";
         public static string email = "";
         public static string userName = "";
         public static string Password = "";
@@ -96,9 +94,7 @@ namespace RVL_Management_System
             role = cBoxRole.Text;
             acctID = txt_level.Text;
             uID = txt_userID.Text;
-            lastName = txt_ln.Text;
-            firstName = txt_fn.Text;
-            middleName = txt_mi.Text;
+            fullName = txt_fullname.Text;
             email = txt_email.Text;
             Class.Cls_cmd.userAdd();
             Class.Cls_cmd.userLogin();

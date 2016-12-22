@@ -88,9 +88,6 @@ namespace RVL_Management_System
         private void Frm_Main_Load(object sender, EventArgs e)
         {
             lbl_Usertype.Text = Frm_Login.UserType;
-
-            
-            
         }
 
         private void metroTile5_Click(object sender, EventArgs e)
@@ -100,7 +97,7 @@ namespace RVL_Management_System
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            metroTile1.Enabled = false;
+            //metroTile1.Enabled = false;
             Frm_UserMenu _pnlone = new Frm_UserMenu(this);
             //_pnlone.Closed += _pnlone_Closed;
             //_pnlone.Shown += _pnlone_Shown;
@@ -169,7 +166,7 @@ namespace RVL_Management_System
 
         private void btn_task_Click(object sender, EventArgs e)
         {
-            btn_task.Enabled = false;
+            //btn_task.Enabled = false;
             Frm_Tasks _pnlone = new Frm_Tasks(this);
             _pnlone.Closed += _pnlone_Closed;
             _pnlone.Shown += _pnlone_Shown;
@@ -179,6 +176,12 @@ namespace RVL_Management_System
         private void Frm_Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void metroLink2_Click_1(object sender, EventArgs e)
+        {
+            Frm_AddLeadSource flead = new Frm_AddLeadSource();
+            flead.ShowDialog();
         }
     }
 }

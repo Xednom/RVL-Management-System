@@ -1,6 +1,6 @@
-﻿namespace RVL_Management_System
+﻿namespace RVL_Management_System.Forms
 {
-    partial class Frm_LeadGeneration
+    partial class Frm_MarketingUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cBoxPriority = new System.Windows.Forms.ComboBox();
             this.cBoxLeadFollowUp = new System.Windows.Forms.ComboBox();
             this.txt_others = new MetroFramework.Controls.MetroTextBox();
-            this.btn_save = new MetroFramework.Controls.MetroButton();
-            this.txt_cancel = new MetroFramework.Controls.MetroButton();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.cBoxLeadStats = new System.Windows.Forms.ComboBox();
             this.cBoxLeadSource = new System.Windows.Forms.ComboBox();
+            this.txt_cancel = new MetroFramework.Controls.MetroButton();
+            this.btn_save = new MetroFramework.Controls.MetroButton();
+            this.txt_leadAssigned = new MetroFramework.Controls.MetroTextBox();
             this.txt_memo = new MetroFramework.Controls.MetroTextBox();
             this.txt_IssueDes = new MetroFramework.Controls.MetroTextBox();
             this.txt_email = new MetroFramework.Controls.MetroTextBox();
@@ -58,23 +62,67 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
-            this.cBoxLeadAssigned = new System.Windows.Forms.ComboBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.txt_search = new MetroFramework.Controls.MetroTextBox();
+            this.btn_search = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(392, 54);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Marketing Update";
+            // 
+            // metroLink1
+            // 
+            this.metroLink1.BackColor = System.Drawing.Color.White;
+            this.metroLink1.Image = global::RVL_Management_System.Properties.Resources.cancel;
+            this.metroLink1.ImageSize = 32;
+            this.metroLink1.Location = new System.Drawing.Point(914, 9);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.NoFocusImage = global::RVL_Management_System.Properties.Resources.cancel_1_;
+            this.metroLink1.Size = new System.Drawing.Size(41, 47);
+            this.metroLink1.TabIndex = 12;
+            this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(10, 477);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.Size = new System.Drawing.Size(954, 188);
+            this.dataGridView.TabIndex = 13;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cBoxLeadAssigned);
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btn_search);
+            this.groupBox1.Controls.Add(this.txt_search);
+            this.groupBox1.Controls.Add(this.metroLabel16);
+            this.groupBox1.Controls.Add(this.metroLabel15);
+            this.groupBox1.Controls.Add(this.metroComboBox1);
             this.groupBox1.Controls.Add(this.cBoxPriority);
             this.groupBox1.Controls.Add(this.cBoxLeadFollowUp);
             this.groupBox1.Controls.Add(this.txt_others);
-            this.groupBox1.Controls.Add(this.btn_save);
-            this.groupBox1.Controls.Add(this.txt_cancel);
             this.groupBox1.Controls.Add(this.metroLabel14);
             this.groupBox1.Controls.Add(this.cBoxLeadStats);
             this.groupBox1.Controls.Add(this.cBoxLeadSource);
+            this.groupBox1.Controls.Add(this.txt_cancel);
+            this.groupBox1.Controls.Add(this.btn_save);
+            this.groupBox1.Controls.Add(this.txt_leadAssigned);
             this.groupBox1.Controls.Add(this.txt_memo);
             this.groupBox1.Controls.Add(this.txt_IssueDes);
             this.groupBox1.Controls.Add(this.txt_email);
@@ -97,10 +145,10 @@
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(5, 74);
+            this.groupBox1.Location = new System.Drawing.Point(10, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(788, 531);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(958, 402);
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marketing Information";
             // 
@@ -163,26 +211,6 @@
             this.txt_others.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_others.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(24, 412);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(144, 33);
-            this.btn_save.TabIndex = 80;
-            this.btn_save.Text = "&Save";
-            this.btn_save.UseSelectable = true;
-            this.btn_save.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // txt_cancel
-            // 
-            this.txt_cancel.Location = new System.Drawing.Point(24, 460);
-            this.txt_cancel.Name = "txt_cancel";
-            this.txt_cancel.Size = new System.Drawing.Size(144, 33);
-            this.txt_cancel.TabIndex = 81;
-            this.txt_cancel.Text = "&Clear";
-            this.txt_cancel.UseSelectable = true;
-            this.txt_cancel.Click += new System.EventHandler(this.txt_cancel_Click);
-            // 
             // metroLabel14
             // 
             this.metroLabel14.AutoSize = true;
@@ -209,7 +237,54 @@
             this.cBoxLeadSource.Name = "cBoxLeadSource";
             this.cBoxLeadSource.Size = new System.Drawing.Size(187, 21);
             this.cBoxLeadSource.TabIndex = 83;
-            this.cBoxLeadSource.SelectedIndexChanged += new System.EventHandler(this.cBoxLeadSource_SelectedIndexChanged);
+            // 
+            // txt_cancel
+            // 
+            this.txt_cancel.Location = new System.Drawing.Point(808, 179);
+            this.txt_cancel.Name = "txt_cancel";
+            this.txt_cancel.Size = new System.Drawing.Size(144, 33);
+            this.txt_cancel.TabIndex = 81;
+            this.txt_cancel.Text = "&Clear";
+            this.txt_cancel.UseSelectable = true;
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(808, 131);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(144, 33);
+            this.btn_save.TabIndex = 80;
+            this.btn_save.Text = "&Save";
+            this.btn_save.UseSelectable = true;
+            // 
+            // txt_leadAssigned
+            // 
+            // 
+            // 
+            // 
+            this.txt_leadAssigned.CustomButton.Image = null;
+            this.txt_leadAssigned.CustomButton.Location = new System.Drawing.Point(165, 1);
+            this.txt_leadAssigned.CustomButton.Name = "";
+            this.txt_leadAssigned.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_leadAssigned.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_leadAssigned.CustomButton.TabIndex = 1;
+            this.txt_leadAssigned.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_leadAssigned.CustomButton.UseSelectable = true;
+            this.txt_leadAssigned.CustomButton.Visible = false;
+            this.txt_leadAssigned.Lines = new string[0];
+            this.txt_leadAssigned.Location = new System.Drawing.Point(18, 363);
+            this.txt_leadAssigned.MaxLength = 32767;
+            this.txt_leadAssigned.Name = "txt_leadAssigned";
+            this.txt_leadAssigned.PasswordChar = '\0';
+            this.txt_leadAssigned.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_leadAssigned.SelectedText = "";
+            this.txt_leadAssigned.SelectionLength = 0;
+            this.txt_leadAssigned.SelectionStart = 0;
+            this.txt_leadAssigned.ShortcutsEnabled = true;
+            this.txt_leadAssigned.Size = new System.Drawing.Size(187, 23);
+            this.txt_leadAssigned.TabIndex = 79;
+            this.txt_leadAssigned.UseSelectable = true;
+            this.txt_leadAssigned.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_leadAssigned.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txt_memo
             // 
@@ -548,49 +623,91 @@
             this.metroLabel1.TabIndex = 54;
             this.metroLabel1.Text = "Date of the Call/ Lead Received";
             // 
-            // label1
+            // metroComboBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 54);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Marketing";
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "Last name",
+            "First name",
+            "Middle name"});
+            this.metroComboBox1.Location = new System.Drawing.Point(273, 49);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(153, 29);
+            this.metroComboBox1.TabIndex = 89;
+            this.metroComboBox1.UseSelectable = true;
             // 
-            // metroLink1
+            // metroLabel15
             // 
-            this.metroLink1.BackColor = System.Drawing.Color.White;
-            this.metroLink1.Image = global::RVL_Management_System.Properties.Resources.cancel;
-            this.metroLink1.ImageSize = 32;
-            this.metroLink1.Location = new System.Drawing.Point(750, 3);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.NoFocusImage = global::RVL_Management_System.Properties.Resources.cancel_1_;
-            this.metroLink1.Size = new System.Drawing.Size(41, 47);
-            this.metroLink1.TabIndex = 8;
-            this.metroLink1.UseSelectable = true;
-            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.Location = new System.Drawing.Point(273, 27);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel15.TabIndex = 90;
+            this.metroLabel15.Text = "Search By";
             // 
-            // cBoxLeadAssigned
+            // metroLabel16
             // 
-            this.cBoxLeadAssigned.FormattingEnabled = true;
-            this.cBoxLeadAssigned.Location = new System.Drawing.Point(18, 363);
-            this.cBoxLeadAssigned.Name = "cBoxLeadAssigned";
-            this.cBoxLeadAssigned.Size = new System.Drawing.Size(187, 21);
-            this.cBoxLeadAssigned.TabIndex = 89;
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.Location = new System.Drawing.Point(450, 27);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel16.TabIndex = 91;
+            this.metroLabel16.Text = "Search";
             // 
-            // Frm_LeadGeneration
+            // txt_search
+            // 
+            // 
+            // 
+            // 
+            this.txt_search.CustomButton.Image = null;
+            this.txt_search.CustomButton.Location = new System.Drawing.Point(165, 1);
+            this.txt_search.CustomButton.Name = "";
+            this.txt_search.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_search.CustomButton.TabIndex = 1;
+            this.txt_search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_search.CustomButton.UseSelectable = true;
+            this.txt_search.CustomButton.Visible = false;
+            this.txt_search.Lines = new string[0];
+            this.txt_search.Location = new System.Drawing.Point(450, 55);
+            this.txt_search.MaxLength = 32767;
+            this.txt_search.Name = "txt_search";
+            this.txt_search.PasswordChar = '\0';
+            this.txt_search.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_search.SelectedText = "";
+            this.txt_search.SelectionLength = 0;
+            this.txt_search.SelectionStart = 0;
+            this.txt_search.ShortcutsEnabled = true;
+            this.txt_search.Size = new System.Drawing.Size(187, 23);
+            this.txt_search.TabIndex = 92;
+            this.txt_search.UseSelectable = true;
+            this.txt_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btn_search
+            // 
+            this.btn_search.Location = new System.Drawing.Point(654, 45);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(144, 33);
+            this.btn_search.TabIndex = 93;
+            this.btn_search.Text = "&Search";
+            this.btn_search.UseSelectable = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // Frm_MarketingUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.metroLink1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Frm_LeadGeneration";
-            this.Size = new System.Drawing.Size(799, 620);
-            this.Load += new System.EventHandler(this.Frm_LeadGeneration_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Frm_LeadGeneration_MouseDown);
+            this.Name = "Frm_MarketingUpdate";
+            this.Size = new System.Drawing.Size(975, 687);
+            this.Load += new System.EventHandler(this.Frm_MarketingUpdate_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Frm_MarketingUpdate_MouseDown);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -600,17 +717,24 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cBoxPriority;
+        private System.Windows.Forms.ComboBox cBoxLeadFollowUp;
+        private MetroFramework.Controls.MetroTextBox txt_others;
+        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private System.Windows.Forms.ComboBox cBoxLeadStats;
+        private System.Windows.Forms.ComboBox cBoxLeadSource;
         private MetroFramework.Controls.MetroButton txt_cancel;
         private MetroFramework.Controls.MetroButton btn_save;
+        private MetroFramework.Controls.MetroTextBox txt_leadAssigned;
         private MetroFramework.Controls.MetroTextBox txt_memo;
         private MetroFramework.Controls.MetroTextBox txt_IssueDes;
         private MetroFramework.Controls.MetroTextBox txt_email;
         private MetroFramework.Controls.MetroTextBox txt_pnum;
         private MetroFramework.Controls.MetroTextBox txt_mn;
         private MetroFramework.Controls.MetroTextBox txt_fn;
+        private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroTextBox txt_ln;
-        private MetroFramework.Controls.MetroDateTime dtLeadReceived;
         private MetroFramework.Controls.MetroLabel metroLabel13;
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private MetroFramework.Controls.MetroLabel metroLabel11;
@@ -624,14 +748,13 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.Label label1;
-        private MetroFramework.Controls.MetroLink metroLink1;
-        private System.Windows.Forms.ComboBox cBoxLeadSource;
-        private System.Windows.Forms.ComboBox cBoxLeadStats;
-        private MetroFramework.Controls.MetroTextBox txt_others;
-        private MetroFramework.Controls.MetroLabel metroLabel14;
-        private System.Windows.Forms.ComboBox cBoxLeadFollowUp;
-        private System.Windows.Forms.ComboBox cBoxPriority;
-        private System.Windows.Forms.ComboBox cBoxLeadAssigned;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private MetroFramework.Controls.MetroDateTime dtLeadReceived;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel15;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroTextBox txt_search;
+        private MetroFramework.Controls.MetroLabel metroLabel16;
+        private MetroFramework.Controls.MetroButton btn_search;
     }
 }

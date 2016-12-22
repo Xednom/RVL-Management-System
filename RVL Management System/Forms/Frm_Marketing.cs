@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using Transitions;
 using MetroFramework.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace RVL_Management_System
 {
@@ -64,16 +66,71 @@ namespace RVL_Management_System
             txt_pnum.Text = null;
             txt_email.Text = null;
             txt_IssueDes.Text = null;
-            txt_leadSource.Text = null;
-            txt_leadStat.Text = null;
-            txt_leadFollow.Text = null;
-            txt_priority.Text = null;
-            txt_leadAssigned.Text = null;
+            cBoxLeadSource.Text = null;
+            cBoxLeadStats.Text = null;
+            cBoxLeadFollowUp.Text = null;
+            cBoxPriority.Text = null;
+            cBoxLeadAssigned.Text = null;
             txt_memo.Text = null;
+        }
+
+        public void loadLeadSource()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+
+            conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT * FROM tblLeadSource";
+            cmd.CommandType = CommandType.Text;
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string gLeadDes = reader.GetString(reader.GetOrdinal("LeadDescription"));
+               cBoxLeadSource.Items.Add(gLeadDes);
+            }
+            conn.Close();
+        }
+
+        public void loadLeadAssigned()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+
+            conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT * FROM tblUser";
+            cmd.CommandType = CommandType.Text;
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string gFullname = reader.GetString(reader.GetOrdinal("Full_Name"));
+                cBoxLeadAssigned.Items.Add(gFullname);
+            }
+            conn.Close();
         }
 
         private void Frm_LeadGeneration_Load(object sender, EventArgs e)
         {
+            loadLeadSource();
+
+            loadLeadAssigned();
+
+            cBoxLeadSource.Items.Add("Others..");
+
+            cBoxLeadStats.Items.Add("Prospect");
+            cBoxLeadStats.Items.Add("Qualified Lead");
+            cBoxLeadStats.Items.Add("Buyer");
+            cBoxLeadStats.Items.Add("Seller");
+            cBoxLeadStats.Items.Add("Invalid Lead");
             
         }
 
@@ -101,11 +158,11 @@ namespace RVL_Management_System
             phoneNumber = txt_pnum.Text;
             emailAddress = txt_email.Text;
             issueDescription = txt_IssueDes.Text;
-            leadSource = txt_leadSource.Text;
-            leadStat = txt_leadStat.Text;
-            leadFollow = txt_leadFollow.Text;
-            priority = txt_priority.Text;
-            leadAssigned = txt_leadAssigned.Text;
+            leadSource = cBoxLeadSource.Text;
+            leadStat = cBoxLeadStats.Text;
+            leadFollow = cBoxLeadFollowUp.Text;
+            priority = cBoxPriority.Text;
+            leadAssigned = cBoxLeadAssigned.Text;
             memo = txt_memo.Text;
             Class.Cls_cmd.marketingAdd();
             clear();
@@ -138,6 +195,24 @@ namespace RVL_Management_System
         private void metroLink1_Click(object sender, EventArgs e)
         {
             swipe(false);
+        }
+
+        private void cBoxLeadSource_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cBoxLeadSource.Text == "Others..")
+            {
+                txt_others.Enabled = true;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

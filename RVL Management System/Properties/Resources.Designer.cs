@@ -123,6 +123,16 @@ namespace RVL_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cart_12 {
+            get {
+                object obj = ResourceManager.GetObject("cart-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cart1 {
             get {
                 object obj = ResourceManager.GetObject("cart1", resourceCulture);
@@ -196,6 +206,26 @@ namespace RVL_Management_System.Properties {
         internal static System.Drawing.Bitmap notepad {
             get {
                 object obj = ResourceManager.GetObject("notepad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_board {
+            get {
+                object obj = ResourceManager.GetObject("white-board", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_board_1 {
+            get {
+                object obj = ResourceManager.GetObject("white-board-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

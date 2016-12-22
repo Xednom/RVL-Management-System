@@ -148,5 +148,10 @@ namespace RVL_Management_System
             cBoxRole.Enabled = true;
             btn_edit.Hide();
         }
+
+        private void GridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

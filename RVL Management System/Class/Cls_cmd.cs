@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
+using RVL_Management_System.Forms;
 
 namespace RVL_Management_System.Class
 {
@@ -45,11 +46,9 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string INSERT = "INSERT INTO tblUser(AcctID,Last_Name,First_Name,Middle_Name,Email)VALUES(@acctID,@ln,@fn,@mn,@email)";
+            string INSERT = "INSERT INTO tblUser(AcctID,Full_Name,Email)VALUES(@acctID,@fn,@email)";
             cmd.Parameters.AddWithValue("acctID", Frm_UserAdd.acctID);
-            cmd.Parameters.AddWithValue("ln", Frm_UserAdd.lastName);
-            cmd.Parameters.AddWithValue("fn", Frm_UserAdd.firstName);
-            cmd.Parameters.AddWithValue("mn", Frm_UserAdd.middleName);
+            cmd.Parameters.AddWithValue("fn", Frm_UserAdd.fullName);
             cmd.Parameters.AddWithValue("email", Frm_UserAdd.email);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
@@ -58,6 +57,27 @@ namespace RVL_Management_System.Class
 
             cmd.Parameters.Clear();
         }
+
+        public static void leadAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblLeadSource(LeadDescription)VALUES(@leadD)";
+            cmd.Parameters.AddWithValue("leadD", Forms.Frm_AddLeadSource.leadDes);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully saved this Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+        
 
         public static void marketingAdd()
         {

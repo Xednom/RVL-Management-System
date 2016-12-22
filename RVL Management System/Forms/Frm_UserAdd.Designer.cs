@@ -40,12 +40,7 @@
             this.Label8 = new System.Windows.Forms.Label();
             this.txt_un = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
-            this.Label12 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.txt_mi = new System.Windows.Forms.TextBox();
-            this.txt_fn = new System.Windows.Forms.TextBox();
-            this.txt_ln = new System.Windows.Forms.TextBox();
+            this.txt_fullname = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
@@ -176,68 +171,22 @@
             this.Label5.TabIndex = 8;
             this.Label5.Text = "Username :";
             // 
-            // Label12
+            // txt_fullname
             // 
-            this.Label12.AutoSize = true;
-            this.Label12.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label12.Location = new System.Drawing.Point(443, 42);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(19, 12);
-            this.Label12.TabIndex = 8;
-            this.Label12.Text = "MI";
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label11.Location = new System.Drawing.Point(270, 42);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(55, 12);
-            this.Label11.TabIndex = 8;
-            this.Label11.Text = "Firstname";
-            // 
-            // Label10
-            // 
-            this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.Location = new System.Drawing.Point(99, 42);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(54, 12);
-            this.Label10.TabIndex = 8;
-            this.Label10.Text = "Lastname";
-            // 
-            // txt_mi
-            // 
-            this.txt_mi.BackColor = System.Drawing.Color.White;
-            this.txt_mi.Location = new System.Drawing.Point(443, 57);
-            this.txt_mi.Name = "txt_mi";
-            this.txt_mi.Size = new System.Drawing.Size(39, 21);
-            this.txt_mi.TabIndex = 2;
-            // 
-            // txt_fn
-            // 
-            this.txt_fn.BackColor = System.Drawing.Color.White;
-            this.txt_fn.Location = new System.Drawing.Point(272, 57);
-            this.txt_fn.Name = "txt_fn";
-            this.txt_fn.Size = new System.Drawing.Size(165, 21);
-            this.txt_fn.TabIndex = 1;
-            // 
-            // txt_ln
-            // 
-            this.txt_ln.BackColor = System.Drawing.Color.White;
-            this.txt_ln.Location = new System.Drawing.Point(101, 57);
-            this.txt_ln.Name = "txt_ln";
-            this.txt_ln.Size = new System.Drawing.Size(165, 21);
-            this.txt_ln.TabIndex = 0;
+            this.txt_fullname.BackColor = System.Drawing.Color.White;
+            this.txt_fullname.Location = new System.Drawing.Point(101, 57);
+            this.txt_fullname.Name = "txt_fullname";
+            this.txt_fullname.Size = new System.Drawing.Size(165, 21);
+            this.txt_fullname.TabIndex = 0;
             // 
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(43, 60);
+            this.Label3.Location = new System.Drawing.Point(20, 60);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(49, 13);
+            this.Label3.Size = new System.Drawing.Size(72, 13);
             this.Label3.TabIndex = 4;
-            this.Label3.Text = "Name :";
+            this.Label3.Text = "Full Name :";
             // 
             // Label6
             // 
@@ -253,12 +202,7 @@
             this.GroupBox1.Controls.Add(this.label2);
             this.GroupBox1.Controls.Add(this.txt_email);
             this.GroupBox1.Controls.Add(this.txt_userID);
-            this.GroupBox1.Controls.Add(this.Label12);
-            this.GroupBox1.Controls.Add(this.Label11);
-            this.GroupBox1.Controls.Add(this.Label10);
-            this.GroupBox1.Controls.Add(this.txt_mi);
-            this.GroupBox1.Controls.Add(this.txt_fn);
-            this.GroupBox1.Controls.Add(this.txt_ln);
+            this.GroupBox1.Controls.Add(this.txt_fullname);
             this.GroupBox1.Controls.Add(this.Label3);
             this.GroupBox1.Controls.Add(this.Label6);
             this.GroupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,12 +288,7 @@
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.TextBox txt_un;
         internal System.Windows.Forms.Label Label5;
-        internal System.Windows.Forms.Label Label12;
-        internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.TextBox txt_mi;
-        internal System.Windows.Forms.TextBox txt_fn;
-        internal System.Windows.Forms.TextBox txt_ln;
+        internal System.Windows.Forms.TextBox txt_fullname;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.GroupBox GroupBox1;

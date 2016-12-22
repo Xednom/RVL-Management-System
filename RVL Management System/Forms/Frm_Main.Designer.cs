@@ -43,6 +43,7 @@
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.btn_marketing = new MetroFramework.Controls.MetroLink();
             this.btn_task = new MetroFramework.Controls.MetroLink();
+            this.btn_lead = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -192,6 +193,21 @@
             this.btn_task.UseSelectable = true;
             this.btn_task.Click += new System.EventHandler(this.btn_task_Click);
             // 
+            // btn_lead
+            // 
+            this.btn_lead.Image = global::RVL_Management_System.Properties.Resources.white_board_1;
+            this.btn_lead.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_lead.ImageSize = 32;
+            this.btn_lead.Location = new System.Drawing.Point(148, 306);
+            this.btn_lead.Name = "btn_lead";
+            this.btn_lead.NoFocusImage = global::RVL_Management_System.Properties.Resources.white_board;
+            this.btn_lead.Size = new System.Drawing.Size(118, 67);
+            this.btn_lead.TabIndex = 24;
+            this.btn_lead.Text = "Lead Source";
+            this.btn_lead.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_lead.UseSelectable = true;
+            this.btn_lead.Click += new System.EventHandler(this.metroLink2_Click_1);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +215,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.btn_lead);
             this.Controls.Add(this.btn_task);
             this.Controls.Add(this.btn_marketing);
             this.Controls.Add(this.metroLink1);
@@ -247,6 +264,7 @@
         private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroLink btn_marketing;
         public MetroFramework.Controls.MetroLink btn_task;
+        private MetroFramework.Controls.MetroLink btn_lead;
     }
 }
 
