@@ -88,7 +88,7 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string INSERT = "INSERT INTO tblMarketing(Lead_Received,Last_Name,First_Name,Middle_Name,Phone_Number,Email_Address,Issue_Description,Lead_Source,Lead_Status,Priority,Memo,Lead_Assigned)VALUES(@leadReceived,@ln,@fn,@mn,@pNum,@eAdd,@issueDes,@leadSource,@leadStats,@priority,@memo,@leadAssigned)";
+            string INSERT = "INSERT INTO tblMarketing(Lead_Received,Last_Name,First_Name,Middle_Name,Phone_Number,Email_Address,Issue_Description,Lead_Source,Lead_Status,Priority,Memo,Lead_Assigned,Lead_Assesment)VALUES(@leadReceived,@ln,@fn,@mn,@pNum,@eAdd,@issueDes,@leadSource,@leadStats,@priority,@memo,@leadAssigned,@leadAssesment)";
             cmd.Parameters.AddWithValue("leadReceived", Frm_LeadGeneration.leadReceived);
             cmd.Parameters.AddWithValue("ln", Frm_LeadGeneration.lastName);
             cmd.Parameters.AddWithValue("fn", Frm_LeadGeneration.firstName);
@@ -101,6 +101,7 @@ namespace RVL_Management_System.Class
             cmd.Parameters.AddWithValue("priority", Frm_LeadGeneration.priority);
             cmd.Parameters.AddWithValue("memo", Frm_LeadGeneration.memo);
             cmd.Parameters.AddWithValue("leadAssigned", Frm_LeadGeneration.leadAssigned);
+            cmd.Parameters.AddWithValue("leadAssesment", Frm_LeadGeneration.leadAssesment);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 

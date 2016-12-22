@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cBoxLeadAssesment = new System.Windows.Forms.ComboBox();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.cBoxLeadAssigned = new System.Windows.Forms.ComboBox();
             this.cBoxPriority = new System.Windows.Forms.ComboBox();
             this.cBoxLeadFollowUp = new System.Windows.Forms.ComboBox();
             this.txt_others = new MetroFramework.Controls.MetroTextBox();
-            this.btn_save = new MetroFramework.Controls.MetroButton();
-            this.txt_cancel = new MetroFramework.Controls.MetroButton();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.cBoxLeadStats = new System.Windows.Forms.ComboBox();
             this.cBoxLeadSource = new System.Windows.Forms.ComboBox();
@@ -58,20 +62,23 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.btn_save = new MetroFramework.Controls.MetroButton();
+            this.txt_cancel = new MetroFramework.Controls.MetroButton();
             this.label1 = new System.Windows.Forms.Label();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
-            this.cBoxLeadAssigned = new System.Windows.Forms.ComboBox();
+            this.GridView = new MetroFramework.Controls.MetroGrid();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cBoxLeadAssesment);
+            this.groupBox1.Controls.Add(this.metroLabel15);
             this.groupBox1.Controls.Add(this.cBoxLeadAssigned);
             this.groupBox1.Controls.Add(this.cBoxPriority);
             this.groupBox1.Controls.Add(this.cBoxLeadFollowUp);
             this.groupBox1.Controls.Add(this.txt_others);
-            this.groupBox1.Controls.Add(this.btn_save);
-            this.groupBox1.Controls.Add(this.txt_cancel);
             this.groupBox1.Controls.Add(this.metroLabel14);
             this.groupBox1.Controls.Add(this.cBoxLeadStats);
             this.groupBox1.Controls.Add(this.cBoxLeadSource);
@@ -99,10 +106,38 @@
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(5, 74);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(788, 531);
+            this.groupBox1.Size = new System.Drawing.Size(788, 394);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marketing Information";
+            // 
+            // cBoxLeadAssesment
+            // 
+            this.cBoxLeadAssesment.FormattingEnabled = true;
+            this.cBoxLeadAssesment.Items.AddRange(new object[] {
+            "Passed",
+            "Failed"});
+            this.cBoxLeadAssesment.Location = new System.Drawing.Point(239, 312);
+            this.cBoxLeadAssesment.Name = "cBoxLeadAssesment";
+            this.cBoxLeadAssesment.Size = new System.Drawing.Size(187, 21);
+            this.cBoxLeadAssesment.TabIndex = 91;
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.Location = new System.Drawing.Point(239, 284);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(102, 19);
+            this.metroLabel15.TabIndex = 90;
+            this.metroLabel15.Text = "Lead Assesment";
+            // 
+            // cBoxLeadAssigned
+            // 
+            this.cBoxLeadAssigned.FormattingEnabled = true;
+            this.cBoxLeadAssigned.Location = new System.Drawing.Point(18, 363);
+            this.cBoxLeadAssigned.Name = "cBoxLeadAssigned";
+            this.cBoxLeadAssigned.Size = new System.Drawing.Size(187, 21);
+            this.cBoxLeadAssigned.TabIndex = 89;
             // 
             // cBoxPriority
             // 
@@ -162,26 +197,6 @@
             this.txt_others.UseSelectable = true;
             this.txt_others.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_others.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(24, 412);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(144, 33);
-            this.btn_save.TabIndex = 80;
-            this.btn_save.Text = "&Save";
-            this.btn_save.UseSelectable = true;
-            this.btn_save.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // txt_cancel
-            // 
-            this.txt_cancel.Location = new System.Drawing.Point(24, 460);
-            this.txt_cancel.Name = "txt_cancel";
-            this.txt_cancel.Size = new System.Drawing.Size(144, 33);
-            this.txt_cancel.TabIndex = 81;
-            this.txt_cancel.Text = "&Clear";
-            this.txt_cancel.UseSelectable = true;
-            this.txt_cancel.Click += new System.EventHandler(this.txt_cancel_Click);
             // 
             // metroLabel14
             // 
@@ -548,6 +563,26 @@
             this.metroLabel1.TabIndex = 54;
             this.metroLabel1.Text = "Date of the Call/ Lead Received";
             // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(799, 84);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(144, 33);
+            this.btn_save.TabIndex = 80;
+            this.btn_save.Text = "&Save";
+            this.btn_save.UseSelectable = true;
+            this.btn_save.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // txt_cancel
+            // 
+            this.txt_cancel.Location = new System.Drawing.Point(799, 123);
+            this.txt_cancel.Name = "txt_cancel";
+            this.txt_cancel.Size = new System.Drawing.Size(144, 33);
+            this.txt_cancel.TabIndex = 81;
+            this.txt_cancel.Text = "&Clear";
+            this.txt_cancel.UseSelectable = true;
+            this.txt_cancel.Click += new System.EventHandler(this.txt_cancel_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -563,7 +598,7 @@
             this.metroLink1.BackColor = System.Drawing.Color.White;
             this.metroLink1.Image = global::RVL_Management_System.Properties.Resources.cancel;
             this.metroLink1.ImageSize = 32;
-            this.metroLink1.Location = new System.Drawing.Point(750, 3);
+            this.metroLink1.Location = new System.Drawing.Point(902, 3);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.NoFocusImage = global::RVL_Management_System.Properties.Resources.cancel_1_;
             this.metroLink1.Size = new System.Drawing.Size(41, 47);
@@ -571,28 +606,70 @@
             this.metroLink1.UseSelectable = true;
             this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
-            // cBoxLeadAssigned
+            // GridView
             // 
-            this.cBoxLeadAssigned.FormattingEnabled = true;
-            this.cBoxLeadAssigned.Location = new System.Drawing.Point(18, 363);
-            this.cBoxLeadAssigned.Name = "cBoxLeadAssigned";
-            this.cBoxLeadAssigned.Size = new System.Drawing.Size(187, 21);
-            this.cBoxLeadAssigned.TabIndex = 89;
+            this.GridView.AllowUserToAddRows = false;
+            this.GridView.AllowUserToDeleteRows = false;
+            this.GridView.AllowUserToResizeRows = false;
+            this.GridView.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.GridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.GridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.GridView.EnableHeadersVisualStyles = false;
+            this.GridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.GridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GridView.Location = new System.Drawing.Point(7, 484);
+            this.GridView.Name = "GridView";
+            this.GridView.ReadOnly = true;
+            this.GridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.GridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.GridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridView.Size = new System.Drawing.Size(936, 150);
+            this.GridView.TabIndex = 82;
             // 
             // Frm_LeadGeneration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.GridView);
             this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.txt_cancel);
             this.Name = "Frm_LeadGeneration";
-            this.Size = new System.Drawing.Size(799, 620);
+            this.Size = new System.Drawing.Size(951, 664);
             this.Load += new System.EventHandler(this.Frm_LeadGeneration_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Frm_LeadGeneration_MouseDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -633,5 +710,8 @@
         private System.Windows.Forms.ComboBox cBoxLeadFollowUp;
         private System.Windows.Forms.ComboBox cBoxPriority;
         private System.Windows.Forms.ComboBox cBoxLeadAssigned;
+        private System.Windows.Forms.ComboBox cBoxLeadAssesment;
+        private MetroFramework.Controls.MetroLabel metroLabel15;
+        private MetroFramework.Controls.MetroGrid GridView;
     }
 }

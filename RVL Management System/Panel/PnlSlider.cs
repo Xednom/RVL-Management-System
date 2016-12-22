@@ -81,7 +81,7 @@ namespace RVL_Management_System.Panel
         {
             this.Visible = true;
             Transition _transasition = new Transitions.Transition(new TransitionType_EaseInEaseOut(600));
-            _transasition.add(this, "Left", show ? 350 : this.Width);
+            _transasition.add(this, "Left", show ? 250 : this.Width);
             _transasition.add(this, "Top", show ? 100 : this.Height);
             _transasition.run();
 

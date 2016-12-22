@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transitions;
-using MetroFramework.Forms;
+using MetroFramework;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -30,6 +30,7 @@ namespace RVL_Management_System
         public static string leadFollow = "";
         public static string priority = "";
         public static string leadAssigned = "";
+        public static string leadAssesment = "";
         public static string memo = "";
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -47,6 +48,10 @@ namespace RVL_Management_System
         const int AW_HOR_NEGATIVE = 0X2;
 
         const int AW_BLEND = 0X80000;
+
+        SqlConnection conn = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
+
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -55,6 +60,8 @@ namespace RVL_Management_System
         public Frm_LeadGeneration(Form owner) : base(owner)
         {
             InitializeComponent();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+
         }
 
         public void clear()
@@ -71,15 +78,12 @@ namespace RVL_Management_System
             cBoxLeadFollowUp.Text = null;
             cBoxPriority.Text = null;
             cBoxLeadAssigned.Text = null;
+            cBoxLeadAssesment.Text = null;
             txt_memo.Text = null;
         }
 
         public void loadLeadSource()
         {
-            SqlConnection conn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-
-            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
 
             conn.Open();
             cmd.Connection = conn;
@@ -98,11 +102,6 @@ namespace RVL_Management_System
 
         public void loadLeadAssigned()
         {
-            SqlConnection conn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-
-            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
-
             conn.Open();
             cmd.Connection = conn;
             cmd.CommandText = "SELECT * FROM tblUser";
@@ -118,10 +117,28 @@ namespace RVL_Management_System
             conn.Close();
         }
 
+        public void loadData()
+        {
+            conn.Open();
+            cmd.Connection = conn;
+            string Show = "SELECT * FROM tblMarketing";
+            cmd.CommandText = Show;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            GridView.DataSource = dt;
+
+            conn.Close();
+
+            cmd.Parameters.Clear();
+        }
+
+
         private void Frm_LeadGeneration_Load(object sender, EventArgs e)
         {
             loadLeadSource();
-
+            loadData();
             loadLeadAssigned();
 
             cBoxLeadSource.Items.Add("Others..");
@@ -151,21 +168,29 @@ namespace RVL_Management_System
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            leadReceived = dtLeadReceived.Text;
-            lastName = txt_ln.Text;
-            firstName = txt_fn.Text;
-            middleName = txt_mn.Text;
-            phoneNumber = txt_pnum.Text;
-            emailAddress = txt_email.Text;
-            issueDescription = txt_IssueDes.Text;
-            leadSource = cBoxLeadSource.Text;
-            leadStat = cBoxLeadStats.Text;
-            leadFollow = cBoxLeadFollowUp.Text;
-            priority = cBoxPriority.Text;
-            leadAssigned = cBoxLeadAssigned.Text;
-            memo = txt_memo.Text;
-            Class.Cls_cmd.marketingAdd();
-            clear();
+            if (MetroMessageBox.Show(this, "Do you want to save this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                leadReceived = dtLeadReceived.Text;
+                lastName = txt_ln.Text;
+                firstName = txt_fn.Text;
+                middleName = txt_mn.Text;
+                phoneNumber = txt_pnum.Text;
+                emailAddress = txt_email.Text;
+                issueDescription = txt_IssueDes.Text;
+                leadSource = cBoxLeadSource.Text;
+                leadStat = cBoxLeadStats.Text;
+                leadFollow = cBoxLeadFollowUp.Text;
+                priority = cBoxPriority.Text;
+                leadAssigned = cBoxLeadAssigned.Text;
+                leadAssesment = cBoxLeadAssesment.Text;
+                memo = txt_memo.Text;
+                Class.Cls_cmd.marketingAdd();
+                clear();
+            }
+            else
+            {
+                //TODO: NOTHING
+            }
         }
 
         private void txt_cancel_Click(object sender, EventArgs e)
