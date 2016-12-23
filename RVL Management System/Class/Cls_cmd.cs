@@ -111,6 +111,39 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void marketingUpdate()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblMarketing(Lead_Received,Last_Name,First_Name,Middle_Name,Phone_Number,Email_Address,Issue_Description,Lead_Source,Other,Lead_Status,Priority,Memo,Lead_Assigned,Lead_Assesment)VALUES(@leadReceived,@ln,@fn,@mn,@pNum,@eAdd,@issueDes,@leadSource,@other,@leadStats,@priority,@memo,@leadAssigned,@leadAssesment)";
+            cmd.Parameters.AddWithValue("leadReceived", Frm_MarketingUpdate.leadReceived);
+            cmd.Parameters.AddWithValue("ln", Frm_MarketingUpdate.lastName);
+            cmd.Parameters.AddWithValue("fn", Frm_MarketingUpdate.firstName);
+            cmd.Parameters.AddWithValue("mn", Frm_MarketingUpdate.middleName);
+            cmd.Parameters.AddWithValue("pNum", Frm_MarketingUpdate.phoneNumber);
+            cmd.Parameters.AddWithValue("eAdd", Frm_MarketingUpdate.emailAddress);
+            cmd.Parameters.AddWithValue("issueDes", Frm_MarketingUpdate.issueDescription);
+            cmd.Parameters.AddWithValue("leadSource", Frm_MarketingUpdate.leadSource);
+            cmd.Parameters.AddWithValue("other", Frm_MarketingUpdate.other);
+            cmd.Parameters.AddWithValue("leadStats", Frm_MarketingUpdate.leadStat);
+            cmd.Parameters.AddWithValue("priority", Frm_MarketingUpdate.priority);
+            cmd.Parameters.AddWithValue("memo", Frm_MarketingUpdate.memo);
+            cmd.Parameters.AddWithValue("leadAssigned", Frm_MarketingUpdate.leadAssigned);
+            cmd.Parameters.AddWithValue("leadAssesment", Frm_MarketingUpdate.leadAssesment);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully updated this Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
         public static void updateLogin()
         {
             SqlConnection conn = new SqlConnection();

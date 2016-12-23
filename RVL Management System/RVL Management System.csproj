@@ -143,10 +143,16 @@
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_MarketingUpdate.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Frm_MarketingUpdate.Designer.cs">
       <DependentUpon>Frm_MarketingUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_MarketingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_MarketingView.Designer.cs">
+      <DependentUpon>Frm_MarketingView.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Tasks.cs">
       <SubType>UserControl</SubType>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MarketingUpdate.resx">
       <DependentUpon>Frm_MarketingUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_MarketingVIew.resx">
+      <DependentUpon>Frm_MarketingView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Tasks.resx">
       <DependentUpon>Frm_Tasks.cs</DependentUpon>

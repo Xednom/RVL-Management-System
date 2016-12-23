@@ -13,6 +13,7 @@ using MetroFramework;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Configuration;
+using RVL_Management_System.Forms;  
 
 namespace RVL_Management_System
 {
@@ -26,6 +27,7 @@ namespace RVL_Management_System
         public static string emailAddress = "";
         public static string issueDescription = "";
         public static string leadSource = "";
+        public static string other = "";
         public static string leadStat = "";
         public static string leadFollow = "";
         public static string priority = "";
@@ -178,6 +180,7 @@ namespace RVL_Management_System
                 emailAddress = txt_email.Text;
                 issueDescription = txt_IssueDes.Text;
                 leadSource = cBoxLeadSource.Text;
+                other = txt_others.Text;
                 leadStat = cBoxLeadStats.Text;
                 leadFollow = cBoxLeadFollowUp.Text;
                 priority = cBoxPriority.Text;
@@ -238,6 +241,18 @@ namespace RVL_Management_System
         private void dataGridView_SelectionChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void metroButton1_Click_1(object sender, EventArgs e)
+        {
+            Frm_MarketingView fview = new Frm_MarketingView();
+            fview.ShowDialog();
+        }
+
+        private void metroButton2_Click_1(object sender, EventArgs e)
+        {
+            Frm_MarketingUpdate fupdate = new Frm_MarketingUpdate();
+            fupdate.ShowDialog();
         }
     }
 }

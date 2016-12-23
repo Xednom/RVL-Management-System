@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cBoxLeadAssesment = new System.Windows.Forms.ComboBox();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.cBoxLeadAssigned = new System.Windows.Forms.ComboBox();
             this.cBoxPriority = new System.Windows.Forms.ComboBox();
             this.cBoxLeadFollowUp = new System.Windows.Forms.ComboBox();
@@ -65,8 +63,12 @@
             this.btn_save = new MetroFramework.Controls.MetroButton();
             this.txt_cancel = new MetroFramework.Controls.MetroButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.GridView = new MetroFramework.Controls.MetroGrid();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.cBoxLeadAssesment = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
@@ -110,26 +112,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marketing Information";
-            // 
-            // cBoxLeadAssesment
-            // 
-            this.cBoxLeadAssesment.FormattingEnabled = true;
-            this.cBoxLeadAssesment.Items.AddRange(new object[] {
-            "Passed",
-            "Failed"});
-            this.cBoxLeadAssesment.Location = new System.Drawing.Point(239, 312);
-            this.cBoxLeadAssesment.Name = "cBoxLeadAssesment";
-            this.cBoxLeadAssesment.Size = new System.Drawing.Size(187, 21);
-            this.cBoxLeadAssesment.TabIndex = 91;
-            // 
-            // metroLabel15
-            // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(239, 284);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(102, 19);
-            this.metroLabel15.TabIndex = 90;
-            this.metroLabel15.Text = "Lead Assesment";
             // 
             // cBoxLeadAssigned
             // 
@@ -593,19 +575,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Marketing";
             // 
-            // metroLink1
-            // 
-            this.metroLink1.BackColor = System.Drawing.Color.White;
-            this.metroLink1.Image = global::RVL_Management_System.Properties.Resources.cancel;
-            this.metroLink1.ImageSize = 32;
-            this.metroLink1.Location = new System.Drawing.Point(902, 3);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.NoFocusImage = global::RVL_Management_System.Properties.Resources.cancel_1_;
-            this.metroLink1.Size = new System.Drawing.Size(41, 47);
-            this.metroLink1.TabIndex = 8;
-            this.metroLink1.UseSelectable = true;
-            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
-            // 
             // GridView
             // 
             this.GridView.AllowUserToAddRows = false;
@@ -652,11 +621,66 @@
             this.GridView.Size = new System.Drawing.Size(936, 150);
             this.GridView.TabIndex = 82;
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(799, 425);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(144, 33);
+            this.metroButton1.TabIndex = 83;
+            this.metroButton1.Text = "&View all records";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
+            // 
+            // metroLink1
+            // 
+            this.metroLink1.BackColor = System.Drawing.Color.White;
+            this.metroLink1.Image = global::RVL_Management_System.Properties.Resources.cancel;
+            this.metroLink1.ImageSize = 32;
+            this.metroLink1.Location = new System.Drawing.Point(902, 3);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.NoFocusImage = global::RVL_Management_System.Properties.Resources.cancel_1_;
+            this.metroLink1.Size = new System.Drawing.Size(41, 47);
+            this.metroLink1.TabIndex = 8;
+            this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(799, 386);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(144, 33);
+            this.metroButton2.TabIndex = 84;
+            this.metroButton2.Text = "&Update Records";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.Location = new System.Drawing.Point(239, 284);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(102, 19);
+            this.metroLabel15.TabIndex = 90;
+            this.metroLabel15.Text = "Lead Assesment";
+            // 
+            // cBoxLeadAssesment
+            // 
+            this.cBoxLeadAssesment.FormattingEnabled = true;
+            this.cBoxLeadAssesment.Items.AddRange(new object[] {
+            "Passed",
+            "Failed"});
+            this.cBoxLeadAssesment.Location = new System.Drawing.Point(239, 312);
+            this.cBoxLeadAssesment.Name = "cBoxLeadAssesment";
+            this.cBoxLeadAssesment.Size = new System.Drawing.Size(187, 21);
+            this.cBoxLeadAssesment.TabIndex = 91;
+            // 
             // Frm_LeadGeneration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.GridView);
             this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.label1);
@@ -664,7 +688,7 @@
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.txt_cancel);
             this.Name = "Frm_LeadGeneration";
-            this.Size = new System.Drawing.Size(951, 664);
+            this.Size = new System.Drawing.Size(951, 652);
             this.Load += new System.EventHandler(this.Frm_LeadGeneration_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Frm_LeadGeneration_MouseDown);
             this.groupBox1.ResumeLayout(false);
@@ -710,8 +734,10 @@
         private System.Windows.Forms.ComboBox cBoxLeadFollowUp;
         private System.Windows.Forms.ComboBox cBoxPriority;
         private System.Windows.Forms.ComboBox cBoxLeadAssigned;
+        private MetroFramework.Controls.MetroGrid GridView;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
         private System.Windows.Forms.ComboBox cBoxLeadAssesment;
         private MetroFramework.Controls.MetroLabel metroLabel15;
-        private MetroFramework.Controls.MetroGrid GridView;
     }
 }
