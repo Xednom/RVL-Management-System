@@ -88,7 +88,7 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string INSERT = "INSERT INTO tblMarketing(Lead_Received,Last_Name,First_Name,Middle_Name,Phone_Number,Email_Address,Issue_Description,Lead_Source,Lead_Status,Priority,Memo,Lead_Assigned,Lead_Assesment)VALUES(@leadReceived,@ln,@fn,@mn,@pNum,@eAdd,@issueDes,@leadSource,@leadStats,@priority,@memo,@leadAssigned,@leadAssesment)";
+            string INSERT = "INSERT INTO tblMarketing(Lead_Received,Last_Name,First_Name,Middle_Name,Phone_Number,Email_Address,Issue_Description,Lead_Source,Other,Lead_FollowUp,Lead_Status,Priority,Memo,Lead_Assigned,Lead_Assesment)VALUES(@leadReceived,@ln,@fn,@mn,@pNum,@eAdd,@issueDes,@leadSource,@other,@leadFollow,@leadStats,@priority,@memo,@leadAssigned,@leadAssesment)";
             cmd.Parameters.AddWithValue("leadReceived", Frm_LeadGeneration.leadReceived);
             cmd.Parameters.AddWithValue("ln", Frm_LeadGeneration.lastName);
             cmd.Parameters.AddWithValue("fn", Frm_LeadGeneration.firstName);
@@ -97,6 +97,8 @@ namespace RVL_Management_System.Class
             cmd.Parameters.AddWithValue("eAdd", Frm_LeadGeneration.emailAddress);
             cmd.Parameters.AddWithValue("issueDes", Frm_LeadGeneration.issueDescription);
             cmd.Parameters.AddWithValue("leadSource", Frm_LeadGeneration.leadSource);
+            cmd.Parameters.AddWithValue("other", Frm_LeadGeneration.other);
+            cmd.Parameters.AddWithValue("leadFollow", Frm_LeadGeneration.leadFollow);
             cmd.Parameters.AddWithValue("leadStats", Frm_LeadGeneration.leadStat);
             cmd.Parameters.AddWithValue("priority", Frm_LeadGeneration.priority);
             cmd.Parameters.AddWithValue("memo", Frm_LeadGeneration.memo);
@@ -120,7 +122,7 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string INSERT = "INSERT INTO tblMarketing(Lead_Received,Last_Name,First_Name,Middle_Name,Phone_Number,Email_Address,Issue_Description,Lead_Source,Other,Lead_Status,Priority,Memo,Lead_Assigned,Lead_Assesment)VALUES(@leadReceived,@ln,@fn,@mn,@pNum,@eAdd,@issueDes,@leadSource,@other,@leadStats,@priority,@memo,@leadAssigned,@leadAssesment)";
+            string INSERT = "INSERT INTO tblMarketing(Lead_Received,Last_Name,First_Name,Middle_Name,Phone_Number,Email_Address,Issue_Description,Lead_Source,Other,Lead_FollowUp,Lead_Status,Priority,Memo,Lead_Assigned,Lead_Assesment)VALUES(@leadReceived,@ln,@fn,@mn,@pNum,@eAdd,@issueDes,@leadSource,@other,@leadFollow,@leadStats,@priority,@memo,@leadAssigned,@leadAssesment)";
             cmd.Parameters.AddWithValue("leadReceived", Frm_MarketingUpdate.leadReceived);
             cmd.Parameters.AddWithValue("ln", Frm_MarketingUpdate.lastName);
             cmd.Parameters.AddWithValue("fn", Frm_MarketingUpdate.firstName);
@@ -130,6 +132,7 @@ namespace RVL_Management_System.Class
             cmd.Parameters.AddWithValue("issueDes", Frm_MarketingUpdate.issueDescription);
             cmd.Parameters.AddWithValue("leadSource", Frm_MarketingUpdate.leadSource);
             cmd.Parameters.AddWithValue("other", Frm_MarketingUpdate.other);
+            cmd.Parameters.AddWithValue("leadFollow", Frm_MarketingUpdate.leadFollow);
             cmd.Parameters.AddWithValue("leadStats", Frm_MarketingUpdate.leadStat);
             cmd.Parameters.AddWithValue("priority", Frm_MarketingUpdate.priority);
             cmd.Parameters.AddWithValue("memo", Frm_MarketingUpdate.memo);

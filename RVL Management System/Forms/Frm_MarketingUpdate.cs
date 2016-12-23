@@ -164,6 +164,9 @@ namespace RVL_Management_System.Forms
 
         private void Frm_MarketingUpdate_Load(object sender, EventArgs e)
         {
+            loadLeadSource();
+            loadLeadAssigned();
+            loadData();
             cBoxLeadStats.Items.Add("Prospect");
             cBoxLeadStats.Items.Add("Qualified Lead");
             cBoxLeadStats.Items.Add("Buyer");
@@ -221,11 +224,13 @@ namespace RVL_Management_System.Forms
                 txt_email.Text = row.Cells[6].Value.ToString();
                 txt_IssueDes.Text = row.Cells[7].Value.ToString();
                 cBoxLeadSource.Text = row.Cells[8].Value.ToString();
-                cBoxLeadStats.Text = row.Cells[9].Value.ToString();
-                cBoxPriority.Text = row.Cells[10].Value.ToString();
-                txt_memo.Text = row.Cells[11].Value.ToString();
-                cBoxLeadAssigned.Text = row.Cells[12].Value.ToString();
-                cBoxLeadAssesment.Text = row.Cells[13].Value.ToString();
+                txt_others.Text = row.Cells[9].Value.ToString();
+                cBoxLeadFollowUp.Text = row.Cells[10].Value.ToString();
+                cBoxLeadStats.Text = row.Cells[11].Value.ToString();
+                cBoxPriority.Text = row.Cells[12].Value.ToString();
+                txt_memo.Text = row.Cells[13].Value.ToString();
+                cBoxLeadAssigned.Text = row.Cells[14].Value.ToString();
+                cBoxLeadAssesment.Text = row.Cells[15].Value.ToString();
             }
         }
 
@@ -252,12 +257,19 @@ namespace RVL_Management_System.Forms
                 leadFollow = cBoxLeadFollowUp.Text;
                 leadAssesment = cBoxLeadAssesment.Text;
                 leadAssigned = cBoxLeadAssigned.Text;
+                memo = txt_memo.Text;
                 Class.Cls_cmd.marketingUpdate();
+                loadData();
             }
             else
             {
                 //TODO: NOTHING
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

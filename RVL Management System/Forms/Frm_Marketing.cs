@@ -189,6 +189,7 @@ namespace RVL_Management_System
                 memo = txt_memo.Text;
                 Class.Cls_cmd.marketingAdd();
                 clear();
+                loadData();
             }
             else
             {
