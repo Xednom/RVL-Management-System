@@ -124,6 +124,12 @@
     <Compile Include="Forms\Frm_Email.Designer.cs">
       <DependentUpon>Frm_Email.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_LeadAssigned.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_LeadAssigned.Designer.cs">
+      <DependentUpon>Frm_LeadAssigned.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_Marketing.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Email.resx">
       <DependentUpon>Frm_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_LeadAssigned.resx">
+      <DependentUpon>Frm_LeadAssigned.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Marketing.resx">
       <DependentUpon>Frm_Marketing.cs</DependentUpon>
