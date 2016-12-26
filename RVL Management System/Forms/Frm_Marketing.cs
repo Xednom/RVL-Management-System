@@ -255,5 +255,11 @@ namespace RVL_Management_System
             Frm_MarketingUpdate fupdate = new Frm_MarketingUpdate();
             fupdate.ShowDialog();
         }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            Frm_LeadAssigned flead = new Frm_LeadAssigned();
+            flead.ShowDialog();
+        }
     }
 }

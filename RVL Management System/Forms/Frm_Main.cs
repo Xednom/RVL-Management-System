@@ -193,5 +193,11 @@ namespace RVL_Management_System
             Frm_LeadAssigned fassigned = new Frm_LeadAssigned();
             fassigned.ShowDialog();
         }
+
+        private void metroLink3_Click(object sender, EventArgs e)
+        {
+            Frm_CompanyLoginsMenu flogins = new Frm_CompanyLoginsMenu();
+            flogins.ShowDialog();
+        }
     }
 }

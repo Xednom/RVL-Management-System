@@ -113,6 +113,31 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void companyAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblCompanyLogins(Category_Name,URL_Link,Username,Password,Name_Login_Under,Give_Access_To)VALUES(@catName,@url,@un,@pw,@nameLogin,@giveAccess)";
+            cmd.Parameters.AddWithValue("catName", Frm_CompanyLoginsAdd.categoryName);
+            cmd.Parameters.AddWithValue("url", Frm_CompanyLoginsAdd.URLlink);
+            cmd.Parameters.AddWithValue("un", Frm_CompanyLoginsAdd.userName);
+            cmd.Parameters.AddWithValue("pw", Frm_CompanyLoginsAdd.passWord);
+            cmd.Parameters.AddWithValue("nameLogin", Frm_CompanyLoginsAdd.nameLogin);
+            cmd.Parameters.AddWithValue("giveAccess", Frm_CompanyLoginsAdd.giveAccess);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully saved this Company login Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
         public static void marketingUpdate()
         {
             SqlConnection conn = new SqlConnection();
@@ -196,6 +221,32 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void companyUpdate()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string UPDATE = "UPDATE tblCompanyLogins SET Category_Name = @cn, URL_Link=@url, Username = @un, Password=@pw, Name_Login_Under = @nLogin, Give_Access_To = @gAccessTo WHERE CID = @cid";
+            cmd.Parameters.AddWithValue("cn", Frm_CompanyLoginsUpdate.categoryName);
+            cmd.Parameters.AddWithValue("url", Frm_CompanyLoginsUpdate.URLlink);
+            cmd.Parameters.AddWithValue("un", Frm_CompanyLoginsUpdate.userName);
+            cmd.Parameters.AddWithValue("pw", Frm_CompanyLoginsUpdate.passWord);
+            cmd.Parameters.AddWithValue("nLogin", Frm_CompanyLoginsUpdate.nameLogin);
+            cmd.Parameters.AddWithValue("gAccessTo", Frm_CompanyLoginsUpdate.giveAccess);
+            cmd.Parameters.AddWithValue("cid", Frm_CompanyLoginsUpdate.categoryID);
+            cmd.CommandText = UPDATE;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully updated this Company Logins Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
         public static void taskAssign()
         {
             SqlConnection conn = new SqlConnection();
@@ -213,6 +264,26 @@ namespace RVL_Management_System.Class
 
             MessageBox.Show("Task assign to this person.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
             conn.Close();
+
+            cmd.Parameters.Clear();
+        }
+
+        public static void companyDelete()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string UPDATE = "DELETE tblCompanyLogins WHERE CID = @cid";
+            cmd.Parameters.AddWithValue("cid", Frm_CompanyLoginsDelete.CID);
+            cmd.CommandText = UPDATE;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully deleted this Company Logins Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }

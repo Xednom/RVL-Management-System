@@ -118,6 +118,36 @@
     <Compile Include="Forms\Frm_AddLeadSource.Designer.cs">
       <DependentUpon>Frm_AddLeadSource.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsAdd.Designer.cs">
+      <DependentUpon>Frm_CompanyLoginsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsDelete.Designer.cs">
+      <DependentUpon>Frm_CompanyLoginsDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsMenu.Designer.cs">
+      <DependentUpon>Frm_CompanyLoginsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsUpdate.Designer.cs">
+      <DependentUpon>Frm_CompanyLoginsUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsView.Designer.cs">
+      <DependentUpon>Frm_CompanyLoginsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_Email.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +254,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Frm_AddLeadSource.resx">
       <DependentUpon>Frm_AddLeadSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_CompanyLoginsAdd.resx">
+      <DependentUpon>Frm_CompanyLoginsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_CompanyLoginsDelete.resx">
+      <DependentUpon>Frm_CompanyLoginsDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_CompanyLoginsMenu.resx">
+      <DependentUpon>Frm_CompanyLoginsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_CompanyLoginsUpdate.resx">
+      <DependentUpon>Frm_CompanyLoginsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_CompanyLoginsView.resx">
+      <DependentUpon>Frm_CompanyLoginsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Email.resx">
       <DependentUpon>Frm_Email.cs</DependentUpon>
@@ -359,6 +404,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cart-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rubbish-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cabinet-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cabinet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
