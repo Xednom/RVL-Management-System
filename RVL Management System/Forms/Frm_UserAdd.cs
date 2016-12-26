@@ -30,7 +30,7 @@ namespace RVL_Management_System
             InitializeComponent();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
         }
-        public void loadUserype()
+        public void loadUserType()
         {
             conn.Open();
             cmd.Connection = conn;
@@ -67,7 +67,7 @@ namespace RVL_Management_System
         private void Frm_UserAdd_Load(object sender, EventArgs e)
         {
             loadUID();
-            loadUserype();
+            loadUserType();
         }
 
         private void metroButton2_Click(object sender, EventArgs e)

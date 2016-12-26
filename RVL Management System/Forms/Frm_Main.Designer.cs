@@ -44,6 +44,9 @@
             this.btn_marketing = new MetroFramework.Controls.MetroLink();
             this.btn_task = new MetroFramework.Controls.MetroLink();
             this.btn_lead = new MetroFramework.Controls.MetroLink();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_name = new System.Windows.Forms.ToolStripStatusLabel();
+            this.metroLink2 = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +62,9 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel,
-            this.lbl_Usertype});
+            this.lbl_Usertype,
+            this.toolStripStatusLabel1,
+            this.lbl_name});
             this.statusStrip.Location = new System.Drawing.Point(20, 610);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(957, 22);
@@ -208,6 +213,33 @@
             this.btn_lead.UseSelectable = true;
             this.btn_lead.Click += new System.EventHandler(this.metroLink2_Click_1);
             // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel1.Text = "Name:";
+            // 
+            // lbl_name
+            // 
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(118, 17);
+            this.lbl_name.Text = "toolStripStatusLabel2";
+            // 
+            // metroLink2
+            // 
+            this.metroLink2.Image = global::RVL_Management_System.Properties.Resources.cart_1;
+            this.metroLink2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLink2.ImageSize = 32;
+            this.metroLink2.Location = new System.Drawing.Point(148, 379);
+            this.metroLink2.Name = "metroLink2";
+            this.metroLink2.NoFocusImage = global::RVL_Management_System.Properties.Resources.cart;
+            this.metroLink2.Size = new System.Drawing.Size(156, 74);
+            this.metroLink2.TabIndex = 26;
+            this.metroLink2.Text = "Lead Assigned to you";
+            this.metroLink2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroLink2.UseSelectable = true;
+            this.metroLink2.Click += new System.EventHandler(this.metroLink2_Click_2);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +247,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.metroLink2);
             this.Controls.Add(this.btn_lead);
             this.Controls.Add(this.btn_task);
             this.Controls.Add(this.btn_marketing);
@@ -265,6 +298,9 @@
         private MetroFramework.Controls.MetroLink btn_marketing;
         public MetroFramework.Controls.MetroLink btn_task;
         private MetroFramework.Controls.MetroLink btn_lead;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_name;
+        private MetroFramework.Controls.MetroLink metroLink2;
     }
 }
 

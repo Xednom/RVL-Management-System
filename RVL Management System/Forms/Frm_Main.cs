@@ -18,6 +18,7 @@ namespace RVL_Management_System
     {
         private int childFormNumber = 0;
         public static string task = "";
+        public static string name = "";
 
         public Frm_Main()
         {
@@ -88,6 +89,9 @@ namespace RVL_Management_System
         private void Frm_Main_Load(object sender, EventArgs e)
         {
             lbl_Usertype.Text = Frm_Login.UserType;
+            lbl_name.Text = Frm_Login.fullName;
+
+            name = lbl_name.Text;
         }
 
         private void metroTile5_Click(object sender, EventArgs e)
@@ -182,6 +186,12 @@ namespace RVL_Management_System
         {
             Frm_AddLeadSource flead = new Frm_AddLeadSource();
             flead.ShowDialog();
+        }
+
+        private void metroLink2_Click_2(object sender, EventArgs e)
+        {
+            Frm_LeadAssigned fassigned = new Frm_LeadAssigned();
+            fassigned.ShowDialog();
         }
     }
 }

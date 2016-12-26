@@ -28,8 +28,10 @@ namespace RVL_Management_System.Forms
         {
             conn.Open();
             cmd.Connection = conn;
-            string Show = "SELECT * FROM tblMarketing";
+            string Show = "SELECT * FROM tblMarketing WHERE Lead_Assigned = @lAssigned";
+            cmd.Parameters.AddWithValue("lAssigned", lbl_name.Text);
             cmd.CommandText = Show;
+            cmd.ExecuteNonQuery();
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -43,7 +45,8 @@ namespace RVL_Management_System.Forms
 
         private void Frm_LeadAssigned_Load(object sender, EventArgs e)
         {
-
+            lbl_name.Text = Frm_Main.name;
+            loadData();
         }
     }
 }
