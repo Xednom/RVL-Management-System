@@ -142,7 +142,7 @@
             this.txt_cid.CustomButton.Visible = false;
             this.txt_cid.Enabled = false;
             this.txt_cid.Lines = new string[0];
-            this.txt_cid.Location = new System.Drawing.Point(80, 106);
+            this.txt_cid.Location = new System.Drawing.Point(576, 106);
             this.txt_cid.MaxLength = 32767;
             this.txt_cid.Name = "txt_cid";
             this.txt_cid.PasswordChar = '\0';

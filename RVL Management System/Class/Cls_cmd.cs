@@ -138,6 +138,26 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void landOwnerAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblLandOwner(Land_Owner)VALUES(@landOwner)";
+            cmd.Parameters.AddWithValue("landOwner", Frm_LandOwner.landOwner);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully saved this land owner Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
         public static void marketingUpdate()
         {
             SqlConnection conn = new SqlConnection();

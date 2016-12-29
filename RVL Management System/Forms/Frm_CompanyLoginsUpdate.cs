@@ -100,23 +100,30 @@ namespace RVL_Management_System.Forms
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to update this Company Login Information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txt_cid.Text == string.Empty)
             {
-                categoryID = txt_cid.Text;
-                categoryName = txt_categoryName.Text;
-                URLlink = txt_url.Text;
-                userName = txt_un.Text;
-                passWord = txt_pw.Text;
-                nameLogin = txt_nameLogin.Text;
-                giveAccess = txt_giveAccess.Text;
-                Class.Cls_cmd.companyUpdate();
-                clear();
-                refresh();
+                MetroMessageBox.Show(this,"Please select a data to update!", "RVL System", MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else
             {
-                //if no 
-                //TODO:NOTHING
+                if (MetroMessageBox.Show(this, "Do you want to update this Company Login Information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    categoryID = txt_cid.Text;
+                    categoryName = txt_categoryName.Text;
+                    URLlink = txt_url.Text;
+                    userName = txt_un.Text;
+                    passWord = txt_pw.Text;
+                    nameLogin = txt_nameLogin.Text;
+                    giveAccess = txt_giveAccess.Text;
+                    Class.Cls_cmd.companyUpdate();
+                    clear();
+                    refresh();
+                }
+                else
+                {
+                    //if no 
+                    //TODO:NOTHING
+                }
             }
         }
 

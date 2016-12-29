@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using MetroFramework;
 using System.Data.SqlClient;
 using System.Configuration;
 
@@ -90,9 +91,24 @@ namespace RVL_Management_System.Forms
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            CID = txt_cid.Text;
-            Class.Cls_cmd.companyDelete();
-            refresh();
+            if (txt_cid.Text == string.Empty)
+            {
+                MetroMessageBox.Show(this, "Please select a data to delete!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (MetroMessageBox.Show(this, "Do you want to delete this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CID = txt_cid.Text;
+                    Class.Cls_cmd.companyDelete();
+                    refresh();
+                }
+                else
+                {
+                    //IF NO
+                    //TODO: NOTHING
+                }
+            }
         }
     }
 }
