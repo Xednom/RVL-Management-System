@@ -48,6 +48,7 @@
             this.btn_lead = new MetroFramework.Controls.MetroLink();
             this.metroLink2 = new MetroFramework.Controls.MetroLink();
             this.metroLink3 = new MetroFramework.Controls.MetroLink();
+            this.metroLink4 = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -256,6 +257,20 @@
             this.metroLink3.UseSelectable = true;
             this.metroLink3.Click += new System.EventHandler(this.metroLink3_Click);
             // 
+            // metroLink4
+            // 
+            this.metroLink4.Image = global::RVL_Management_System.Properties.Resources.share;
+            this.metroLink4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLink4.ImageSize = 32;
+            this.metroLink4.Location = new System.Drawing.Point(310, 87);
+            this.metroLink4.Name = "metroLink4";
+            this.metroLink4.NoFocusImage = global::RVL_Management_System.Properties.Resources.share_1;
+            this.metroLink4.Size = new System.Drawing.Size(128, 67);
+            this.metroLink4.TabIndex = 30;
+            this.metroLink4.Text = "Social Media";
+            this.metroLink4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroLink4.UseSelectable = true;
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,6 +278,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.metroLink4);
             this.Controls.Add(this.metroLink3);
             this.Controls.Add(this.metroLink2);
             this.Controls.Add(this.btn_lead);
@@ -319,6 +335,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lbl_name;
         private MetroFramework.Controls.MetroLink metroLink2;
         private MetroFramework.Controls.MetroLink metroLink3;
+        private MetroFramework.Controls.MetroLink metroLink4;
     }
 }
 

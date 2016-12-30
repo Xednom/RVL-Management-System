@@ -214,6 +214,18 @@
     <Compile Include="Forms\Frm_SocialMediaAdd.Designer.cs">
       <DependentUpon>Frm_SocialMediaAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_SocialMediaUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SocialMediaUpdate.Designer.cs">
+      <DependentUpon>Frm_SocialMediaUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SocialMediaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SocialMediaView.Designer.cs">
+      <DependentUpon>Frm_SocialMediaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_Tasks.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -326,6 +338,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_SocialMediaAdd.resx">
       <DependentUpon>Frm_SocialMediaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SocialMediaUpdate.resx">
+      <DependentUpon>Frm_SocialMediaUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SocialMediaView.resx">
+      <DependentUpon>Frm_SocialMediaView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Tasks.resx">
       <DependentUpon>Frm_Tasks.cs</DependentUpon>
@@ -470,6 +488,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cabinet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\share-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\share.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

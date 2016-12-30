@@ -39,7 +39,7 @@
             this.btn_view.Image = global::RVL_Management_System.Properties.Resources.cabinet;
             this.btn_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_view.ImageSize = 32;
-            this.btn_view.Location = new System.Drawing.Point(389, 80);
+            this.btn_view.Location = new System.Drawing.Point(361, 80);
             this.btn_view.Name = "btn_view";
             this.btn_view.NoFocusImage = global::RVL_Management_System.Properties.Resources.cabinet_1;
             this.btn_view.Size = new System.Drawing.Size(89, 75);
@@ -54,7 +54,7 @@
             this.btn_delete.Image = global::RVL_Management_System.Properties.Resources.delete_photo;
             this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_delete.ImageSize = 32;
-            this.btn_delete.Location = new System.Drawing.Point(277, 80);
+            this.btn_delete.Location = new System.Drawing.Point(266, 80);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.NoFocusImage = global::RVL_Management_System.Properties.Resources.rubbish_bin;
             this.btn_delete.Size = new System.Drawing.Size(89, 75);
@@ -84,7 +84,7 @@
             this.btn_add.Image = global::RVL_Management_System.Properties.Resources.plus_1;
             this.btn_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_add.ImageSize = 32;
-            this.btn_add.Location = new System.Drawing.Point(50, 80);
+            this.btn_add.Location = new System.Drawing.Point(63, 80);
             this.btn_add.Name = "btn_add";
             this.btn_add.NoFocusImage = global::RVL_Management_System.Properties.Resources.plus;
             this.btn_add.Size = new System.Drawing.Size(78, 75);
@@ -98,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 187);
+            this.ClientSize = new System.Drawing.Size(496, 171);
             this.Controls.Add(this.btn_view);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_edit);

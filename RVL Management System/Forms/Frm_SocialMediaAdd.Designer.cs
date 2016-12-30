@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -48,8 +51,10 @@
             this.cBoxPreApproved = new MetroFramework.Controls.MetroComboBox();
             this.cBoxStatus = new MetroFramework.Controls.MetroComboBox();
             this.txt_addiotnalNotes = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btn_save = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.GridView = new MetroFramework.Controls.MetroGrid();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -178,7 +183,7 @@
             // 
             // 
             this.txt_current.CustomButton.Image = null;
-            this.txt_current.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.txt_current.CustomButton.Location = new System.Drawing.Point(110, 1);
             this.txt_current.CustomButton.Name = "";
             this.txt_current.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_current.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -208,7 +213,7 @@
             // 
             // 
             this.txt_updatePrice.CustomButton.Image = null;
-            this.txt_updatePrice.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.txt_updatePrice.CustomButton.Location = new System.Drawing.Point(110, 1);
             this.txt_updatePrice.CustomButton.Name = "";
             this.txt_updatePrice.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_updatePrice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -238,7 +243,7 @@
             // 
             // 
             this.txt_title.CustomButton.Image = null;
-            this.txt_title.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.txt_title.CustomButton.Location = new System.Drawing.Point(304, 1);
             this.txt_title.CustomButton.Name = "";
             this.txt_title.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_title.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -298,7 +303,7 @@
             // 
             // 
             this.txt_hashtags.CustomButton.Image = null;
-            this.txt_hashtags.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.txt_hashtags.CustomButton.Location = new System.Drawing.Point(141, 1);
             this.txt_hashtags.CustomButton.Name = "";
             this.txt_hashtags.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_hashtags.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -316,7 +321,7 @@
             this.txt_hashtags.SelectionLength = 0;
             this.txt_hashtags.SelectionStart = 0;
             this.txt_hashtags.ShortcutsEnabled = true;
-            this.txt_hashtags.Size = new System.Drawing.Size(155, 23);
+            this.txt_hashtags.Size = new System.Drawing.Size(163, 23);
             this.txt_hashtags.TabIndex = 15;
             this.txt_hashtags.UseSelectable = true;
             this.txt_hashtags.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -385,9 +390,9 @@
             // 
             // 
             this.txt_addiotnalNotes.CustomButton.Image = null;
-            this.txt_addiotnalNotes.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.txt_addiotnalNotes.CustomButton.Location = new System.Drawing.Point(231, 1);
             this.txt_addiotnalNotes.CustomButton.Name = "";
-            this.txt_addiotnalNotes.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_addiotnalNotes.CustomButton.Size = new System.Drawing.Size(91, 91);
             this.txt_addiotnalNotes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_addiotnalNotes.CustomButton.TabIndex = 1;
             this.txt_addiotnalNotes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -410,31 +415,80 @@
             this.txt_addiotnalNotes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_addiotnalNotes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroButton1
+            // btn_save
             // 
-            this.metroButton1.Location = new System.Drawing.Point(43, 319);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 20;
-            this.metroButton1.Text = "&Save";
-            this.metroButton1.UseSelectable = true;
+            this.btn_save.Location = new System.Drawing.Point(43, 252);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 23);
+            this.btn_save.TabIndex = 20;
+            this.btn_save.Text = "&Save";
+            this.btn_save.UseSelectable = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(123, 319);
+            this.metroButton2.Location = new System.Drawing.Point(123, 252);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 21;
             this.metroButton2.Text = "&Clear";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // GridView
+            // 
+            this.GridView.AllowUserToAddRows = false;
+            this.GridView.AllowUserToDeleteRows = false;
+            this.GridView.AllowUserToResizeRows = false;
+            this.GridView.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.GridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.GridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.GridView.EnableHeadersVisualStyles = false;
+            this.GridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.GridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GridView.Location = new System.Drawing.Point(23, 333);
+            this.GridView.Name = "GridView";
+            this.GridView.ReadOnly = true;
+            this.GridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.GridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.GridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridView.Size = new System.Drawing.Size(1072, 194);
+            this.GridView.TabIndex = 50;
             // 
             // Frm_SocialMediaAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 506);
+            this.ClientSize = new System.Drawing.Size(1118, 550);
+            this.Controls.Add(this.GridView);
             this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.txt_addiotnalNotes);
             this.Controls.Add(this.cBoxStatus);
             this.Controls.Add(this.cBoxPreApproved);
@@ -461,6 +515,7 @@
             this.Resizable = false;
             this.Text = "Add Social Media Infromation";
             this.Load += new System.EventHandler(this.Frm_SocialMediaAdd_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,7 +543,8 @@
         private MetroFramework.Controls.MetroComboBox cBoxPreApproved;
         private MetroFramework.Controls.MetroComboBox cBoxStatus;
         private MetroFramework.Controls.MetroTextBox txt_addiotnalNotes;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btn_save;
         private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroGrid GridView;
     }
 }

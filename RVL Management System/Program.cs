@@ -16,7 +16,7 @@ namespace RVL_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.Frm_PropertyInventory());
+            Application.Run(new Forms.Frm_SocialMediaView());
         }
     }
 }

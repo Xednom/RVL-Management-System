@@ -158,6 +158,34 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void socialMediaAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblSocialMedia(Current_Market_Value,Updated_Price,Title,Social_Media_Notes,Hashtags,Schedule,Pre_Approved,Status,Additional_Notes)VALUES(@currentMarketValue,@updatedPrice,@title,@SocialMediaNotes,@hashtags,@schedule,@preApproved,@status,@additionalNotes)";
+            cmd.Parameters.AddWithValue("currentMarketValue", Frm_SocialMediaAdd.currentMarketValue);
+            cmd.Parameters.AddWithValue("updatedPrice", Frm_SocialMediaAdd.updatedPrice);
+            cmd.Parameters.AddWithValue("title", Frm_SocialMediaAdd.title);
+            cmd.Parameters.AddWithValue("SocialMediaNotes", Frm_SocialMediaAdd.socialMediaNotes);
+            cmd.Parameters.AddWithValue("hashtags", Frm_SocialMediaAdd.hashtagsToUse);
+            cmd.Parameters.AddWithValue("schedule", Frm_SocialMediaAdd.scheduleToBePosted);
+            cmd.Parameters.AddWithValue("preApproved", Frm_SocialMediaAdd.preApproved);
+            cmd.Parameters.AddWithValue("status", Frm_SocialMediaAdd.status);
+            cmd.Parameters.AddWithValue("additionalNotes", Frm_SocialMediaAdd.additionalNotes);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully saved this Social Media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
         public static void marketingUpdate()
         {
             SqlConnection conn = new SqlConnection();
@@ -188,6 +216,34 @@ namespace RVL_Management_System.Class
 
             conn.Close();
             MessageBox.Show("Successfully updated this Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
+        public static void socialMediaUpdate()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string UPDATE = "UPDATE tblSocialMedia SET Current_Market_Value =@currentMarketValue, Updated_Price = @updatedPrice, Title = @title, Social_Media_Notes = @socialMedia, Hashtags = @hashtags, Schedule = @schedule, Pre_Approved = @preApproved, Status = @status, Additional_Notes =@additionalNotes";
+            cmd.Parameters.AddWithValue("currentMarketValue", Frm_SocialMediaUpdate.currentMarketValue);
+            cmd.Parameters.AddWithValue("updatedPrice", Frm_SocialMediaUpdate.updatePrice);
+            cmd.Parameters.AddWithValue("title", Frm_SocialMediaUpdate.title);
+            cmd.Parameters.AddWithValue("socialMedia", Frm_SocialMediaUpdate.socialMediaNotes);
+            cmd.Parameters.AddWithValue("hashtags", Frm_SocialMediaUpdate.hashtags);
+            cmd.Parameters.AddWithValue("schedule", Frm_SocialMediaUpdate.schedule);
+            cmd.Parameters.AddWithValue("preApproved", Frm_SocialMediaUpdate.preApproved);
+            cmd.Parameters.AddWithValue("status", Frm_SocialMediaUpdate.status);
+            cmd.Parameters.AddWithValue("additionalNotes", Frm_SocialMediaUpdate.additionalNotes);
+            cmd.CommandText = UPDATE;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully updated this social media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
