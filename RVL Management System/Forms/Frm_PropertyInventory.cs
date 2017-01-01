@@ -81,5 +81,10 @@ namespace RVL_Management_System.Forms
             Frm_SocialMedia fsocial = new Frm_SocialMedia();
             fsocial.ShowDialog();
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

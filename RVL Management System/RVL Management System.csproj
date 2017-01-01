@@ -196,6 +196,24 @@
     <Compile Include="Forms\Frm_MarketingView.Designer.cs">
       <DependentUpon>Frm_MarketingView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_PropertyAccountingBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_PropertyAccountingBusiness.Designer.cs">
+      <DependentUpon>Frm_PropertyAccountingBusiness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_PropertyAccountingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_PropertyAccountingMenu.Designer.cs">
+      <DependentUpon>Frm_PropertyAccountingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_PropertyAccountingPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_PropertyAccountingPersonal.Designer.cs">
+      <DependentUpon>Frm_PropertyAccountingPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_PropertyInventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +347,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MarketingVIew.resx">
       <DependentUpon>Frm_MarketingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_PropertyAccountingBusiness.resx">
+      <DependentUpon>Frm_PropertyAccountingBusiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_PropertyAccountingMenu.resx">
+      <DependentUpon>Frm_PropertyAccountingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_PropertyAccountingPersonal.resx">
+      <DependentUpon>Frm_PropertyAccountingPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_PropertyInventory.resx">
       <DependentUpon>Frm_PropertyInventory.cs</DependentUpon>
@@ -494,6 +521,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

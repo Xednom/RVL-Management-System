@@ -199,5 +199,11 @@ namespace RVL_Management_System
             Frm_CompanyLoginsMenu flogins = new Frm_CompanyLoginsMenu();
             flogins.ShowDialog();
         }
+
+        private void metroLink5_Click(object sender, EventArgs e)
+        {
+            Frm_PropertyAccountingMenu fmenu = new Frm_PropertyAccountingMenu();
+            fmenu.ShowDialog();
+        }
     }
 }

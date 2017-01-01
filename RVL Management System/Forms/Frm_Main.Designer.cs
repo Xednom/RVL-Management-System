@@ -49,6 +49,7 @@
             this.metroLink2 = new MetroFramework.Controls.MetroLink();
             this.metroLink3 = new MetroFramework.Controls.MetroLink();
             this.metroLink4 = new MetroFramework.Controls.MetroLink();
+            this.metroLink5 = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -271,6 +272,20 @@
             this.metroLink4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroLink4.UseSelectable = true;
             // 
+            // metroLink5
+            // 
+            this.metroLink5.Image = global::RVL_Management_System.Properties.Resources.contract;
+            this.metroLink5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLink5.ImageSize = 32;
+            this.metroLink5.Location = new System.Drawing.Point(310, 160);
+            this.metroLink5.Name = "metroLink5";
+            this.metroLink5.Size = new System.Drawing.Size(158, 67);
+            this.metroLink5.TabIndex = 32;
+            this.metroLink5.Text = "Property Accounting";
+            this.metroLink5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroLink5.UseSelectable = true;
+            this.metroLink5.Click += new System.EventHandler(this.metroLink5_Click);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +293,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.metroLink5);
             this.Controls.Add(this.metroLink4);
             this.Controls.Add(this.metroLink3);
             this.Controls.Add(this.metroLink2);
@@ -336,6 +352,7 @@
         private MetroFramework.Controls.MetroLink metroLink2;
         private MetroFramework.Controls.MetroLink metroLink3;
         private MetroFramework.Controls.MetroLink metroLink4;
+        private MetroFramework.Controls.MetroLink metroLink5;
     }
 }
 

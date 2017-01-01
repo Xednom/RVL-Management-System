@@ -81,8 +81,8 @@
             this.metroTextBox24 = new MetroFramework.Controls.MetroTextBox();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.cBoxLeadSource = new MetroFramework.Controls.MetroComboBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btn_save = new MetroFramework.Controls.MetroButton();
+            this.btn_clear = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.cBoxLandOwner = new MetroFramework.Controls.MetroComboBox();
             this.SuspendLayout();
@@ -1041,23 +1041,24 @@
             this.cBoxLeadSource.TabIndex = 57;
             this.cBoxLeadSource.UseSelectable = true;
             // 
-            // metroButton1
+            // btn_save
             // 
-            this.metroButton1.Location = new System.Drawing.Point(22, 634);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(86, 41);
-            this.metroButton1.TabIndex = 58;
-            this.metroButton1.Text = "Save";
-            this.metroButton1.UseSelectable = true;
+            this.btn_save.Location = new System.Drawing.Point(22, 634);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(86, 41);
+            this.btn_save.TabIndex = 58;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseSelectable = true;
+            this.btn_save.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // metroButton2
+            // btn_clear
             // 
-            this.metroButton2.Location = new System.Drawing.Point(118, 634);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(86, 41);
-            this.metroButton2.TabIndex = 59;
-            this.metroButton2.Text = "Clear";
-            this.metroButton2.UseSelectable = true;
+            this.btn_clear.Location = new System.Drawing.Point(118, 634);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(86, 41);
+            this.btn_clear.TabIndex = 59;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseSelectable = true;
             // 
             // metroButton3
             // 
@@ -1086,8 +1087,8 @@
             this.ClientSize = new System.Drawing.Size(1139, 698);
             this.Controls.Add(this.cBoxLandOwner);
             this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.cBoxLeadSource);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.metroTextBox24);
@@ -1207,8 +1208,8 @@
         private MetroFramework.Controls.MetroTextBox metroTextBox24;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroComboBox cBoxLeadSource;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btn_save;
+        private MetroFramework.Controls.MetroButton btn_clear;
         private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroComboBox cBoxLandOwner;
     }
