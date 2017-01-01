@@ -271,6 +271,7 @@
             this.metroLink4.Text = "Social Media";
             this.metroLink4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroLink4.UseSelectable = true;
+            this.metroLink4.Click += new System.EventHandler(this.metroLink4_Click);
             // 
             // metroLink5
             // 

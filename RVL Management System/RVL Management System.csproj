@@ -232,6 +232,12 @@
     <Compile Include="Forms\Frm_SocialMediaAdd.Designer.cs">
       <DependentUpon>Frm_SocialMediaAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_SocialMediaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SocialMediaMenu.Designer.cs">
+      <DependentUpon>Frm_SocialMediaMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_SocialMediaUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_SocialMediaAdd.resx">
       <DependentUpon>Frm_SocialMediaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SocialMediaMenu.resx">
+      <DependentUpon>Frm_SocialMediaMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_SocialMediaUpdate.resx">
       <DependentUpon>Frm_SocialMediaUpdate.cs</DependentUpon>

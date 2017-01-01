@@ -205,5 +205,11 @@ namespace RVL_Management_System
             Frm_PropertyAccountingMenu fmenu = new Frm_PropertyAccountingMenu();
             fmenu.ShowDialog();
         }
+
+        private void metroLink4_Click(object sender, EventArgs e)
+        {
+            Frm_SocialMediaMenu fsocial = new Frm_SocialMediaMenu();
+            fsocial.ShowDialog();
+        }
     }
 }
