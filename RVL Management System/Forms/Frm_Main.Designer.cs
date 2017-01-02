@@ -173,7 +173,7 @@
             this.metroLink1.Image = global::RVL_Management_System.Properties.Resources.logout;
             this.metroLink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroLink1.ImageSize = 32;
-            this.metroLink1.Location = new System.Drawing.Point(24, 452);
+            this.metroLink1.Location = new System.Drawing.Point(24, 459);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.NoFocusImage = global::RVL_Management_System.Properties.Resources.logout_1;
             this.metroLink1.Size = new System.Drawing.Size(118, 67);
@@ -203,7 +203,7 @@
             this.btn_task.Image = global::RVL_Management_System.Properties.Resources.clipboard_1;
             this.btn_task.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_task.ImageSize = 32;
-            this.btn_task.Location = new System.Drawing.Point(24, 379);
+            this.btn_task.Location = new System.Drawing.Point(24, 386);
             this.btn_task.Name = "btn_task";
             this.btn_task.NoFocusImage = global::RVL_Management_System.Properties.Resources.clipboard;
             this.btn_task.Size = new System.Drawing.Size(118, 67);
@@ -221,7 +221,7 @@
             this.btn_lead.Location = new System.Drawing.Point(148, 306);
             this.btn_lead.Name = "btn_lead";
             this.btn_lead.NoFocusImage = global::RVL_Management_System.Properties.Resources.white_board;
-            this.btn_lead.Size = new System.Drawing.Size(118, 67);
+            this.btn_lead.Size = new System.Drawing.Size(156, 67);
             this.btn_lead.TabIndex = 24;
             this.btn_lead.Text = "Lead Source";
             this.btn_lead.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -251,7 +251,7 @@
             this.metroLink3.Location = new System.Drawing.Point(148, 459);
             this.metroLink3.Name = "metroLink3";
             this.metroLink3.NoFocusImage = global::RVL_Management_System.Properties.Resources.login;
-            this.metroLink3.Size = new System.Drawing.Size(128, 67);
+            this.metroLink3.Size = new System.Drawing.Size(156, 67);
             this.metroLink3.TabIndex = 28;
             this.metroLink3.Text = "Company Logins";
             this.metroLink3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -266,7 +266,7 @@
             this.metroLink4.Location = new System.Drawing.Point(310, 87);
             this.metroLink4.Name = "metroLink4";
             this.metroLink4.NoFocusImage = global::RVL_Management_System.Properties.Resources.share_1;
-            this.metroLink4.Size = new System.Drawing.Size(128, 67);
+            this.metroLink4.Size = new System.Drawing.Size(158, 67);
             this.metroLink4.TabIndex = 30;
             this.metroLink4.Text = "Social Media";
             this.metroLink4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
