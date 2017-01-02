@@ -81,6 +81,8 @@
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
@@ -117,7 +119,7 @@
             this.groupBox1.Controls.Add(this.metroLabel3);
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.metroLabel1);
-            this.groupBox1.Location = new System.Drawing.Point(23, 63);
+            this.groupBox1.Location = new System.Drawing.Point(23, 107);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(947, 323);
             this.groupBox1.TabIndex = 26;
@@ -579,7 +581,7 @@
             this.groupBox2.Controls.Add(this.metroLabel15);
             this.groupBox2.Controls.Add(this.metroGrid1);
             this.groupBox2.Controls.Add(this.metroLabel14);
-            this.groupBox2.Location = new System.Drawing.Point(23, 392);
+            this.groupBox2.Location = new System.Drawing.Point(23, 436);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(704, 287);
             this.groupBox2.TabIndex = 27;
@@ -667,7 +669,7 @@
             this.groupBox3.Controls.Add(this.metroLabel18);
             this.groupBox3.Controls.Add(this.metroLabel17);
             this.groupBox3.Controls.Add(this.metroLabel16);
-            this.groupBox3.Location = new System.Drawing.Point(733, 392);
+            this.groupBox3.Location = new System.Drawing.Point(730, 436);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(434, 287);
             this.groupBox3.TabIndex = 28;
@@ -966,11 +968,34 @@
             this.metroLabel16.TabIndex = 0;
             this.metroLabel16.Text = "Expenses:";
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(1067, 97);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 30;
+            this.metroButton2.Text = "metroButton2";
+            this.metroButton2.UseSelectable = true;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackgroundImage = global::RVL_Management_System.Properties.Resources.save_1;
+            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.metroButton1.Location = new System.Drawing.Point(511, 15);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(137, 86);
+            this.metroButton1.TabIndex = 29;
+            this.metroButton1.Text = "Save";
+            this.metroButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroButton1.UseSelectable = true;
+            // 
             // Frm_PropertyAccountingBusiness
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1187, 705);
+            this.ClientSize = new System.Drawing.Size(1187, 746);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1043,5 +1068,7 @@
         private MetroFramework.Controls.MetroTextBox metroTextBox15;
         private MetroFramework.Controls.MetroLabel metroLabel25;
         private MetroFramework.Controls.MetroTextBox metroTextBox16;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }

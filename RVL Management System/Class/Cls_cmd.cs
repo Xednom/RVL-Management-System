@@ -19,7 +19,7 @@ namespace RVL_Management_System.Class
             SqlCommand cmd = new SqlCommand();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
-           
+
             conn.Open();
 
             cmd.Connection = conn;
@@ -31,7 +31,7 @@ namespace RVL_Management_System.Class
             cmd.CommandText = InsertLogin;
             cmd.ExecuteNonQuery();
 
-            MessageBox.Show("Successfully added this information to the database.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully added these information to the database.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             conn.Close();
             cmd.Parameters.Clear();
@@ -73,7 +73,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved this Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully saved these Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -108,7 +108,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved this Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully saved these Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -133,7 +133,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved this Company login Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully saved these Company login Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -153,7 +153,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved this land owner Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully saved these land owner Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -181,7 +181,40 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved this Social Media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully saved these Social Media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
+        public static void landStayAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblLandStay(Seller,Phone_Number,Seller_Email,Seller_Notes,Seller_Name,Availability,State,County,APN,Acres,Legal,GPS,Price,Contact_or_Checkout)VALUES(@seller,@phoneNumber,@sellerEmail,@sellerNotes,@sellerName,@availability,@state,@county,@APN,@acres,@legal,@GPS,@price,@contactOrCheckout)";
+            cmd.Parameters.AddWithValue("seller", Frm_LandStay.seller);
+            cmd.Parameters.AddWithValue("phoneNumber", Frm_LandStay.phone);
+            cmd.Parameters.AddWithValue("sellerEmail", Frm_LandStay.sellerEmail);
+            cmd.Parameters.AddWithValue("sellerNotes", Frm_LandStay.sellerNotes);
+            cmd.Parameters.AddWithValue("sellerName", Frm_LandStay.sellerName);
+            cmd.Parameters.AddWithValue("availability", Frm_LandStay.availability);
+            cmd.Parameters.AddWithValue("state", Frm_LandStay.state);
+            cmd.Parameters.AddWithValue("county", Frm_LandStay.county);
+            cmd.Parameters.AddWithValue("APN", Frm_LandStay.APN);
+            cmd.Parameters.AddWithValue("acres", Frm_LandStay.acres);
+            cmd.Parameters.AddWithValue("legal", Frm_LandStay.legal);
+            cmd.Parameters.AddWithValue("GPS", Frm_LandStay.gps);
+            cmd.Parameters.AddWithValue("price", Frm_LandStay.price);
+            cmd.Parameters.AddWithValue("contactOrCheckout", Frm_LandStay.contactOrCheckout);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully saved these Land Stay Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -215,7 +248,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully updated this Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully updated these Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -243,7 +276,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully updated this social media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully updated these social media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -318,7 +351,41 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully updated this Company Logins Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully updated these Company Logins Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
+        public static void landStayUpdate()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "UPDATE tblLandStay SET Seller = @seller, Phone_Number = @phoneNumber, Seller_Email = @sellerEmail, Seller_Notes = @sellerNotes, Seller_Name = @sellerName, Availability = @availability ,State = @state, County = @county, APN = @APN, Acres = @acres, Legal = @legal, GPS = @GPS, Price = @price,Contact_or_Checkout = @contactOrCheckout WHERE LSID = @lsid";
+            cmd.Parameters.AddWithValue("seller", Frm_LandStay.sellerUpdate);
+            cmd.Parameters.AddWithValue("phoneNumber", Frm_LandStay.phoneUpdate);
+            cmd.Parameters.AddWithValue("sellerEmail", Frm_LandStay.sellerEmailUpdate);
+            cmd.Parameters.AddWithValue("sellerNotes", Frm_LandStay.sellerNotesUpdate);
+            cmd.Parameters.AddWithValue("sellerName", Frm_LandStay.sellerNameUpdate);
+            cmd.Parameters.AddWithValue("availability", Frm_LandStay.availabilityUpdate);
+            cmd.Parameters.AddWithValue("state", Frm_LandStay.stateUpdate);
+            cmd.Parameters.AddWithValue("county", Frm_LandStay.countyUpdate);
+            cmd.Parameters.AddWithValue("APN", Frm_LandStay.APNUpdate);
+            cmd.Parameters.AddWithValue("acres", Frm_LandStay.acresUpdate);
+            cmd.Parameters.AddWithValue("legal", Frm_LandStay.legalUpdate);
+            cmd.Parameters.AddWithValue("GPS", Frm_LandStay.gpsUpdate);
+            cmd.Parameters.AddWithValue("price", Frm_LandStay.priceUpdate);
+            cmd.Parameters.AddWithValue("contactOrCheckout", Frm_LandStay.contactOrCheckoutUpdate);
+            cmd.Parameters.AddWithValue("lsid", Frm_LandStay.lsid);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully Updated these Land Stay Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -353,13 +420,33 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string UPDATE = "DELETE tblCompanyLogins WHERE CID = @cid";
+            string DELETE = "DELETE tblCompanyLogins WHERE CID = @cid";
             cmd.Parameters.AddWithValue("cid", Frm_CompanyLoginsDelete.CID);
-            cmd.CommandText = UPDATE;
+            cmd.CommandText = DELETE;
             cmd.ExecuteNonQuery();
 
             conn.Close();
             MessageBox.Show("Successfully deleted this Company Logins Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
+        public static void LandStayDelete()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string DELETE = "DELETE tblLandStay WHERE LSID = @lsid";
+            cmd.Parameters.AddWithValue("lsid", Frm_LandStay.lsidDelete);
+            cmd.CommandText = DELETE;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully deleted these Company Logins Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }

@@ -160,6 +160,12 @@
     <Compile Include="Forms\Frm_LandOwner.Designer.cs">
       <DependentUpon>Frm_LandOwner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_LandStay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_LandStay.Designer.cs">
+      <DependentUpon>Frm_LandStay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_LeadAssigned.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_LandOwner.resx">
       <DependentUpon>Frm_LandOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_LandStay.resx">
+      <DependentUpon>Frm_LandStay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_LeadAssigned.resx">
       <DependentUpon>Frm_LeadAssigned.cs</DependentUpon>
@@ -533,6 +542,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
