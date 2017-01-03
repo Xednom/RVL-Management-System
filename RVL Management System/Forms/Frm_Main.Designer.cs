@@ -132,6 +132,7 @@
             this.metroTile4.TabIndex = 7;
             this.metroTile4.Text = "Accounting";
             this.metroTile4.UseSelectable = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
             // metroTile6
             // 

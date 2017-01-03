@@ -217,5 +217,10 @@ namespace RVL_Management_System
             Frm_LandStay fland = new Frm_LandStay();
             fland.ShowDialog();
         }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
