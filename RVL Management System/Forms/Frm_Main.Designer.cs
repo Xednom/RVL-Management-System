@@ -50,6 +50,7 @@
             this.metroLink3 = new MetroFramework.Controls.MetroLink();
             this.metroLink4 = new MetroFramework.Controls.MetroLink();
             this.metroLink5 = new MetroFramework.Controls.MetroLink();
+            this.metroLink6 = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -287,6 +288,19 @@
             this.metroLink5.UseSelectable = true;
             this.metroLink5.Click += new System.EventHandler(this.metroLink5_Click);
             // 
+            // metroLink6
+            // 
+            this.metroLink6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLink6.ImageSize = 32;
+            this.metroLink6.Location = new System.Drawing.Point(310, 233);
+            this.metroLink6.Name = "metroLink6";
+            this.metroLink6.Size = new System.Drawing.Size(158, 67);
+            this.metroLink6.TabIndex = 34;
+            this.metroLink6.Text = "Land Stay";
+            this.metroLink6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroLink6.UseSelectable = true;
+            this.metroLink6.Click += new System.EventHandler(this.metroLink6_Click);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,6 +308,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.metroLink6);
             this.Controls.Add(this.metroLink5);
             this.Controls.Add(this.metroLink4);
             this.Controls.Add(this.metroLink3);
@@ -354,6 +369,7 @@
         private MetroFramework.Controls.MetroLink metroLink3;
         private MetroFramework.Controls.MetroLink metroLink4;
         private MetroFramework.Controls.MetroLink metroLink5;
+        private MetroFramework.Controls.MetroLink metroLink6;
     }
 }
 

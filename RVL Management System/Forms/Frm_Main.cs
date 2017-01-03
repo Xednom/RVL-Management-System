@@ -211,5 +211,11 @@ namespace RVL_Management_System
             Frm_SocialMediaMenu fsocial = new Frm_SocialMediaMenu();
             fsocial.ShowDialog();
         }
+
+        private void metroLink6_Click(object sender, EventArgs e)
+        {
+            Frm_LandStay fland = new Frm_LandStay();
+            fland.ShowDialog();
+        }
     }
 }

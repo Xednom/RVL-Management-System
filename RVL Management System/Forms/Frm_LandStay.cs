@@ -360,6 +360,24 @@ namespace RVL_Management_System.Forms
                 txt_priceUpdate.Text = row.Cells[13].Value.ToString();
                 txt_contactOrCheckoutUpdate.Text = row.Cells[14].Value.ToString();
             }
+            else
+            {
+                lbl_lsid.Text = null;
+                txt_sellerUpdate.Text = null;
+                txt_phoneUpdate.Text = null;
+                txt_sellerEmailUpdate.Text = null;
+                txt_sellerNotesUpdate.Text = null;
+                txt_sellerNameUpdate.Text = null;
+                cBoxAvailabilityUpdate.Text = null;
+                txt_stateUpdate.Text = null;
+                txt_countyUpdate.Text = null;
+                txt_apnUpdate.Text = null;
+                txt_acresUpdate.Text = null;
+                txt_legalUpdate.Text = null;
+                txt_gpsUpdate.Text = null;
+                txt_priceUpdate.Text = null;
+                txt_contactOrCheckoutUpdate.Text = null;
+            }
         }
 
         private void GridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -389,6 +407,24 @@ namespace RVL_Management_System.Forms
                 txt_priceUpdate.Text = row.Cells[13].Value.ToString();
                 txt_contactOrCheckoutUpdate.Text = row.Cells[14].Value.ToString();
             }
+            else
+            {
+                lbl_lsid.Text = null;
+                txt_sellerUpdate.Text = null;
+                txt_phoneUpdate.Text = null;
+                txt_sellerEmailUpdate.Text = null;
+                txt_sellerNotesUpdate.Text = null;
+                txt_sellerNameUpdate.Text = null;
+                cBoxAvailabilityUpdate.Text = null;
+                txt_stateUpdate.Text = null;
+                txt_countyUpdate.Text = null;
+                txt_apnUpdate.Text = null;
+                txt_acresUpdate.Text = null;
+                txt_legalUpdate.Text = null;
+                txt_gpsUpdate.Text = null;
+                txt_priceUpdate.Text = null;
+                txt_contactOrCheckoutUpdate.Text = null;
+            }
         }
 
         private void btn_clearUpdate_Click(object sender, EventArgs e)
@@ -408,22 +444,29 @@ namespace RVL_Management_System.Forms
 
         private void btn_del_Click(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to delete these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (lbl_lsidDelete.Text == string.Empty)
             {
-                lsidDelete = lbl_lsidDelete.Text;
-                Class.Cls_cmd.LandStayDelete();
+                MetroMessageBox.Show(this, "Please select an information to delete.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                //IF NO
-                //TODO:NOTHING
+                if (MetroMessageBox.Show(this, "Do you want to delete these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    lsidDelete = lbl_lsidDelete.Text;
+                    Class.Cls_cmd.LandStayDelete();
+                }
+                else
+                {
+                    //IF NO
+                    //TODO:NOTHING
+                }
             }
         }
 
         private void GridViewDelete_SelectionChanged(object sender, EventArgs e)
         {
             DataGridViewCell cell = null;
-            foreach (DataGridViewCell selectedCell in GridViewUpdate.SelectedCells)
+            foreach (DataGridViewCell selectedCell in GridViewDelete.SelectedCells)
             {
                 cell = selectedCell;
                 break;
@@ -432,6 +475,11 @@ namespace RVL_Management_System.Forms
             {
                 DataGridViewRow row = cell.OwningRow;
                 lbl_lsidDelete.Text = row.Cells[0].Value.ToString();
+            }
+            else
+            {
+                lbl_lsidDelete.Text = null;
+
             }
         }
 
