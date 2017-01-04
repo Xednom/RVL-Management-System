@@ -219,6 +219,58 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void accountingBusinessAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblAccountingBusiness(Type_Of_Account,Type_Of_Payment,Paid_Via,APN_ID,Date_Sold,Date_Aquired,Closed_Sale_Amount,Original_Price,OriginalPrice_Expense,Net_Sale,Balance_Due,Sold_From,Sold_To,Terms_with_LLC,Shared60,Shared40,Check_Number,Invoice_Number,Memo,Date_Payments,Amount_Payments,Total_Amount_Paid,Total_Land_Cost,Payment_Balance_Due,Category_Expense,Notes,Recording_Fee,Card_Processing_Fee,Back_Taxes,Notary,Other_Expense,Total_Expense,Net_Profit)VALUES(@typeAccount,@typePayment,@paidVia,@apnID,@dateSold,@dateAquired,@closedSaleAmount,@originalPrice,@originalPriceExpense,@netSale,@balanceDue,@soldFrom,@soldTo,@termsLLC,@shared60,@shared40,@checkNumber,@invoiceNumber,@memo,@datePayment,@amountPayment,@totalAmountPaid,@totalLandCost,@paymentBalanceDue,@categoryExpense,@notes,@recordingFee,@processingFee,@backTaxes,@notary,@otherExpense,@totalExpense,@netProfit)";
+            cmd.Parameters.AddWithValue("typeAccount", Frm_PropertyAccountingBusiness.typeAccount);
+            cmd.Parameters.AddWithValue("typePayment", Frm_PropertyAccountingBusiness.typePayment);
+            cmd.Parameters.AddWithValue("paidVia", Frm_PropertyAccountingBusiness.paidVia);
+            cmd.Parameters.AddWithValue("apnID", Frm_PropertyAccountingBusiness.apnID);
+            cmd.Parameters.AddWithValue("dateSold", Frm_PropertyAccountingBusiness.dateSold);
+            cmd.Parameters.AddWithValue("dateAquired", Frm_PropertyAccountingBusiness.dateAquired);
+            cmd.Parameters.AddWithValue("closedSaleAmount", Frm_PropertyAccountingBusiness.closedSale);
+            cmd.Parameters.AddWithValue("originalPrice", Frm_PropertyAccountingBusiness.originalPrice);
+            cmd.Parameters.AddWithValue("originalPriceExpense", Frm_PropertyAccountingBusiness.originalPriceExpense);
+            cmd.Parameters.AddWithValue("netSale", Frm_PropertyAccountingBusiness.netSale);
+            cmd.Parameters.AddWithValue("balanceDue", Frm_PropertyAccountingBusiness.balanceDue);
+            cmd.Parameters.AddWithValue("soldFrom", Frm_PropertyAccountingBusiness.soldFrom);
+            cmd.Parameters.AddWithValue("soldTo", Frm_PropertyAccountingBusiness.soldTo);
+            cmd.Parameters.AddWithValue("termsLLC", Frm_PropertyAccountingBusiness.termsLLC);
+            cmd.Parameters.AddWithValue("shared60", Frm_PropertyAccountingBusiness.shared60);
+            cmd.Parameters.AddWithValue("shared40", Frm_PropertyAccountingBusiness.shared40);
+            cmd.Parameters.AddWithValue("checkNumber", Frm_PropertyAccountingBusiness.checkNumber);
+            cmd.Parameters.AddWithValue("invoiceNumber", Frm_PropertyAccountingBusiness.invoiceNumber);
+            cmd.Parameters.AddWithValue("memo", Frm_PropertyAccountingBusiness.memo);
+            cmd.Parameters.AddWithValue("datePayment", Frm_PropertyAccountingBusiness.datePayment);
+            cmd.Parameters.AddWithValue("amountPayment", Frm_PropertyAccountingBusiness.amountPayment);
+            cmd.Parameters.AddWithValue("totalAmountPaid", Frm_PropertyAccountingBusiness.totalAmountPaid);
+            cmd.Parameters.AddWithValue("totalLandCost", Frm_PropertyAccountingBusiness.totalLandCost);
+            cmd.Parameters.AddWithValue("paymentBalanceDue", Frm_PropertyAccountingBusiness.paymentBalanceDue);
+            cmd.Parameters.AddWithValue("categoryExpense", Frm_PropertyAccountingBusiness.categoryExpense);
+            cmd.Parameters.AddWithValue("notes", Frm_PropertyAccountingBusiness.notes);
+            cmd.Parameters.AddWithValue("recordingFee", Frm_PropertyAccountingBusiness.recordingFee);
+            cmd.Parameters.AddWithValue("processingFee", Frm_PropertyAccountingBusiness.cardProcessingFee);
+            cmd.Parameters.AddWithValue("backTaxes", Frm_PropertyAccountingBusiness.backTaxes);
+            cmd.Parameters.AddWithValue("notary", Frm_PropertyAccountingBusiness.notary);
+            cmd.Parameters.AddWithValue("otherExpense", Frm_PropertyAccountingBusiness.otherExpense);
+            cmd.Parameters.AddWithValue("totalExpense", Frm_PropertyAccountingBusiness.totalExpense);
+            cmd.Parameters.AddWithValue("netProfit", Frm_PropertyAccountingBusiness.netProfit);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully saved these Land Stay Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
         public static void marketingUpdate()
         {
             SqlConnection conn = new SqlConnection();

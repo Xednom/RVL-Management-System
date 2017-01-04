@@ -51,7 +51,7 @@ namespace RVL_Management_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
