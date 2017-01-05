@@ -306,8 +306,8 @@ namespace RVL_Management_System.Class
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblYoutubeLink(Process,Link)VALUES(@process,@link)";
-            cmd.Parameters.AddWithValue("process", Frm_YoutubeTutorials.process);
-            cmd.Parameters.AddWithValue("link", Frm_YoutubeTutorials.link);
+            cmd.Parameters.AddWithValue("process", Frm_VideoTutorials.process);
+            cmd.Parameters.AddWithValue("link", Frm_VideoTutorials.link);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 

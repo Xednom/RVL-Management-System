@@ -298,11 +298,11 @@
     <Compile Include="Forms\Frm_UserView.Designer.cs">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_YoutubeTutorials.cs">
+    <Compile Include="Forms\Frm_VideoTutorials.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_YoutubeTutorials.Designer.cs">
-      <DependentUpon>Frm_YoutubeTutorials.cs</DependentUpon>
+    <Compile Include="Forms\Frm_VideoTutorials.Designer.cs">
+      <DependentUpon>Frm_VideoTutorials.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\PnlMarketing.cs">
       <SubType>UserControl</SubType>
@@ -423,8 +423,8 @@
     <EmbeddedResource Include="Forms\Frm_UserView.resx">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_YoutubeTutorials.resx">
-      <DependentUpon>Frm_YoutubeTutorials.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_VideoTutorials.resx">
+      <DependentUpon>Frm_VideoTutorials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\PnlMarketing.resx">
       <DependentUpon>PnlMarketing.cs</DependentUpon>
