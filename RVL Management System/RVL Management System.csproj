@@ -118,6 +118,12 @@
     <Compile Include="Forms\Frm_AddLeadSource.Designer.cs">
       <DependentUpon>Frm_AddLeadSource.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_AdminOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AdminOffice.Designer.cs">
+      <DependentUpon>Frm_AdminOffice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_CompanyLoginsAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,12 @@
     <Compile Include="Forms\Frm_UserView.Designer.cs">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_YoutubeTutorials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_YoutubeTutorials.Designer.cs">
+      <DependentUpon>Frm_YoutubeTutorials.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\PnlMarketing.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -320,6 +332,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Frm_AddLeadSource.resx">
       <DependentUpon>Frm_AddLeadSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AdminOffice.resx">
+      <DependentUpon>Frm_AdminOffice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_CompanyLoginsAdd.resx">
       <DependentUpon>Frm_CompanyLoginsAdd.cs</DependentUpon>
@@ -407,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_UserView.resx">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_YoutubeTutorials.resx">
+      <DependentUpon>Frm_YoutubeTutorials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\PnlMarketing.resx">
       <DependentUpon>PnlMarketing.cs</DependentUpon>
@@ -548,6 +566,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer-with-numbers-around.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -230,10 +230,80 @@ namespace RVL_Management_System.Forms
 
         private void txt_netSale_TextChanged(object sender, EventArgs e)
         {
-            int a = Convert.ToInt32(txt_totalExpense.Text);
-            int b = Convert.ToInt32(txt_netSale.Text);
+            double a = Convert.ToInt32(txt_totalExpense.Text);
+            double b = Convert.ToInt32(txt_netSale.Text);
             
             txt_netProfit.Text = (b - a).ToString();
+        }
+
+        private void txt_recordingFee_TextChanged(object sender, EventArgs e)
+        {
+            //double a = Convert.ToInt32(txt_recordingFee.Text);
+            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
+            //double c = Convert.ToInt32(txt_backTaxes.Text);
+            //double d = Convert.ToInt32(txt_Notary.Text);
+            //double f = Convert.ToInt32(txt_otherExpense.Text);
+
+
+            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+        }
+
+        private void txt_backTaxes_TextChanged(object sender, EventArgs e)
+        {
+            //double a = Convert.ToInt32(txt_recordingFee.Text);
+            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
+            //double c = Convert.ToInt32(txt_backTaxes.Text);
+            //double d = Convert.ToInt32(txt_Notary.Text);
+            //double f = Convert.ToInt32(txt_otherExpense.Text);
+
+
+            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+        }
+
+        private void txt_cardProcessingFee_TextChanged(object sender, EventArgs e)
+        {
+            //double a = Convert.ToInt32(txt_recordingFee.Text);
+            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
+            //double c = Convert.ToInt32(txt_backTaxes.Text);
+            //double d = Convert.ToInt32(txt_Notary.Text);
+            //double f = Convert.ToInt32(txt_otherExpense.Text);
+
+
+            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+        }
+
+        private void txt_Notary_TextChanged(object sender, EventArgs e)
+        {
+            //double a = Convert.ToInt32(txt_recordingFee.Text);
+            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
+            //double c = Convert.ToInt32(txt_backTaxes.Text);
+            //double d = Convert.ToInt32(txt_Notary.Text);
+            //double f = Convert.ToInt32(txt_otherExpense.Text);
+
+
+            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+        }
+
+        private void txt_otherExpense_TextChanged(object sender, EventArgs e)
+        {
+            //double a = Convert.ToInt32(txt_recordingFee.Text);
+            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
+            //double c = Convert.ToInt32(txt_backTaxes.Text);
+            //double d = Convert.ToInt32(txt_Notary.Text);
+            //double f = Convert.ToInt32(txt_otherExpense.Text);
+
+
+            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+        }
+
+        private void txt_recordingFee_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != (char)8;
+
+            if (e.KeyChar == (char)13)
+            {
+                txt_recordingFee.Text = string.Format("{0:n0}", double.Parse(txt_recordingFee.Text));
+            }
         }
     }
 }

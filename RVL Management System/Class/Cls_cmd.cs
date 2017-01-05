@@ -271,6 +271,53 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void adminOfficeAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblAdminContact(Full_name,Email,Phone_number,Address,County,Category)VALUES(@fullName,@email,@phoneNumber,@address,@county,@category)";
+            cmd.Parameters.AddWithValue("fullName", Frm_AdminOffice.fullName);
+            cmd.Parameters.AddWithValue("email", Frm_AdminOffice.email);
+            cmd.Parameters.AddWithValue("phoneNumber", Frm_AdminOffice.phoneNumber);
+            cmd.Parameters.AddWithValue("address", Frm_AdminOffice.address);
+            cmd.Parameters.AddWithValue("county", Frm_AdminOffice.county);
+            cmd.Parameters.AddWithValue("category", Frm_AdminOffice.category);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully saved these Admin Contact List Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
+        public static void youtubeLinkAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblYoutubeLink(Process,Link)VALUES(@process,@link)";
+            cmd.Parameters.AddWithValue("process", Frm_YoutubeTutorials.process);
+            cmd.Parameters.AddWithValue("link", Frm_YoutubeTutorials.link);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MessageBox.Show("Successfully saved these Youtube Tutorials.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
+
         public static void marketingUpdate()
         {
             SqlConnection conn = new SqlConnection();
