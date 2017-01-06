@@ -12,7 +12,7 @@ using MetroFramework;
 
 namespace RVL_Management_System.Forms
 {
-    public partial class Frm_AdminOffice : MetroForm
+    public partial class Frm_AdminOfficeAdd : MetroForm
     {
         public static string fullName = "";
         public static string email = "";
@@ -21,7 +21,7 @@ namespace RVL_Management_System.Forms
         public static string county = "";
         public static string category = "";
 
-        public Frm_AdminOffice()
+        public Frm_AdminOfficeAdd()
         {
             InitializeComponent();
         }

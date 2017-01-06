@@ -1,6 +1,6 @@
 ﻿namespace RVL_Management_System.Forms
 {
-    partial class Frm_AdminOffice
+    partial class Frm_AdminOfficeAdd
     {
         /// <summary>
         /// Required designer variable.

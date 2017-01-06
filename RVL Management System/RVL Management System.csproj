@@ -118,11 +118,23 @@
     <Compile Include="Forms\Frm_AddLeadSource.Designer.cs">
       <DependentUpon>Frm_AddLeadSource.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOffice.cs">
+    <Compile Include="Forms\Frm_AdminOfficeAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOffice.Designer.cs">
-      <DependentUpon>Frm_AdminOffice.cs</DependentUpon>
+    <Compile Include="Forms\Frm_AdminOfficeAdd.Designer.cs">
+      <DependentUpon>Frm_AdminOfficeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AdminOfficeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AdminOfficeMenu.Designer.cs">
+      <DependentUpon>Frm_AdminOfficeMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AdminOfficeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AdminOfficeUpdate.Designer.cs">
+      <DependentUpon>Frm_AdminOfficeUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_CompanyLoginsAdd.cs">
       <SubType>Form</SubType>
@@ -333,8 +345,14 @@
     <EmbeddedResource Include="Forms\Frm_AddLeadSource.resx">
       <DependentUpon>Frm_AddLeadSource.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_AdminOffice.resx">
-      <DependentUpon>Frm_AdminOffice.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_AdminOfficeAdd.resx">
+      <DependentUpon>Frm_AdminOfficeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AdminOfficeMenu.resx">
+      <DependentUpon>Frm_AdminOfficeMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AdminOfficeUpdate.resx">
+      <DependentUpon>Frm_AdminOfficeUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_CompanyLoginsAdd.resx">
       <DependentUpon>Frm_CompanyLoginsAdd.cs</DependentUpon>
@@ -569,6 +587,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\computer-with-numbers-around.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

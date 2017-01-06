@@ -281,12 +281,12 @@ namespace RVL_Management_System.Class
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblAdminContact(Full_name,Email,Phone_number,Address,County,Category)VALUES(@fullName,@email,@phoneNumber,@address,@county,@category)";
-            cmd.Parameters.AddWithValue("fullName", Frm_AdminOffice.fullName);
-            cmd.Parameters.AddWithValue("email", Frm_AdminOffice.email);
-            cmd.Parameters.AddWithValue("phoneNumber", Frm_AdminOffice.phoneNumber);
-            cmd.Parameters.AddWithValue("address", Frm_AdminOffice.address);
-            cmd.Parameters.AddWithValue("county", Frm_AdminOffice.county);
-            cmd.Parameters.AddWithValue("category", Frm_AdminOffice.category);
+            cmd.Parameters.AddWithValue("fullName", Frm_AdminOfficeAdd.fullName);
+            cmd.Parameters.AddWithValue("email", Frm_AdminOfficeAdd.email);
+            cmd.Parameters.AddWithValue("phoneNumber", Frm_AdminOfficeAdd.phoneNumber);
+            cmd.Parameters.AddWithValue("address", Frm_AdminOfficeAdd.address);
+            cmd.Parameters.AddWithValue("county", Frm_AdminOfficeAdd.county);
+            cmd.Parameters.AddWithValue("category", Frm_AdminOfficeAdd.category);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
