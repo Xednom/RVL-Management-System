@@ -12,12 +12,12 @@ using MetroFramework;
 
 namespace RVL_Management_System.Forms
 {
-    public partial class Frm_VideoTutorials : MetroForm
+    public partial class Frm_VideoTutorialsAdd : MetroForm
     {
         public static string process = "";
         public static string link = "";
 
-        public Frm_VideoTutorials()
+        public Frm_VideoTutorialsAdd()
         {
             InitializeComponent();
         }
@@ -41,7 +41,7 @@ namespace RVL_Management_System.Forms
                 {
                     process = txt_process.Text;
                     link = txt_youtube.Text;
-                    Class.Cls_cmd.youtubeLinkAdd();
+                    Class.Cls_cmd.videoTutorialsAdd();
                     clear();
                 }
                 else

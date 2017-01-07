@@ -191,7 +191,7 @@
       <DependentUpon>Frm_LeadAssigned.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Marketing.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Frm_Marketing.Designer.cs">
       <DependentUpon>Frm_Marketing.cs</DependentUpon>
@@ -310,11 +310,17 @@
     <Compile Include="Forms\Frm_UserView.Designer.cs">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorials.cs">
+    <Compile Include="Forms\Frm_VideoTutorialsAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorials.Designer.cs">
-      <DependentUpon>Frm_VideoTutorials.cs</DependentUpon>
+    <Compile Include="Forms\Frm_VideoTutorialsAdd.Designer.cs">
+      <DependentUpon>Frm_VideoTutorialsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_VideoTutorialsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_VideoTutorialsUpdate.Designer.cs">
+      <DependentUpon>Frm_VideoTutorialsUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\PnlMarketing.cs">
       <SubType>UserControl</SubType>
@@ -441,8 +447,11 @@
     <EmbeddedResource Include="Forms\Frm_UserView.resx">
       <DependentUpon>Frm_UserView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_VideoTutorials.resx">
-      <DependentUpon>Frm_VideoTutorials.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_VideoTutorialsAdd.resx">
+      <DependentUpon>Frm_VideoTutorialsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_VideoTutorialsUpdate.resx">
+      <DependentUpon>Frm_VideoTutorialsUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\PnlMarketing.resx">
       <DependentUpon>PnlMarketing.cs</DependentUpon>

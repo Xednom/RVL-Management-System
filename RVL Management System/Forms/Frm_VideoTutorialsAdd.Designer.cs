@@ -1,6 +1,6 @@
 ﻿namespace RVL_Management_System.Forms
 {
-    partial class Frm_VideoTutorials
+    partial class Frm_VideoTutorialsAdd
     {
         /// <summary>
         /// Required designer variable.

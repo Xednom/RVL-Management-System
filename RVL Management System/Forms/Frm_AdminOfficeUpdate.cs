@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using MetroFramework;
 
 namespace RVL_Management_System.Forms
 {
@@ -17,6 +18,15 @@ namespace RVL_Management_System.Forms
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
+
+        public static string acid = "";
+        public static string fullName = "";
+        public static string eMail = "";
+        public static string phoneNumber = "";
+        public static string address = "";
+        public static string county = "";
+        public static string category = "";
+
         public Frm_AdminOfficeUpdate()
         {
             InitializeComponent();
@@ -59,6 +69,19 @@ namespace RVL_Management_System.Forms
             conn.Close();
 
             cmd.Parameters.Clear();
+        }
+
+        public void clear()
+        {
+            txt_fullName.Text = null;
+            txt_email.Text = null;
+            txt_phoneNumber.Text = null;
+            txt_address.Text = null;
+            txt_county.Text = null;
+            cBoxCategory.Text = null;
+            txt_acid.Text = null;
+            txt_search.Text = null;
+            cBoxSearchBy.Text = null; 
         }
 
         private void Frm_AdminOfficeUpdate_Load(object sender, EventArgs e)
@@ -106,6 +129,38 @@ namespace RVL_Management_System.Forms
         }
 
         private void btn_update_Click(object sender, EventArgs e)
+        {
+            if (MetroMessageBox.Show(this, "Do you want to update these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                fullName = txt_fullName.Text;
+                eMail = txt_email.Text;
+                phoneNumber = txt_phoneNumber.Text;
+                address = txt_address.Text;
+                county = txt_county.Text;
+                category = cBoxCategory.Text;
+                acid = txt_acid.Text;
+                Class.Cls_cmd.adminOfficeUpdate();
+                clear();
+            }
+            else
+            {
+                //IF NO
+                //TODO:NOTHING
+            }
+
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            txt_fullName.Text = null;
+            txt_email.Text = null;
+            txt_phoneNumber.Text = null;
+            txt_address.Text = null;
+            txt_county.Text = null;
+            cBoxCategory.Text = null;
+        }
+
+        private void txt_search_Click(object sender, EventArgs e)
         {
 
         }

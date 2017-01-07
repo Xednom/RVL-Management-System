@@ -161,11 +161,7 @@ namespace RVL_Management_System
 
         private void metroLink2_Click(object sender, EventArgs e)
         {
-            btn_marketing.Enabled = false;
-            Frm_LeadGeneration _pnlone = new Frm_LeadGeneration(this);
-            _pnlone.Closed += _pnlone_Closed;
-            _pnlone.Shown += _pnlone_Shown;
-            _pnlone.swipe(true);
+
         }
 
         private void btn_task_Click(object sender, EventArgs e)

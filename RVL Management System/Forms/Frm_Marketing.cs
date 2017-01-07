@@ -13,11 +13,12 @@ using MetroFramework;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Configuration;
+using MetroFramework.Forms;
 using RVL_Management_System.Forms;  
 
 namespace RVL_Management_System
 {
-    public partial class Frm_LeadGeneration : PnlSlider
+    public partial class Frm_LeadGeneration : MetroForm
     {
         public static string leadReceived = "";
         public static string lastName = "";
@@ -59,7 +60,7 @@ namespace RVL_Management_System
             
         }
 
-        public Frm_LeadGeneration(Form owner) : base(owner)
+        public Frm_LeadGeneration()
         {
             InitializeComponent();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
@@ -223,7 +224,7 @@ namespace RVL_Management_System
 
         private void metroLink1_Click(object sender, EventArgs e)
         {
-            swipe(false);
+
         }
 
         private void cBoxLeadSource_SelectedIndexChanged(object sender, EventArgs e)

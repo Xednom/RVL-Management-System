@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
 using RVL_Management_System.Forms;
+using MetroFramework;
 
 namespace RVL_Management_System.Class
 {
@@ -17,6 +18,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_UserAdd _owner = new Frm_UserAdd();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
 
@@ -31,7 +34,7 @@ namespace RVL_Management_System.Class
             cmd.CommandText = InsertLogin;
             cmd.ExecuteNonQuery();
 
-            MessageBox.Show("Successfully added these information to the database.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully added these information to the database.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             conn.Close();
             cmd.Parameters.Clear();
@@ -41,6 +44,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_AddLeadSource _owner = new Frm_AddLeadSource();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -55,6 +60,8 @@ namespace RVL_Management_System.Class
 
             conn.Close();
 
+            MetroMessageBox.Show(_owner, "Successfully saved these User Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             cmd.Parameters.Clear();
         }
 
@@ -62,6 +69,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_AddLeadSource _owner = new Frm_AddLeadSource();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -73,7 +82,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved these Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully saved these Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -83,6 +92,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_LeadGeneration _owner = new Frm_LeadGeneration();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -108,7 +119,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved these Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully saved these Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -117,6 +128,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_LandOwner _owner = new Frm_LandOwner();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -133,7 +146,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved these Company login Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully saved these Company login Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -142,6 +155,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_LandOwner _owner = new Frm_LandOwner();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -153,7 +168,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved these land owner Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully saved these land owner Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -162,6 +177,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_SocialMediaAdd _owner = new Frm_SocialMediaAdd();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -181,7 +198,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved these Social Media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully saved these Social Media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -191,6 +208,8 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
+            Frm_LandStay _owner = new Frm_LandStay();
+            
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
@@ -214,7 +233,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved these Land Stay Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully saved these Land Stay Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -223,6 +242,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_PropertyAccountingBusiness _owner = new Frm_PropertyAccountingBusiness();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -266,7 +287,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved these Land Stay Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully saved these Land Stay Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -275,6 +296,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_AdminOfficeAdd _owner = new Frm_AdminOfficeAdd();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -291,28 +314,30 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved these Admin Contact List Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully saved these Admin Contact List Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
 
-        public static void youtubeLinkAdd()
+        public static void videoTutorialsAdd()
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_VideoTutorialsAdd _owner = new Frm_VideoTutorialsAdd();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
-            string INSERT = "INSERT INTO tblYoutubeLink(Process,Link)VALUES(@process,@link)";
-            cmd.Parameters.AddWithValue("process", Frm_VideoTutorials.process);
-            cmd.Parameters.AddWithValue("link", Frm_VideoTutorials.link);
+            string INSERT = "INSERT INTO tblVideoTutorial(Process,Link)VALUES(@process,@link)";
+            cmd.Parameters.AddWithValue("process", Frm_VideoTutorialsAdd.process);
+            cmd.Parameters.AddWithValue("link", Frm_VideoTutorialsAdd.link);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully saved these Youtube Tutorials.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully saved these Youtube Tutorials.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -322,6 +347,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_MarketingUpdate _owner = new Frm_MarketingUpdate();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -347,7 +374,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully updated these Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully updated these Marketing Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -356,6 +383,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_SocialMediaUpdate _owner = new Frm_SocialMediaUpdate();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -375,7 +404,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully updated these social media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully updated these social media Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -385,7 +414,10 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
+            Frm_UserEdit _owner = new Frm_UserEdit();
+
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+
 
             conn.Open();
 
@@ -399,7 +431,7 @@ namespace RVL_Management_System.Class
             cmd.CommandText = InsertLogin;
             cmd.ExecuteNonQuery();
 
-            MessageBox.Show("Successfully updated the information for this login.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully updated the information for this login.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             conn.Close();
             cmd.Parameters.Clear();
@@ -409,6 +441,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_UserEdit _owner = new Frm_UserEdit();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -423,7 +457,7 @@ namespace RVL_Management_System.Class
             cmd.CommandText = UPDATE;
             cmd.ExecuteNonQuery();
 
-            MessageBox.Show("Successfully updated the User Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully updated the User Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             conn.Close();
             cmd.Parameters.Clear();
@@ -433,6 +467,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_CompanyLoginsUpdate _owner = new Frm_CompanyLoginsUpdate();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -450,7 +486,7 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully updated these Company Logins Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully updated these Company Logins Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
@@ -459,6 +495,8 @@ namespace RVL_Management_System.Class
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
+
+            Frm_LandStay _owner = new Frm_LandStay();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -484,10 +522,39 @@ namespace RVL_Management_System.Class
             cmd.ExecuteNonQuery();
 
             conn.Close();
-            MessageBox.Show("Successfully Updated these Land Stay Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(_owner, "Successfully Updated these Land Stay Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
+
+        public static void adminOfficeUpdate()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            Frm_AdminOfficeUpdate _owner = new Frm_AdminOfficeUpdate();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string UPDATE = "UPDATE tblAdminContact SET Full_name = @fn, Email = @email, Phone_number = @phoneNumber, Address = @address, County = @county, Category = @category WHERE ACID = @acid";
+            cmd.Parameters.AddWithValue("fn", Frm_AdminOfficeUpdate.fullName);
+            cmd.Parameters.AddWithValue("email", Frm_AdminOfficeUpdate.eMail);
+            cmd.Parameters.AddWithValue("phoneNumber", Frm_AdminOfficeUpdate.phoneNumber);
+            cmd.Parameters.AddWithValue("address", Frm_AdminOfficeUpdate.address);
+            cmd.Parameters.AddWithValue("county", Frm_AdminOfficeUpdate.county);
+            cmd.Parameters.AddWithValue("category", Frm_AdminOfficeUpdate.category);
+            cmd.Parameters.AddWithValue("acid", Frm_AdminOfficeUpdate.acid);
+            cmd.CommandText = UPDATE;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Successfully updated these Admin Contact List Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
 
         public static void taskAssign()
         {
