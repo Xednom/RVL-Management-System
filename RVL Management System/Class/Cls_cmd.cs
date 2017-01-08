@@ -662,5 +662,27 @@ namespace RVL_Management_System.Class
 
             cmd.Parameters.Clear();
         }
+
+        public static void videoTutorialsDelete()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            Frm_VideoTutorialsDelete _owner = new Frm_VideoTutorialsDelete();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string DELETE = "DELETE tblVideoTutorial WHERE VID = @vid";
+            cmd.Parameters.AddWithValue("vid", Frm_VideoTutorialsDelete.vid);
+            cmd.CommandText = DELETE;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Successfully deleted these Video Tutorials Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
     }
 }
