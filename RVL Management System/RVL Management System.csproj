@@ -316,11 +316,23 @@
     <Compile Include="Forms\Frm_VideoTutorialsAdd.Designer.cs">
       <DependentUpon>Frm_VideoTutorialsAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_VideoTutorialsDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_VideoTutorialsDelete.Designer.cs">
+      <DependentUpon>Frm_VideoTutorialsDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_VideoTutorialsUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Frm_VideoTutorialsUpdate.Designer.cs">
       <DependentUpon>Frm_VideoTutorialsUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AdminOfficeDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AdminOfficeDelete.Designer.cs">
+      <DependentUpon>Frm_AdminOfficeDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\PnlMarketing.cs">
       <SubType>UserControl</SubType>
@@ -450,8 +462,14 @@
     <EmbeddedResource Include="Forms\Frm_VideoTutorialsAdd.resx">
       <DependentUpon>Frm_VideoTutorialsAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_VideoTutorialsDelete.resx">
+      <DependentUpon>Frm_VideoTutorialsDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_VideoTutorialsUpdate.resx">
       <DependentUpon>Frm_VideoTutorialsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AdminOfficeDelete.resx">
+      <DependentUpon>Frm_AdminOfficeDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\PnlMarketing.resx">
       <DependentUpon>PnlMarketing.cs</DependentUpon>

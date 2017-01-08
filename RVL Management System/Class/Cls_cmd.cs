@@ -555,6 +555,30 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void videoTutorialsUpdate()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            Frm_VideoTutorialsUpdate _owner = new Frm_VideoTutorialsUpdate();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string UPDATE = "UPDATE tblVideoTutorial SET Process = @proc, Link = @link  WHERE VID = @vid";
+            cmd.Parameters.AddWithValue("proc", Frm_VideoTutorialsUpdate.process);
+            cmd.Parameters.AddWithValue("link", Frm_VideoTutorialsUpdate.link);
+            cmd.Parameters.AddWithValue("vid", Frm_VideoTutorialsUpdate.vid);
+            cmd.CommandText = UPDATE;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Successfully updated these Youtube Tutorials.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
 
         public static void taskAssign()
         {
@@ -613,6 +637,28 @@ namespace RVL_Management_System.Class
 
             conn.Close();
             MessageBox.Show("Successfully deleted these Company Logins Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
+        public static void adminOfficeDelete()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            Frm_AdminOfficeDelete _owner = new Frm_AdminOfficeDelete();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string DELETE = "DELETE tblAdminContact WHERE ACID = @acid";
+            cmd.Parameters.AddWithValue("acid", Frm_AdminOfficeDelete.acid);
+            cmd.CommandText = DELETE;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Successfully deleted these Admin Contact List Information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }

@@ -21,6 +21,7 @@ namespace RVL_Management_System.Forms
 
         public static string process = "";
         public static string link = "";
+        public static string vid = "";
 
         public Frm_VideoTutorialsUpdate()
         {
@@ -47,12 +48,12 @@ namespace RVL_Management_System.Forms
             cmd.Parameters.Clear();
         }
 
-        public void searchcideoID()
+        public void searchvideoID()
         {
             conn.Open();
             cmd.Connection = conn;
-            string LOAD = "SELECT * FROM tblVideoTutorial WHERE VID LIKE @vid";
-            cmd.Parameters.AddWithValue("vid", "%" + txt_search.Text + "%");
+            string LOAD = "SELECT * FROM tblVideoTutorial WHERE VID = @vid";
+            cmd.Parameters.AddWithValue("vid", txt_search.Text);
             cmd.CommandText = LOAD;
             cmd.ExecuteNonQuery();
 
@@ -66,6 +67,15 @@ namespace RVL_Management_System.Forms
             cmd.Parameters.Clear();
         }
 
+        public void clear()
+        {
+            txt_process.Text = null;
+            txt_youtube.Text = null;
+            txt_vid.Text = null;
+            txt_search.Text = null;
+            cBoxSearchBy.Text = null;
+        }
+
         private void Frm_VideoTutorialsUpdate_Load(object sender, EventArgs e)
         {
 
@@ -73,7 +83,7 @@ namespace RVL_Management_System.Forms
 
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
-            searchProcess();
+            
         }
 
         private void GridView_SelectionChanged(object sender, EventArgs e)
@@ -91,6 +101,35 @@ namespace RVL_Management_System.Forms
                 txt_process.Text = row.Cells[1].Value.ToString();
                 txt_youtube.Text = row.Cells[2].Value.ToString();
 
+            }
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            if (cBoxSearchBy.Text == "Process")
+            {
+                searchProcess();
+            }
+            else if (cBoxSearchBy.Text == "VID")
+            {
+                searchvideoID();
+            }
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            if (MetroMessageBox.Show(this, "Do you want to update these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                process = txt_process.Text;
+                link = txt_youtube.Text;
+                vid = txt_vid.Text;
+                Class.Cls_cmd.videoTutorialsUpdate();
+                clear();
+            }
+            else
+            {
+                //IF NO
+                //TODO:NOTHING
             }
         }
     }
