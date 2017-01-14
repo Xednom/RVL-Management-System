@@ -40,7 +40,6 @@
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.btn_marketing = new MetroFramework.Controls.MetroLink();
@@ -51,6 +50,7 @@
             this.metroLink4 = new MetroFramework.Controls.MetroLink();
             this.metroLink5 = new MetroFramework.Controls.MetroLink();
             this.metroLink6 = new MetroFramework.Controls.MetroLink();
+            this.metroLink7 = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,18 +144,6 @@
             this.metroTile6.TabIndex = 10;
             this.metroTile6.Text = "Admin And Accounting";
             this.metroTile6.UseSelectable = true;
-            // 
-            // metroTile7
-            // 
-            this.metroTile7.ActiveControl = null;
-            this.metroTile7.Location = new System.Drawing.Point(148, 160);
-            this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(156, 67);
-            this.metroTile7.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile7.TabIndex = 12;
-            this.metroTile7.Text = "Training Materials";
-            this.metroTile7.UseSelectable = true;
-            this.metroTile7.Click += new System.EventHandler(this.metroTile7_Click);
             // 
             // metroTile8
             // 
@@ -302,6 +290,21 @@
             this.metroLink6.UseSelectable = true;
             this.metroLink6.Click += new System.EventHandler(this.metroLink6_Click);
             // 
+            // metroLink7
+            // 
+            this.metroLink7.Image = global::RVL_Management_System.Properties.Resources.folder_1;
+            this.metroLink7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLink7.ImageSize = 32;
+            this.metroLink7.Location = new System.Drawing.Point(148, 160);
+            this.metroLink7.Name = "metroLink7";
+            this.metroLink7.NoFocusImage = global::RVL_Management_System.Properties.Resources.folder;
+            this.metroLink7.Size = new System.Drawing.Size(158, 67);
+            this.metroLink7.TabIndex = 36;
+            this.metroLink7.Text = "Training Materials";
+            this.metroLink7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroLink7.UseSelectable = true;
+            this.metroLink7.Click += new System.EventHandler(this.metroLink7_Click);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +312,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.metroLink7);
             this.Controls.Add(this.metroLink6);
             this.Controls.Add(this.metroLink5);
             this.Controls.Add(this.metroLink4);
@@ -319,7 +323,6 @@
             this.Controls.Add(this.btn_marketing);
             this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.metroTile8);
-            this.Controls.Add(this.metroTile7);
             this.Controls.Add(this.metroTile6);
             this.Controls.Add(this.metroTile4);
             this.Controls.Add(this.metroTile2);
@@ -329,7 +332,6 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Frm_Main";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Green;
@@ -358,7 +360,6 @@
         private MetroFramework.Controls.MetroTile metroTile4;
         private MetroFramework.Controls.MetroTile metroTile6;
         private System.Windows.Forms.ToolStripStatusLabel lbl_Usertype;
-        private MetroFramework.Controls.MetroTile metroTile7;
         private MetroFramework.Controls.MetroTile metroTile8;
         private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroLink btn_marketing;
@@ -371,6 +372,7 @@
         private MetroFramework.Controls.MetroLink metroLink4;
         private MetroFramework.Controls.MetroLink metroLink5;
         private MetroFramework.Controls.MetroLink metroLink6;
+        private MetroFramework.Controls.MetroLink metroLink7;
     }
 }
 

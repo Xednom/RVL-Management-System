@@ -342,6 +342,48 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void californiaDeedAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            Frm_CaliforniaGrantDeed _owner = new Frm_CaliforniaGrantDeed();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO tblCaliforniaDeed(APN,PreparedBy,ReturnTo,StatementsGrantee,Acknowledged,GrantTo,CountyOf,Dated,Grantor,GrantDeedPrintName,StateOf,AcknowledgementCountyOf,AcknowledgementOn,BeforeMe,PersonallyAppeared,LawsStateOf,NotaryPublic,CommissionExpires,AcknowledgementPrintName,GrantorNameAddressPhone,GranteeNameAddressPhone)VALUES(@apn,@preparedBy,@returnTo,@statementGrantee,@acknowledged,@grantTo,@countyOf,@dated,@grantor,@grantDeedPrintName,@stateOf,@acknowledgementCountyOf,@acknowledgedOn,@beforeMe,@personallyAppeared,@lawsStateOf,@notaryPublic,@commissionExpires,@acknowledgementPrintName,@grantorNameAddressPhone,@granteeNameAddressPhone)";
+            cmd.Parameters.AddWithValue("apn", Frm_CaliforniaGrantDeed.APN);
+            cmd.Parameters.AddWithValue("preparedBy", Frm_CaliforniaGrantDeed.preparedBy);
+            cmd.Parameters.AddWithValue("returnTo", Frm_CaliforniaGrantDeed.returnTo);
+            cmd.Parameters.AddWithValue("statementGrantee", Frm_CaliforniaGrantDeed.statementsToGrantee);
+            cmd.Parameters.AddWithValue("acknowledged", Frm_CaliforniaGrantDeed.acknowledged);
+            cmd.Parameters.AddWithValue("grantTo", Frm_CaliforniaGrantDeed.grantTo);
+            cmd.Parameters.AddWithValue("countyOf", Frm_CaliforniaGrantDeed.countyOf);
+            cmd.Parameters.AddWithValue("dated", Frm_CaliforniaGrantDeed.dated);
+            cmd.Parameters.AddWithValue("grantor", Frm_CaliforniaGrantDeed.grantor);
+            cmd.Parameters.AddWithValue("grantDeedPrintName", Frm_CaliforniaGrantDeed.grantPrintDeedName);
+            cmd.Parameters.AddWithValue("stateOf", Frm_CaliforniaGrantDeed.stateOf);
+            cmd.Parameters.AddWithValue("acknowledgementCountyOf", Frm_CaliforniaGrantDeed.acknowledgementCountyOf);
+            cmd.Parameters.AddWithValue("acknowledgedOn", Frm_CaliforniaGrantDeed.acknowledgementOn);
+            cmd.Parameters.AddWithValue("beforeMe", Frm_CaliforniaGrantDeed.beforeMe);
+            cmd.Parameters.AddWithValue("personallyAppeared", Frm_CaliforniaGrantDeed.personallyAppeared);
+            cmd.Parameters.AddWithValue("lawsStateOf", Frm_CaliforniaGrantDeed.lawStateOf);
+            cmd.Parameters.AddWithValue("notaryPublic", Frm_CaliforniaGrantDeed.notaryPublic);
+            cmd.Parameters.AddWithValue("commissionExpires", Frm_CaliforniaGrantDeed.commissionExpires);
+            cmd.Parameters.AddWithValue("acknowledgementPrintName", Frm_CaliforniaGrantDeed.acknowledgementPrintName);
+            cmd.Parameters.AddWithValue("grantorNameAddressPhone", Frm_CaliforniaGrantDeed.grantorNameAddressPhone);
+            cmd.Parameters.AddWithValue("granteeNameAddressPhone", Frm_CaliforniaGrantDeed.granteeNameAddressPhone);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Successfully saved these California Deed information.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
 
         public static void marketingUpdate()
         {

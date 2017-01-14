@@ -61,6 +61,25 @@ namespace RVL_Management_System.Forms
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
         }
 
+        public void loadPayments()
+        {
+            conn.Open();
+            cmd.Connection = conn;
+            string LOAD = "SELECT Date_Payments,Amount_Payments,Total_Amount_Paid,Total_Land_Cost,Payment_Balance_Due FROM tblAccountingBusiness WHERE Sold_To = @soldTo";
+            cmd.Parameters.AddWithValue("soldTo", cBoxSoldTo.Text);
+            cmd.CommandText = LOAD;
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            GridView.DataSource = dt;
+
+            conn.Close();
+
+            cmd.Parameters.Clear();
+        }
+
         public void loadLandOwner()
         {
 
@@ -82,6 +101,7 @@ namespace RVL_Management_System.Forms
         private void Frm_PropertyAccounting_Load(object sender, EventArgs e)
         {
             loadLandOwner();
+            loadPayments();
         }
 
         private void Frm_PropertyAccountingBusiness_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)

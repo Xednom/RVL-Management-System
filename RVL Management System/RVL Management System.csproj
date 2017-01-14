@@ -85,6 +85,8 @@
     <Reference Include="MetroFramework.Fonts">
       <HintPath>H:\Projects\metroframework-modern-ui-master\MetroFramework.Fonts\bin\Release\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -92,6 +94,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -112,6 +115,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Cls_cmd.cs" />
+    <Compile Include="Print\PrintCaliforniaGrantDeed.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCaliforniaGrantDeed.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_AddLeadSource.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +143,12 @@
     </Compile>
     <Compile Include="Forms\Frm_AdminOfficeUpdate.Designer.cs">
       <DependentUpon>Frm_AdminOfficeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_CaliforniaGrantDeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CaliforniaGrantDeed.Designer.cs">
+      <DependentUpon>Frm_CaliforniaGrantDeed.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_CompanyLoginsAdd.cs">
       <SubType>Form</SubType>
@@ -219,6 +233,12 @@
     </Compile>
     <Compile Include="Forms\Frm_MarketingView.Designer.cs">
       <DependentUpon>Frm_MarketingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print Forms\Frm_PrintCaliforniaDeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print Forms\Frm_PrintCaliforniaDeed.Designer.cs">
+      <DependentUpon>Frm_PrintCaliforniaDeed.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_PropertyAccountingBusiness.cs">
       <SubType>Form</SubType>
@@ -372,6 +392,9 @@
     <EmbeddedResource Include="Forms\Frm_AdminOfficeUpdate.resx">
       <DependentUpon>Frm_AdminOfficeUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_CaliforniaGrantDeed.resx">
+      <DependentUpon>Frm_CaliforniaGrantDeed.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_CompanyLoginsAdd.resx">
       <DependentUpon>Frm_CompanyLoginsAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -413,6 +436,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MarketingVIew.resx">
       <DependentUpon>Frm_MarketingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print Forms\Frm_PrintCaliforniaDeed.resx">
+      <DependentUpon>Frm_PrintCaliforniaDeed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_PropertyAccountingBusiness.resx">
       <DependentUpon>Frm_PropertyAccountingBusiness.cs</DependentUpon>
@@ -471,6 +497,7 @@
     <EmbeddedResource Include="Forms\Frm_AdminOfficeDelete.resx">
       <DependentUpon>Frm_AdminOfficeDelete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report1.rdlc" />
     <EmbeddedResource Include="Panel\PnlMarketing.resx">
       <DependentUpon>PnlMarketing.cs</DependentUpon>
     </EmbeddedResource>
@@ -480,6 +507,7 @@
     <EmbeddedResource Include="Panel\PnlTask.resx">
       <DependentUpon>PnlTask.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Print\CaliforniaDeed.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -490,6 +518,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Print\PrintCaliforniaGrantDeed.xsc">
+      <DependentUpon>PrintCaliforniaGrantDeed.xsd</DependentUpon>
+    </None>
+    <None Include="Print\PrintCaliforniaGrantDeed.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCaliforniaGrantDeed.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Print\PrintCaliforniaGrantDeed.xss">
+      <DependentUpon>PrintCaliforniaGrantDeed.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -620,6 +659,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\update_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

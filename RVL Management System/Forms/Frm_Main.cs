@@ -218,5 +218,11 @@ namespace RVL_Management_System
         {
 
         }
+
+        private void metroLink7_Click(object sender, EventArgs e)
+        {
+            Frm_TrainingMaterials ftrain = new Frm_TrainingMaterials();
+            ftrain.ShowDialog();
+        }
     }
 }
