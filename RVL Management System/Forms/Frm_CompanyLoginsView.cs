@@ -10,11 +10,15 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using Microsoft.Office.Interop.Excel;
+
 
 namespace RVL_Management_System.Forms
 {
     public partial class Frm_CompanyLoginsView : MetroForm
     {
+        
+
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         public Frm_CompanyLoginsView()
@@ -32,7 +36,7 @@ namespace RVL_Management_System.Forms
             cmd.ExecuteNonQuery();
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             da.Fill(dt);
             GridView.DataSource = dt;
 
@@ -41,9 +45,33 @@ namespace RVL_Management_System.Forms
             cmd.Parameters.Clear();
         }
 
+        private void copyAlltoClipboard()
+        {
+            GridView.SelectAll();
+            DataObject dataObj = GridView.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
+        }
+
         private void Frm_CompanyLoginsView_Load(object sender, EventArgs e)
         {
             loadData();
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            copyAlltoClipboard();
+            Microsoft.Office.Interop.Excel.Application xlexcel;
+            Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+            xlexcel = new Microsoft.Office.Interop.Excel.Application();
+            xlexcel.Visible = true;
+            xlWorkBook = xlexcel.Workbooks.Add(misValue);
+            xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
+            CR.Select();
+            xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
         }
     }
 }

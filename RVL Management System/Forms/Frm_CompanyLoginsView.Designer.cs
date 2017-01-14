@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GridView = new MetroFramework.Controls.MetroGrid();
+            this.btn_export = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.GridView.EnableHeadersVisualStyles = false;
             this.GridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.GridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GridView.Location = new System.Drawing.Point(23, 83);
+            this.GridView.Location = new System.Drawing.Point(23, 123);
             this.GridView.Name = "GridView";
             this.GridView.ReadOnly = true;
             this.GridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -81,11 +82,22 @@
             this.GridView.Size = new System.Drawing.Size(743, 402);
             this.GridView.TabIndex = 0;
             // 
+            // btn_export
+            // 
+            this.btn_export.Location = new System.Drawing.Point(23, 82);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(75, 23);
+            this.btn_export.TabIndex = 1;
+            this.btn_export.Text = "&Export";
+            this.btn_export.UseSelectable = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_print_Click);
+            // 
             // Frm_CompanyLoginsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 508);
+            this.ClientSize = new System.Drawing.Size(789, 548);
+            this.Controls.Add(this.btn_export);
             this.Controls.Add(this.GridView);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -101,5 +113,6 @@
         #endregion
 
         private MetroFramework.Controls.MetroGrid GridView;
+        private MetroFramework.Controls.MetroButton btn_export;
     }
 }

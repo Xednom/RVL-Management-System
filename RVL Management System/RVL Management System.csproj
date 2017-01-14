@@ -52,6 +52,9 @@
       <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ExcelLibrary">
+      <HintPath>..\ExcelLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Apis, Version=1.19.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.19.0\lib\net45\Google.Apis.dll</HintPath>
       <Private>True</Private>
@@ -115,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Cls_cmd.cs" />
+    <Compile Include="Print Forms\Frm_PrintCompanyLogins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print Forms\Frm_PrintCompanyLogins.Designer.cs">
+      <DependentUpon>Frm_PrintCompanyLogins.cs</DependentUpon>
+    </Compile>
     <Compile Include="Print\PrintCaliforniaGrantDeed.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -378,6 +387,11 @@
     <Compile Include="Panel\PnlUser.Designer.cs">
       <DependentUpon>PnlUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Print\PrintCompanyLogins.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCompanyLogins.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Frm_AddLeadSource.resx">
@@ -497,7 +511,11 @@
     <EmbeddedResource Include="Forms\Frm_AdminOfficeDelete.resx">
       <DependentUpon>Frm_AdminOfficeDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print\Report1.rdlc" />
+    <EmbeddedResource Include="Print Forms\Frm_PrintCompanyLogins.resx">
+      <DependentUpon>Frm_PrintCompanyLogins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\rptCompangLogins.rdlc" />
+    <EmbeddedResource Include="Print\rptCaliforniaDeeds.rdlc" />
     <EmbeddedResource Include="Panel\PnlMarketing.resx">
       <DependentUpon>PnlMarketing.cs</DependentUpon>
     </EmbeddedResource>
@@ -530,6 +548,17 @@
       <DependentUpon>PrintCaliforniaGrantDeed.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Print\PrintCompanyLogins.xsc">
+      <DependentUpon>PrintCompanyLogins.xsd</DependentUpon>
+    </None>
+    <None Include="Print\PrintCompanyLogins.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCompanyLogins.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Print\PrintCompanyLogins.xss">
+      <DependentUpon>PrintCompanyLogins.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -665,6 +694,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
