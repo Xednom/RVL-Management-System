@@ -83,9 +83,10 @@ namespace RVL_Management_System.Forms
 
         }
 
+      
         private void Frm_CompanyLoginsUpdate_Load(object sender, EventArgs e)
         {
-
+            refresh();
         }
 
         private void txt_search_Click(object sender, EventArgs e)
@@ -152,6 +153,12 @@ namespace RVL_Management_System.Forms
         private void GridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn_export_Click(object sender, EventArgs e)
+        {
+            Frm_CompanyLoginsView fview = new Frm_CompanyLoginsView();
+            fview.ShowDialog();
         }
     }
 }

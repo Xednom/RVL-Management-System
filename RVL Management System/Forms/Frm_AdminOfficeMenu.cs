@@ -28,5 +28,11 @@ namespace RVL_Management_System.Forms
             Frm_AdminOfficeAdd fofficeadd = new Frm_AdminOfficeAdd();
             fofficeadd.ShowDialog();
         }
+
+        private void btn_view_Click(object sender, EventArgs e)
+        {
+            Frm_AdminOfficeView fadminView = new Frm_AdminOfficeView();
+            fadminView.ShowDialog();
+        }
     }
 }

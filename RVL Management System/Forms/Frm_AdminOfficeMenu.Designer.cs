@@ -47,6 +47,7 @@
             this.btn_view.Text = "View";
             this.btn_view.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_view.UseSelectable = true;
+            this.btn_view.Click += new System.EventHandler(this.btn_view_Click);
             // 
             // btn_delete
             // 

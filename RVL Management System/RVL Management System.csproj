@@ -118,6 +118,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Cls_cmd.cs" />
+    <Compile Include="Forms\Frm_AdminOfficeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AdminOfficeView.Designer.cs">
+      <DependentUpon>Frm_AdminOfficeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_ExportFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_ExportFiles.Designer.cs">
+      <DependentUpon>Frm_ExportFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_LandStayView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_LandStayView.Designer.cs">
+      <DependentUpon>Frm_LandStayView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SocialMediaExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SocialMediaExport.Designer.cs">
+      <DependentUpon>Frm_SocialMediaExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_VideoTutorialsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_VideoTutorialsView.Designer.cs">
+      <DependentUpon>Frm_VideoTutorialsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Print Forms\Frm_PrintCompanyLogins.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -406,6 +436,9 @@
     <EmbeddedResource Include="Forms\Frm_AdminOfficeUpdate.resx">
       <DependentUpon>Frm_AdminOfficeUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AdminOfficeView.resx">
+      <DependentUpon>Frm_AdminOfficeView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_CaliforniaGrantDeed.resx">
       <DependentUpon>Frm_CaliforniaGrantDeed.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,11 +460,17 @@
     <EmbeddedResource Include="Forms\Frm_Email.resx">
       <DependentUpon>Frm_Email.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_ExportFiles.resx">
+      <DependentUpon>Frm_ExportFiles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_LandOwner.resx">
       <DependentUpon>Frm_LandOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_LandStay.resx">
       <DependentUpon>Frm_LandStay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_LandStayVIew.resx">
+      <DependentUpon>Frm_LandStayView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_LeadAssigned.resx">
       <DependentUpon>Frm_LeadAssigned.cs</DependentUpon>
@@ -450,6 +489,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_MarketingVIew.resx">
       <DependentUpon>Frm_MarketingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SocialMediaExport.resx">
+      <DependentUpon>Frm_SocialMediaExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_VideoTutorialsView.resx">
+      <DependentUpon>Frm_VideoTutorialsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print Forms\Frm_PrintCaliforniaDeed.resx">
       <DependentUpon>Frm_PrintCaliforniaDeed.cs</DependentUpon>
@@ -723,6 +768,21 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-with-company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-with-cogwheels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\optimization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
