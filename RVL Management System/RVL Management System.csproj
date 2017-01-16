@@ -118,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Cls_cmd.cs" />
+    <Compile Include="Forms\Frm_AdminOfficeExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AdminOfficeExport.Designer.cs">
+      <DependentUpon>Frm_AdminOfficeExport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_AdminOfficeView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="Forms\Frm_ExportFiles.Designer.cs">
       <DependentUpon>Frm_ExportFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_LandStayExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_LandStayExport.Designer.cs">
+      <DependentUpon>Frm_LandStayExport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_LandStayView.cs">
       <SubType>Form</SubType>
@@ -142,11 +154,23 @@
     <Compile Include="Forms\Frm_SocialMediaExport.Designer.cs">
       <DependentUpon>Frm_SocialMediaExport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_VideoTutorialsExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_VideoTutorialsExport.Designer.cs">
+      <DependentUpon>Frm_VideoTutorialsExport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_VideoTutorialsView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Frm_VideoTutorialsView.Designer.cs">
       <DependentUpon>Frm_VideoTutorialsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyLoginsExport.Designer.cs">
+      <DependentUpon>Frm_CompanyLoginsExport.cs</DependentUpon>
     </Compile>
     <Compile Include="Print Forms\Frm_PrintCompanyLogins.cs">
       <SubType>Form</SubType>
@@ -430,6 +454,9 @@
     <EmbeddedResource Include="Forms\Frm_AdminOfficeAdd.resx">
       <DependentUpon>Frm_AdminOfficeAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AdminOfficeExport.resx">
+      <DependentUpon>Frm_AdminOfficeExport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_AdminOfficeMenu.resx">
       <DependentUpon>Frm_AdminOfficeMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -469,6 +496,9 @@
     <EmbeddedResource Include="Forms\Frm_LandStay.resx">
       <DependentUpon>Frm_LandStay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_LandStayExport.resx">
+      <DependentUpon>Frm_LandStayExport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_LandStayVIew.resx">
       <DependentUpon>Frm_LandStayView.cs</DependentUpon>
     </EmbeddedResource>
@@ -493,8 +523,14 @@
     <EmbeddedResource Include="Forms\Frm_SocialMediaExport.resx">
       <DependentUpon>Frm_SocialMediaExport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_VideoTutorialsExport.resx">
+      <DependentUpon>Frm_VideoTutorialsExport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_VideoTutorialsView.resx">
       <DependentUpon>Frm_VideoTutorialsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_CompanyLoginsExport.resx">
+      <DependentUpon>Frm_CompanyLoginsExport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print Forms\Frm_PrintCaliforniaDeed.resx">
       <DependentUpon>Frm_PrintCaliforniaDeed.cs</DependentUpon>

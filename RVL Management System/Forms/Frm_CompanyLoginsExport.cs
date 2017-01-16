@@ -11,23 +11,24 @@ using MetroFramework.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
 
-namespace RVL_Management_System.Forms
+namespace RVL_Management_System
 {
-    public partial class Frm_SocialMediaExport : MetroForm
+    public partial class Frm_CompanyLoginsExport : MetroForm
     {
-        SqlCommand cmd = new SqlCommand();
         SqlConnection conn = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
 
-        public Frm_SocialMediaExport()
+        public Frm_CompanyLoginsExport()
         {
             InitializeComponent();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
         }
+
         public void loadData()
         {
             conn.Open();
             cmd.Connection = conn;
-            string LOAD = "SELECT * FROM tblSocialMedia";
+            string LOAD = "SELECT * FROM tblCompanyLogins";
             cmd.CommandText = LOAD;
             cmd.ExecuteNonQuery();
 
@@ -49,12 +50,12 @@ namespace RVL_Management_System.Forms
                 Clipboard.SetDataObject(dataObj);
         }
 
-        private void Frm_SocialMediaExport_Load(object sender, EventArgs e)
+        private void Frm_CompanyLoginsExport_Load(object sender, EventArgs e)
         {
             loadData();
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void btn_export_Click(object sender, EventArgs e)
         {
             copyAlltoClipboard();
             Microsoft.Office.Interop.Excel.Application xlexcel;

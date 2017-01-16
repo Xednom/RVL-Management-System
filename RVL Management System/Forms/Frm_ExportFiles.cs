@@ -25,19 +25,19 @@ namespace RVL_Management_System.Forms
 
         private void btn_company_Click(object sender, EventArgs e)
         {
-            Frm_CompanyLoginsView fcompanyView = new Frm_CompanyLoginsView();
+            Frm_CompanyLoginsExport fcompanyView = new Frm_CompanyLoginsExport();
             fcompanyView.ShowDialog();
         }
 
         private void btn_adminOffice_Click(object sender, EventArgs e)
         {
-            Frm_AdminOfficeView fadminView = new Frm_AdminOfficeView();
+            Frm_AdminOfficeExport fadminView = new Frm_AdminOfficeExport();
             fadminView.ShowDialog();
         }
 
         private void btn_landStay_Click(object sender, EventArgs e)
         {
-            Frm_LandStayView flandView = new Frm_LandStayView();
+            Frm_LandStayExport flandView = new Frm_LandStayExport();
             flandView.ShowDialog();
         }
 
@@ -49,7 +49,7 @@ namespace RVL_Management_System.Forms
 
         private void btn_videoTutorials_Click(object sender, EventArgs e)
         {
-            Frm_VideoTutorialsView fvideoView = new Frm_VideoTutorialsView();
+            Frm_VideoTutorialsExport fvideoView = new Frm_VideoTutorialsExport();
             fvideoView.ShowDialog();
         }
     }

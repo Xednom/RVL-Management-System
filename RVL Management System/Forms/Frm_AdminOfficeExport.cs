@@ -13,21 +13,21 @@ using System.Configuration;
 
 namespace RVL_Management_System.Forms
 {
-    public partial class Frm_SocialMediaExport : MetroForm
+    public partial class Frm_AdminOfficeExport : MetroForm
     {
         SqlCommand cmd = new SqlCommand();
         SqlConnection conn = new SqlConnection();
-
-        public Frm_SocialMediaExport()
+        public Frm_AdminOfficeExport()
         {
             InitializeComponent();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
         }
+
         public void loadData()
         {
             conn.Open();
             cmd.Connection = conn;
-            string LOAD = "SELECT * FROM tblSocialMedia";
+            string LOAD = "SELECT * FROM tblAdminContact";
             cmd.CommandText = LOAD;
             cmd.ExecuteNonQuery();
 
@@ -49,7 +49,7 @@ namespace RVL_Management_System.Forms
                 Clipboard.SetDataObject(dataObj);
         }
 
-        private void Frm_SocialMediaExport_Load(object sender, EventArgs e)
+        private void Frm_AdminOfficeExport_Load(object sender, EventArgs e)
         {
             loadData();
         }
