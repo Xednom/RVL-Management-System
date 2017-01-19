@@ -1,5 +1,4 @@
 ﻿using System;
-using RVL_Management_System.Panel;
 using RVL_Management_System.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -101,11 +100,9 @@ namespace RVL_Management_System
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            //metroTile1.Enabled = false;
-            Frm_UserMenu _pnlone = new Frm_UserMenu(this);
-            //_pnlone.Closed += _pnlone_Closed;
-            //_pnlone.Shown += _pnlone_Shown;
-            _pnlone.swipe(true);
+            UserMenu Umenu = new UserMenu();
+            Umenu.ShowDialog();
+
         }
 
         private void metroTile3_Click(object sender, EventArgs e)
@@ -166,11 +163,8 @@ namespace RVL_Management_System
 
         private void btn_task_Click(object sender, EventArgs e)
         {
-            //btn_task.Enabled = false;
-            Frm_Tasks _pnlone = new Frm_Tasks(this);
-            _pnlone.Closed += _pnlone_Closed;
-            _pnlone.Shown += _pnlone_Shown;
-            _pnlone.swipe(true);
+            Frm_Tasks ftask = new Frm_Tasks();
+            ftask.Show();
         }
 
         private void Frm_Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -223,6 +217,12 @@ namespace RVL_Management_System
         {
             TrainingMaterials ftrain = new TrainingMaterials();
             ftrain.ShowDialog();
+        }
+
+        private void metroLink8_Click(object sender, EventArgs e)
+        {
+            VideoTutorialsMenu vMenu = new VideoTutorialsMenu();
+            vMenu.ShowDialog();
         }
     }
 }

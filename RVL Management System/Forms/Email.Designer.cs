@@ -29,33 +29,39 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_cc = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chckBoxSsl = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_port = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btn_send = new MetroFramework.Controls.MetroButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_pw = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_smtp = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.txt_to = new System.Windows.Forms.TextBox();
             this.txt_subject = new System.Windows.Forms.TextBox();
             this.txt_content = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_send = new MetroFramework.Controls.MetroButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_pw = new System.Windows.Forms.TextBox();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_cc = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_smtp = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txt_port = new System.Windows.Forms.TextBox();
-            this.chckBoxSsl = new System.Windows.Forms.CheckBox();
+            this.txt_attachments = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_attach = new MetroFramework.Controls.MetroButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.txt_attachments);
             this.groupBox1.Controls.Add(this.txt_cc);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -72,6 +78,152 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New Message";
+            // 
+            // txt_cc
+            // 
+            this.txt_cc.Location = new System.Drawing.Point(89, 41);
+            this.txt_cc.Name = "txt_cc";
+            this.txt_cc.Size = new System.Drawing.Size(633, 21);
+            this.txt_cc.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(53, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "CC:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn_attach);
+            this.groupBox2.Controls.Add(this.chckBoxSsl);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txt_port);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.btn_send);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txt_pw);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txt_smtp);
+            this.groupBox2.Controls.Add(this.txt_email);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(89, 424);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(633, 179);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Account Setting";
+            // 
+            // chckBoxSsl
+            // 
+            this.chckBoxSsl.AutoSize = true;
+            this.chckBoxSsl.Checked = true;
+            this.chckBoxSsl.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chckBoxSsl.Enabled = false;
+            this.chckBoxSsl.Location = new System.Drawing.Point(365, 70);
+            this.chckBoxSsl.Name = "chckBoxSsl";
+            this.chckBoxSsl.Size = new System.Drawing.Size(64, 17);
+            this.chckBoxSsl.TabIndex = 28;
+            this.chckBoxSsl.Text = "Enable";
+            this.chckBoxSsl.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(34, 98);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Port:";
+            // 
+            // txt_port
+            // 
+            this.txt_port.Enabled = false;
+            this.txt_port.Location = new System.Drawing.Point(77, 95);
+            this.txt_port.Name = "txt_port";
+            this.txt_port.Size = new System.Drawing.Size(107, 21);
+            this.txt_port.TabIndex = 26;
+            this.txt_port.Text = "587";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(190, 71);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(169, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "SSL(Secure Sockets Layer):";
+            // 
+            // btn_send
+            // 
+            this.btn_send.Location = new System.Drawing.Point(552, 146);
+            this.btn_send.Name = "btn_send";
+            this.btn_send.Size = new System.Drawing.Size(75, 27);
+            this.btn_send.TabIndex = 1;
+            this.btn_send.Text = "Send";
+            this.btn_send.UseSelectable = true;
+            this.btn_send.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 44);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Password:";
+            // 
+            // txt_pw
+            // 
+            this.txt_pw.Location = new System.Drawing.Point(77, 41);
+            this.txt_pw.Name = "txt_pw";
+            this.txt_pw.PasswordChar = '*';
+            this.txt_pw.Size = new System.Drawing.Size(540, 21);
+            this.txt_pw.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Smtp:";
+            // 
+            // txt_smtp
+            // 
+            this.txt_smtp.Enabled = false;
+            this.txt_smtp.Location = new System.Drawing.Point(77, 68);
+            this.txt_smtp.Name = "txt_smtp";
+            this.txt_smtp.Size = new System.Drawing.Size(107, 21);
+            this.txt_smtp.TabIndex = 21;
+            this.txt_smtp.Text = "smtp.gmail.com";
+            // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(77, 14);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(540, 21);
+            this.txt_email.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Email:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(36, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.TabIndex = 16;
             // 
             // txt_to
             // 
@@ -92,7 +244,7 @@
             this.txt_content.Location = new System.Drawing.Point(89, 95);
             this.txt_content.Multiline = true;
             this.txt_content.Name = "txt_content";
-            this.txt_content.Size = new System.Drawing.Size(631, 323);
+            this.txt_content.Size = new System.Drawing.Size(631, 287);
             this.txt_content.TabIndex = 15;
             // 
             // label4
@@ -122,159 +274,44 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "To:";
             // 
-            // btn_send
+            // txt_attachments
             // 
-            this.btn_send.Location = new System.Drawing.Point(552, 146);
-            this.btn_send.Name = "btn_send";
-            this.btn_send.Size = new System.Drawing.Size(75, 27);
-            this.btn_send.TabIndex = 1;
-            this.btn_send.Text = "Send";
-            this.btn_send.UseSelectable = true;
-            this.btn_send.Click += new System.EventHandler(this.metroButton1_Click);
+            this.txt_attachments.Location = new System.Drawing.Point(89, 388);
+            this.txt_attachments.Name = "txt_attachments";
+            this.txt_attachments.Size = new System.Drawing.Size(631, 21);
+            this.txt_attachments.TabIndex = 29;
             // 
-            // label6
+            // label11
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
-            this.label6.TabIndex = 16;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(0, 391);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Attachments:";
             // 
-            // groupBox2
+            // btn_attach
             // 
-            this.groupBox2.Controls.Add(this.chckBoxSsl);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txt_port);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.btn_send);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txt_pw);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txt_smtp);
-            this.groupBox2.Controls.Add(this.txt_email);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(89, 424);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(633, 179);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Account Setting";
+            this.btn_attach.Location = new System.Drawing.Point(434, 146);
+            this.btn_attach.Name = "btn_attach";
+            this.btn_attach.Size = new System.Drawing.Size(112, 27);
+            this.btn_attach.TabIndex = 29;
+            this.btn_attach.Text = "Add Attachments";
+            this.btn_attach.UseSelectable = true;
+            this.btn_attach.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
-            // label7
+            // openFileDialog1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 44);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Password:";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // txt_pw
-            // 
-            this.txt_pw.Location = new System.Drawing.Point(77, 41);
-            this.txt_pw.Name = "txt_pw";
-            this.txt_pw.PasswordChar = '*';
-            this.txt_pw.Size = new System.Drawing.Size(540, 21);
-            this.txt_pw.TabIndex = 20;
-            // 
-            // txt_email
-            // 
-            this.txt_email.Location = new System.Drawing.Point(77, 14);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(540, 21);
-            this.txt_email.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Email:";
-            // 
-            // txt_cc
-            // 
-            this.txt_cc.Location = new System.Drawing.Point(89, 41);
-            this.txt_cc.Name = "txt_cc";
-            this.txt_cc.Size = new System.Drawing.Size(633, 21);
-            this.txt_cc.TabIndex = 19;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(53, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "CC:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(190, 71);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(169, 13);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "SSL(Secure Sockets Layer):";
-            // 
-            // txt_smtp
-            // 
-            this.txt_smtp.Enabled = false;
-            this.txt_smtp.Location = new System.Drawing.Point(77, 68);
-            this.txt_smtp.Name = "txt_smtp";
-            this.txt_smtp.Size = new System.Drawing.Size(107, 21);
-            this.txt_smtp.TabIndex = 21;
-            this.txt_smtp.Text = "smtp.gmail.com";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 71);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Smtp:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(34, 98);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Port:";
-            // 
-            // txt_port
-            // 
-            this.txt_port.Enabled = false;
-            this.txt_port.Location = new System.Drawing.Point(77, 95);
-            this.txt_port.Name = "txt_port";
-            this.txt_port.Size = new System.Drawing.Size(107, 21);
-            this.txt_port.TabIndex = 26;
-            this.txt_port.Text = "587";
-            // 
-            // chckBoxSsl
-            // 
-            this.chckBoxSsl.AutoSize = true;
-            this.chckBoxSsl.Checked = true;
-            this.chckBoxSsl.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chckBoxSsl.Enabled = false;
-            this.chckBoxSsl.Location = new System.Drawing.Point(365, 70);
-            this.chckBoxSsl.Name = "chckBoxSsl";
-            this.chckBoxSsl.Size = new System.Drawing.Size(64, 17);
-            this.chckBoxSsl.TabIndex = 28;
-            this.chckBoxSsl.Text = "Enable";
-            this.chckBoxSsl.UseVisualStyleBackColor = true;
-            // 
-            // Frm_Email
+            // Email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 693);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Frm_Email";
+            this.Name = "Email";
             this.Padding = new System.Windows.Forms.Padding(23, 60, 23, 20);
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Green;
@@ -313,5 +350,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_smtp;
         private System.Windows.Forms.CheckBox chckBoxSsl;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txt_attachments;
+        private MetroFramework.Controls.MetroButton btn_attach;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

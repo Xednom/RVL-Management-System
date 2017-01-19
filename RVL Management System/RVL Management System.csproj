@@ -154,11 +154,23 @@
     <Compile Include="Forms\SocialMediaExport.Designer.cs">
       <DependentUpon>SocialMediaExport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserMenu.Designer.cs">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\VideoTutorialsExport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\VideoTutorialsExport.Designer.cs">
       <DependentUpon>VideoTutorialsExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VideoTutorialsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VideoTutorialsMenu.Designer.cs">
+      <DependentUpon>VideoTutorialsMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\VideoTutorialsView.cs">
       <SubType>Form</SubType>
@@ -279,11 +291,11 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main.cs">
+    <Compile Include="Forms\Frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Forms\Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MarketingUpdate.cs">
       <SubType>Form</SubType>
@@ -358,7 +370,7 @@
       <DependentUpon>SocialMediaView.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tasks.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Tasks.Designer.cs">
       <DependentUpon>Tasks.cs</DependentUpon>
@@ -380,12 +392,6 @@
     </Compile>
     <Compile Include="Forms\UserEdit.Designer.cs">
       <DependentUpon>UserEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\UserMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\UserMenu.Designer.cs">
-      <DependentUpon>UserMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserView.cs">
       <SubType>Form</SubType>
@@ -416,30 +422,6 @@
     </Compile>
     <Compile Include="Forms\AdminOfficeDelete.Designer.cs">
       <DependentUpon>AdminOfficeDelete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Panel\PnlMarketing.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Panel\PnlMarketing.Designer.cs">
-      <DependentUpon>PnlMarketing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Panel\PnlSlider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Panel\PnlSlider.Designer.cs">
-      <DependentUpon>PnlSlider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Panel\PnlTask.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Panel\PnlTask.Designer.cs">
-      <DependentUpon>PnlTask.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Panel\PnlUser.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Panel\PnlUser.Designer.cs">
-      <DependentUpon>PnlUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Print\PrintCompanyLogins.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -511,8 +493,8 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MarketingUpdate.resx">
       <DependentUpon>MarketingUpdate.cs</DependentUpon>
@@ -523,8 +505,14 @@
     <EmbeddedResource Include="Forms\SocialMediaExport.resx">
       <DependentUpon>SocialMediaExport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserMenu.resx">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\VideoTutorialsExport.resx">
       <DependentUpon>VideoTutorialsExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VideoTutorialsMenu.resx">
+      <DependentUpon>VideoTutorialsMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VideoTutorialsView.resx">
       <DependentUpon>VideoTutorialsView.cs</DependentUpon>
@@ -574,9 +562,6 @@
     <EmbeddedResource Include="Forms\UserEdit.resx">
       <DependentUpon>UserEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserMenu.resx">
-      <DependentUpon>UserMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserView.resx">
       <DependentUpon>UserView.cs</DependentUpon>
     </EmbeddedResource>
@@ -597,15 +582,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Print\rptCompangLogins.rdlc" />
     <EmbeddedResource Include="Print\rptCaliforniaDeeds.rdlc" />
-    <EmbeddedResource Include="Panel\PnlMarketing.resx">
-      <DependentUpon>PnlMarketing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Panel\PnlSlider.resx">
-      <DependentUpon>PnlSlider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Panel\PnlTask.resx">
-      <DependentUpon>PnlTask.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Print\CaliforniaDeed.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -819,6 +795,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

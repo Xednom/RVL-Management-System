@@ -51,6 +51,7 @@
             this.metroLink5 = new MetroFramework.Controls.MetroLink();
             this.metroLink6 = new MetroFramework.Controls.MetroLink();
             this.metroLink7 = new MetroFramework.Controls.MetroLink();
+            this.btn_video = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -305,6 +306,20 @@
             this.metroLink7.UseSelectable = true;
             this.metroLink7.Click += new System.EventHandler(this.metroLink7_Click);
             // 
+            // btn_video
+            // 
+            this.btn_video.Image = global::RVL_Management_System.Properties.Resources.youtube;
+            this.btn_video.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_video.ImageSize = 32;
+            this.btn_video.Location = new System.Drawing.Point(310, 306);
+            this.btn_video.Name = "btn_video";
+            this.btn_video.Size = new System.Drawing.Size(158, 67);
+            this.btn_video.TabIndex = 38;
+            this.btn_video.Text = "Video Tutorials";
+            this.btn_video.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_video.UseSelectable = true;
+            this.btn_video.Click += new System.EventHandler(this.metroLink8_Click);
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,6 +327,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.btn_video);
             this.Controls.Add(this.metroLink7);
             this.Controls.Add(this.metroLink6);
             this.Controls.Add(this.metroLink5);
@@ -373,6 +389,7 @@
         private MetroFramework.Controls.MetroLink metroLink5;
         private MetroFramework.Controls.MetroLink metroLink6;
         private MetroFramework.Controls.MetroLink metroLink7;
+        private MetroFramework.Controls.MetroLink btn_video;
     }
 }
 

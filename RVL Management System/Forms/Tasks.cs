@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 
 namespace RVL_Management_System
 {
-    public partial class Frm_Tasks : Panel.PnlSlider
+    public partial class Frm_Tasks : MetroForm
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
@@ -39,7 +39,7 @@ namespace RVL_Management_System
 
         const int AW_BLEND = 0X80000;
 
-        public Frm_Tasks(Form owner) : base(owner)
+        public Frm_Tasks()
         {
             InitializeComponent();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
@@ -125,9 +125,9 @@ namespace RVL_Management_System
 
         private void metroLink1_Click(object sender, EventArgs e)
         {
-            swipe(false);
             Frm_Main fmain = new Frm_Main();
-            fmain.btn_task.Enabled = true;
+            fmain.Show();
+            Hide();
         }
 
         private void Frm_Tasks_MouseDown(object sender, MouseEventArgs e)

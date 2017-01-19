@@ -7,48 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms;
+using MetroFramework.Forms; 
 
-namespace RVL_Management_System
+namespace RVL_Management_System.Forms
 {
-    public partial class Frm_UserMenu : Panel.PnlSlider
+    public partial class UserMenu : MetroForm
     {
-        public Frm_UserMenu(Form owner) : base(owner)
+        public UserMenu()
         {
             InitializeComponent();
         }
 
-        private void Frm_UserMenu_Load(object sender, EventArgs e)
+        private void UserMenu_Load(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
+        private void btn_add_Click(object sender, EventArgs e)
         {
             Frm_UserAdd fadd = new Frm_UserAdd();
             fadd.ShowDialog();
         }
 
-        private void metroTile2_Click(object sender, EventArgs e)
+        private void btn_edit_Click(object sender, EventArgs e)
         {
             Frm_UserEdit fedit = new Frm_UserEdit();
             fedit.ShowDialog();
         }
 
-        private void metroTile3_Click(object sender, EventArgs e)
+        private void btn_view_Click(object sender, EventArgs e)
         {
             Frm_UserView fview = new Frm_UserView();
             fview.ShowDialog();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            swipe(false);
-        }
-
-        private void Frm_UserMenu_MouseHover(object sender, EventArgs e)
-        {
-            this.Region = new Region(new Rectangle(0, 0, this.Width, this.Height));
         }
     }
 }

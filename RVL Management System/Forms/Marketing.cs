@@ -1,5 +1,4 @@
 ﻿using System;
-using RVL_Management_System.Panel;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
