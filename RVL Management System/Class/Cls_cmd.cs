@@ -45,7 +45,7 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_AddLeadSource _owner = new Frm_AddLeadSource();
+            AddLeadSource _owner = new AddLeadSource();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
@@ -70,14 +70,14 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_AddLeadSource _owner = new Frm_AddLeadSource();
+            AddLeadSource _owner = new AddLeadSource();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblLeadSource(LeadDescription)VALUES(@leadD)";
-            cmd.Parameters.AddWithValue("leadD", Forms.Frm_AddLeadSource.leadDes);
+            cmd.Parameters.AddWithValue("leadD", Forms.AddLeadSource.leadDes);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -129,19 +129,19 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_LandOwner _owner = new Frm_LandOwner();
+            LandOwner _owner = new LandOwner();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblCompanyLogins(Category_Name,URL_Link,Username,Password,Name_Login_Under,Give_Access_To)VALUES(@catName,@url,@un,@pw,@nameLogin,@giveAccess)";
-            cmd.Parameters.AddWithValue("catName", Frm_CompanyLoginsAdd.categoryName);
-            cmd.Parameters.AddWithValue("url", Frm_CompanyLoginsAdd.URLlink);
-            cmd.Parameters.AddWithValue("un", Frm_CompanyLoginsAdd.userName);
-            cmd.Parameters.AddWithValue("pw", Frm_CompanyLoginsAdd.passWord);
-            cmd.Parameters.AddWithValue("nameLogin", Frm_CompanyLoginsAdd.nameLogin);
-            cmd.Parameters.AddWithValue("giveAccess", Frm_CompanyLoginsAdd.giveAccess);
+            cmd.Parameters.AddWithValue("catName", CompanyLoginsAdd.categoryName);
+            cmd.Parameters.AddWithValue("url", CompanyLoginsAdd.URLlink);
+            cmd.Parameters.AddWithValue("un", CompanyLoginsAdd.userName);
+            cmd.Parameters.AddWithValue("pw", CompanyLoginsAdd.passWord);
+            cmd.Parameters.AddWithValue("nameLogin", CompanyLoginsAdd.nameLogin);
+            cmd.Parameters.AddWithValue("giveAccess", CompanyLoginsAdd.giveAccess);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -156,14 +156,14 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_LandOwner _owner = new Frm_LandOwner();
+            LandOwner _owner = new LandOwner();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblLandOwner(Land_Owner)VALUES(@landOwner)";
-            cmd.Parameters.AddWithValue("landOwner", Frm_LandOwner.landOwner);
+            cmd.Parameters.AddWithValue("landOwner", LandOwner.landOwner);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -178,22 +178,22 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_SocialMediaAdd _owner = new Frm_SocialMediaAdd();
+            SocialMediaAdd _owner = new SocialMediaAdd();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblSocialMedia(Current_Market_Value,Updated_Price,Title,Social_Media_Notes,Hashtags,Schedule,Pre_Approved,Status,Additional_Notes)VALUES(@currentMarketValue,@updatedPrice,@title,@SocialMediaNotes,@hashtags,@schedule,@preApproved,@status,@additionalNotes)";
-            cmd.Parameters.AddWithValue("currentMarketValue", Frm_SocialMediaAdd.currentMarketValue);
-            cmd.Parameters.AddWithValue("updatedPrice", Frm_SocialMediaAdd.updatedPrice);
-            cmd.Parameters.AddWithValue("title", Frm_SocialMediaAdd.title);
-            cmd.Parameters.AddWithValue("SocialMediaNotes", Frm_SocialMediaAdd.socialMediaNotes);
-            cmd.Parameters.AddWithValue("hashtags", Frm_SocialMediaAdd.hashtagsToUse);
-            cmd.Parameters.AddWithValue("schedule", Frm_SocialMediaAdd.scheduleToBePosted);
-            cmd.Parameters.AddWithValue("preApproved", Frm_SocialMediaAdd.preApproved);
-            cmd.Parameters.AddWithValue("status", Frm_SocialMediaAdd.status);
-            cmd.Parameters.AddWithValue("additionalNotes", Frm_SocialMediaAdd.additionalNotes);
+            cmd.Parameters.AddWithValue("currentMarketValue", SocialMediaAdd.currentMarketValue);
+            cmd.Parameters.AddWithValue("updatedPrice", SocialMediaAdd.updatedPrice);
+            cmd.Parameters.AddWithValue("title", SocialMediaAdd.title);
+            cmd.Parameters.AddWithValue("SocialMediaNotes", SocialMediaAdd.socialMediaNotes);
+            cmd.Parameters.AddWithValue("hashtags", SocialMediaAdd.hashtagsToUse);
+            cmd.Parameters.AddWithValue("schedule", SocialMediaAdd.scheduleToBePosted);
+            cmd.Parameters.AddWithValue("preApproved", SocialMediaAdd.preApproved);
+            cmd.Parameters.AddWithValue("status", SocialMediaAdd.status);
+            cmd.Parameters.AddWithValue("additionalNotes", SocialMediaAdd.additionalNotes);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -208,27 +208,27 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_LandStay _owner = new Frm_LandStay();
+            LandStay _owner = new LandStay();
             
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblLandStay(Seller,Phone_Number,Seller_Email,Seller_Notes,Seller_Name,Availability,State,County,APN,Acres,Legal,GPS,Price,Contact_or_Checkout)VALUES(@seller,@phoneNumber,@sellerEmail,@sellerNotes,@sellerName,@availability,@state,@county,@APN,@acres,@legal,@GPS,@price,@contactOrCheckout)";
-            cmd.Parameters.AddWithValue("seller", Frm_LandStay.seller);
-            cmd.Parameters.AddWithValue("phoneNumber", Frm_LandStay.phone);
-            cmd.Parameters.AddWithValue("sellerEmail", Frm_LandStay.sellerEmail);
-            cmd.Parameters.AddWithValue("sellerNotes", Frm_LandStay.sellerNotes);
-            cmd.Parameters.AddWithValue("sellerName", Frm_LandStay.sellerName);
-            cmd.Parameters.AddWithValue("availability", Frm_LandStay.availability);
-            cmd.Parameters.AddWithValue("state", Frm_LandStay.state);
-            cmd.Parameters.AddWithValue("county", Frm_LandStay.county);
-            cmd.Parameters.AddWithValue("APN", Frm_LandStay.APN);
-            cmd.Parameters.AddWithValue("acres", Frm_LandStay.acres);
-            cmd.Parameters.AddWithValue("legal", Frm_LandStay.legal);
-            cmd.Parameters.AddWithValue("GPS", Frm_LandStay.gps);
-            cmd.Parameters.AddWithValue("price", Frm_LandStay.price);
-            cmd.Parameters.AddWithValue("contactOrCheckout", Frm_LandStay.contactOrCheckout);
+            cmd.Parameters.AddWithValue("seller", LandStay.seller);
+            cmd.Parameters.AddWithValue("phoneNumber", LandStay.phone);
+            cmd.Parameters.AddWithValue("sellerEmail", LandStay.sellerEmail);
+            cmd.Parameters.AddWithValue("sellerNotes", LandStay.sellerNotes);
+            cmd.Parameters.AddWithValue("sellerName", LandStay.sellerName);
+            cmd.Parameters.AddWithValue("availability", LandStay.availability);
+            cmd.Parameters.AddWithValue("state", LandStay.state);
+            cmd.Parameters.AddWithValue("county", LandStay.county);
+            cmd.Parameters.AddWithValue("APN", LandStay.APN);
+            cmd.Parameters.AddWithValue("acres", LandStay.acres);
+            cmd.Parameters.AddWithValue("legal", LandStay.legal);
+            cmd.Parameters.AddWithValue("GPS", LandStay.gps);
+            cmd.Parameters.AddWithValue("price", LandStay.price);
+            cmd.Parameters.AddWithValue("contactOrCheckout", LandStay.contactOrCheckout);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -243,46 +243,46 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_PropertyAccountingBusiness _owner = new Frm_PropertyAccountingBusiness();
+            PropertyAccountingBusiness _owner = new PropertyAccountingBusiness();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblAccountingBusiness(Type_Of_Account,Type_Of_Payment,Paid_Via,APN_ID,Date_Sold,Date_Aquired,Closed_Sale_Amount,Original_Price,OriginalPrice_Expense,Net_Sale,Balance_Due,Sold_From,Sold_To,Terms_with_LLC,Shared60,Shared40,Check_Number,Invoice_Number,Memo,Date_Payments,Amount_Payments,Total_Amount_Paid,Total_Land_Cost,Payment_Balance_Due,Category_Expense,Notes,Recording_Fee,Card_Processing_Fee,Back_Taxes,Notary,Other_Expense,Total_Expense,Net_Profit)VALUES(@typeAccount,@typePayment,@paidVia,@apnID,@dateSold,@dateAquired,@closedSaleAmount,@originalPrice,@originalPriceExpense,@netSale,@balanceDue,@soldFrom,@soldTo,@termsLLC,@shared60,@shared40,@checkNumber,@invoiceNumber,@memo,@datePayment,@amountPayment,@totalAmountPaid,@totalLandCost,@paymentBalanceDue,@categoryExpense,@notes,@recordingFee,@processingFee,@backTaxes,@notary,@otherExpense,@totalExpense,@netProfit)";
-            cmd.Parameters.AddWithValue("typeAccount", Frm_PropertyAccountingBusiness.typeAccount);
-            cmd.Parameters.AddWithValue("typePayment", Frm_PropertyAccountingBusiness.typePayment);
-            cmd.Parameters.AddWithValue("paidVia", Frm_PropertyAccountingBusiness.paidVia);
-            cmd.Parameters.AddWithValue("apnID", Frm_PropertyAccountingBusiness.apnID);
-            cmd.Parameters.AddWithValue("dateSold", Frm_PropertyAccountingBusiness.dateSold);
-            cmd.Parameters.AddWithValue("dateAquired", Frm_PropertyAccountingBusiness.dateAquired);
-            cmd.Parameters.AddWithValue("closedSaleAmount", Frm_PropertyAccountingBusiness.closedSale);
-            cmd.Parameters.AddWithValue("originalPrice", Frm_PropertyAccountingBusiness.originalPrice);
-            cmd.Parameters.AddWithValue("originalPriceExpense", Frm_PropertyAccountingBusiness.originalPriceExpense);
-            cmd.Parameters.AddWithValue("netSale", Frm_PropertyAccountingBusiness.netSale);
-            cmd.Parameters.AddWithValue("balanceDue", Frm_PropertyAccountingBusiness.balanceDue);
-            cmd.Parameters.AddWithValue("soldFrom", Frm_PropertyAccountingBusiness.soldFrom);
-            cmd.Parameters.AddWithValue("soldTo", Frm_PropertyAccountingBusiness.soldTo);
-            cmd.Parameters.AddWithValue("termsLLC", Frm_PropertyAccountingBusiness.termsLLC);
-            cmd.Parameters.AddWithValue("shared60", Frm_PropertyAccountingBusiness.shared60);
-            cmd.Parameters.AddWithValue("shared40", Frm_PropertyAccountingBusiness.shared40);
-            cmd.Parameters.AddWithValue("checkNumber", Frm_PropertyAccountingBusiness.checkNumber);
-            cmd.Parameters.AddWithValue("invoiceNumber", Frm_PropertyAccountingBusiness.invoiceNumber);
-            cmd.Parameters.AddWithValue("memo", Frm_PropertyAccountingBusiness.memo);
-            cmd.Parameters.AddWithValue("datePayment", Frm_PropertyAccountingBusiness.datePayment);
-            cmd.Parameters.AddWithValue("amountPayment", Frm_PropertyAccountingBusiness.amountPayment);
-            cmd.Parameters.AddWithValue("totalAmountPaid", Frm_PropertyAccountingBusiness.totalAmountPaid);
-            cmd.Parameters.AddWithValue("totalLandCost", Frm_PropertyAccountingBusiness.totalLandCost);
-            cmd.Parameters.AddWithValue("paymentBalanceDue", Frm_PropertyAccountingBusiness.paymentBalanceDue);
-            cmd.Parameters.AddWithValue("categoryExpense", Frm_PropertyAccountingBusiness.categoryExpense);
-            cmd.Parameters.AddWithValue("notes", Frm_PropertyAccountingBusiness.notes);
-            cmd.Parameters.AddWithValue("recordingFee", Frm_PropertyAccountingBusiness.recordingFee);
-            cmd.Parameters.AddWithValue("processingFee", Frm_PropertyAccountingBusiness.cardProcessingFee);
-            cmd.Parameters.AddWithValue("backTaxes", Frm_PropertyAccountingBusiness.backTaxes);
-            cmd.Parameters.AddWithValue("notary", Frm_PropertyAccountingBusiness.notary);
-            cmd.Parameters.AddWithValue("otherExpense", Frm_PropertyAccountingBusiness.otherExpense);
-            cmd.Parameters.AddWithValue("totalExpense", Frm_PropertyAccountingBusiness.totalExpense);
-            cmd.Parameters.AddWithValue("netProfit", Frm_PropertyAccountingBusiness.netProfit);
+            cmd.Parameters.AddWithValue("typeAccount", PropertyAccountingBusiness.typeAccount);
+            cmd.Parameters.AddWithValue("typePayment", PropertyAccountingBusiness.typePayment);
+            cmd.Parameters.AddWithValue("paidVia", PropertyAccountingBusiness.paidVia);
+            cmd.Parameters.AddWithValue("apnID", PropertyAccountingBusiness.apnID);
+            cmd.Parameters.AddWithValue("dateSold", PropertyAccountingBusiness.dateSold);
+            cmd.Parameters.AddWithValue("dateAquired", PropertyAccountingBusiness.dateAquired);
+            cmd.Parameters.AddWithValue("closedSaleAmount", PropertyAccountingBusiness.closedSale);
+            cmd.Parameters.AddWithValue("originalPrice", PropertyAccountingBusiness.originalPrice);
+            cmd.Parameters.AddWithValue("originalPriceExpense", PropertyAccountingBusiness.originalPriceExpense);
+            cmd.Parameters.AddWithValue("netSale", PropertyAccountingBusiness.netSale);
+            cmd.Parameters.AddWithValue("balanceDue", PropertyAccountingBusiness.balanceDue);
+            cmd.Parameters.AddWithValue("soldFrom", PropertyAccountingBusiness.soldFrom);
+            cmd.Parameters.AddWithValue("soldTo", PropertyAccountingBusiness.soldTo);
+            cmd.Parameters.AddWithValue("termsLLC", PropertyAccountingBusiness.termsLLC);
+            cmd.Parameters.AddWithValue("shared60", PropertyAccountingBusiness.shared60);
+            cmd.Parameters.AddWithValue("shared40", PropertyAccountingBusiness.shared40);
+            cmd.Parameters.AddWithValue("checkNumber", PropertyAccountingBusiness.checkNumber);
+            cmd.Parameters.AddWithValue("invoiceNumber", PropertyAccountingBusiness.invoiceNumber);
+            cmd.Parameters.AddWithValue("memo", PropertyAccountingBusiness.memo);
+            cmd.Parameters.AddWithValue("datePayment", PropertyAccountingBusiness.datePayment);
+            cmd.Parameters.AddWithValue("amountPayment", PropertyAccountingBusiness.amountPayment);
+            cmd.Parameters.AddWithValue("totalAmountPaid", PropertyAccountingBusiness.totalAmountPaid);
+            cmd.Parameters.AddWithValue("totalLandCost", PropertyAccountingBusiness.totalLandCost);
+            cmd.Parameters.AddWithValue("paymentBalanceDue", PropertyAccountingBusiness.paymentBalanceDue);
+            cmd.Parameters.AddWithValue("categoryExpense", PropertyAccountingBusiness.categoryExpense);
+            cmd.Parameters.AddWithValue("notes", PropertyAccountingBusiness.notes);
+            cmd.Parameters.AddWithValue("recordingFee", PropertyAccountingBusiness.recordingFee);
+            cmd.Parameters.AddWithValue("processingFee", PropertyAccountingBusiness.cardProcessingFee);
+            cmd.Parameters.AddWithValue("backTaxes", PropertyAccountingBusiness.backTaxes);
+            cmd.Parameters.AddWithValue("notary", PropertyAccountingBusiness.notary);
+            cmd.Parameters.AddWithValue("otherExpense", PropertyAccountingBusiness.otherExpense);
+            cmd.Parameters.AddWithValue("totalExpense", PropertyAccountingBusiness.totalExpense);
+            cmd.Parameters.AddWithValue("netProfit", PropertyAccountingBusiness.netProfit);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -297,19 +297,19 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_AdminOfficeAdd _owner = new Frm_AdminOfficeAdd();
+            AdminOfficeAdd _owner = new AdminOfficeAdd();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblAdminContact(Full_name,Email,Phone_number,Address,County,Category)VALUES(@fullName,@email,@phoneNumber,@address,@county,@category)";
-            cmd.Parameters.AddWithValue("fullName", Frm_AdminOfficeAdd.fullName);
-            cmd.Parameters.AddWithValue("email", Frm_AdminOfficeAdd.email);
-            cmd.Parameters.AddWithValue("phoneNumber", Frm_AdminOfficeAdd.phoneNumber);
-            cmd.Parameters.AddWithValue("address", Frm_AdminOfficeAdd.address);
-            cmd.Parameters.AddWithValue("county", Frm_AdminOfficeAdd.county);
-            cmd.Parameters.AddWithValue("category", Frm_AdminOfficeAdd.category);
+            cmd.Parameters.AddWithValue("fullName", AdminOfficeAdd.fullName);
+            cmd.Parameters.AddWithValue("email", AdminOfficeAdd.email);
+            cmd.Parameters.AddWithValue("phoneNumber", AdminOfficeAdd.phoneNumber);
+            cmd.Parameters.AddWithValue("address", AdminOfficeAdd.address);
+            cmd.Parameters.AddWithValue("county", AdminOfficeAdd.county);
+            cmd.Parameters.AddWithValue("category", AdminOfficeAdd.category);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -324,15 +324,15 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_VideoTutorialsAdd _owner = new Frm_VideoTutorialsAdd();
+            VideoTutorialsAdd _owner = new VideoTutorialsAdd();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblVideoTutorial(Process,Link)VALUES(@process,@link)";
-            cmd.Parameters.AddWithValue("process", Frm_VideoTutorialsAdd.process);
-            cmd.Parameters.AddWithValue("link", Frm_VideoTutorialsAdd.link);
+            cmd.Parameters.AddWithValue("process", VideoTutorialsAdd.process);
+            cmd.Parameters.AddWithValue("link", VideoTutorialsAdd.link);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -347,34 +347,34 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_CaliforniaGrantDeed _owner = new Frm_CaliforniaGrantDeed();
+            CaliforniaGrantDeed _owner = new CaliforniaGrantDeed();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblCaliforniaDeed(APN,PreparedBy,ReturnTo,StatementsGrantee,Acknowledged,GrantTo,CountyOf,Dated,Grantor,GrantDeedPrintName,StateOf,AcknowledgementCountyOf,AcknowledgementOn,BeforeMe,PersonallyAppeared,LawsStateOf,NotaryPublic,CommissionExpires,AcknowledgementPrintName,GrantorNameAddressPhone,GranteeNameAddressPhone)VALUES(@apn,@preparedBy,@returnTo,@statementGrantee,@acknowledged,@grantTo,@countyOf,@dated,@grantor,@grantDeedPrintName,@stateOf,@acknowledgementCountyOf,@acknowledgedOn,@beforeMe,@personallyAppeared,@lawsStateOf,@notaryPublic,@commissionExpires,@acknowledgementPrintName,@grantorNameAddressPhone,@granteeNameAddressPhone)";
-            cmd.Parameters.AddWithValue("apn", Frm_CaliforniaGrantDeed.APN);
-            cmd.Parameters.AddWithValue("preparedBy", Frm_CaliforniaGrantDeed.preparedBy);
-            cmd.Parameters.AddWithValue("returnTo", Frm_CaliforniaGrantDeed.returnTo);
-            cmd.Parameters.AddWithValue("statementGrantee", Frm_CaliforniaGrantDeed.statementsToGrantee);
-            cmd.Parameters.AddWithValue("acknowledged", Frm_CaliforniaGrantDeed.acknowledged);
-            cmd.Parameters.AddWithValue("grantTo", Frm_CaliforniaGrantDeed.grantTo);
-            cmd.Parameters.AddWithValue("countyOf", Frm_CaliforniaGrantDeed.countyOf);
-            cmd.Parameters.AddWithValue("dated", Frm_CaliforniaGrantDeed.dated);
-            cmd.Parameters.AddWithValue("grantor", Frm_CaliforniaGrantDeed.grantor);
-            cmd.Parameters.AddWithValue("grantDeedPrintName", Frm_CaliforniaGrantDeed.grantPrintDeedName);
-            cmd.Parameters.AddWithValue("stateOf", Frm_CaliforniaGrantDeed.stateOf);
-            cmd.Parameters.AddWithValue("acknowledgementCountyOf", Frm_CaliforniaGrantDeed.acknowledgementCountyOf);
-            cmd.Parameters.AddWithValue("acknowledgedOn", Frm_CaliforniaGrantDeed.acknowledgementOn);
-            cmd.Parameters.AddWithValue("beforeMe", Frm_CaliforniaGrantDeed.beforeMe);
-            cmd.Parameters.AddWithValue("personallyAppeared", Frm_CaliforniaGrantDeed.personallyAppeared);
-            cmd.Parameters.AddWithValue("lawsStateOf", Frm_CaliforniaGrantDeed.lawStateOf);
-            cmd.Parameters.AddWithValue("notaryPublic", Frm_CaliforniaGrantDeed.notaryPublic);
-            cmd.Parameters.AddWithValue("commissionExpires", Frm_CaliforniaGrantDeed.commissionExpires);
-            cmd.Parameters.AddWithValue("acknowledgementPrintName", Frm_CaliforniaGrantDeed.acknowledgementPrintName);
-            cmd.Parameters.AddWithValue("grantorNameAddressPhone", Frm_CaliforniaGrantDeed.grantorNameAddressPhone);
-            cmd.Parameters.AddWithValue("granteeNameAddressPhone", Frm_CaliforniaGrantDeed.granteeNameAddressPhone);
+            cmd.Parameters.AddWithValue("apn", CaliforniaGrantDeed.APN);
+            cmd.Parameters.AddWithValue("preparedBy", CaliforniaGrantDeed.preparedBy);
+            cmd.Parameters.AddWithValue("returnTo", CaliforniaGrantDeed.returnTo);
+            cmd.Parameters.AddWithValue("statementGrantee", CaliforniaGrantDeed.statementsToGrantee);
+            cmd.Parameters.AddWithValue("acknowledged", CaliforniaGrantDeed.acknowledged);
+            cmd.Parameters.AddWithValue("grantTo", CaliforniaGrantDeed.grantTo);
+            cmd.Parameters.AddWithValue("countyOf", CaliforniaGrantDeed.countyOf);
+            cmd.Parameters.AddWithValue("dated", CaliforniaGrantDeed.dated);
+            cmd.Parameters.AddWithValue("grantor", CaliforniaGrantDeed.grantor);
+            cmd.Parameters.AddWithValue("grantDeedPrintName", CaliforniaGrantDeed.grantPrintDeedName);
+            cmd.Parameters.AddWithValue("stateOf", CaliforniaGrantDeed.stateOf);
+            cmd.Parameters.AddWithValue("acknowledgementCountyOf", CaliforniaGrantDeed.acknowledgementCountyOf);
+            cmd.Parameters.AddWithValue("acknowledgedOn", CaliforniaGrantDeed.acknowledgementOn);
+            cmd.Parameters.AddWithValue("beforeMe", CaliforniaGrantDeed.beforeMe);
+            cmd.Parameters.AddWithValue("personallyAppeared", CaliforniaGrantDeed.personallyAppeared);
+            cmd.Parameters.AddWithValue("lawsStateOf", CaliforniaGrantDeed.lawStateOf);
+            cmd.Parameters.AddWithValue("notaryPublic", CaliforniaGrantDeed.notaryPublic);
+            cmd.Parameters.AddWithValue("commissionExpires", CaliforniaGrantDeed.commissionExpires);
+            cmd.Parameters.AddWithValue("acknowledgementPrintName", CaliforniaGrantDeed.acknowledgementPrintName);
+            cmd.Parameters.AddWithValue("grantorNameAddressPhone", CaliforniaGrantDeed.grantorNameAddressPhone);
+            cmd.Parameters.AddWithValue("granteeNameAddressPhone", CaliforniaGrantDeed.granteeNameAddressPhone);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -390,28 +390,28 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_MarketingUpdate _owner = new Frm_MarketingUpdate();
+            MarketingUpdate _owner = new MarketingUpdate();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "INSERT INTO tblMarketing(Lead_Received,Last_Name,First_Name,Middle_Name,Phone_Number,Email_Address,Issue_Description,Lead_Source,Other,Lead_FollowUp,Lead_Status,Priority,Memo,Lead_Assigned,Lead_Assesment)VALUES(@leadReceived,@ln,@fn,@mn,@pNum,@eAdd,@issueDes,@leadSource,@other,@leadFollow,@leadStats,@priority,@memo,@leadAssigned,@leadAssesment)";
-            cmd.Parameters.AddWithValue("leadReceived", Frm_MarketingUpdate.leadReceived);
-            cmd.Parameters.AddWithValue("ln", Frm_MarketingUpdate.lastName);
-            cmd.Parameters.AddWithValue("fn", Frm_MarketingUpdate.firstName);
-            cmd.Parameters.AddWithValue("mn", Frm_MarketingUpdate.middleName);
-            cmd.Parameters.AddWithValue("pNum", Frm_MarketingUpdate.phoneNumber);
-            cmd.Parameters.AddWithValue("eAdd", Frm_MarketingUpdate.emailAddress);
-            cmd.Parameters.AddWithValue("issueDes", Frm_MarketingUpdate.issueDescription);
-            cmd.Parameters.AddWithValue("leadSource", Frm_MarketingUpdate.leadSource);
-            cmd.Parameters.AddWithValue("other", Frm_MarketingUpdate.other);
-            cmd.Parameters.AddWithValue("leadFollow", Frm_MarketingUpdate.leadFollow);
-            cmd.Parameters.AddWithValue("leadStats", Frm_MarketingUpdate.leadStat);
-            cmd.Parameters.AddWithValue("priority", Frm_MarketingUpdate.priority);
-            cmd.Parameters.AddWithValue("memo", Frm_MarketingUpdate.memo);
-            cmd.Parameters.AddWithValue("leadAssigned", Frm_MarketingUpdate.leadAssigned);
-            cmd.Parameters.AddWithValue("leadAssesment", Frm_MarketingUpdate.leadAssesment);
+            cmd.Parameters.AddWithValue("leadReceived", MarketingUpdate.leadReceived);
+            cmd.Parameters.AddWithValue("ln", MarketingUpdate.lastName);
+            cmd.Parameters.AddWithValue("fn", MarketingUpdate.firstName);
+            cmd.Parameters.AddWithValue("mn", MarketingUpdate.middleName);
+            cmd.Parameters.AddWithValue("pNum", MarketingUpdate.phoneNumber);
+            cmd.Parameters.AddWithValue("eAdd", MarketingUpdate.emailAddress);
+            cmd.Parameters.AddWithValue("issueDes", MarketingUpdate.issueDescription);
+            cmd.Parameters.AddWithValue("leadSource", MarketingUpdate.leadSource);
+            cmd.Parameters.AddWithValue("other", MarketingUpdate.other);
+            cmd.Parameters.AddWithValue("leadFollow", MarketingUpdate.leadFollow);
+            cmd.Parameters.AddWithValue("leadStats", MarketingUpdate.leadStat);
+            cmd.Parameters.AddWithValue("priority", MarketingUpdate.priority);
+            cmd.Parameters.AddWithValue("memo", MarketingUpdate.memo);
+            cmd.Parameters.AddWithValue("leadAssigned", MarketingUpdate.leadAssigned);
+            cmd.Parameters.AddWithValue("leadAssesment", MarketingUpdate.leadAssesment);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -426,22 +426,22 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_SocialMediaUpdate _owner = new Frm_SocialMediaUpdate();
+            SocialMediaUpdate _owner = new SocialMediaUpdate();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string UPDATE = "UPDATE tblSocialMedia SET Current_Market_Value =@currentMarketValue, Updated_Price = @updatedPrice, Title = @title, Social_Media_Notes = @socialMedia, Hashtags = @hashtags, Schedule = @schedule, Pre_Approved = @preApproved, Status = @status, Additional_Notes =@additionalNotes";
-            cmd.Parameters.AddWithValue("currentMarketValue", Frm_SocialMediaUpdate.currentMarketValue);
-            cmd.Parameters.AddWithValue("updatedPrice", Frm_SocialMediaUpdate.updatePrice);
-            cmd.Parameters.AddWithValue("title", Frm_SocialMediaUpdate.title);
-            cmd.Parameters.AddWithValue("socialMedia", Frm_SocialMediaUpdate.socialMediaNotes);
-            cmd.Parameters.AddWithValue("hashtags", Frm_SocialMediaUpdate.hashtags);
-            cmd.Parameters.AddWithValue("schedule", Frm_SocialMediaUpdate.schedule);
-            cmd.Parameters.AddWithValue("preApproved", Frm_SocialMediaUpdate.preApproved);
-            cmd.Parameters.AddWithValue("status", Frm_SocialMediaUpdate.status);
-            cmd.Parameters.AddWithValue("additionalNotes", Frm_SocialMediaUpdate.additionalNotes);
+            cmd.Parameters.AddWithValue("currentMarketValue", SocialMediaUpdate.currentMarketValue);
+            cmd.Parameters.AddWithValue("updatedPrice", SocialMediaUpdate.updatePrice);
+            cmd.Parameters.AddWithValue("title", SocialMediaUpdate.title);
+            cmd.Parameters.AddWithValue("socialMedia", SocialMediaUpdate.socialMediaNotes);
+            cmd.Parameters.AddWithValue("hashtags", SocialMediaUpdate.hashtags);
+            cmd.Parameters.AddWithValue("schedule", SocialMediaUpdate.schedule);
+            cmd.Parameters.AddWithValue("preApproved", SocialMediaUpdate.preApproved);
+            cmd.Parameters.AddWithValue("status", SocialMediaUpdate.status);
+            cmd.Parameters.AddWithValue("additionalNotes", SocialMediaUpdate.additionalNotes);
             cmd.CommandText = UPDATE;
             cmd.ExecuteNonQuery();
 
@@ -510,20 +510,20 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_CompanyLoginsUpdate _owner = new Frm_CompanyLoginsUpdate();
+            CompanyLoginsUpdate _owner = new CompanyLoginsUpdate();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string UPDATE = "UPDATE tblCompanyLogins SET Category_Name = @cn, URL_Link=@url, Username = @un, Password=@pw, Name_Login_Under = @nLogin, Give_Access_To = @gAccessTo WHERE CID = @cid";
-            cmd.Parameters.AddWithValue("cn", Frm_CompanyLoginsUpdate.categoryName);
-            cmd.Parameters.AddWithValue("url", Frm_CompanyLoginsUpdate.URLlink);
-            cmd.Parameters.AddWithValue("un", Frm_CompanyLoginsUpdate.userName);
-            cmd.Parameters.AddWithValue("pw", Frm_CompanyLoginsUpdate.passWord);
-            cmd.Parameters.AddWithValue("nLogin", Frm_CompanyLoginsUpdate.nameLogin);
-            cmd.Parameters.AddWithValue("gAccessTo", Frm_CompanyLoginsUpdate.giveAccess);
-            cmd.Parameters.AddWithValue("cid", Frm_CompanyLoginsUpdate.categoryID);
+            cmd.Parameters.AddWithValue("cn", CompanyLoginsUpdate.categoryName);
+            cmd.Parameters.AddWithValue("url", CompanyLoginsUpdate.URLlink);
+            cmd.Parameters.AddWithValue("un", CompanyLoginsUpdate.userName);
+            cmd.Parameters.AddWithValue("pw", CompanyLoginsUpdate.passWord);
+            cmd.Parameters.AddWithValue("nLogin", CompanyLoginsUpdate.nameLogin);
+            cmd.Parameters.AddWithValue("gAccessTo", CompanyLoginsUpdate.giveAccess);
+            cmd.Parameters.AddWithValue("cid", CompanyLoginsUpdate.categoryID);
             cmd.CommandText = UPDATE;
             cmd.ExecuteNonQuery();
 
@@ -538,28 +538,28 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_LandStay _owner = new Frm_LandStay();
+            LandStay _owner = new LandStay();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string INSERT = "UPDATE tblLandStay SET Seller = @seller, Phone_Number = @phoneNumber, Seller_Email = @sellerEmail, Seller_Notes = @sellerNotes, Seller_Name = @sellerName, Availability = @availability ,State = @state, County = @county, APN = @APN, Acres = @acres, Legal = @legal, GPS = @GPS, Price = @price,Contact_or_Checkout = @contactOrCheckout WHERE LSID = @lsid";
-            cmd.Parameters.AddWithValue("seller", Frm_LandStay.sellerUpdate);
-            cmd.Parameters.AddWithValue("phoneNumber", Frm_LandStay.phoneUpdate);
-            cmd.Parameters.AddWithValue("sellerEmail", Frm_LandStay.sellerEmailUpdate);
-            cmd.Parameters.AddWithValue("sellerNotes", Frm_LandStay.sellerNotesUpdate);
-            cmd.Parameters.AddWithValue("sellerName", Frm_LandStay.sellerNameUpdate);
-            cmd.Parameters.AddWithValue("availability", Frm_LandStay.availabilityUpdate);
-            cmd.Parameters.AddWithValue("state", Frm_LandStay.stateUpdate);
-            cmd.Parameters.AddWithValue("county", Frm_LandStay.countyUpdate);
-            cmd.Parameters.AddWithValue("APN", Frm_LandStay.APNUpdate);
-            cmd.Parameters.AddWithValue("acres", Frm_LandStay.acresUpdate);
-            cmd.Parameters.AddWithValue("legal", Frm_LandStay.legalUpdate);
-            cmd.Parameters.AddWithValue("GPS", Frm_LandStay.gpsUpdate);
-            cmd.Parameters.AddWithValue("price", Frm_LandStay.priceUpdate);
-            cmd.Parameters.AddWithValue("contactOrCheckout", Frm_LandStay.contactOrCheckoutUpdate);
-            cmd.Parameters.AddWithValue("lsid", Frm_LandStay.lsid);
+            cmd.Parameters.AddWithValue("seller", LandStay.sellerUpdate);
+            cmd.Parameters.AddWithValue("phoneNumber", LandStay.phoneUpdate);
+            cmd.Parameters.AddWithValue("sellerEmail", LandStay.sellerEmailUpdate);
+            cmd.Parameters.AddWithValue("sellerNotes", LandStay.sellerNotesUpdate);
+            cmd.Parameters.AddWithValue("sellerName", LandStay.sellerNameUpdate);
+            cmd.Parameters.AddWithValue("availability", LandStay.availabilityUpdate);
+            cmd.Parameters.AddWithValue("state", LandStay.stateUpdate);
+            cmd.Parameters.AddWithValue("county", LandStay.countyUpdate);
+            cmd.Parameters.AddWithValue("APN", LandStay.APNUpdate);
+            cmd.Parameters.AddWithValue("acres", LandStay.acresUpdate);
+            cmd.Parameters.AddWithValue("legal", LandStay.legalUpdate);
+            cmd.Parameters.AddWithValue("GPS", LandStay.gpsUpdate);
+            cmd.Parameters.AddWithValue("price", LandStay.priceUpdate);
+            cmd.Parameters.AddWithValue("contactOrCheckout", LandStay.contactOrCheckoutUpdate);
+            cmd.Parameters.AddWithValue("lsid", LandStay.lsid);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -574,20 +574,20 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_AdminOfficeUpdate _owner = new Frm_AdminOfficeUpdate();
+            AdminOfficeUpdate _owner = new AdminOfficeUpdate();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string UPDATE = "UPDATE tblAdminContact SET Full_name = @fn, Email = @email, Phone_number = @phoneNumber, Address = @address, County = @county, Category = @category WHERE ACID = @acid";
-            cmd.Parameters.AddWithValue("fn", Frm_AdminOfficeUpdate.fullName);
-            cmd.Parameters.AddWithValue("email", Frm_AdminOfficeUpdate.eMail);
-            cmd.Parameters.AddWithValue("phoneNumber", Frm_AdminOfficeUpdate.phoneNumber);
-            cmd.Parameters.AddWithValue("address", Frm_AdminOfficeUpdate.address);
-            cmd.Parameters.AddWithValue("county", Frm_AdminOfficeUpdate.county);
-            cmd.Parameters.AddWithValue("category", Frm_AdminOfficeUpdate.category);
-            cmd.Parameters.AddWithValue("acid", Frm_AdminOfficeUpdate.acid);
+            cmd.Parameters.AddWithValue("fn", AdminOfficeUpdate.fullName);
+            cmd.Parameters.AddWithValue("email", AdminOfficeUpdate.eMail);
+            cmd.Parameters.AddWithValue("phoneNumber", AdminOfficeUpdate.phoneNumber);
+            cmd.Parameters.AddWithValue("address", AdminOfficeUpdate.address);
+            cmd.Parameters.AddWithValue("county", AdminOfficeUpdate.county);
+            cmd.Parameters.AddWithValue("category", AdminOfficeUpdate.category);
+            cmd.Parameters.AddWithValue("acid", AdminOfficeUpdate.acid);
             cmd.CommandText = UPDATE;
             cmd.ExecuteNonQuery();
 
@@ -602,16 +602,16 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_VideoTutorialsUpdate _owner = new Frm_VideoTutorialsUpdate();
+            VideoTutorialsUpdate _owner = new VideoTutorialsUpdate();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string UPDATE = "UPDATE tblVideoTutorial SET Process = @proc, Link = @link  WHERE VID = @vid";
-            cmd.Parameters.AddWithValue("proc", Frm_VideoTutorialsUpdate.process);
-            cmd.Parameters.AddWithValue("link", Frm_VideoTutorialsUpdate.link);
-            cmd.Parameters.AddWithValue("vid", Frm_VideoTutorialsUpdate.vid);
+            cmd.Parameters.AddWithValue("proc", VideoTutorialsUpdate.process);
+            cmd.Parameters.AddWithValue("link", VideoTutorialsUpdate.link);
+            cmd.Parameters.AddWithValue("vid", VideoTutorialsUpdate.vid);
             cmd.CommandText = UPDATE;
             cmd.ExecuteNonQuery();
 
@@ -653,7 +653,7 @@ namespace RVL_Management_System.Class
 
             cmd.Connection = conn;
             string DELETE = "DELETE tblCompanyLogins WHERE CID = @cid";
-            cmd.Parameters.AddWithValue("cid", Frm_CompanyLoginsDelete.CID);
+            cmd.Parameters.AddWithValue("cid", CompanyLoginsDelete.CID);
             cmd.CommandText = DELETE;
             cmd.ExecuteNonQuery();
 
@@ -673,7 +673,7 @@ namespace RVL_Management_System.Class
 
             cmd.Connection = conn;
             string DELETE = "DELETE tblLandStay WHERE LSID = @lsid";
-            cmd.Parameters.AddWithValue("lsid", Frm_LandStay.lsidDelete);
+            cmd.Parameters.AddWithValue("lsid", LandStay.lsidDelete);
             cmd.CommandText = DELETE;
             cmd.ExecuteNonQuery();
 
@@ -710,14 +710,14 @@ namespace RVL_Management_System.Class
             SqlConnection conn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
 
-            Frm_VideoTutorialsDelete _owner = new Frm_VideoTutorialsDelete();
+            VideoTutorialsDelete _owner = new VideoTutorialsDelete();
 
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
             conn.Open();
 
             cmd.Connection = conn;
             string DELETE = "DELETE tblVideoTutorial WHERE VID = @vid";
-            cmd.Parameters.AddWithValue("vid", Frm_VideoTutorialsDelete.vid);
+            cmd.Parameters.AddWithValue("vid", VideoTutorialsDelete.vid);
             cmd.CommandText = DELETE;
             cmd.ExecuteNonQuery();
 

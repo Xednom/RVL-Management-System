@@ -118,59 +118,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Cls_cmd.cs" />
-    <Compile Include="Forms\Frm_AdminOfficeExport.cs">
+    <Compile Include="Forms\AdminOfficeExport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeExport.Designer.cs">
-      <DependentUpon>Frm_AdminOfficeExport.cs</DependentUpon>
+    <Compile Include="Forms\AdminOfficeExport.Designer.cs">
+      <DependentUpon>AdminOfficeExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeView.cs">
+    <Compile Include="Forms\AdminOfficeView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeView.Designer.cs">
-      <DependentUpon>Frm_AdminOfficeView.cs</DependentUpon>
+    <Compile Include="Forms\AdminOfficeView.Designer.cs">
+      <DependentUpon>AdminOfficeView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_ExportFiles.cs">
+    <Compile Include="Forms\ExportFiles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_ExportFiles.Designer.cs">
-      <DependentUpon>Frm_ExportFiles.cs</DependentUpon>
+    <Compile Include="Forms\ExportFiles.Designer.cs">
+      <DependentUpon>ExportFiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_LandStayExport.cs">
+    <Compile Include="Forms\LandStayExport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_LandStayExport.Designer.cs">
-      <DependentUpon>Frm_LandStayExport.cs</DependentUpon>
+    <Compile Include="Forms\LandStayExport.Designer.cs">
+      <DependentUpon>LandStayExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_LandStayView.cs">
+    <Compile Include="Forms\LandStayView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_LandStayView.Designer.cs">
-      <DependentUpon>Frm_LandStayView.cs</DependentUpon>
+    <Compile Include="Forms\LandStayView.Designer.cs">
+      <DependentUpon>LandStayView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaExport.cs">
+    <Compile Include="Forms\SocialMediaExport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaExport.Designer.cs">
-      <DependentUpon>Frm_SocialMediaExport.cs</DependentUpon>
+    <Compile Include="Forms\SocialMediaExport.Designer.cs">
+      <DependentUpon>SocialMediaExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsExport.cs">
+    <Compile Include="Forms\VideoTutorialsExport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsExport.Designer.cs">
-      <DependentUpon>Frm_VideoTutorialsExport.cs</DependentUpon>
+    <Compile Include="Forms\VideoTutorialsExport.Designer.cs">
+      <DependentUpon>VideoTutorialsExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsView.cs">
+    <Compile Include="Forms\VideoTutorialsView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsView.Designer.cs">
-      <DependentUpon>Frm_VideoTutorialsView.cs</DependentUpon>
+    <Compile Include="Forms\VideoTutorialsView.Designer.cs">
+      <DependentUpon>VideoTutorialsView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsExport.cs">
+    <Compile Include="Forms\CompanyLoginsExport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsExport.Designer.cs">
-      <DependentUpon>Frm_CompanyLoginsExport.cs</DependentUpon>
+    <Compile Include="Forms\CompanyLoginsExport.Designer.cs">
+      <DependentUpon>CompanyLoginsExport.cs</DependentUpon>
     </Compile>
     <Compile Include="Print Forms\Frm_PrintCompanyLogins.cs">
       <SubType>Form</SubType>
@@ -183,119 +183,119 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PrintCaliforniaGrantDeed.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_AddLeadSource.cs">
+    <Compile Include="Forms\AddLeadSource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_AddLeadSource.Designer.cs">
-      <DependentUpon>Frm_AddLeadSource.cs</DependentUpon>
+    <Compile Include="Forms\AddLeadSource.Designer.cs">
+      <DependentUpon>AddLeadSource.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeAdd.cs">
+    <Compile Include="Forms\AdminOfficeAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeAdd.Designer.cs">
-      <DependentUpon>Frm_AdminOfficeAdd.cs</DependentUpon>
+    <Compile Include="Forms\AdminOfficeAdd.Designer.cs">
+      <DependentUpon>AdminOfficeAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeMenu.cs">
+    <Compile Include="Forms\AdminOfficeMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeMenu.Designer.cs">
-      <DependentUpon>Frm_AdminOfficeMenu.cs</DependentUpon>
+    <Compile Include="Forms\AdminOfficeMenu.Designer.cs">
+      <DependentUpon>AdminOfficeMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeUpdate.cs">
+    <Compile Include="Forms\AdminOfficeUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeUpdate.Designer.cs">
-      <DependentUpon>Frm_AdminOfficeUpdate.cs</DependentUpon>
+    <Compile Include="Forms\AdminOfficeUpdate.Designer.cs">
+      <DependentUpon>AdminOfficeUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_CaliforniaGrantDeed.cs">
+    <Compile Include="Forms\CaliforniaGrantDeed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_CaliforniaGrantDeed.Designer.cs">
-      <DependentUpon>Frm_CaliforniaGrantDeed.cs</DependentUpon>
+    <Compile Include="Forms\CaliforniaGrantDeed.Designer.cs">
+      <DependentUpon>CaliforniaGrantDeed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsAdd.cs">
+    <Compile Include="Forms\CompanyLoginsAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsAdd.Designer.cs">
-      <DependentUpon>Frm_CompanyLoginsAdd.cs</DependentUpon>
+    <Compile Include="Forms\CompanyLoginsAdd.Designer.cs">
+      <DependentUpon>CompanyLoginsAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsDelete.cs">
+    <Compile Include="Forms\CompanyLoginsDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsDelete.Designer.cs">
-      <DependentUpon>Frm_CompanyLoginsDelete.cs</DependentUpon>
+    <Compile Include="Forms\CompanyLoginsDelete.Designer.cs">
+      <DependentUpon>CompanyLoginsDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsMenu.cs">
+    <Compile Include="Forms\CompanyLoginsMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsMenu.Designer.cs">
-      <DependentUpon>Frm_CompanyLoginsMenu.cs</DependentUpon>
+    <Compile Include="Forms\CompanyLoginsMenu.Designer.cs">
+      <DependentUpon>CompanyLoginsMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsUpdate.cs">
+    <Compile Include="Forms\CompanyLoginsUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsUpdate.Designer.cs">
-      <DependentUpon>Frm_CompanyLoginsUpdate.cs</DependentUpon>
+    <Compile Include="Forms\CompanyLoginsUpdate.Designer.cs">
+      <DependentUpon>CompanyLoginsUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsView.cs">
+    <Compile Include="Forms\CompanyLoginsView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_CompanyLoginsView.Designer.cs">
-      <DependentUpon>Frm_CompanyLoginsView.cs</DependentUpon>
+    <Compile Include="Forms\CompanyLoginsView.Designer.cs">
+      <DependentUpon>CompanyLoginsView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Email.cs">
+    <Compile Include="Forms\Email.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Email.Designer.cs">
-      <DependentUpon>Frm_Email.cs</DependentUpon>
+    <Compile Include="Forms\Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_LandOwner.cs">
+    <Compile Include="Forms\LandOwner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_LandOwner.Designer.cs">
-      <DependentUpon>Frm_LandOwner.cs</DependentUpon>
+    <Compile Include="Forms\LandOwner.Designer.cs">
+      <DependentUpon>LandOwner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_LandStay.cs">
+    <Compile Include="Forms\LandStay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_LandStay.Designer.cs">
-      <DependentUpon>Frm_LandStay.cs</DependentUpon>
+    <Compile Include="Forms\LandStay.Designer.cs">
+      <DependentUpon>LandStay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_LeadAssigned.cs">
+    <Compile Include="Forms\LeadAssigned.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_LeadAssigned.Designer.cs">
-      <DependentUpon>Frm_LeadAssigned.cs</DependentUpon>
+    <Compile Include="Forms\LeadAssigned.Designer.cs">
+      <DependentUpon>LeadAssigned.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Marketing.cs">
+    <Compile Include="Forms\Marketing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Marketing.Designer.cs">
-      <DependentUpon>Frm_Marketing.cs</DependentUpon>
+    <Compile Include="Forms\Marketing.Designer.cs">
+      <DependentUpon>Marketing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Login.cs">
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Login.Designer.cs">
-      <DependentUpon>Frm_Login.cs</DependentUpon>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Main.cs">
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Main.Designer.cs">
-      <DependentUpon>Frm_Main.cs</DependentUpon>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_MarketingUpdate.cs">
+    <Compile Include="Forms\MarketingUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_MarketingUpdate.Designer.cs">
-      <DependentUpon>Frm_MarketingUpdate.cs</DependentUpon>
+    <Compile Include="Forms\MarketingUpdate.Designer.cs">
+      <DependentUpon>MarketingUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_MarketingView.cs">
+    <Compile Include="Forms\MarketingView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_MarketingView.Designer.cs">
-      <DependentUpon>Frm_MarketingView.cs</DependentUpon>
+    <Compile Include="Forms\MarketingView.Designer.cs">
+      <DependentUpon>MarketingView.cs</DependentUpon>
     </Compile>
     <Compile Include="Print Forms\Frm_PrintCaliforniaDeed.cs">
       <SubType>Form</SubType>
@@ -303,119 +303,119 @@
     <Compile Include="Print Forms\Frm_PrintCaliforniaDeed.Designer.cs">
       <DependentUpon>Frm_PrintCaliforniaDeed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_PropertyAccountingBusiness.cs">
+    <Compile Include="Forms\PropertyAccountingBusiness.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_PropertyAccountingBusiness.Designer.cs">
-      <DependentUpon>Frm_PropertyAccountingBusiness.cs</DependentUpon>
+    <Compile Include="Forms\PropertyAccountingBusiness.Designer.cs">
+      <DependentUpon>PropertyAccountingBusiness.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_PropertyAccountingMenu.cs">
+    <Compile Include="Forms\PropertyAccountingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_PropertyAccountingMenu.Designer.cs">
-      <DependentUpon>Frm_PropertyAccountingMenu.cs</DependentUpon>
+    <Compile Include="Forms\PropertyAccountingMenu.Designer.cs">
+      <DependentUpon>PropertyAccountingMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_PropertyAccountingPersonal.cs">
+    <Compile Include="Forms\PropertyAccountingPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_PropertyAccountingPersonal.Designer.cs">
-      <DependentUpon>Frm_PropertyAccountingPersonal.cs</DependentUpon>
+    <Compile Include="Forms\PropertyAccountingPersonal.Designer.cs">
+      <DependentUpon>PropertyAccountingPersonal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_PropertyInventory.cs">
+    <Compile Include="Forms\PropertyInventory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_PropertyInventory.Designer.cs">
-      <DependentUpon>Frm_PropertyInventory.cs</DependentUpon>
+    <Compile Include="Forms\PropertyInventory.Designer.cs">
+      <DependentUpon>PropertyInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMedia.cs">
+    <Compile Include="Forms\SocialMedia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMedia.Designer.cs">
-      <DependentUpon>Frm_SocialMedia.cs</DependentUpon>
+    <Compile Include="Forms\SocialMedia.Designer.cs">
+      <DependentUpon>SocialMedia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaAdd.cs">
+    <Compile Include="Forms\SocialMediaAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaAdd.Designer.cs">
-      <DependentUpon>Frm_SocialMediaAdd.cs</DependentUpon>
+    <Compile Include="Forms\SocialMediaAdd.Designer.cs">
+      <DependentUpon>SocialMediaAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaMenu.cs">
+    <Compile Include="Forms\SocialMediaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaMenu.Designer.cs">
-      <DependentUpon>Frm_SocialMediaMenu.cs</DependentUpon>
+    <Compile Include="Forms\SocialMediaMenu.Designer.cs">
+      <DependentUpon>SocialMediaMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaUpdate.cs">
+    <Compile Include="Forms\SocialMediaUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaUpdate.Designer.cs">
-      <DependentUpon>Frm_SocialMediaUpdate.cs</DependentUpon>
+    <Compile Include="Forms\SocialMediaUpdate.Designer.cs">
+      <DependentUpon>SocialMediaUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaView.cs">
+    <Compile Include="Forms\SocialMediaView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_SocialMediaView.Designer.cs">
-      <DependentUpon>Frm_SocialMediaView.cs</DependentUpon>
+    <Compile Include="Forms\SocialMediaView.Designer.cs">
+      <DependentUpon>SocialMediaView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Tasks.cs">
+    <Compile Include="Forms\Tasks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Tasks.Designer.cs">
-      <DependentUpon>Frm_Tasks.cs</DependentUpon>
+    <Compile Include="Forms\Tasks.Designer.cs">
+      <DependentUpon>Tasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_TrainingMaterials.cs">
+    <Compile Include="Forms\TrainingMaterials.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_TrainingMaterials.Designer.cs">
-      <DependentUpon>Frm_TrainingMaterials.cs</DependentUpon>
+    <Compile Include="Forms\TrainingMaterials.Designer.cs">
+      <DependentUpon>TrainingMaterials.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_UserAdd.cs">
+    <Compile Include="Forms\UserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_UserAdd.Designer.cs">
-      <DependentUpon>Frm_UserAdd.cs</DependentUpon>
+    <Compile Include="Forms\UserAdd.Designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_UserEdit.cs">
+    <Compile Include="Forms\UserEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_UserEdit.Designer.cs">
-      <DependentUpon>Frm_UserEdit.cs</DependentUpon>
+    <Compile Include="Forms\UserEdit.Designer.cs">
+      <DependentUpon>UserEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_UserMenu.cs">
+    <Compile Include="Forms\UserMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_UserMenu.Designer.cs">
-      <DependentUpon>Frm_UserMenu.cs</DependentUpon>
+    <Compile Include="Forms\UserMenu.Designer.cs">
+      <DependentUpon>UserMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_UserView.cs">
+    <Compile Include="Forms\UserView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_UserView.Designer.cs">
-      <DependentUpon>Frm_UserView.cs</DependentUpon>
+    <Compile Include="Forms\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsAdd.cs">
+    <Compile Include="Forms\VideoTutorialsAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsAdd.Designer.cs">
-      <DependentUpon>Frm_VideoTutorialsAdd.cs</DependentUpon>
+    <Compile Include="Forms\VideoTutorialsAdd.Designer.cs">
+      <DependentUpon>VideoTutorialsAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsDelete.cs">
+    <Compile Include="Forms\VideoTutorialsDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsDelete.Designer.cs">
-      <DependentUpon>Frm_VideoTutorialsDelete.cs</DependentUpon>
+    <Compile Include="Forms\VideoTutorialsDelete.Designer.cs">
+      <DependentUpon>VideoTutorialsDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsUpdate.cs">
+    <Compile Include="Forms\VideoTutorialsUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_VideoTutorialsUpdate.Designer.cs">
-      <DependentUpon>Frm_VideoTutorialsUpdate.cs</DependentUpon>
+    <Compile Include="Forms\VideoTutorialsUpdate.Designer.cs">
+      <DependentUpon>VideoTutorialsUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeDelete.cs">
+    <Compile Include="Forms\AdminOfficeDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_AdminOfficeDelete.Designer.cs">
-      <DependentUpon>Frm_AdminOfficeDelete.cs</DependentUpon>
+    <Compile Include="Forms\AdminOfficeDelete.Designer.cs">
+      <DependentUpon>AdminOfficeDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\PnlMarketing.cs">
       <SubType>UserControl</SubType>
@@ -448,149 +448,149 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Frm_AddLeadSource.resx">
-      <DependentUpon>Frm_AddLeadSource.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddLeadSource.resx">
+      <DependentUpon>AddLeadSource.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_AdminOfficeAdd.resx">
-      <DependentUpon>Frm_AdminOfficeAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminOfficeAdd.resx">
+      <DependentUpon>AdminOfficeAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_AdminOfficeExport.resx">
-      <DependentUpon>Frm_AdminOfficeExport.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminOfficeExport.resx">
+      <DependentUpon>AdminOfficeExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_AdminOfficeMenu.resx">
-      <DependentUpon>Frm_AdminOfficeMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminOfficeMenu.resx">
+      <DependentUpon>AdminOfficeMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_AdminOfficeUpdate.resx">
-      <DependentUpon>Frm_AdminOfficeUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminOfficeUpdate.resx">
+      <DependentUpon>AdminOfficeUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_AdminOfficeView.resx">
-      <DependentUpon>Frm_AdminOfficeView.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminOfficeView.resx">
+      <DependentUpon>AdminOfficeView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_CaliforniaGrantDeed.resx">
-      <DependentUpon>Frm_CaliforniaGrantDeed.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CaliforniaGrantDeed.resx">
+      <DependentUpon>CaliforniaGrantDeed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_CompanyLoginsAdd.resx">
-      <DependentUpon>Frm_CompanyLoginsAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CompanyLoginsAdd.resx">
+      <DependentUpon>CompanyLoginsAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_CompanyLoginsDelete.resx">
-      <DependentUpon>Frm_CompanyLoginsDelete.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CompanyLoginsDelete.resx">
+      <DependentUpon>CompanyLoginsDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_CompanyLoginsMenu.resx">
-      <DependentUpon>Frm_CompanyLoginsMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CompanyLoginsMenu.resx">
+      <DependentUpon>CompanyLoginsMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_CompanyLoginsUpdate.resx">
-      <DependentUpon>Frm_CompanyLoginsUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CompanyLoginsUpdate.resx">
+      <DependentUpon>CompanyLoginsUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_CompanyLoginsView.resx">
-      <DependentUpon>Frm_CompanyLoginsView.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CompanyLoginsView.resx">
+      <DependentUpon>CompanyLoginsView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Email.resx">
-      <DependentUpon>Frm_Email.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_ExportFiles.resx">
-      <DependentUpon>Frm_ExportFiles.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ExportFiles.resx">
+      <DependentUpon>ExportFiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_LandOwner.resx">
-      <DependentUpon>Frm_LandOwner.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LandOwner.resx">
+      <DependentUpon>LandOwner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_LandStay.resx">
-      <DependentUpon>Frm_LandStay.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LandStay.resx">
+      <DependentUpon>LandStay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_LandStayExport.resx">
-      <DependentUpon>Frm_LandStayExport.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LandStayExport.resx">
+      <DependentUpon>LandStayExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_LandStayVIew.resx">
-      <DependentUpon>Frm_LandStayView.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LandStayView.resx">
+      <DependentUpon>LandStayView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_LeadAssigned.resx">
-      <DependentUpon>Frm_LeadAssigned.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LeadAssigned.resx">
+      <DependentUpon>LeadAssigned.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Marketing.resx">
-      <DependentUpon>Frm_Marketing.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Marketing.resx">
+      <DependentUpon>Marketing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Login.resx">
-      <DependentUpon>Frm_Login.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Main.resx">
-      <DependentUpon>Frm_Main.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_MarketingUpdate.resx">
-      <DependentUpon>Frm_MarketingUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MarketingUpdate.resx">
+      <DependentUpon>MarketingUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_MarketingVIew.resx">
-      <DependentUpon>Frm_MarketingView.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MarketingView.resx">
+      <DependentUpon>MarketingView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_SocialMediaExport.resx">
-      <DependentUpon>Frm_SocialMediaExport.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SocialMediaExport.resx">
+      <DependentUpon>SocialMediaExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_VideoTutorialsExport.resx">
-      <DependentUpon>Frm_VideoTutorialsExport.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VideoTutorialsExport.resx">
+      <DependentUpon>VideoTutorialsExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_VideoTutorialsView.resx">
-      <DependentUpon>Frm_VideoTutorialsView.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VideoTutorialsView.resx">
+      <DependentUpon>VideoTutorialsView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_CompanyLoginsExport.resx">
-      <DependentUpon>Frm_CompanyLoginsExport.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CompanyLoginsExport.resx">
+      <DependentUpon>CompanyLoginsExport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print Forms\Frm_PrintCaliforniaDeed.resx">
       <DependentUpon>Frm_PrintCaliforniaDeed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_PropertyAccountingBusiness.resx">
-      <DependentUpon>Frm_PropertyAccountingBusiness.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PropertyAccountingBusiness.resx">
+      <DependentUpon>PropertyAccountingBusiness.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_PropertyAccountingMenu.resx">
-      <DependentUpon>Frm_PropertyAccountingMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PropertyAccountingMenu.resx">
+      <DependentUpon>PropertyAccountingMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_PropertyAccountingPersonal.resx">
-      <DependentUpon>Frm_PropertyAccountingPersonal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PropertyAccountingPersonal.resx">
+      <DependentUpon>PropertyAccountingPersonal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_PropertyInventory.resx">
-      <DependentUpon>Frm_PropertyInventory.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PropertyInventory.resx">
+      <DependentUpon>PropertyInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_SocialMedia.resx">
-      <DependentUpon>Frm_SocialMedia.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SocialMedia.resx">
+      <DependentUpon>SocialMedia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_SocialMediaAdd.resx">
-      <DependentUpon>Frm_SocialMediaAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SocialMediaAdd.resx">
+      <DependentUpon>SocialMediaAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_SocialMediaMenu.resx">
-      <DependentUpon>Frm_SocialMediaMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SocialMediaMenu.resx">
+      <DependentUpon>SocialMediaMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_SocialMediaUpdate.resx">
-      <DependentUpon>Frm_SocialMediaUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SocialMediaUpdate.resx">
+      <DependentUpon>SocialMediaUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_SocialMediaView.resx">
-      <DependentUpon>Frm_SocialMediaView.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SocialMediaView.resx">
+      <DependentUpon>SocialMediaView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Tasks.resx">
-      <DependentUpon>Frm_Tasks.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tasks.resx">
+      <DependentUpon>Tasks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_TrainingMaterials.resx">
-      <DependentUpon>Frm_TrainingMaterials.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\TrainingMaterials.resx">
+      <DependentUpon>TrainingMaterials.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_UserAdd.resx">
-      <DependentUpon>Frm_UserAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_UserEdit.resx">
-      <DependentUpon>Frm_UserEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserEdit.resx">
+      <DependentUpon>UserEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_UserMenu.resx">
-      <DependentUpon>Frm_UserMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserMenu.resx">
+      <DependentUpon>UserMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_UserView.resx">
-      <DependentUpon>Frm_UserView.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_VideoTutorialsAdd.resx">
-      <DependentUpon>Frm_VideoTutorialsAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VideoTutorialsAdd.resx">
+      <DependentUpon>VideoTutorialsAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_VideoTutorialsDelete.resx">
-      <DependentUpon>Frm_VideoTutorialsDelete.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VideoTutorialsDelete.resx">
+      <DependentUpon>VideoTutorialsDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_VideoTutorialsUpdate.resx">
-      <DependentUpon>Frm_VideoTutorialsUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\VideoTutorialsUpdate.resx">
+      <DependentUpon>VideoTutorialsUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_AdminOfficeDelete.resx">
-      <DependentUpon>Frm_AdminOfficeDelete.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminOfficeDelete.resx">
+      <DependentUpon>AdminOfficeDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print Forms\Frm_PrintCompanyLogins.resx">
       <DependentUpon>Frm_PrintCompanyLogins.cs</DependentUpon>
