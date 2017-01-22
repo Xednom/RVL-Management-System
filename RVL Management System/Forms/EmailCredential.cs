@@ -17,6 +17,8 @@ namespace RVL_Management_System.Forms
     {
         public static string email = "";
         public static string password = "";
+        public static string senderName = "";
+
 
         SqlCommand cmd = new SqlCommand();
         SqlConnection conn = new SqlConnection();
@@ -52,13 +54,21 @@ namespace RVL_Management_System.Forms
             {
                 email = txt_email.Text;
                 password = txt_pw.Text;
+                senderName = txt_name.Text;
                 Class.Cls_cmd.emailUpdate();
+                Email femail = new Email();
+                femail.Show();
+                Hide();
             }
             else if (count == 0)
             {
                 email = txt_email.Text;
                 password = txt_pw.Text;
+                senderName = txt_name.Text;
                 Class.Cls_cmd.emailAdd();
+                Email femail = new Email();
+                femail.Show();
+                Hide();
             }
             conn.Close();
 

@@ -29,7 +29,7 @@ namespace RVL_Management_System.Forms
         {
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient(txt_smtp.Text);
-            mail.From = new MailAddress(txt_email.Text);
+            mail.From = new MailAddress(txt_email.Text, txt_nameFrom.Text);
             mail.To.Add(txt_to.Text);
             mail.Subject = txt_subject.Text;
             mail.Body = txt_content.Text;
@@ -60,8 +60,10 @@ namespace RVL_Management_System.Forms
             {
                 string gEmail = reader.GetString(reader.GetOrdinal("Email")).ToString();
                 string gAppPass = reader.GetString(reader.GetOrdinal("AppPassword")).ToString();
+                string gSenderName = reader.GetString(reader.GetOrdinal("SenderName")).ToString();
                 txt_email.Text = gEmail;
                 txt_pw.Text = gAppPass;
+                txt_nameFrom.Text = gSenderName;
             }
             conn.Close();
         }

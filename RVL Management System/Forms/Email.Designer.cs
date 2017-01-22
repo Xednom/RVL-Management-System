@@ -55,6 +55,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_nameFrom = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +116,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txt_nameFrom);
             this.groupBox2.Controls.Add(this.btn_emailCreden);
             this.groupBox2.Controls.Add(this.btn_attach);
             this.groupBox2.Controls.Add(this.chckBoxSsl);
@@ -160,7 +164,7 @@
             this.chckBoxSsl.Checked = true;
             this.chckBoxSsl.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chckBoxSsl.Enabled = false;
-            this.chckBoxSsl.Location = new System.Drawing.Point(365, 70);
+            this.chckBoxSsl.Location = new System.Drawing.Point(365, 103);
             this.chckBoxSsl.Name = "chckBoxSsl";
             this.chckBoxSsl.Size = new System.Drawing.Size(64, 17);
             this.chckBoxSsl.TabIndex = 28;
@@ -170,7 +174,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(34, 98);
+            this.label10.Location = new System.Drawing.Point(34, 131);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 27;
@@ -179,7 +183,7 @@
             // txt_port
             // 
             this.txt_port.Enabled = false;
-            this.txt_port.Location = new System.Drawing.Point(77, 95);
+            this.txt_port.Location = new System.Drawing.Point(77, 128);
             this.txt_port.Name = "txt_port";
             this.txt_port.Size = new System.Drawing.Size(107, 21);
             this.txt_port.TabIndex = 26;
@@ -188,7 +192,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(190, 71);
+            this.label9.Location = new System.Drawing.Point(190, 104);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(169, 13);
             this.label9.TabIndex = 25;
@@ -225,7 +229,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 71);
+            this.label5.Location = new System.Drawing.Point(34, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 22;
@@ -234,7 +238,7 @@
             // txt_smtp
             // 
             this.txt_smtp.Enabled = false;
-            this.txt_smtp.Location = new System.Drawing.Point(77, 68);
+            this.txt_smtp.Location = new System.Drawing.Point(77, 101);
             this.txt_smtp.Name = "txt_smtp";
             this.txt_smtp.Size = new System.Drawing.Size(107, 21);
             this.txt_smtp.TabIndex = 21;
@@ -318,6 +322,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(26, 71);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Name:";
+            // 
+            // txt_nameFrom
+            // 
+            this.txt_nameFrom.Enabled = false;
+            this.txt_nameFrom.Location = new System.Drawing.Point(77, 68);
+            this.txt_nameFrom.Name = "txt_nameFrom";
+            this.txt_nameFrom.Size = new System.Drawing.Size(540, 21);
+            this.txt_nameFrom.TabIndex = 31;
+            // 
             // Email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -369,5 +390,7 @@
         private MetroFramework.Controls.MetroButton btn_attach;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private MetroFramework.Controls.MetroButton btn_emailCreden;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txt_nameFrom;
     }
 }

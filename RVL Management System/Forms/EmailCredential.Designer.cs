@@ -34,6 +34,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.btn_save = new MetroFramework.Controls.MetroButton();
             this.btn_cancel = new MetroFramework.Controls.MetroButton();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.txt_name = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // txt_email
@@ -116,7 +118,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(126, 157);
+            this.btn_save.Location = new System.Drawing.Point(127, 202);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(96, 29);
             this.btn_save.TabIndex = 4;
@@ -126,18 +128,59 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(228, 157);
+            this.btn_cancel.Location = new System.Drawing.Point(229, 202);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(72, 29);
             this.btn_cancel.TabIndex = 6;
             this.btn_cancel.Text = "&Cancel";
             this.btn_cancel.UseSelectable = true;
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(60, 161);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel3.TabIndex = 8;
+            this.metroLabel3.Text = "Name:";
+            // 
+            // txt_name
+            // 
+            // 
+            // 
+            // 
+            this.txt_name.CustomButton.Image = null;
+            this.txt_name.CustomButton.Location = new System.Drawing.Point(174, 1);
+            this.txt_name.CustomButton.Name = "";
+            this.txt_name.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_name.CustomButton.TabIndex = 1;
+            this.txt_name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_name.CustomButton.UseSelectable = true;
+            this.txt_name.CustomButton.Visible = false;
+            this.txt_name.Lines = new string[0];
+            this.txt_name.Location = new System.Drawing.Point(114, 157);
+            this.txt_name.MaxLength = 32767;
+            this.txt_name.Name = "txt_name";
+            this.txt_name.PasswordChar = '\0';
+            this.txt_name.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_name.SelectedText = "";
+            this.txt_name.SelectionLength = 0;
+            this.txt_name.SelectionStart = 0;
+            this.txt_name.ShortcutsEnabled = true;
+            this.txt_name.Size = new System.Drawing.Size(196, 23);
+            this.txt_name.TabIndex = 7;
+            this.txt_name.UseSelectable = true;
+            this.txt_name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // EmailCredential
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 239);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.txt_name);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.metroLabel2);
@@ -163,5 +206,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroButton btn_save;
         private MetroFramework.Controls.MetroButton btn_cancel;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroTextBox txt_name;
     }
 }

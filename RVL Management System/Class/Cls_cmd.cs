@@ -395,9 +395,10 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string INSERT = "INSERT INTO Email(Email,AppPassword)VALUES(@email,@appPassword)";
+            string INSERT = "INSERT INTO Email(Email,AppPassword,SenderName)VALUES(@email,@appPassword,@senderName)";
             cmd.Parameters.AddWithValue("email", EmailCredential.email);
             cmd.Parameters.AddWithValue("appPassword", EmailCredential.password);
+            cmd.Parameters.AddWithValue("senderName", EmailCredential.senderName);
             cmd.CommandText = INSERT;
             cmd.ExecuteNonQuery();
 
@@ -655,10 +656,11 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string UPDATE = "UPDATE Email SET Email = @email, AppPassword = @appPassword WHERE Email = @mail";
+            string UPDATE = "UPDATE Email SET Email = @email, AppPassword = @appPassword, SenderName = @senderName WHERE Email = @mail";
             cmd.Parameters.AddWithValue("email", EmailCredential.email);
             cmd.Parameters.AddWithValue("appPassword", EmailCredential.password);
             cmd.Parameters.AddWithValue("mail", EmailCredential.email);
+            cmd.Parameters.AddWithValue("senderName", EmailCredential.senderName);
             cmd.CommandText = UPDATE;
             cmd.ExecuteNonQuery();
 
