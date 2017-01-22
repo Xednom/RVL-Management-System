@@ -143,6 +143,12 @@
     <Compile Include="Forms\AdminOfficeView.Designer.cs">
       <DependentUpon>AdminOfficeView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EmailCredential.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmailCredential.Designer.cs">
+      <DependentUpon>EmailCredential.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ExportFiles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -481,6 +487,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Email.resx">
       <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmailCredential.resx">
+      <DependentUpon>EmailCredential.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportFiles.resx">
       <DependentUpon>ExportFiles.cs</DependentUpon>

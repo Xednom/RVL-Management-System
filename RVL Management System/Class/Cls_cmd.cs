@@ -384,6 +384,29 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void emailAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            VideoTutorialsUpdate _owner = new VideoTutorialsUpdate();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO Email(Email,AppPassword)VALUES(@email,@appPassword)";
+            cmd.Parameters.AddWithValue("email", EmailCredential.email);
+            cmd.Parameters.AddWithValue("appPassword", EmailCredential.password);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Successfully Added your Gmail credentials in the System.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
 
         public static void marketingUpdate()
         {
@@ -621,6 +644,29 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void emailUpdate()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            VideoTutorialsUpdate _owner = new VideoTutorialsUpdate();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string UPDATE = "UPDATE Email SET Email = @email, AppPassword = @appPassword WHERE Email = @mail";
+            cmd.Parameters.AddWithValue("email", EmailCredential.email);
+            cmd.Parameters.AddWithValue("appPassword", EmailCredential.password);
+            cmd.Parameters.AddWithValue("mail", EmailCredential.email);
+            cmd.CommandText = UPDATE;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Successfully updated your Gmail credentials.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
 
         public static void taskAssign()
         {

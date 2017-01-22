@@ -9,123 +9,98 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
-using System.Net.Mime;
-using System.Security.Cryptography.X509Certificates;
-using Google.Apis.Auth.OAuth2;
-using System.Threading;
-using MimeKit;
-using MailKit.Net.Smtp;
-using MailKit.Security;
-
-
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Net.Mail;
 
 namespace RVL_Management_System.Forms
 {
     public partial class Email : MetroForm
     {
-
-        const string clientID = "419579761857-ins0hvsjj2u4t6bkjfnp780rbqvr4pmm.apps.googleusercontent.com";
-        const string clientSecret = "1u3UL04y74WehY7s05Sgqtu4";
-        const string authorizationEndpoint = "https://www.googleapis.com/oauth2/v1/certs";
-        const string tokenEndpoint = "https://accounts.google.com/o/oauth2/token";
-
-        //public async void Main(string[] args)
-        //{
-        //    var certificate = new X509Certificate2(@"C:\Users\monde\Downloads\client_id", "password", X509KeyStorageFlags.Exportable);
-        //    var credential = new ServiceAccountCredential(new ServiceAccountCredential
-        //        .Initializer("your-developer-id@developer.gserviceaccount.com")
-        //    {
-        //        // Note: other scopes can be found here: https://developers.google.com/gmail/api/auth/scopes
-        //        Scopes = new[] { "https://mail.google.com/" },
-        //        User = "xednom@gmail.com"
-        //    }.FromCertificate(certificate));
-
-        //    // Note: result will be true if the access token was received successfully
-        //    bool result = await credential.RequestAccessTokenAsync(CancellationToken.None);
-
-        //    if (!result)
-        //    {
-        //        MetroMessageBox.Show(this, "Error fetching access token!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    var message = new MimeMessage();
-        //    message.From.Add(new MailboxAddress("Richmond", "xednom@gmail.com"));
-        //    message.To.Add(new MailboxAddress("Piso", "monde.lacanlalay@gmail.com"));
-        //    message.Subject = "This is a test message";
-
-        //    var builder = new BodyBuilder();
-        //    builder.TextBody = "This is the body of the message.";
-        //    builder.Attachments.Add(@"E:\TeamBugels files\14485103_866861653448425_38638487722515396_n");
-
-        //    message.Body = builder.ToMessageBody();
-
-        //    using (var client = new SmtpClient())
-        //    {
-        //        client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-
-        //        // use the access token as the password string
-        //        client.Authenticate("xednom@gmail.com", credential.Token.AccessToken);
-
-        //        client.Send(message);
-
-        //        client.Disconnect(true);
-        //    }
-        //}
-
-    public Email()
+        SqlCommand cmd = new SqlCommand();
+        SqlConnection conn = new SqlConnection();
+        public Email()
         {
             InitializeComponent();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+        }
+
+        public void email_send()
+        {
+            MailMessage mail = new MailMessage();
+            SmtpClient SmtpServer = new SmtpClient(txt_smtp.Text);
+            mail.From = new MailAddress(txt_email.Text);
+            mail.To.Add(txt_to.Text);
+            mail.Subject = txt_subject.Text;
+            mail.Body = txt_content.Text;
+
+            Attachment attachment;
+            attachment = new Attachment(txt_attachments.Text);
+            mail.Attachments.Add(attachment);
+
+            SmtpServer.Port = 587;
+            SmtpServer.Credentials = new System.Net.NetworkCredential(txt_email.Text, txt_pw.Text);
+            SmtpServer.EnableSsl = true;
+
+            SmtpServer.Send(mail);
+
+            MetroMessageBox.Show(this, "Email Sent!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void loadEmail()
+        {
+            conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT * FROM Email";
+            cmd.CommandType = CommandType.Text;
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string gEmail = reader.GetString(reader.GetOrdinal("Email")).ToString();
+                string gAppPass = reader.GetString(reader.GetOrdinal("AppPassword")).ToString();
+                txt_email.Text = gEmail;
+                txt_pw.Text = gAppPass;
+            }
+            conn.Close();
         }
 
         private void Frm_Email_Load(object sender, EventArgs e)
         {
-
+            loadEmail();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("Richmond B. Lacanlalay", txt_email.Text));
-            message.To.Add(new MailboxAddress("Piso kins", txt_to.Text));
-            message.Subject = txt_subject.Text;
+            email_send();
 
-            message.Body = new TextPart("plain")
-            {
-                Text = txt_content.Text
-            };
+            //var message = new MimeMessage();
+            //message.From.Add(new MailboxAddress("Richmond B. Lacanlalay", txt_email.Text));
+            //message.To.Add(new MailboxAddress("Raymond Negro", txt_to.Text));
+            //message.Subject = txt_subject.Text;
 
-            using (var client = new SmtpClient())
-            {
-                client.Connect(txt_smtp.Text, 587);
+            //message.Body = new TextPart("plain")
+            //{
+            //    Text = txt_content.Text
+            //};
 
+            //using (var client = new SmtpClient())
+            //{
+            //    client.Connect(txt_smtp.Text, 587);
+            //    var attachments = txt_attachments.Text;
 
-                // Note: since we don't have an OAuth2 token, disable
-                // the XOAUTH2 authentication mechanism.
-                client.AuthenticationMechanisms.Remove("XOAUTH2");
+            //    // Note: since we don't have an OAuth2 token, disable
+            //    // the XOAUTH2 authentication mechanism.
+            //    client.AuthenticationMechanisms.Remove("XOAUTH2");
 
-                // Note: only needed if the SMTP server requires authentication
-                client.Authenticate(txt_email.Text, txt_pw.Text);
+            //    // Note: only needed if the SMTP server requires authentication
+            //    client.Authenticate(txt_email.Text, txt_pw.Text);
+            //    client.Send(message);
+            //    client.Disconnect(true);
 
-                client.Send(message);
-                client.Disconnect(true);
-
-                MetroMessageBox.Show(this, "Email Sent!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            //string file = txt_attachments.Text;
-            //MimeMessage mail = new MimeMessage(txt_email.Text, txt_to.Text, txt_subject.Text, txt_content.Text);
-            //MimePart data = new MimePart(file, MediaTypeNames.Application.Octet);
-            //Multipart multipart = new Multipart();
-            //multipart.Add(data);
-            //SmtpClient client = new SmtpClient(txt_smtp.text);
-            //client. = false;
-            //client.credentials = new networkcredential(txt_email.text, txt_pw.text);
-            //client.port = 587;
-            //client.enablessl = true;
-            //client.send(mail);
-
-            //MessageBox.Show("Email Sent!", "Sent Successfully");
+            //    MetroMessageBox.Show(this, "Email Sent!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
 
         private void metroButton1_Click_1(object sender, EventArgs e)
@@ -134,6 +109,12 @@ namespace RVL_Management_System.Forms
             {
                 txt_attachments.Text = openFileDialog1.FileName;
             }
+        }
+
+        private void btn_emailCreden_Click(object sender, EventArgs e)
+        {
+            EmailCredential eCredential = new EmailCredential();
+            eCredential.ShowDialog();
         }
     }
 }

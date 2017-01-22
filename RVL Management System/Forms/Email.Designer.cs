@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_attachments = new System.Windows.Forms.TextBox();
             this.txt_cc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_emailCreden = new MetroFramework.Controls.MetroButton();
+            this.btn_attach = new MetroFramework.Controls.MetroButton();
             this.chckBoxSsl = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_port = new System.Windows.Forms.TextBox();
@@ -50,9 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_attachments = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btn_attach = new MetroFramework.Controls.MetroButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -72,16 +73,32 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(13, 56);
+            this.groupBox1.Location = new System.Drawing.Point(9, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(735, 625);
+            this.groupBox1.Size = new System.Drawing.Size(746, 625);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New Message";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 391);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Attachments:";
+            // 
+            // txt_attachments
+            // 
+            this.txt_attachments.Location = new System.Drawing.Point(97, 388);
+            this.txt_attachments.Name = "txt_attachments";
+            this.txt_attachments.Size = new System.Drawing.Size(631, 21);
+            this.txt_attachments.TabIndex = 29;
+            // 
             // txt_cc
             // 
-            this.txt_cc.Location = new System.Drawing.Point(89, 41);
+            this.txt_cc.Location = new System.Drawing.Point(97, 41);
             this.txt_cc.Name = "txt_cc";
             this.txt_cc.Size = new System.Drawing.Size(633, 21);
             this.txt_cc.TabIndex = 19;
@@ -89,7 +106,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(53, 44);
+            this.label8.Location = new System.Drawing.Point(61, 44);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 18;
@@ -97,6 +114,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_emailCreden);
             this.groupBox2.Controls.Add(this.btn_attach);
             this.groupBox2.Controls.Add(this.chckBoxSsl);
             this.groupBox2.Controls.Add(this.label10);
@@ -109,12 +127,32 @@
             this.groupBox2.Controls.Add(this.txt_smtp);
             this.groupBox2.Controls.Add(this.txt_email);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(89, 424);
+            this.groupBox2.Location = new System.Drawing.Point(97, 424);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(633, 179);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Account Setting";
+            // 
+            // btn_emailCreden
+            // 
+            this.btn_emailCreden.Location = new System.Drawing.Point(274, 146);
+            this.btn_emailCreden.Name = "btn_emailCreden";
+            this.btn_emailCreden.Size = new System.Drawing.Size(154, 27);
+            this.btn_emailCreden.TabIndex = 30;
+            this.btn_emailCreden.Text = "Add/Edit Gmail Credentials";
+            this.btn_emailCreden.UseSelectable = true;
+            this.btn_emailCreden.Click += new System.EventHandler(this.btn_emailCreden_Click);
+            // 
+            // btn_attach
+            // 
+            this.btn_attach.Location = new System.Drawing.Point(434, 146);
+            this.btn_attach.Name = "btn_attach";
+            this.btn_attach.Size = new System.Drawing.Size(112, 27);
+            this.btn_attach.TabIndex = 29;
+            this.btn_attach.Text = "Add Attachments";
+            this.btn_attach.UseSelectable = true;
+            this.btn_attach.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
             // chckBoxSsl
             // 
@@ -177,6 +215,7 @@
             // 
             // txt_pw
             // 
+            this.txt_pw.Enabled = false;
             this.txt_pw.Location = new System.Drawing.Point(77, 41);
             this.txt_pw.Name = "txt_pw";
             this.txt_pw.PasswordChar = '*';
@@ -203,6 +242,7 @@
             // 
             // txt_email
             // 
+            this.txt_email.Enabled = false;
             this.txt_email.Location = new System.Drawing.Point(77, 14);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(540, 21);
@@ -220,28 +260,28 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 28);
+            this.label6.Location = new System.Drawing.Point(44, 28);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 16;
             // 
             // txt_to
             // 
-            this.txt_to.Location = new System.Drawing.Point(89, 14);
+            this.txt_to.Location = new System.Drawing.Point(97, 14);
             this.txt_to.Name = "txt_to";
             this.txt_to.Size = new System.Drawing.Size(633, 21);
             this.txt_to.TabIndex = 13;
             // 
             // txt_subject
             // 
-            this.txt_subject.Location = new System.Drawing.Point(89, 68);
+            this.txt_subject.Location = new System.Drawing.Point(97, 68);
             this.txt_subject.Name = "txt_subject";
             this.txt_subject.Size = new System.Drawing.Size(633, 21);
             this.txt_subject.TabIndex = 14;
             // 
             // txt_content
             // 
-            this.txt_content.Location = new System.Drawing.Point(89, 95);
+            this.txt_content.Location = new System.Drawing.Point(97, 95);
             this.txt_content.Multiline = true;
             this.txt_content.Name = "txt_content";
             this.txt_content.Size = new System.Drawing.Size(631, 287);
@@ -250,7 +290,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 95);
+            this.label4.Location = new System.Drawing.Point(34, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 7;
@@ -259,7 +299,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 70);
+            this.label3.Location = new System.Drawing.Point(36, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 6;
@@ -268,37 +308,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 17);
+            this.label2.Location = new System.Drawing.Point(66, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "To:";
-            // 
-            // txt_attachments
-            // 
-            this.txt_attachments.Location = new System.Drawing.Point(89, 388);
-            this.txt_attachments.Name = "txt_attachments";
-            this.txt_attachments.Size = new System.Drawing.Size(631, 21);
-            this.txt_attachments.TabIndex = 29;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(0, 391);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 13);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "Attachments:";
-            // 
-            // btn_attach
-            // 
-            this.btn_attach.Location = new System.Drawing.Point(434, 146);
-            this.btn_attach.Name = "btn_attach";
-            this.btn_attach.Size = new System.Drawing.Size(112, 27);
-            this.btn_attach.TabIndex = 29;
-            this.btn_attach.Text = "Add Attachments";
-            this.btn_attach.UseSelectable = true;
-            this.btn_attach.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
             // openFileDialog1
             // 
@@ -354,5 +368,6 @@
         private System.Windows.Forms.TextBox txt_attachments;
         private MetroFramework.Controls.MetroButton btn_attach;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private MetroFramework.Controls.MetroButton btn_emailCreden;
     }
 }
