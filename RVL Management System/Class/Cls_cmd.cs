@@ -14,6 +14,43 @@ namespace RVL_Management_System.Class
 {
     class Cls_cmd
     {
+        public static void Login()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            Frm_Login _owner = new Frm_Login();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+
+            conn.Open();
+            cmd.Connection = conn;
+            string LOGIN = "SELECT A.Account, L.UN, L.PW, U.Full_Name FROM tblUser AS U LEFT JOIN tblAccount AS A ON A.AcctID = U.AcctID LEFT JOIN tblLogin AS L ON L.AcctID = U.AcctID WHERE L.UN = @un AND L.PW = @pw AND A.Account = @ut";
+            cmd.Parameters.AddWithValue("un", Frm_Login.Username);
+            cmd.Parameters.AddWithValue("pw", Frm_Login.Password);
+            cmd.Parameters.AddWithValue("ut", Frm_Login.UserType);
+            cmd.CommandText = LOGIN;
+            cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                MetroMessageBox.Show(_owner, "Welcome", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Frm_Main fmain = new Frm_Main();
+                fmain.Show();
+                _owner.Hide();
+            }
+            else
+            {
+                MetroMessageBox.Show(_owner, "Wrong username or password!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            conn.Close();
+
+            cmd.Parameters.Clear();
+
+        }
+
         public static void userLogin()
         {
             SqlConnection conn = new SqlConnection();

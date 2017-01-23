@@ -40,7 +40,6 @@
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.btn_marketing = new MetroFramework.Controls.MetroLink();
             this.btn_task = new MetroFramework.Controls.MetroLink();
@@ -52,6 +51,7 @@
             this.metroLink6 = new MetroFramework.Controls.MetroLink();
             this.metroLink7 = new MetroFramework.Controls.MetroLink();
             this.btn_video = new MetroFramework.Controls.MetroLink();
+            this.metroLink8 = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,18 +145,6 @@
             this.metroTile6.TabIndex = 10;
             this.metroTile6.Text = "Admin And Accounting";
             this.metroTile6.UseSelectable = true;
-            // 
-            // metroTile8
-            // 
-            this.metroTile8.ActiveControl = null;
-            this.metroTile8.Location = new System.Drawing.Point(148, 233);
-            this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(156, 67);
-            this.metroTile8.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile8.TabIndex = 14;
-            this.metroTile8.Text = "Email";
-            this.metroTile8.UseSelectable = true;
-            this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
             // 
             // metroLink1
             // 
@@ -320,6 +308,19 @@
             this.btn_video.UseSelectable = true;
             this.btn_video.Click += new System.EventHandler(this.metroLink8_Click);
             // 
+            // metroLink8
+            // 
+            this.metroLink8.Image = global::RVL_Management_System.Properties.Resources.mail_sent;
+            this.metroLink8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLink8.ImageSize = 32;
+            this.metroLink8.Location = new System.Drawing.Point(146, 233);
+            this.metroLink8.Name = "metroLink8";
+            this.metroLink8.Size = new System.Drawing.Size(158, 67);
+            this.metroLink8.TabIndex = 40;
+            this.metroLink8.Text = "Email";
+            this.metroLink8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroLink8.UseSelectable = true;
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +328,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.metroLink8);
             this.Controls.Add(this.btn_video);
             this.Controls.Add(this.metroLink7);
             this.Controls.Add(this.metroLink6);
@@ -338,7 +340,6 @@
             this.Controls.Add(this.btn_task);
             this.Controls.Add(this.btn_marketing);
             this.Controls.Add(this.metroLink1);
-            this.Controls.Add(this.metroTile8);
             this.Controls.Add(this.metroTile6);
             this.Controls.Add(this.metroTile4);
             this.Controls.Add(this.metroTile2);
@@ -376,7 +377,6 @@
         private MetroFramework.Controls.MetroTile metroTile4;
         private MetroFramework.Controls.MetroTile metroTile6;
         private System.Windows.Forms.ToolStripStatusLabel lbl_Usertype;
-        private MetroFramework.Controls.MetroTile metroTile8;
         private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroLink btn_marketing;
         public MetroFramework.Controls.MetroLink btn_task;
@@ -390,6 +390,7 @@
         private MetroFramework.Controls.MetroLink metroLink6;
         private MetroFramework.Controls.MetroLink metroLink7;
         private MetroFramework.Controls.MetroLink btn_video;
+        private MetroFramework.Controls.MetroLink metroLink8;
     }
 }
 

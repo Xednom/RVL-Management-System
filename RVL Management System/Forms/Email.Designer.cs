@@ -34,6 +34,8 @@
             this.txt_cc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_nameFrom = new System.Windows.Forms.TextBox();
             this.btn_emailCreden = new MetroFramework.Controls.MetroButton();
             this.btn_attach = new MetroFramework.Controls.MetroButton();
             this.chckBoxSsl = new System.Windows.Forms.CheckBox();
@@ -55,8 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_nameFrom = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +93,7 @@
             // 
             // txt_attachments
             // 
+            this.txt_attachments.Enabled = false;
             this.txt_attachments.Location = new System.Drawing.Point(97, 388);
             this.txt_attachments.Name = "txt_attachments";
             this.txt_attachments.Size = new System.Drawing.Size(631, 21);
@@ -137,6 +138,23 @@
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Account Setting";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(26, 71);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Name:";
+            // 
+            // txt_nameFrom
+            // 
+            this.txt_nameFrom.Enabled = false;
+            this.txt_nameFrom.Location = new System.Drawing.Point(77, 68);
+            this.txt_nameFrom.Name = "txt_nameFrom";
+            this.txt_nameFrom.Size = new System.Drawing.Size(540, 21);
+            this.txt_nameFrom.TabIndex = 31;
             // 
             // btn_emailCreden
             // 
@@ -322,23 +340,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(26, 71);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 13);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Name:";
-            // 
-            // txt_nameFrom
-            // 
-            this.txt_nameFrom.Enabled = false;
-            this.txt_nameFrom.Location = new System.Drawing.Point(77, 68);
-            this.txt_nameFrom.Name = "txt_nameFrom";
-            this.txt_nameFrom.Size = new System.Drawing.Size(540, 21);
-            this.txt_nameFrom.TabIndex = 31;
-            // 
             // Email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -346,6 +347,8 @@
             this.ClientSize = new System.Drawing.Size(764, 693);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Email";
             this.Padding = new System.Windows.Forms.Padding(23, 60, 23, 20);
             this.Resizable = false;

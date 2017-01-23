@@ -56,34 +56,41 @@ namespace RVL_Management_System
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            cmd.Connection = conn;
-            string LOGIN = "SELECT A.Account, L.UN, L.PW, U.Full_Name FROM tblUser AS U LEFT JOIN tblAccount AS A ON A.AcctID = U.AcctID LEFT JOIN tblLogin AS L ON L.AcctID = U.AcctID WHERE L.UN = @un AND L.PW = @pw AND A.Account = @ut";
-            cmd.Parameters.AddWithValue("un", txt_un.Text);
-            cmd.Parameters.AddWithValue("pw", txt_pw.Text);
-            cmd.Parameters.AddWithValue("ut", cBoxUsertype.Text);
-            cmd.CommandText = LOGIN;
-            cmd.ExecuteNonQuery();
-            SqlDataReader reader = cmd.ExecuteReader();
+            UserType = cBoxUsertype.Text;
+            Username = txt_un.Text;
+            Password = txt_pw.Text;
+            fullName = txt_name.Text;
+            Class.Cls_cmd.Login();
+            
 
-            if (reader.HasRows)
-            {
-                MessageBox.Show("Welcome", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //conn.Open();
+            //cmd.Connection = conn;
+            //string LOGIN = "SELECT A.Account, L.UN, L.PW, U.Full_Name FROM tblUser AS U LEFT JOIN tblAccount AS A ON A.AcctID = U.AcctID LEFT JOIN tblLogin AS L ON L.AcctID = U.AcctID WHERE L.UN = @un AND L.PW = @pw AND A.Account = @ut";
+            //cmd.Parameters.AddWithValue("un", txt_un.Text);
+            //cmd.Parameters.AddWithValue("pw", txt_pw.Text);
+            //cmd.Parameters.AddWithValue("ut", cBoxUsertype.Text);
+            //cmd.CommandText = LOGIN;
+            //cmd.ExecuteNonQuery();
+            //SqlDataReader reader = cmd.ExecuteReader();
 
-                UserType = cBoxUsertype.Text;
-                fullName = txt_name.Text;
-                Frm_Main fmain = new Frm_Main();
-                fmain.Show();
-                Hide();
-            }
-            else
-            {
-                MessageBox.Show("Wrong username or password!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //if (reader.HasRows)
+            //{
+            //    MessageBox.Show("Welcome", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            conn.Close();
+            //    UserType = cBoxUsertype.Text;
+            //    fullName = txt_name.Text;
+            //    Frm_Main fmain = new Frm_Main();
+            //    fmain.Show();
+            //    Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Wrong username or password!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            cmd.Parameters.Clear();
+            //}
+            //conn.Close();
+
+            //cmd.Parameters.Clear();
 
         }
 
