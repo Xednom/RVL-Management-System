@@ -224,5 +224,27 @@ namespace RVL_Management_System
             VideoTutorialsMenu vMenu = new VideoTutorialsMenu();
             vMenu.ShowDialog();
         }
+
+        private void metroLink9_Click(object sender, EventArgs e)
+        {
+            LandsOwnedDeedAdventure adventure = new LandsOwnedDeedAdventure();
+            adventure.ShowDialog();
+        }
+
+        private void metroLink8_Click_1(object sender, EventArgs e)
+        {
+            Email email = new Email();
+            email.ShowDialog();
+        }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

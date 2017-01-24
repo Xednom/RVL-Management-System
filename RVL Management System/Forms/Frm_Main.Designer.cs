@@ -52,6 +52,7 @@
             this.metroLink7 = new MetroFramework.Controls.MetroLink();
             this.btn_video = new MetroFramework.Controls.MetroLink();
             this.metroLink8 = new MetroFramework.Controls.MetroLink();
+            this.metroLink9 = new MetroFramework.Controls.MetroLink();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +123,7 @@
             this.metroTile2.TabIndex = 5;
             this.metroTile2.Text = "Listing";
             this.metroTile2.UseSelectable = true;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // metroTile4
             // 
@@ -145,6 +147,7 @@
             this.metroTile6.TabIndex = 10;
             this.metroTile6.Text = "Admin And Accounting";
             this.metroTile6.UseSelectable = true;
+            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
             // 
             // metroLink1
             // 
@@ -320,6 +323,21 @@
             this.metroLink8.Text = "Email";
             this.metroLink8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroLink8.UseSelectable = true;
+            this.metroLink8.Click += new System.EventHandler(this.metroLink8_Click_1);
+            // 
+            // metroLink9
+            // 
+            this.metroLink9.Image = global::RVL_Management_System.Properties.Resources.map;
+            this.metroLink9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLink9.ImageSize = 32;
+            this.metroLink9.Location = new System.Drawing.Point(310, 379);
+            this.metroLink9.Name = "metroLink9";
+            this.metroLink9.Size = new System.Drawing.Size(229, 67);
+            this.metroLink9.TabIndex = 42;
+            this.metroLink9.Text = "Lands Owned By Deed Adventure";
+            this.metroLink9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroLink9.UseSelectable = true;
+            this.metroLink9.Click += new System.EventHandler(this.metroLink9_Click);
             // 
             // Frm_Main
             // 
@@ -328,6 +346,7 @@
             this.BackgroundImage = global::RVL_Management_System.Properties.Resources.blue_sky_green_field;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(997, 652);
+            this.Controls.Add(this.metroLink9);
             this.Controls.Add(this.metroLink8);
             this.Controls.Add(this.btn_video);
             this.Controls.Add(this.metroLink7);
@@ -391,6 +410,7 @@
         private MetroFramework.Controls.MetroLink metroLink7;
         private MetroFramework.Controls.MetroLink btn_video;
         private MetroFramework.Controls.MetroLink metroLink8;
+        private MetroFramework.Controls.MetroLink metroLink9;
     }
 }
 

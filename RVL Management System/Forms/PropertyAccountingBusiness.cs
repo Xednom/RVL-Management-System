@@ -162,24 +162,12 @@ namespace RVL_Management_System.Forms
 
         private void txt_totalExpense_TextChanged(object sender, EventArgs e)
         {
-            int a = Convert.ToInt32(txt_origPrice.Text);
-            int b = Convert.ToInt32(txt_totalExpense.Text);
-
-            txt_originalPriceExpense.Text = (a + b).ToString();
+            
         }
 
         private void txt_originalPriceExpense_TextChanged(object sender, EventArgs e)
         {
-            int a = Convert.ToInt32(txt_origPrice.Text);
-            int b = Convert.ToInt32(txt_originalPriceExpense.Text);
-            int c = Convert.ToInt32(txt_originalPriceExpense.Text);
-            int d = Convert.ToInt32(txt_originalPriceExpense.Text);
-
-            txt_netSale.Text = (a - b).ToString();
-
-            txt_shared60.Text = (c * 0.60).ToString();
-            txt_shared40.Text = (c * 0.40).ToString();
-
+           
         }
 
         private void metroLabel15_DragDrop(object sender, DragEventArgs e)
@@ -250,70 +238,31 @@ namespace RVL_Management_System.Forms
 
         private void txt_netSale_TextChanged(object sender, EventArgs e)
         {
-            double a = Convert.ToInt32(txt_totalExpense.Text);
-            double b = Convert.ToInt32(txt_netSale.Text);
-            
-            txt_netProfit.Text = (b - a).ToString();
         }
 
         private void txt_recordingFee_TextChanged(object sender, EventArgs e)
         {
-            //double a = Convert.ToInt32(txt_recordingFee.Text);
-            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
-            //double c = Convert.ToInt32(txt_backTaxes.Text);
-            //double d = Convert.ToInt32(txt_Notary.Text);
-            //double f = Convert.ToInt32(txt_otherExpense.Text);
-
-
-            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+           
         }
 
         private void txt_backTaxes_TextChanged(object sender, EventArgs e)
         {
-            //double a = Convert.ToInt32(txt_recordingFee.Text);
-            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
-            //double c = Convert.ToInt32(txt_backTaxes.Text);
-            //double d = Convert.ToInt32(txt_Notary.Text);
-            //double f = Convert.ToInt32(txt_otherExpense.Text);
-
-
-            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+            
         }
 
         private void txt_cardProcessingFee_TextChanged(object sender, EventArgs e)
         {
-            //double a = Convert.ToInt32(txt_recordingFee.Text);
-            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
-            //double c = Convert.ToInt32(txt_backTaxes.Text);
-            //double d = Convert.ToInt32(txt_Notary.Text);
-            //double f = Convert.ToInt32(txt_otherExpense.Text);
-
-
-            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+            
         }
 
         private void txt_Notary_TextChanged(object sender, EventArgs e)
         {
-            //double a = Convert.ToInt32(txt_recordingFee.Text);
-            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
-            //double c = Convert.ToInt32(txt_backTaxes.Text);
-            //double d = Convert.ToInt32(txt_Notary.Text);
-            //double f = Convert.ToInt32(txt_otherExpense.Text);
-
-
-            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+           
         }
 
         private void txt_otherExpense_TextChanged(object sender, EventArgs e)
         {
-            //double a = Convert.ToInt32(txt_recordingFee.Text);
-            //double b = Convert.ToInt32(txt_cardProcessingFee.Text);
-            //double c = Convert.ToInt32(txt_backTaxes.Text);
-            //double d = Convert.ToInt32(txt_Notary.Text);
-            //double f = Convert.ToInt32(txt_otherExpense.Text);
-
-
-            //txt_totalExpense.Text = (a + b + c + d + f).ToString();
+            
         }
 
         private void txt_recordingFee_KeyPress(object sender, KeyPressEventArgs e)
@@ -324,6 +273,28 @@ namespace RVL_Management_System.Forms
             {
                 txt_recordingFee.Text = string.Format("{0:n0}", double.Parse(txt_recordingFee.Text));
             }
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            int a = Convert.ToInt32(txt_origPrice.Text);
+            int b = Convert.ToInt32(txt_totalExpense.Text);
+            int c = Convert.ToInt32(txt_origPrice.Text);
+            int d = Convert.ToInt32(txt_originalPriceExpense.Text);
+            int f = Convert.ToInt32(txt_originalPriceExpense.Text);
+            int g = Convert.ToInt32(txt_originalPriceExpense.Text);
+            double h = Convert.ToInt32(txt_totalExpense.Text);
+            double i = Convert.ToInt32(txt_netSale.Text);
+
+            txt_netSale.Text = (a - b).ToString();
+
+            txt_shared60.Text = (c * 0.60).ToString();
+            txt_shared40.Text = (c * 0.40).ToString();
+
+
+            
+
+            txt_netProfit.Text = (b - a).ToString();
         }
     }
 }

@@ -155,6 +155,18 @@
     <Compile Include="Forms\ExportFiles.Designer.cs">
       <DependentUpon>ExportFiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LandsOwnedDeedAdventure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LandsOwnedDeedAdventure.Designer.cs">
+      <DependentUpon>LandsOwnedDeedAdventure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LandsOwnedDeedAdventureView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LandsOwnedDeedAdventureView.Designer.cs">
+      <DependentUpon>LandsOwnedDeedAdventureView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LandStayExport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,12 @@
     </Compile>
     <Compile Include="Forms\LandStayView.Designer.cs">
       <DependentUpon>LandStayView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SocialMediaExport.cs">
       <SubType>Form</SubType>
@@ -497,6 +515,12 @@
     <EmbeddedResource Include="Forms\LandOwner.resx">
       <DependentUpon>LandOwner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LandsOwnedDeedAdventure.resx">
+      <DependentUpon>LandsOwnedDeedAdventure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LandsOwnedDeedAdventureView.resx">
+      <DependentUpon>LandsOwnedDeedAdventureView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LandStay.resx">
       <DependentUpon>LandStay.cs</DependentUpon>
     </EmbeddedResource>
@@ -508,6 +532,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LeadAssigned.resx">
       <DependentUpon>LeadAssigned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Marketing.resx">
       <DependentUpon>Marketing.cs</DependentUpon>
@@ -823,6 +850,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mail-sent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\digital-calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-book-opened-from-top-view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-edit-symbol-for-interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-search-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -51,7 +51,7 @@ namespace RVL_Management_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            cBoxUsertype.Text = "User Type";
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -61,6 +61,7 @@ namespace RVL_Management_System
             Password = txt_pw.Text;
             fullName = txt_name.Text;
             Class.Cls_cmd.Login();
+            Hide();
             
 
             //conn.Open();
@@ -129,6 +130,16 @@ namespace RVL_Management_System
                 DataGridViewRow row = cell.OwningRow;
                 txt_name.Text = row.Cells[0].Value.ToString();
             }
+        }
+
+        private void Frm_Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void Frm_Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

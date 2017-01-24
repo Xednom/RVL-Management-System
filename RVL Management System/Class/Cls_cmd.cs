@@ -36,9 +36,8 @@ namespace RVL_Management_System.Class
             if (reader.HasRows)
             {
                 MetroMessageBox.Show(_owner, "Welcome", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Frm_Main fmain = new Frm_Main();
+                Main fmain = new Main();
                 fmain.Show();
-                _owner.Hide();
             }
             else
             {
@@ -441,6 +440,37 @@ namespace RVL_Management_System.Class
 
             conn.Close();
             MetroMessageBox.Show(_owner, "Successfully Added your Gmail credentials in the System.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
+        public static void deedAdventureAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            LandsOwnedDeedAdventure _owner = new LandsOwnedDeedAdventure();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO DeedAdventure(APN,County,OriginalPrice,MarketPrice,StatusOfTheLand,TypeOfSale,DownPaymentMade,MonthlyPaymentMade,PaymentPaidSoFar,AmountClosed)VALUES(@apn,@county,@origPrice,@marketPrice,@StatsofTheLand,@typeOfSale,@downPaymentMade,@monthlyPaymentMade,@paymentPaidSoFar,@amountClosed)";
+            cmd.Parameters.AddWithValue("apn", LandsOwnedDeedAdventure.apn);
+            cmd.Parameters.AddWithValue("county", LandsOwnedDeedAdventure.county);
+            cmd.Parameters.AddWithValue("origPrice", LandsOwnedDeedAdventure.originalPrice);
+            cmd.Parameters.AddWithValue("marketPrice", LandsOwnedDeedAdventure.marketPrice);
+            cmd.Parameters.AddWithValue("StatsofTheLand", LandsOwnedDeedAdventure.statusOfTheLand);
+            cmd.Parameters.AddWithValue("typeOfSale", LandsOwnedDeedAdventure.typeOfSale);
+            cmd.Parameters.AddWithValue("downPaymentMade", LandsOwnedDeedAdventure.downPaymentMade);
+            cmd.Parameters.AddWithValue("monthlyPaymentMade", LandsOwnedDeedAdventure.monthlyPaymentMade);
+            cmd.Parameters.AddWithValue("paymentPaidSoFar", LandsOwnedDeedAdventure.paymentPaidSoFar);
+            cmd.Parameters.AddWithValue("amountClosed", LandsOwnedDeedAdventure.amountClosed);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Successfully Added information for lands owned by Deed Adventure in the System.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmd.Parameters.Clear();
         }
