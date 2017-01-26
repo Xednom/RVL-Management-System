@@ -28,50 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_clear = new MetroFramework.Controls.MetroButton();
-            this.btn_update = new MetroFramework.Controls.MetroButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_giveAccess = new MetroFramework.Controls.MetroTextBox();
             this.txt_nameLogin = new MetroFramework.Controls.MetroTextBox();
             this.txt_pw = new MetroFramework.Controls.MetroTextBox();
             this.txt_un = new MetroFramework.Controls.MetroTextBox();
             this.txt_url = new MetroFramework.Controls.MetroTextBox();
             this.txt_categoryName = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.GridView = new MetroFramework.Controls.MetroGrid();
             this.txt_search = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.txt_cid = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.btn_export = new MetroFramework.Controls.MetroButton();
+            this.btn_update = new MetroFramework.Controls.MetroTile();
+            this.btn_export = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_clear
-            // 
-            this.btn_clear.Location = new System.Drawing.Point(209, 247);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(75, 23);
-            this.btn_clear.TabIndex = 28;
-            this.btn_clear.Text = "Clear";
-            this.btn_clear.UseSelectable = true;
-            // 
-            // btn_update
-            // 
-            this.btn_update.Location = new System.Drawing.Point(23, 247);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 23);
-            this.btn_update.TabIndex = 27;
-            this.btn_update.Text = "Update";
-            this.btn_update.UseSelectable = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // txt_giveAccess
             // 
@@ -88,10 +60,11 @@
             this.txt_giveAccess.CustomButton.UseSelectable = true;
             this.txt_giveAccess.CustomButton.Visible = false;
             this.txt_giveAccess.Lines = new string[0];
-            this.txt_giveAccess.Location = new System.Drawing.Point(458, 198);
+            this.txt_giveAccess.Location = new System.Drawing.Point(458, 140);
             this.txt_giveAccess.MaxLength = 32767;
             this.txt_giveAccess.Name = "txt_giveAccess";
             this.txt_giveAccess.PasswordChar = '\0';
+            this.txt_giveAccess.PromptText = "Give access to";
             this.txt_giveAccess.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_giveAccess.SelectedText = "";
             this.txt_giveAccess.SelectionLength = 0;
@@ -100,6 +73,7 @@
             this.txt_giveAccess.Size = new System.Drawing.Size(197, 23);
             this.txt_giveAccess.TabIndex = 26;
             this.txt_giveAccess.UseSelectable = true;
+            this.txt_giveAccess.WaterMark = "Give access to";
             this.txt_giveAccess.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_giveAccess.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -118,10 +92,11 @@
             this.txt_nameLogin.CustomButton.UseSelectable = true;
             this.txt_nameLogin.CustomButton.Visible = false;
             this.txt_nameLogin.Lines = new string[0];
-            this.txt_nameLogin.Location = new System.Drawing.Point(23, 198);
+            this.txt_nameLogin.Location = new System.Drawing.Point(23, 140);
             this.txt_nameLogin.MaxLength = 32767;
             this.txt_nameLogin.Name = "txt_nameLogin";
             this.txt_nameLogin.PasswordChar = '\0';
+            this.txt_nameLogin.PromptText = "Name log in under";
             this.txt_nameLogin.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_nameLogin.SelectedText = "";
             this.txt_nameLogin.SelectionLength = 0;
@@ -130,6 +105,7 @@
             this.txt_nameLogin.Size = new System.Drawing.Size(197, 23);
             this.txt_nameLogin.TabIndex = 25;
             this.txt_nameLogin.UseSelectable = true;
+            this.txt_nameLogin.WaterMark = "Name log in under";
             this.txt_nameLogin.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_nameLogin.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -148,10 +124,11 @@
             this.txt_pw.CustomButton.UseSelectable = true;
             this.txt_pw.CustomButton.Visible = false;
             this.txt_pw.Lines = new string[0];
-            this.txt_pw.Location = new System.Drawing.Point(458, 139);
+            this.txt_pw.Location = new System.Drawing.Point(458, 111);
             this.txt_pw.MaxLength = 32767;
             this.txt_pw.Name = "txt_pw";
             this.txt_pw.PasswordChar = '\0';
+            this.txt_pw.PromptText = "Password";
             this.txt_pw.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_pw.SelectedText = "";
             this.txt_pw.SelectionLength = 0;
@@ -160,6 +137,7 @@
             this.txt_pw.Size = new System.Drawing.Size(197, 23);
             this.txt_pw.TabIndex = 24;
             this.txt_pw.UseSelectable = true;
+            this.txt_pw.WaterMark = "Password";
             this.txt_pw.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_pw.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -178,10 +156,11 @@
             this.txt_un.CustomButton.UseSelectable = true;
             this.txt_un.CustomButton.Visible = false;
             this.txt_un.Lines = new string[0];
-            this.txt_un.Location = new System.Drawing.Point(235, 139);
+            this.txt_un.Location = new System.Drawing.Point(235, 111);
             this.txt_un.MaxLength = 32767;
             this.txt_un.Name = "txt_un";
             this.txt_un.PasswordChar = '\0';
+            this.txt_un.PromptText = "Username";
             this.txt_un.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_un.SelectedText = "";
             this.txt_un.SelectionLength = 0;
@@ -190,6 +169,7 @@
             this.txt_un.Size = new System.Drawing.Size(197, 23);
             this.txt_un.TabIndex = 23;
             this.txt_un.UseSelectable = true;
+            this.txt_un.WaterMark = "Username";
             this.txt_un.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_un.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -208,10 +188,11 @@
             this.txt_url.CustomButton.UseSelectable = true;
             this.txt_url.CustomButton.Visible = false;
             this.txt_url.Lines = new string[0];
-            this.txt_url.Location = new System.Drawing.Point(235, 198);
+            this.txt_url.Location = new System.Drawing.Point(235, 140);
             this.txt_url.MaxLength = 32767;
             this.txt_url.Name = "txt_url";
             this.txt_url.PasswordChar = '\0';
+            this.txt_url.PromptText = "URL Link";
             this.txt_url.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_url.SelectedText = "";
             this.txt_url.SelectionLength = 0;
@@ -220,6 +201,7 @@
             this.txt_url.Size = new System.Drawing.Size(197, 23);
             this.txt_url.TabIndex = 22;
             this.txt_url.UseSelectable = true;
+            this.txt_url.WaterMark = "URL Link";
             this.txt_url.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_url.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -238,10 +220,11 @@
             this.txt_categoryName.CustomButton.UseSelectable = true;
             this.txt_categoryName.CustomButton.Visible = false;
             this.txt_categoryName.Lines = new string[0];
-            this.txt_categoryName.Location = new System.Drawing.Point(23, 139);
+            this.txt_categoryName.Location = new System.Drawing.Point(23, 111);
             this.txt_categoryName.MaxLength = 32767;
             this.txt_categoryName.Name = "txt_categoryName";
             this.txt_categoryName.PasswordChar = '\0';
+            this.txt_categoryName.PromptText = "Category Name";
             this.txt_categoryName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_categoryName.SelectedText = "";
             this.txt_categoryName.SelectionLength = 0;
@@ -250,62 +233,9 @@
             this.txt_categoryName.Size = new System.Drawing.Size(197, 23);
             this.txt_categoryName.TabIndex = 21;
             this.txt_categoryName.UseSelectable = true;
+            this.txt_categoryName.WaterMark = "Category Name";
             this.txt_categoryName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_categoryName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(458, 176);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(93, 19);
-            this.metroLabel6.TabIndex = 20;
-            this.metroLabel6.Text = "Give access to:";
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(23, 176);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(124, 19);
-            this.metroLabel5.TabIndex = 19;
-            this.metroLabel5.Text = "Name log in under:";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(458, 117);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel4.TabIndex = 18;
-            this.metroLabel4.Text = "Password:";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(235, 117);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(71, 19);
-            this.metroLabel3.TabIndex = 17;
-            this.metroLabel3.Text = "Username:";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(235, 176);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(61, 19);
-            this.metroLabel2.TabIndex = 16;
-            this.metroLabel2.Text = "URL Link:";
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 117);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(107, 19);
-            this.metroLabel1.TabIndex = 15;
-            this.metroLabel1.Text = "Category Name:";
             // 
             // GridView
             // 
@@ -316,41 +246,41 @@
             this.GridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.GridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridView.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.GridView.EnableHeadersVisualStyles = false;
             this.GridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.GridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GridView.Location = new System.Drawing.Point(23, 283);
+            this.GridView.Location = new System.Drawing.Point(23, 240);
             this.GridView.Name = "GridView";
             this.GridView.ReadOnly = true;
             this.GridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.GridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.GridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridView.Size = new System.Drawing.Size(695, 291);
+            this.GridView.Size = new System.Drawing.Size(695, 334);
             this.GridView.TabIndex = 29;
             this.GridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_CellContentClick);
             this.GridView.SelectionChanged += new System.EventHandler(this.GridView_SelectionChanged);
@@ -360,7 +290,7 @@
             // 
             // 
             // 
-            this.txt_search.CustomButton.Image = null;
+            this.txt_search.CustomButton.Image = global::RVL_Management_System.Properties.Resources.search;
             this.txt_search.CustomButton.Location = new System.Drawing.Point(175, 1);
             this.txt_search.CustomButton.Name = "";
             this.txt_search.CustomButton.Size = new System.Drawing.Size(21, 21);
@@ -368,33 +298,29 @@
             this.txt_search.CustomButton.TabIndex = 1;
             this.txt_search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_search.CustomButton.UseSelectable = true;
-            this.txt_search.CustomButton.Visible = false;
             this.txt_search.Lines = new string[0];
             this.txt_search.Location = new System.Drawing.Point(23, 82);
             this.txt_search.MaxLength = 32767;
             this.txt_search.Name = "txt_search";
             this.txt_search.PasswordChar = '\0';
+            this.txt_search.PromptText = "Search";
             this.txt_search.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_search.SelectedText = "";
             this.txt_search.SelectionLength = 0;
             this.txt_search.SelectionStart = 0;
             this.txt_search.ShortcutsEnabled = true;
+            this.txt_search.ShowButton = true;
+            this.txt_search.ShowClearButton = true;
             this.txt_search.Size = new System.Drawing.Size(197, 23);
             this.txt_search.TabIndex = 31;
             this.txt_search.UseSelectable = true;
+            this.txt_search.WaterMark = "Search";
             this.txt_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_search.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.txt_search_ButtonClick);
+            this.txt_search.ClearClicked += new MetroFramework.Controls.MetroTextBox.LUClear(this.txt_search_ClearClicked);
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             this.txt_search.Click += new System.EventHandler(this.txt_search_Click);
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(23, 60);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel7.TabIndex = 30;
-            this.metroLabel7.Text = "Search:";
             // 
             // txt_cid
             // 
@@ -415,6 +341,7 @@
             this.txt_cid.MaxLength = 32767;
             this.txt_cid.Name = "txt_cid";
             this.txt_cid.PasswordChar = '\0';
+            this.txt_cid.PromptText = "Category ID";
             this.txt_cid.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_cid.SelectedText = "";
             this.txt_cid.SelectionLength = 0;
@@ -423,86 +350,80 @@
             this.txt_cid.Size = new System.Drawing.Size(122, 23);
             this.txt_cid.TabIndex = 33;
             this.txt_cid.UseSelectable = true;
+            this.txt_cid.WaterMark = "Category ID";
             this.txt_cid.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_cid.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel8
+            // btn_update
             // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(235, 60);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(83, 19);
-            this.metroLabel8.TabIndex = 32;
-            this.metroLabel8.Text = "Category ID:";
+            this.btn_update.ActiveControl = null;
+            this.btn_update.Location = new System.Drawing.Point(23, 169);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(86, 65);
+            this.btn_update.Style = MetroFramework.MetroColorStyle.Silver;
+            this.btn_update.TabIndex = 35;
+            this.btn_update.Text = "Update";
+            this.btn_update.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_update.TileImage = global::RVL_Management_System.Properties.Resources.edit_1;
+            this.btn_update.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_update.UseSelectable = true;
+            this.btn_update.UseTileImage = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click_1);
             // 
             // btn_export
             // 
-            this.btn_export.Location = new System.Drawing.Point(118, 247);
+            this.btn_export.ActiveControl = null;
+            this.btn_export.Location = new System.Drawing.Point(115, 169);
             this.btn_export.Name = "btn_export";
-            this.btn_export.Size = new System.Drawing.Size(75, 23);
-            this.btn_export.TabIndex = 34;
+            this.btn_export.Size = new System.Drawing.Size(86, 65);
+            this.btn_export.Style = MetroFramework.MetroColorStyle.Silver;
+            this.btn_export.TabIndex = 36;
             this.btn_export.Text = "Export";
+            this.btn_export.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_export.TileImage = global::RVL_Management_System.Properties.Resources.export;
+            this.btn_export.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_export.UseSelectable = true;
-            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+            this.btn_export.UseTileImage = true;
+            this.btn_export.Click += new System.EventHandler(this.metroTile1_Click);
             // 
-            // Frm_CompanyLoginsUpdate
+            // CompanyLoginsUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 597);
             this.Controls.Add(this.btn_export);
-            this.Controls.Add(this.txt_cid);
-            this.Controls.Add(this.metroLabel8);
-            this.Controls.Add(this.txt_search);
-            this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.GridView);
-            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.txt_cid);
+            this.Controls.Add(this.txt_search);
+            this.Controls.Add(this.GridView);
             this.Controls.Add(this.txt_giveAccess);
             this.Controls.Add(this.txt_nameLogin);
             this.Controls.Add(this.txt_pw);
             this.Controls.Add(this.txt_un);
             this.Controls.Add(this.txt_url);
             this.Controls.Add(this.txt_categoryName);
-            this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Frm_CompanyLoginsUpdate";
+            this.Name = "CompanyLoginsUpdate";
             this.Resizable = false;
             this.Text = "Company Logins Edit/Update";
             this.Load += new System.EventHandler(this.Frm_CompanyLoginsUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroButton btn_clear;
-        private MetroFramework.Controls.MetroButton btn_update;
         private MetroFramework.Controls.MetroTextBox txt_giveAccess;
         private MetroFramework.Controls.MetroTextBox txt_nameLogin;
         private MetroFramework.Controls.MetroTextBox txt_pw;
         private MetroFramework.Controls.MetroTextBox txt_un;
         private MetroFramework.Controls.MetroTextBox txt_url;
         private MetroFramework.Controls.MetroTextBox txt_categoryName;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroGrid GridView;
         private MetroFramework.Controls.MetroTextBox txt_search;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroTextBox txt_cid;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroButton btn_export;
+        private MetroFramework.Controls.MetroTile btn_update;
+        private MetroFramework.Controls.MetroTile btn_export;
     }
 }

@@ -56,12 +56,7 @@ namespace RVL_Management_System
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            UserType = cBoxUsertype.Text;
-            Username = txt_un.Text;
-            Password = txt_pw.Text;
-            fullName = txt_name.Text;
-            Class.Cls_cmd.Login();
-            Hide();
+            
             
 
             //conn.Open();
@@ -140,6 +135,16 @@ namespace RVL_Management_System
         private void Frm_Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            UserType = cBoxUsertype.Text;
+            Username = txt_un.Text;
+            Password = txt_pw.Text;
+            fullName = txt_name.Text;
+            Class.Cls_cmd.Login();
+            Hide();
         }
     }
 }

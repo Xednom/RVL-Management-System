@@ -28,75 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txt_categoryName = new MetroFramework.Controls.MetroTextBox();
             this.txt_url = new MetroFramework.Controls.MetroTextBox();
             this.txt_un = new MetroFramework.Controls.MetroTextBox();
             this.txt_pw = new MetroFramework.Controls.MetroTextBox();
             this.txt_nameLogin = new MetroFramework.Controls.MetroTextBox();
             this.txt_giveAccess = new MetroFramework.Controls.MetroTextBox();
-            this.btn_save = new MetroFramework.Controls.MetroButton();
-            this.btn_clear = new MetroFramework.Controls.MetroButton();
+            this.btn_save = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 60);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(107, 19);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Category Name:";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(235, 119);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(61, 19);
-            this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "URL Link:";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(235, 60);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(71, 19);
-            this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "Username:";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(458, 60);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel4.TabIndex = 3;
-            this.metroLabel4.Text = "Password:";
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(23, 119);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(124, 19);
-            this.metroLabel5.TabIndex = 4;
-            this.metroLabel5.Text = "Name log in under:";
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(458, 119);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(93, 19);
-            this.metroLabel6.TabIndex = 5;
-            this.metroLabel6.Text = "Give access to:";
             // 
             // txt_categoryName
             // 
@@ -117,6 +57,7 @@
             this.txt_categoryName.MaxLength = 32767;
             this.txt_categoryName.Name = "txt_categoryName";
             this.txt_categoryName.PasswordChar = '\0';
+            this.txt_categoryName.PromptText = "Category Name";
             this.txt_categoryName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_categoryName.SelectedText = "";
             this.txt_categoryName.SelectionLength = 0;
@@ -125,6 +66,7 @@
             this.txt_categoryName.Size = new System.Drawing.Size(197, 23);
             this.txt_categoryName.TabIndex = 7;
             this.txt_categoryName.UseSelectable = true;
+            this.txt_categoryName.WaterMark = "Category Name";
             this.txt_categoryName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_categoryName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -143,10 +85,11 @@
             this.txt_url.CustomButton.UseSelectable = true;
             this.txt_url.CustomButton.Visible = false;
             this.txt_url.Lines = new string[0];
-            this.txt_url.Location = new System.Drawing.Point(235, 141);
+            this.txt_url.Location = new System.Drawing.Point(235, 111);
             this.txt_url.MaxLength = 32767;
             this.txt_url.Name = "txt_url";
             this.txt_url.PasswordChar = '\0';
+            this.txt_url.PromptText = "URL Link";
             this.txt_url.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_url.SelectedText = "";
             this.txt_url.SelectionLength = 0;
@@ -155,6 +98,7 @@
             this.txt_url.Size = new System.Drawing.Size(197, 23);
             this.txt_url.TabIndex = 8;
             this.txt_url.UseSelectable = true;
+            this.txt_url.WaterMark = "URL Link";
             this.txt_url.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_url.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -177,6 +121,7 @@
             this.txt_un.MaxLength = 32767;
             this.txt_un.Name = "txt_un";
             this.txt_un.PasswordChar = '\0';
+            this.txt_un.PromptText = "Username";
             this.txt_un.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_un.SelectedText = "";
             this.txt_un.SelectionLength = 0;
@@ -185,6 +130,7 @@
             this.txt_un.Size = new System.Drawing.Size(197, 23);
             this.txt_un.TabIndex = 9;
             this.txt_un.UseSelectable = true;
+            this.txt_un.WaterMark = "Username";
             this.txt_un.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_un.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -207,6 +153,7 @@
             this.txt_pw.MaxLength = 32767;
             this.txt_pw.Name = "txt_pw";
             this.txt_pw.PasswordChar = '\0';
+            this.txt_pw.PromptText = "Password";
             this.txt_pw.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_pw.SelectedText = "";
             this.txt_pw.SelectionLength = 0;
@@ -215,6 +162,7 @@
             this.txt_pw.Size = new System.Drawing.Size(197, 23);
             this.txt_pw.TabIndex = 10;
             this.txt_pw.UseSelectable = true;
+            this.txt_pw.WaterMark = "Password";
             this.txt_pw.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_pw.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -233,10 +181,11 @@
             this.txt_nameLogin.CustomButton.UseSelectable = true;
             this.txt_nameLogin.CustomButton.Visible = false;
             this.txt_nameLogin.Lines = new string[0];
-            this.txt_nameLogin.Location = new System.Drawing.Point(23, 141);
+            this.txt_nameLogin.Location = new System.Drawing.Point(23, 111);
             this.txt_nameLogin.MaxLength = 32767;
             this.txt_nameLogin.Name = "txt_nameLogin";
             this.txt_nameLogin.PasswordChar = '\0';
+            this.txt_nameLogin.PromptText = "Name login under";
             this.txt_nameLogin.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_nameLogin.SelectedText = "";
             this.txt_nameLogin.SelectionLength = 0;
@@ -245,6 +194,7 @@
             this.txt_nameLogin.Size = new System.Drawing.Size(197, 23);
             this.txt_nameLogin.TabIndex = 11;
             this.txt_nameLogin.UseSelectable = true;
+            this.txt_nameLogin.WaterMark = "Name login under";
             this.txt_nameLogin.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_nameLogin.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -263,10 +213,11 @@
             this.txt_giveAccess.CustomButton.UseSelectable = true;
             this.txt_giveAccess.CustomButton.Visible = false;
             this.txt_giveAccess.Lines = new string[0];
-            this.txt_giveAccess.Location = new System.Drawing.Point(458, 141);
+            this.txt_giveAccess.Location = new System.Drawing.Point(458, 111);
             this.txt_giveAccess.MaxLength = 32767;
             this.txt_giveAccess.Name = "txt_giveAccess";
             this.txt_giveAccess.PasswordChar = '\0';
+            this.txt_giveAccess.PromptText = "Give access to";
             this.txt_giveAccess.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_giveAccess.SelectedText = "";
             this.txt_giveAccess.SelectionLength = 0;
@@ -275,34 +226,46 @@
             this.txt_giveAccess.Size = new System.Drawing.Size(197, 23);
             this.txt_giveAccess.TabIndex = 12;
             this.txt_giveAccess.UseSelectable = true;
+            this.txt_giveAccess.WaterMark = "Give access to";
             this.txt_giveAccess.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_giveAccess.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(23, 190);
+            this.btn_save.ActiveControl = null;
+            this.btn_save.Location = new System.Drawing.Point(23, 140);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 23);
-            this.btn_save.TabIndex = 13;
+            this.btn_save.Size = new System.Drawing.Size(73, 52);
+            this.btn_save.TabIndex = 15;
             this.btn_save.Text = "Save";
+            this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_save.TileImage = global::RVL_Management_System.Properties.Resources.plus_1;
+            this.btn_save.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_save.UseSelectable = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            this.btn_save.UseTileImage = true;
+            this.btn_save.Click += new System.EventHandler(this.metroTile1_Click);
             // 
-            // btn_clear
+            // metroTile1
             // 
-            this.btn_clear.Location = new System.Drawing.Point(104, 190);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(75, 23);
-            this.btn_clear.TabIndex = 14;
-            this.btn_clear.Text = "Clear";
-            this.btn_clear.UseSelectable = true;
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(102, 140);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(84, 52);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTile1.TabIndex = 16;
+            this.metroTile1.Text = "Cancel";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroTile1.TileImage = global::RVL_Management_System.Properties.Resources.cancel;
+            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.UseTileImage = true;
             // 
-            // Frm_CompanyLoginsAdd
+            // CompanyLoginsAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 227);
-            this.Controls.Add(this.btn_clear);
+            this.ClientSize = new System.Drawing.Size(689, 213);
+            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.txt_giveAccess);
             this.Controls.Add(this.txt_nameLogin);
@@ -310,38 +273,24 @@
             this.Controls.Add(this.txt_un);
             this.Controls.Add(this.txt_url);
             this.Controls.Add(this.txt_categoryName);
-            this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Frm_CompanyLoginsAdd";
+            this.Name = "CompanyLoginsAdd";
             this.Resizable = false;
             this.Text = "Add Company Logins";
             this.Load += new System.EventHandler(this.Frm_CompanyLogins_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroTextBox txt_categoryName;
         private MetroFramework.Controls.MetroTextBox txt_url;
         private MetroFramework.Controls.MetroTextBox txt_un;
         private MetroFramework.Controls.MetroTextBox txt_pw;
         private MetroFramework.Controls.MetroTextBox txt_nameLogin;
         private MetroFramework.Controls.MetroTextBox txt_giveAccess;
-        private MetroFramework.Controls.MetroButton btn_save;
-        private MetroFramework.Controls.MetroButton btn_clear;
+        private MetroFramework.Controls.MetroTile btn_save;
+        private MetroFramework.Controls.MetroTile metroTile1;
     }
 }

@@ -31,20 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_export = new MetroFramework.Controls.MetroButton();
             this.GridView = new MetroFramework.Controls.MetroGrid();
+            this.btn_export = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_export
-            // 
-            this.btn_export.Location = new System.Drawing.Point(23, 88);
-            this.btn_export.Name = "btn_export";
-            this.btn_export.Size = new System.Drawing.Size(75, 23);
-            this.btn_export.TabIndex = 2;
-            this.btn_export.Text = "&Export";
-            this.btn_export.UseSelectable = true;
-            this.btn_export.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // GridView
             // 
@@ -92,16 +82,31 @@
             this.GridView.Size = new System.Drawing.Size(587, 347);
             this.GridView.TabIndex = 3;
             // 
-            // Frm_AdminOfficeExport
+            // btn_export
+            // 
+            this.btn_export.ActiveControl = null;
+            this.btn_export.Location = new System.Drawing.Point(23, 54);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(120, 71);
+            this.btn_export.TabIndex = 5;
+            this.btn_export.Text = "&Export";
+            this.btn_export.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_export.TileImage = global::RVL_Management_System.Properties.Resources.export;
+            this.btn_export.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_export.UseSelectable = true;
+            this.btn_export.UseTileImage = true;
+            this.btn_export.Click += new System.EventHandler(this.metroTile2_Click);
+            // 
+            // AdminOfficeExport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 501);
-            this.Controls.Add(this.GridView);
             this.Controls.Add(this.btn_export);
+            this.Controls.Add(this.GridView);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Frm_AdminOfficeExport";
+            this.Name = "AdminOfficeExport";
             this.Resizable = false;
             this.Text = "Admin Office Export File";
             this.Load += new System.EventHandler(this.Frm_AdminOfficeExport_Load);
@@ -111,8 +116,7 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroButton btn_export;
         private MetroFramework.Controls.MetroGrid GridView;
+        private MetroFramework.Controls.MetroTile btn_export;
     }
 }

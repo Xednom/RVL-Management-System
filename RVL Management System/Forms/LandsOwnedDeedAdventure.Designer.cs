@@ -36,21 +36,13 @@
             this.txt_monthlyPaymentMade = new MetroFramework.Controls.MetroTextBox();
             this.txt_paymentPaidSoFar = new MetroFramework.Controls.MetroTextBox();
             this.txt_amountClosed = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.btn_save = new MetroFramework.Controls.MetroButton();
-            this.btn_cancel = new MetroFramework.Controls.MetroButton();
             this.cBoxStatus = new MetroFramework.Controls.MetroComboBox();
             this.cBoxTypeOfSale = new MetroFramework.Controls.MetroComboBox();
-            this.btn_view = new MetroFramework.Controls.MetroButton();
+            this.btn_save = new MetroFramework.Controls.MetroTile();
+            this.btn_clear = new MetroFramework.Controls.MetroTile();
+            this.btn_view = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // txt_apn
@@ -72,6 +64,7 @@
             this.txt_apn.MaxLength = 32767;
             this.txt_apn.Name = "txt_apn";
             this.txt_apn.PasswordChar = '\0';
+            this.txt_apn.PromptText = "APN";
             this.txt_apn.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_apn.SelectedText = "";
             this.txt_apn.SelectionLength = 0;
@@ -80,6 +73,7 @@
             this.txt_apn.Size = new System.Drawing.Size(160, 23);
             this.txt_apn.TabIndex = 0;
             this.txt_apn.UseSelectable = true;
+            this.txt_apn.WaterMark = "APN";
             this.txt_apn.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_apn.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -98,10 +92,11 @@
             this.txt_county.CustomButton.UseSelectable = true;
             this.txt_county.CustomButton.Visible = false;
             this.txt_county.Lines = new string[0];
-            this.txt_county.Location = new System.Drawing.Point(23, 130);
+            this.txt_county.Location = new System.Drawing.Point(23, 111);
             this.txt_county.MaxLength = 32767;
             this.txt_county.Name = "txt_county";
             this.txt_county.PasswordChar = '\0';
+            this.txt_county.PromptText = "County";
             this.txt_county.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_county.SelectedText = "";
             this.txt_county.SelectionLength = 0;
@@ -110,6 +105,7 @@
             this.txt_county.Size = new System.Drawing.Size(160, 23);
             this.txt_county.TabIndex = 1;
             this.txt_county.UseSelectable = true;
+            this.txt_county.WaterMark = "County";
             this.txt_county.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_county.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -128,10 +124,11 @@
             this.txt_origPrice.CustomButton.UseSelectable = true;
             this.txt_origPrice.CustomButton.Visible = false;
             this.txt_origPrice.Lines = new string[0];
-            this.txt_origPrice.Location = new System.Drawing.Point(23, 179);
+            this.txt_origPrice.Location = new System.Drawing.Point(23, 140);
             this.txt_origPrice.MaxLength = 32767;
             this.txt_origPrice.Name = "txt_origPrice";
             this.txt_origPrice.PasswordChar = '\0';
+            this.txt_origPrice.PromptText = "Original Price";
             this.txt_origPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_origPrice.SelectedText = "";
             this.txt_origPrice.SelectionLength = 0;
@@ -140,6 +137,7 @@
             this.txt_origPrice.Size = new System.Drawing.Size(160, 23);
             this.txt_origPrice.TabIndex = 2;
             this.txt_origPrice.UseSelectable = true;
+            this.txt_origPrice.WaterMark = "Original Price";
             this.txt_origPrice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_origPrice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -158,10 +156,11 @@
             this.txt_marketPrice.CustomButton.UseSelectable = true;
             this.txt_marketPrice.CustomButton.Visible = false;
             this.txt_marketPrice.Lines = new string[0];
-            this.txt_marketPrice.Location = new System.Drawing.Point(23, 227);
+            this.txt_marketPrice.Location = new System.Drawing.Point(23, 169);
             this.txt_marketPrice.MaxLength = 32767;
             this.txt_marketPrice.Name = "txt_marketPrice";
             this.txt_marketPrice.PasswordChar = '\0';
+            this.txt_marketPrice.PromptText = "Market Price";
             this.txt_marketPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_marketPrice.SelectedText = "";
             this.txt_marketPrice.SelectionLength = 0;
@@ -170,6 +169,7 @@
             this.txt_marketPrice.Size = new System.Drawing.Size(160, 23);
             this.txt_marketPrice.TabIndex = 3;
             this.txt_marketPrice.UseSelectable = true;
+            this.txt_marketPrice.WaterMark = "Market Price";
             this.txt_marketPrice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_marketPrice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -188,10 +188,11 @@
             this.txt_downPaymentMade.CustomButton.UseSelectable = true;
             this.txt_downPaymentMade.CustomButton.Visible = false;
             this.txt_downPaymentMade.Lines = new string[0];
-            this.txt_downPaymentMade.Location = new System.Drawing.Point(23, 378);
+            this.txt_downPaymentMade.Location = new System.Drawing.Point(23, 306);
             this.txt_downPaymentMade.MaxLength = 32767;
             this.txt_downPaymentMade.Name = "txt_downPaymentMade";
             this.txt_downPaymentMade.PasswordChar = '\0';
+            this.txt_downPaymentMade.PromptText = "Down payment made";
             this.txt_downPaymentMade.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_downPaymentMade.SelectedText = "";
             this.txt_downPaymentMade.SelectionLength = 0;
@@ -200,6 +201,7 @@
             this.txt_downPaymentMade.Size = new System.Drawing.Size(160, 23);
             this.txt_downPaymentMade.TabIndex = 6;
             this.txt_downPaymentMade.UseSelectable = true;
+            this.txt_downPaymentMade.WaterMark = "Down payment made";
             this.txt_downPaymentMade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_downPaymentMade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -209,7 +211,7 @@
             // 
             // 
             this.txt_monthlyPaymentMade.CustomButton.Image = null;
-            this.txt_monthlyPaymentMade.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txt_monthlyPaymentMade.CustomButton.Location = new System.Drawing.Point(146, 1);
             this.txt_monthlyPaymentMade.CustomButton.Name = "";
             this.txt_monthlyPaymentMade.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_monthlyPaymentMade.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -218,18 +220,20 @@
             this.txt_monthlyPaymentMade.CustomButton.UseSelectable = true;
             this.txt_monthlyPaymentMade.CustomButton.Visible = false;
             this.txt_monthlyPaymentMade.Lines = new string[0];
-            this.txt_monthlyPaymentMade.Location = new System.Drawing.Point(251, 82);
+            this.txt_monthlyPaymentMade.Location = new System.Drawing.Point(243, 82);
             this.txt_monthlyPaymentMade.MaxLength = 32767;
             this.txt_monthlyPaymentMade.Name = "txt_monthlyPaymentMade";
             this.txt_monthlyPaymentMade.PasswordChar = '\0';
+            this.txt_monthlyPaymentMade.PromptText = "Monthly payment made";
             this.txt_monthlyPaymentMade.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_monthlyPaymentMade.SelectedText = "";
             this.txt_monthlyPaymentMade.SelectionLength = 0;
             this.txt_monthlyPaymentMade.SelectionStart = 0;
             this.txt_monthlyPaymentMade.ShortcutsEnabled = true;
-            this.txt_monthlyPaymentMade.Size = new System.Drawing.Size(160, 23);
+            this.txt_monthlyPaymentMade.Size = new System.Drawing.Size(168, 23);
             this.txt_monthlyPaymentMade.TabIndex = 7;
             this.txt_monthlyPaymentMade.UseSelectable = true;
+            this.txt_monthlyPaymentMade.WaterMark = "Monthly payment made";
             this.txt_monthlyPaymentMade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_monthlyPaymentMade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -239,7 +243,7 @@
             // 
             // 
             this.txt_paymentPaidSoFar.CustomButton.Image = null;
-            this.txt_paymentPaidSoFar.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txt_paymentPaidSoFar.CustomButton.Location = new System.Drawing.Point(146, 1);
             this.txt_paymentPaidSoFar.CustomButton.Name = "";
             this.txt_paymentPaidSoFar.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_paymentPaidSoFar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -248,18 +252,20 @@
             this.txt_paymentPaidSoFar.CustomButton.UseSelectable = true;
             this.txt_paymentPaidSoFar.CustomButton.Visible = false;
             this.txt_paymentPaidSoFar.Lines = new string[0];
-            this.txt_paymentPaidSoFar.Location = new System.Drawing.Point(251, 130);
+            this.txt_paymentPaidSoFar.Location = new System.Drawing.Point(243, 111);
             this.txt_paymentPaidSoFar.MaxLength = 32767;
             this.txt_paymentPaidSoFar.Name = "txt_paymentPaidSoFar";
             this.txt_paymentPaidSoFar.PasswordChar = '\0';
+            this.txt_paymentPaidSoFar.PromptText = "Payment paid so far";
             this.txt_paymentPaidSoFar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_paymentPaidSoFar.SelectedText = "";
             this.txt_paymentPaidSoFar.SelectionLength = 0;
             this.txt_paymentPaidSoFar.SelectionStart = 0;
             this.txt_paymentPaidSoFar.ShortcutsEnabled = true;
-            this.txt_paymentPaidSoFar.Size = new System.Drawing.Size(160, 23);
+            this.txt_paymentPaidSoFar.Size = new System.Drawing.Size(168, 23);
             this.txt_paymentPaidSoFar.TabIndex = 8;
             this.txt_paymentPaidSoFar.UseSelectable = true;
+            this.txt_paymentPaidSoFar.WaterMark = "Payment paid so far";
             this.txt_paymentPaidSoFar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_paymentPaidSoFar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -269,7 +275,7 @@
             // 
             // 
             this.txt_amountClosed.CustomButton.Image = null;
-            this.txt_amountClosed.CustomButton.Location = new System.Drawing.Point(138, 1);
+            this.txt_amountClosed.CustomButton.Location = new System.Drawing.Point(146, 1);
             this.txt_amountClosed.CustomButton.Name = "";
             this.txt_amountClosed.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_amountClosed.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -278,61 +284,27 @@
             this.txt_amountClosed.CustomButton.UseSelectable = true;
             this.txt_amountClosed.CustomButton.Visible = false;
             this.txt_amountClosed.Lines = new string[0];
-            this.txt_amountClosed.Location = new System.Drawing.Point(251, 179);
+            this.txt_amountClosed.Location = new System.Drawing.Point(243, 140);
             this.txt_amountClosed.MaxLength = 32767;
             this.txt_amountClosed.Name = "txt_amountClosed";
             this.txt_amountClosed.PasswordChar = '\0';
+            this.txt_amountClosed.PromptText = "Amount closed";
             this.txt_amountClosed.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_amountClosed.SelectedText = "";
             this.txt_amountClosed.SelectionLength = 0;
             this.txt_amountClosed.SelectionStart = 0;
             this.txt_amountClosed.ShortcutsEnabled = true;
-            this.txt_amountClosed.Size = new System.Drawing.Size(160, 23);
+            this.txt_amountClosed.Size = new System.Drawing.Size(168, 23);
             this.txt_amountClosed.TabIndex = 9;
             this.txt_amountClosed.UseSelectable = true;
+            this.txt_amountClosed.WaterMark = "Amount closed";
             this.txt_amountClosed.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_amountClosed.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 60);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(36, 19);
-            this.metroLabel1.TabIndex = 10;
-            this.metroLabel1.Text = "APN";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 108);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(50, 19);
-            this.metroLabel2.TabIndex = 11;
-            this.metroLabel2.Text = "County";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(23, 156);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(89, 19);
-            this.metroLabel3.TabIndex = 12;
-            this.metroLabel3.Text = "Original Price";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(23, 205);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(83, 19);
-            this.metroLabel4.TabIndex = 13;
-            this.metroLabel4.Text = "Market Price";
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(23, 253);
+            this.metroLabel5.Location = new System.Drawing.Point(23, 195);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(113, 19);
             this.metroLabel5.TabIndex = 14;
@@ -341,66 +313,11 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(23, 307);
+            this.metroLabel6.Location = new System.Drawing.Point(23, 249);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(80, 19);
             this.metroLabel6.TabIndex = 15;
             this.metroLabel6.Text = "Type of Sale";
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(23, 356);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(135, 19);
-            this.metroLabel7.TabIndex = 16;
-            this.metroLabel7.Text = "Down payment made";
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(251, 60);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(148, 19);
-            this.metroLabel8.TabIndex = 17;
-            this.metroLabel8.Text = "Monthly Payment Made";
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(251, 108);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(126, 19);
-            this.metroLabel9.TabIndex = 18;
-            this.metroLabel9.Text = "Payment paid so far";
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(251, 156);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(97, 19);
-            this.metroLabel10.TabIndex = 19;
-            this.metroLabel10.Text = "Amount closed";
-            // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(251, 208);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 23);
-            this.btn_save.TabIndex = 20;
-            this.btn_save.Text = "&Save";
-            this.btn_save.UseSelectable = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Location = new System.Drawing.Point(336, 208);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancel.TabIndex = 21;
-            this.btn_cancel.Text = "&Cancel";
-            this.btn_cancel.UseSelectable = true;
             // 
             // cBoxStatus
             // 
@@ -409,7 +326,7 @@
             this.cBoxStatus.Items.AddRange(new object[] {
             "For Sale",
             "Sold"});
-            this.cBoxStatus.Location = new System.Drawing.Point(23, 275);
+            this.cBoxStatus.Location = new System.Drawing.Point(23, 217);
             this.cBoxStatus.Name = "cBoxStatus";
             this.cBoxStatus.Size = new System.Drawing.Size(160, 29);
             this.cBoxStatus.TabIndex = 4;
@@ -422,42 +339,71 @@
             this.cBoxTypeOfSale.Items.AddRange(new object[] {
             "One Term Sale",
             "Term Sale"});
-            this.cBoxTypeOfSale.Location = new System.Drawing.Point(23, 329);
+            this.cBoxTypeOfSale.Location = new System.Drawing.Point(23, 271);
             this.cBoxTypeOfSale.Name = "cBoxTypeOfSale";
             this.cBoxTypeOfSale.Size = new System.Drawing.Size(160, 29);
             this.cBoxTypeOfSale.TabIndex = 5;
             this.cBoxTypeOfSale.UseSelectable = true;
             // 
+            // btn_save
+            // 
+            this.btn_save.ActiveControl = null;
+            this.btn_save.Location = new System.Drawing.Point(334, 169);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(77, 58);
+            this.btn_save.TabIndex = 23;
+            this.btn_save.Text = "Save";
+            this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_save.TileImage = global::RVL_Management_System.Properties.Resources.plus_1;
+            this.btn_save.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_save.UseSelectable = true;
+            this.btn_save.UseTileImage = true;
+            this.btn_save.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.ActiveControl = null;
+            this.btn_clear.Location = new System.Drawing.Point(243, 169);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(85, 58);
+            this.btn_clear.Style = MetroFramework.MetroColorStyle.Orange;
+            this.btn_clear.TabIndex = 24;
+            this.btn_clear.Text = "Cancel";
+            this.btn_clear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_clear.TileImage = global::RVL_Management_System.Properties.Resources.cancel;
+            this.btn_clear.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_clear.UseSelectable = true;
+            this.btn_clear.UseTileImage = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
             // btn_view
             // 
-            this.btn_view.Location = new System.Drawing.Point(291, 237);
+            this.btn_view.ActiveControl = null;
+            this.btn_view.Location = new System.Drawing.Point(275, 233);
             this.btn_view.Name = "btn_view";
-            this.btn_view.Size = new System.Drawing.Size(75, 23);
-            this.btn_view.TabIndex = 22;
-            this.btn_view.Text = "&View";
+            this.btn_view.Size = new System.Drawing.Size(105, 67);
+            this.btn_view.Style = MetroFramework.MetroColorStyle.Orange;
+            this.btn_view.TabIndex = 25;
+            this.btn_view.Text = "View";
+            this.btn_view.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_view.TileImage = global::RVL_Management_System.Properties.Resources.search;
+            this.btn_view.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_view.UseSelectable = true;
-            this.btn_view.Click += new System.EventHandler(this.btn_view_Click);
+            this.btn_view.UseTileImage = true;
+            this.btn_view.Click += new System.EventHandler(this.btn_view_Click_1);
             // 
             // LandsOwnedDeedAdventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 409);
+            this.ClientSize = new System.Drawing.Size(427, 359);
             this.Controls.Add(this.btn_view);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.cBoxTypeOfSale);
             this.Controls.Add(this.cBoxStatus);
-            this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.metroLabel10);
-            this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.metroLabel8);
-            this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.txt_amountClosed);
             this.Controls.Add(this.txt_paymentPaidSoFar);
             this.Controls.Add(this.txt_monthlyPaymentMade);
@@ -486,20 +432,12 @@
         private MetroFramework.Controls.MetroTextBox txt_monthlyPaymentMade;
         private MetroFramework.Controls.MetroTextBox txt_paymentPaidSoFar;
         private MetroFramework.Controls.MetroTextBox txt_amountClosed;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroButton btn_save;
-        private MetroFramework.Controls.MetroButton btn_cancel;
         private MetroFramework.Controls.MetroComboBox cBoxStatus;
         private MetroFramework.Controls.MetroComboBox cBoxTypeOfSale;
-        private MetroFramework.Controls.MetroButton btn_view;
+        private MetroFramework.Controls.MetroTile btn_save;
+        private MetroFramework.Controls.MetroTile btn_clear;
+        private MetroFramework.Controls.MetroTile btn_view;
     }
 }

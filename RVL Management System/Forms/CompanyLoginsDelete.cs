@@ -64,6 +64,12 @@ namespace RVL_Management_System.Forms
             cmd.Parameters.Clear();
         }
 
+        public void clear()
+        {
+            txt_cid.Text = null;
+            txt_delete.Text = null;
+        }
+
         private void Frm_CompanyLoginsDelete_Load(object sender, EventArgs e)
         {
 
@@ -71,7 +77,7 @@ namespace RVL_Management_System.Forms
 
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
-            search();
+            
         }
 
         private void GridView_SelectionChanged(object sender, EventArgs e)
@@ -86,10 +92,30 @@ namespace RVL_Management_System.Forms
             {
                 DataGridViewRow row = cell.OwningRow;
                 txt_cid.Text = row.Cells[0].Value.ToString();
+                txt_delete.Text = row.Cells[1].Value.ToString();
+            }
+            else
+            {
+               
             }
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txt_search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
+            search();
+        }
+
+        private void txt_delete_ButtonClick(object sender, EventArgs e)
         {
             if (txt_cid.Text == string.Empty)
             {
@@ -102,6 +128,7 @@ namespace RVL_Management_System.Forms
                     CID = txt_cid.Text;
                     Class.Cls_cmd.companyDelete();
                     refresh();
+                    clear();
                 }
                 else
                 {

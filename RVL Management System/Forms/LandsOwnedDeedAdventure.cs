@@ -29,12 +29,37 @@ namespace RVL_Management_System.Forms
             InitializeComponent();
         }
 
+        public void clear()
+        {
+            txt_apn.Text = null;
+            txt_county.Text = null;
+            txt_origPrice.Text = null;
+            txt_marketPrice.Text = null;
+            cBoxStatus.Text = null;
+            cBoxTypeOfSale.Text = null;
+            txt_downPaymentMade.Text = null;
+            txt_monthlyPaymentMade.Text = null;
+            txt_paymentPaidSoFar.Text = null;
+            txt_amountClosed.Text = null;
+        }
+
         private void LandsOwnedDeedAdventure_Load(object sender, EventArgs e)
         {
 
         }
 
         private void btn_save_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_view_Click(object sender, EventArgs e)
+        {
+            LandsOwnedDeedAdventureView fview = new LandsOwnedDeedAdventureView();
+            fview.Show();
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
         {
             apn = txt_apn.Text;
             county = txt_county.Text;
@@ -49,10 +74,20 @@ namespace RVL_Management_System.Forms
             Class.Cls_cmd.deedAdventureAdd();
         }
 
-        private void btn_view_Click(object sender, EventArgs e)
+        private void btn_cancel_Click(object sender, EventArgs e)
         {
-            LandsOwnedDeedAdventureView fview = new LandsOwnedDeedAdventureView();
-            fview.Show();
+          
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        private void btn_view_Click_1(object sender, EventArgs e)
+        {
+            LandsOwnedDeedAdventureView lView = new LandsOwnedDeedAdventureView();
+            lView.ShowDialog();
         }
     }
 }

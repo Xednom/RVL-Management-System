@@ -86,7 +86,7 @@ namespace RVL_Management_System.Forms
       
         private void Frm_CompanyLoginsUpdate_Load(object sender, EventArgs e)
         {
-            refresh();
+            
         }
 
         private void txt_search_Click(object sender, EventArgs e)
@@ -96,36 +96,12 @@ namespace RVL_Management_System.Forms
 
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
-            search();
+            
         }
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if (txt_cid.Text == string.Empty)
-            {
-                MetroMessageBox.Show(this,"Please select a data to update!", "RVL System", MessageBoxButtons.OK,MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (MetroMessageBox.Show(this, "Do you want to update this Company Login Information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    categoryID = txt_cid.Text;
-                    categoryName = txt_categoryName.Text;
-                    URLlink = txt_url.Text;
-                    userName = txt_un.Text;
-                    passWord = txt_pw.Text;
-                    nameLogin = txt_nameLogin.Text;
-                    giveAccess = txt_giveAccess.Text;
-                    Class.Cls_cmd.companyUpdate();
-                    clear();
-                    refresh();
-                }
-                else
-                {
-                    //if no 
-                    //TODO:NOTHING
-                }
-            }
+            
         }
 
         private void GridView_SelectionChanged(object sender, EventArgs e)
@@ -156,6 +132,50 @@ namespace RVL_Management_System.Forms
         }
 
         private void btn_export_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
+            search();
+        }
+
+        private void txt_search_ClearClicked()
+        {
+            clear();
+        }
+
+        private void btn_update_Click_1(object sender, EventArgs e)
+        {
+            if (txt_cid.Text == string.Empty)
+            {
+                MetroMessageBox.Show(this, "Please select a data to update!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (MetroMessageBox.Show(this, "Do you want to update this Company Login Information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    categoryID = txt_cid.Text;
+                    categoryName = txt_categoryName.Text;
+                    URLlink = txt_url.Text;
+                    userName = txt_un.Text;
+                    passWord = txt_pw.Text;
+                    nameLogin = txt_nameLogin.Text;
+                    giveAccess = txt_giveAccess.Text;
+                    Class.Cls_cmd.companyUpdate();
+                    clear();
+                    refresh();
+                }
+                else
+                {
+                    //if no 
+                    //TODO:NOTHING
+                }
+            }
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
         {
             CompanyLoginsView fview = new CompanyLoginsView();
             fview.ShowDialog();

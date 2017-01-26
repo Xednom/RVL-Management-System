@@ -33,6 +33,11 @@ namespace RVL_Management_System.Forms
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
             if (txt_categoryName.Text == string.Empty || txt_giveAccess.Text == string.Empty || txt_nameLogin.Text == string.Empty || txt_pw.Text == string.Empty || txt_un.Text == string.Empty || txt_url.Text == string.Empty)
             {
                 MetroMessageBox.Show(this, "Please fill-up the required information.", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);

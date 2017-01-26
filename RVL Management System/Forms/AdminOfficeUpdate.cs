@@ -130,6 +130,26 @@ namespace RVL_Management_System.Forms
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            txt_fullName.Text = null;
+            txt_email.Text = null;
+            txt_phoneNumber.Text = null;
+            txt_address.Text = null;
+            txt_county.Text = null;
+            cBoxCategory.Text = null;
+        }
+
+        private void txt_search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_update_Click_1(object sender, EventArgs e)
+        {
             if (MetroMessageBox.Show(this, "Do you want to update these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 fullName = txt_fullName.Text;
@@ -150,17 +170,7 @@ namespace RVL_Management_System.Forms
 
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            txt_fullName.Text = null;
-            txt_email.Text = null;
-            txt_phoneNumber.Text = null;
-            txt_address.Text = null;
-            txt_county.Text = null;
-            cBoxCategory.Text = null;
-        }
-
-        private void txt_search_Click(object sender, EventArgs e)
+        private void btn_export_Click(object sender, EventArgs e)
         {
 
         }

@@ -244,12 +244,6 @@
     <Compile Include="Forms\AdminOfficeAdd.Designer.cs">
       <DependentUpon>AdminOfficeAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminOfficeMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminOfficeMenu.Designer.cs">
-      <DependentUpon>AdminOfficeMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AdminOfficeUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -475,9 +469,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminOfficeExport.resx">
       <DependentUpon>AdminOfficeExport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminOfficeMenu.resx">
-      <DependentUpon>AdminOfficeMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminOfficeUpdate.resx">
       <DependentUpon>AdminOfficeUpdate.cs</DependentUpon>
@@ -919,6 +910,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\export_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -43,6 +43,11 @@ namespace RVL_Management_System.Forms
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
             if (MetroMessageBox.Show(this, "Do you want to save these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 fullName = txt_fullName.Text;
@@ -59,6 +64,16 @@ namespace RVL_Management_System.Forms
                 //IF NO 
                 //TODO:NOTHING
             }
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTile1_Click_1(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

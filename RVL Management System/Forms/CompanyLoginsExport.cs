@@ -57,6 +57,11 @@ namespace RVL_Management_System
 
         private void btn_export_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btn_export_Click_1(object sender, EventArgs e)
+        {
             copyAlltoClipboard();
             Microsoft.Office.Interop.Excel.Application xlexcel;
             Microsoft.Office.Interop.Excel.Workbook xlWorkBook;

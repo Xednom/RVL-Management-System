@@ -97,30 +97,11 @@ namespace RVL_Management_System
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            if (cBoxSearchBy.Text == "ACID")
-            {
-                searchAdminContactID();
-            }
-            else if (cBoxSearchBy.Text == "Full name")
-            {
-                searchAdminContactFName();
-            }
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to delete these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                acid = txt_acid.Text;
-                Class.Cls_cmd.adminOfficeDelete();
-                clear();
-                refresh();
-            }
-            else
-            {
-                //IF NO
-                //TODO: NOTHING
-            }
+            
         }
 
         private void GridView_SelectionChanged(object sender, EventArgs e)
@@ -136,6 +117,40 @@ namespace RVL_Management_System
                 DataGridViewRow row = cell.OwningRow;
                 txt_acid.Text = row.Cells[0].Value.ToString();
             }
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
+
+            if (cBoxSearchBy.Text == "ACID")
+            {
+                searchAdminContactID();
+            }
+            else if (cBoxSearchBy.Text == "Full name")
+            {
+                searchAdminContactFName();
+            }
+        }
+
+        private void btn_delete_Click_1(object sender, EventArgs e)
+        {
+            if (MetroMessageBox.Show(this, "Do you want to delete these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                acid = txt_acid.Text;
+                Class.Cls_cmd.adminOfficeDelete();
+                clear();
+                refresh();
+            }
+            else
+            {
+                //IF NO
+                //TODO: NOTHING
+            }
+        }
+
+        private void txt_search_ClearClicked()
+        {
+            cBoxSearchBy.Text = null;
         }
     }
 }

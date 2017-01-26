@@ -30,10 +30,23 @@
         {
             this.TabControlMain = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.metroTile8 = new MetroFramework.Controls.MetroTile();
+            this.metroTile7 = new MetroFramework.Controls.MetroTile();
+            this.metroTile6 = new MetroFramework.Controls.MetroTile();
+            this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.metroTile9 = new MetroFramework.Controls.MetroTile();
+            this.metroTile10 = new MetroFramework.Controls.MetroTile();
+            this.metroTile11 = new MetroFramework.Controls.MetroTile();
+            this.metroTile12 = new MetroFramework.Controls.MetroTile();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.metroTile13 = new MetroFramework.Controls.MetroTile();
+            this.metroTile14 = new MetroFramework.Controls.MetroTile();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
@@ -42,19 +55,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_name = new System.Windows.Forms.ToolStripStatusLabel();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroTile8 = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
-            this.metroTile9 = new MetroFramework.Controls.MetroTile();
-            this.metroTile10 = new MetroFramework.Controls.MetroTile();
-            this.metroTile11 = new MetroFramework.Controls.MetroTile();
-            this.metroTile12 = new MetroFramework.Controls.MetroTile();
-            this.metroTile13 = new MetroFramework.Controls.MetroTile();
-            this.metroTile14 = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.TabControlMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -66,15 +67,15 @@
             // TabControlMain
             // 
             this.TabControlMain.Controls.Add(this.tabPage1);
-            this.TabControlMain.Controls.Add(this.tabPage2);
             this.TabControlMain.Controls.Add(this.tabPage3);
             this.TabControlMain.Controls.Add(this.tabPage4);
             this.TabControlMain.Controls.Add(this.tabPage5);
+            this.TabControlMain.Controls.Add(this.tabPage2);
             this.TabControlMain.Controls.Add(this.tabPage6);
             this.TabControlMain.Controls.Add(this.tabPage7);
             this.TabControlMain.Location = new System.Drawing.Point(23, 126);
             this.TabControlMain.Name = "TabControlMain";
-            this.TabControlMain.SelectedIndex = 0;
+            this.TabControlMain.SelectedIndex = 1;
             this.TabControlMain.Size = new System.Drawing.Size(723, 226);
             this.TabControlMain.TabIndex = 0;
             this.TabControlMain.UseSelectable = true;
@@ -89,108 +90,6 @@
             this.tabPage1.Size = new System.Drawing.Size(715, 184);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "User Information";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 38);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(715, 184);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Marketing";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.metroTile8);
-            this.tabPage3.Controls.Add(this.metroTile7);
-            this.tabPage3.Controls.Add(this.metroTile6);
-            this.tabPage3.Controls.Add(this.metroTile5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 38);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(715, 184);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Company Logins";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.metroTile9);
-            this.tabPage4.Controls.Add(this.metroTile10);
-            this.tabPage4.Controls.Add(this.metroTile11);
-            this.tabPage4.Controls.Add(this.metroTile12);
-            this.tabPage4.Location = new System.Drawing.Point(4, 38);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(715, 184);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Social Media";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.metroTile13);
-            this.tabPage5.Controls.Add(this.metroTile14);
-            this.tabPage5.Location = new System.Drawing.Point(4, 38);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(715, 184);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Property Accounting";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 38);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(715, 184);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Land Stay";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 38);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(715, 184);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Video Tutorials";
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel,
-            this.lbl_Usertype,
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.lbl_name});
-            this.statusStrip.Location = new System.Drawing.Point(20, 388);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(729, 22);
-            this.statusStrip.TabIndex = 3;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel.Text = "Status:";
-            // 
-            // lbl_Usertype
-            // 
-            this.lbl_Usertype.Name = "lbl_Usertype";
-            this.lbl_Usertype.Size = new System.Drawing.Size(118, 17);
-            this.lbl_Usertype.Text = "toolStripStatusLabel1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel1.Text = "|";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel2.Text = "Name:";
-            // 
-            // lbl_name
-            // 
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(118, 17);
-            this.lbl_name.Text = "toolStripStatusLabel3";
             // 
             // metroTile4
             // 
@@ -236,6 +135,19 @@
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseTileImage = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.metroTile3);
+            this.tabPage3.Controls.Add(this.metroTile8);
+            this.tabPage3.Controls.Add(this.metroTile7);
+            this.tabPage3.Controls.Add(this.metroTile6);
+            this.tabPage3.Controls.Add(this.metroTile5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 38);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(715, 184);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Company Logins";
             // 
             // metroTile8
             // 
@@ -297,6 +209,18 @@
             this.metroTile5.UseTileImage = true;
             this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.metroTile9);
+            this.tabPage4.Controls.Add(this.metroTile10);
+            this.tabPage4.Controls.Add(this.metroTile11);
+            this.tabPage4.Controls.Add(this.metroTile12);
+            this.tabPage4.Location = new System.Drawing.Point(4, 38);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(715, 184);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Social Media";
+            // 
             // metroTile9
             // 
             this.metroTile9.ActiveControl = null;
@@ -357,6 +281,16 @@
             this.metroTile12.UseTileImage = true;
             this.metroTile12.Click += new System.EventHandler(this.metroTile12_Click);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.metroTile13);
+            this.tabPage5.Controls.Add(this.metroTile14);
+            this.tabPage5.Location = new System.Drawing.Point(4, 38);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(715, 184);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Property Accounting";
+            // 
             // metroTile13
             // 
             this.metroTile13.ActiveControl = null;
@@ -387,6 +321,88 @@
             this.metroTile14.UseTileImage = true;
             this.metroTile14.Click += new System.EventHandler(this.metroTile14_Click);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 38);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(715, 184);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Marketing";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 38);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(715, 184);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Land Stay";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 38);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(715, 184);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Video Tutorials";
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel,
+            this.lbl_Usertype,
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.lbl_name});
+            this.statusStrip.Location = new System.Drawing.Point(20, 388);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(729, 22);
+            this.statusStrip.TabIndex = 3;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel.Text = "Status:";
+            // 
+            // lbl_Usertype
+            // 
+            this.lbl_Usertype.Name = "lbl_Usertype";
+            this.lbl_Usertype.Size = new System.Drawing.Size(118, 17);
+            this.lbl_Usertype.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel1.Text = "|";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel2.Text = "Name:";
+            // 
+            // lbl_name
+            // 
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(118, 17);
+            this.lbl_name.Text = "toolStripStatusLabel3";
+            // 
+            // metroTile3
+            // 
+            this.metroTile3.ActiveControl = null;
+            this.metroTile3.Location = new System.Drawing.Point(556, 47);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(124, 102);
+            this.metroTile3.TabIndex = 5;
+            this.metroTile3.Text = "Export";
+            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile3.TileImage = global::RVL_Management_System.Properties.Resources.export_2;
+            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroTile3.UseSelectable = true;
+            this.metroTile3.UseTileImage = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,7 +413,7 @@
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Resizable = false;
-            this.Text = "Main";
+            this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.Main_Load);
             this.TabControlMain.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -440,5 +456,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel lbl_name;
+        private MetroFramework.Controls.MetroTile metroTile3;
     }
 }
