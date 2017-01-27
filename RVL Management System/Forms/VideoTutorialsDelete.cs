@@ -97,30 +97,12 @@ namespace RVL_Management_System.Forms
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            if (cBoxSearchBy.Text == "VID")
-            {
-                searchVideoID();
-            }
-            else if (cBoxSearchBy.Text == "Process")
-            {
-                searchProcess();
-            }
+           
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to delete these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                vid = txt_vid.Text;
-                Class.Cls_cmd.videoTutorialsDelete();
-                clear();
-                refresh();
-            }
-            else
-            {
-                //IF NO
-                //TODO:NOTHING
-            }
+           
         }
 
         private void GridView_SelectionChanged(object sender, EventArgs e)
@@ -135,7 +117,41 @@ namespace RVL_Management_System.Forms
             {
                 DataGridViewRow row = cell.OwningRow;
                 txt_vid.Text = row.Cells[0].Value.ToString();
+                txt_delete.Text = row.Cells[1].Value.ToString();
 
+            }
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
+            if (cBoxSearchBy.Text == "VID")
+            {
+                searchVideoID();
+            }
+            else if (cBoxSearchBy.Text == "Process")
+            {
+                searchProcess();
+            }
+        }
+
+        private void txt_search_ClearClicked()
+        {
+            clear();   
+        }
+
+        private void metroTextBox1_ButtonClick(object sender, EventArgs e)
+        {
+            if (MetroMessageBox.Show(this, "Do you want to delete these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                vid = txt_vid.Text;
+                Class.Cls_cmd.videoTutorialsDelete();
+                clear();
+                refresh();
+            }
+            else
+            {
+                //IF NO
+                //TODO:NOTHING
             }
         }
     }

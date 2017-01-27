@@ -74,6 +74,16 @@ namespace RVL_Management_System.Forms
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            clearField();
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
             if (MetroMessageBox.Show(this, "Do you want to save this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 currentMarketValue = txt_current.Text;
@@ -96,7 +106,7 @@ namespace RVL_Management_System.Forms
             }
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void btn_clear_Click(object sender, EventArgs e)
         {
             clearField();
         }

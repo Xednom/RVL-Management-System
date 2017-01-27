@@ -106,6 +106,16 @@ namespace RVL_Management_System.Forms
 
         private void btn_search_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
             if (cBoxSearchBy.Text == "Process")
             {
                 searchProcess();
@@ -116,7 +126,7 @@ namespace RVL_Management_System.Forms
             }
         }
 
-        private void btn_update_Click(object sender, EventArgs e)
+        private void metroTile1_Click(object sender, EventArgs e)
         {
             if (MetroMessageBox.Show(this, "Do you want to update these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -131,6 +141,16 @@ namespace RVL_Management_System.Forms
                 //IF NO
                 //TODO:NOTHING
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

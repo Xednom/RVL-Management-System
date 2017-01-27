@@ -923,6 +923,27 @@
   <ItemGroup>
     <None Include="Resources\magnifying-glass.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-document-add-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-document-add-button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-document-add-button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-edit-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-cancel-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

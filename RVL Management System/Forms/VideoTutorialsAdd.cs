@@ -35,6 +35,11 @@ namespace RVL_Management_System.Forms
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
             lock (this)
             {
                 if (MetroMessageBox.Show(this, "Do you want to save these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -50,6 +55,16 @@ namespace RVL_Management_System.Forms
                     //TODO:NOTHING
                 }
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

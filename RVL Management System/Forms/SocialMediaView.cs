@@ -68,6 +68,11 @@ namespace RVL_Management_System.Forms
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
             if (cBoxSearchBy.Text == "APN ID")
             {
                 searchAPN();

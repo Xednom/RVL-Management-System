@@ -36,6 +36,8 @@
             this.txt_giveAccess = new MetroFramework.Controls.MetroTextBox();
             this.btn_save = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_categoryName
@@ -53,7 +55,7 @@
             this.txt_categoryName.CustomButton.UseSelectable = true;
             this.txt_categoryName.CustomButton.Visible = false;
             this.txt_categoryName.Lines = new string[0];
-            this.txt_categoryName.Location = new System.Drawing.Point(23, 82);
+            this.txt_categoryName.Location = new System.Drawing.Point(6, 19);
             this.txt_categoryName.MaxLength = 32767;
             this.txt_categoryName.Name = "txt_categoryName";
             this.txt_categoryName.PasswordChar = '\0';
@@ -85,7 +87,7 @@
             this.txt_url.CustomButton.UseSelectable = true;
             this.txt_url.CustomButton.Visible = false;
             this.txt_url.Lines = new string[0];
-            this.txt_url.Location = new System.Drawing.Point(235, 111);
+            this.txt_url.Location = new System.Drawing.Point(218, 48);
             this.txt_url.MaxLength = 32767;
             this.txt_url.Name = "txt_url";
             this.txt_url.PasswordChar = '\0';
@@ -117,7 +119,7 @@
             this.txt_un.CustomButton.UseSelectable = true;
             this.txt_un.CustomButton.Visible = false;
             this.txt_un.Lines = new string[0];
-            this.txt_un.Location = new System.Drawing.Point(235, 82);
+            this.txt_un.Location = new System.Drawing.Point(218, 19);
             this.txt_un.MaxLength = 32767;
             this.txt_un.Name = "txt_un";
             this.txt_un.PasswordChar = '\0';
@@ -149,7 +151,7 @@
             this.txt_pw.CustomButton.UseSelectable = true;
             this.txt_pw.CustomButton.Visible = false;
             this.txt_pw.Lines = new string[0];
-            this.txt_pw.Location = new System.Drawing.Point(458, 82);
+            this.txt_pw.Location = new System.Drawing.Point(441, 19);
             this.txt_pw.MaxLength = 32767;
             this.txt_pw.Name = "txt_pw";
             this.txt_pw.PasswordChar = '\0';
@@ -181,7 +183,7 @@
             this.txt_nameLogin.CustomButton.UseSelectable = true;
             this.txt_nameLogin.CustomButton.Visible = false;
             this.txt_nameLogin.Lines = new string[0];
-            this.txt_nameLogin.Location = new System.Drawing.Point(23, 111);
+            this.txt_nameLogin.Location = new System.Drawing.Point(6, 48);
             this.txt_nameLogin.MaxLength = 32767;
             this.txt_nameLogin.Name = "txt_nameLogin";
             this.txt_nameLogin.PasswordChar = '\0';
@@ -213,7 +215,7 @@
             this.txt_giveAccess.CustomButton.UseSelectable = true;
             this.txt_giveAccess.CustomButton.Visible = false;
             this.txt_giveAccess.Lines = new string[0];
-            this.txt_giveAccess.Location = new System.Drawing.Point(458, 111);
+            this.txt_giveAccess.Location = new System.Drawing.Point(441, 48);
             this.txt_giveAccess.MaxLength = 32767;
             this.txt_giveAccess.Name = "txt_giveAccess";
             this.txt_giveAccess.PasswordChar = '\0';
@@ -233,7 +235,7 @@
             // btn_save
             // 
             this.btn_save.ActiveControl = null;
-            this.btn_save.Location = new System.Drawing.Point(23, 140);
+            this.btn_save.Location = new System.Drawing.Point(565, 77);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(73, 52);
             this.btn_save.TabIndex = 15;
@@ -248,7 +250,7 @@
             // metroTile1
             // 
             this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(102, 140);
+            this.metroTile1.Location = new System.Drawing.Point(475, 77);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(84, 52);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Red;
@@ -260,25 +262,35 @@
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseTileImage = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txt_categoryName);
+            this.groupBox1.Controls.Add(this.metroTile1);
+            this.groupBox1.Controls.Add(this.txt_url);
+            this.groupBox1.Controls.Add(this.btn_save);
+            this.groupBox1.Controls.Add(this.txt_un);
+            this.groupBox1.Controls.Add(this.txt_giveAccess);
+            this.groupBox1.Controls.Add(this.txt_pw);
+            this.groupBox1.Controls.Add(this.txt_nameLogin);
+            this.groupBox1.Location = new System.Drawing.Point(23, 63);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(653, 139);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            // 
             // CompanyLoginsAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 213);
-            this.Controls.Add(this.metroTile1);
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.txt_giveAccess);
-            this.Controls.Add(this.txt_nameLogin);
-            this.Controls.Add(this.txt_pw);
-            this.Controls.Add(this.txt_un);
-            this.Controls.Add(this.txt_url);
-            this.Controls.Add(this.txt_categoryName);
+            this.ClientSize = new System.Drawing.Size(689, 214);
+            this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CompanyLoginsAdd";
             this.Resizable = false;
             this.Text = "Add Company Logins";
             this.Load += new System.EventHandler(this.Frm_CompanyLogins_Load);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -292,5 +304,6 @@
         private MetroFramework.Controls.MetroTextBox txt_giveAccess;
         private MetroFramework.Controls.MetroTile btn_save;
         private MetroFramework.Controls.MetroTile metroTile1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

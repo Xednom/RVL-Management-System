@@ -92,6 +92,19 @@ namespace RVL_Management_System.Forms
             cmd.Parameters.Clear();
         }
 
+        public void clear()
+        {
+            txt_current.Text = null;
+            txt_updatePrice.Text = null;
+            txt_title.Text = null;
+            txt_socialmedia.Text = null;
+            txt_hashtags.Text = null;
+            txt_schedule.Text = null;
+            cBoxPreApproved.Text = null;
+            cBoxStatus.Text = null;
+            txt_addiotnalNotes.Text = null;
+        }
+
         private void Frm_SocialMediaUpdate_Load(object sender, EventArgs e)
         {
 
@@ -99,14 +112,7 @@ namespace RVL_Management_System.Forms
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            if (cBoxSearchBy.Text == "APN ID")
-            {
-                searchAPN();
-            }
-            else if (cBoxSearchBy.Text == "Title")
-            {
-                searchTitle();
-            }
+           
         }
 
         private void GridView_SelectionChanged(object sender, EventArgs e)
@@ -136,6 +142,23 @@ namespace RVL_Management_System.Forms
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
+            if (cBoxSearchBy.Text == "APN ID")
+            {
+                searchAPN();
+            }
+            else if (cBoxSearchBy.Text == "Title")
+            {
+                searchTitle();
+            }
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
             if (MetroMessageBox.Show(this, "Do you want to update this social media information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 currentMarketValue = txt_current.Text;
@@ -155,6 +178,16 @@ namespace RVL_Management_System.Forms
                 //IF NO
                 //TODO:NOTHING
             }
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

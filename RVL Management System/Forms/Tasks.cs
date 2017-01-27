@@ -92,7 +92,6 @@ namespace RVL_Management_System
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            taskSearch();
         }
 
         private void GridTask_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -137,6 +136,12 @@ namespace RVL_Management_System
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
+            taskSearch();
+
         }
     }
 }

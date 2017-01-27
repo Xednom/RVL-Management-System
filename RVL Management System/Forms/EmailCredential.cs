@@ -36,6 +36,14 @@ namespace RVL_Management_System.Forms
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            
+
+            
+            
+        }
+
+        private void btn_save_Click_1(object sender, EventArgs e)
+        {
             conn.Open();
             cmd.Connection = conn;
             string LOGIN = "SELECT * FROM Email WHERE Email = @email";
@@ -73,9 +81,18 @@ namespace RVL_Management_System.Forms
             conn.Close();
 
             cmd.Parameters.Clear();
+        }
 
-            
-            
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_email.Text = null;
+            txt_pw.Text = null;
+            txt_name.Text = null;
         }
     }
 }

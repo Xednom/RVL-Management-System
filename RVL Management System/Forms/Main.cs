@@ -111,5 +111,35 @@ namespace RVL_Management_System.Forms
             PropertyAccountingPersonal accountPersonal = new PropertyAccountingPersonal();
             accountPersonal.ShowDialog();
         }
+
+        private void metroTile19_Click(object sender, EventArgs e)
+        {
+            VideoTutorialsAdd vAdd = new VideoTutorialsAdd();
+            vAdd.ShowDialog();
+        }
+
+        private void metroTile18_Click(object sender, EventArgs e)
+        {
+            VideoTutorialsUpdate vUpdate = new VideoTutorialsUpdate();
+            vUpdate.ShowDialog();
+        }
+
+        private void metroTile17_Click(object sender, EventArgs e)
+        {
+            VideoTutorialsDelete vDelete = new VideoTutorialsDelete();
+            vDelete.ShowDialog();
+        }
+
+        private void metroTile16_Click(object sender, EventArgs e)
+        {
+            VideoTutorialsView vView = new VideoTutorialsView();
+            vView.ShowDialog();
+        }
+
+        private void metroTile15_Click(object sender, EventArgs e)
+        {
+            VideoTutorialsExport vExport = new VideoTutorialsExport();
+            vExport.ShowDialog();
+        }
     }
 }
