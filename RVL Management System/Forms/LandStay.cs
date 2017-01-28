@@ -434,33 +434,15 @@ namespace RVL_Management_System.Forms
 
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
-            search();
         }
 
         private void txt_searchDelete_TextChanged(object sender, EventArgs e)
         {
-            searchDelete();
         }
 
         private void btn_del_Click(object sender, EventArgs e)
         {
-            if (lbl_lsidDelete.Text == string.Empty)
-            {
-                MetroMessageBox.Show(this, "Please select an information to delete.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (MetroMessageBox.Show(this, "Do you want to delete these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    lsidDelete = lbl_lsidDelete.Text;
-                    Class.Cls_cmd.LandStayDelete();
-                }
-                else
-                {
-                    //IF NO
-                    //TODO:NOTHING
-                }
-            }
+           
         }
 
         private void GridViewDelete_SelectionChanged(object sender, EventArgs e)
@@ -496,6 +478,54 @@ namespace RVL_Management_System.Forms
         private void txt_searchDelete_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroLabel18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
+            search();
+
+        }
+
+        private void txt_searchDelete_ButtonClick(object sender, EventArgs e)
+        {
+            searchDelete();
+
+        }
+
+        private void txt_searchDelete_ClearClicked()
+        {
+            txt_searchDelete.Text = null;
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if (lbl_lsidDelete.Text == string.Empty)
+            {
+                MetroMessageBox.Show(this, "Please select an information to delete.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (MetroMessageBox.Show(this, "Do you want to delete these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    lsidDelete = lbl_lsidDelete.Text;
+                    Class.Cls_cmd.LandStayDelete();
+                }
+                else
+                {
+                    //IF NO
+                    //TODO:NOTHING
+                }
+            }
         }
     }
 }

@@ -55,6 +55,11 @@ namespace RVL_Management_System.Forms
 
         private void btn_export_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
             copyAlltoClipboard();
             Microsoft.Office.Interop.Excel.Application xlexcel;
             Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
