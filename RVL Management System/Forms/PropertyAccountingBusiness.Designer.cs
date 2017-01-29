@@ -1142,7 +1142,7 @@
             this.groupBox3.Controls.Add(this.metroLabel16);
             this.groupBox3.Location = new System.Drawing.Point(835, 446);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(434, 327);
+            this.groupBox3.Size = new System.Drawing.Size(315, 327);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             // 
@@ -1161,7 +1161,7 @@
             this.txt_netProfit.CustomButton.UseSelectable = true;
             this.txt_netProfit.CustomButton.Visible = false;
             this.txt_netProfit.Lines = new string[0];
-            this.txt_netProfit.Location = new System.Drawing.Point(232, 252);
+            this.txt_netProfit.Location = new System.Drawing.Point(141, 252);
             this.txt_netProfit.MaxLength = 32767;
             this.txt_netProfit.Name = "txt_netProfit";
             this.txt_netProfit.PasswordChar = '\0';
@@ -1192,7 +1192,7 @@
             this.txt_totalExpense.CustomButton.UseSelectable = true;
             this.txt_totalExpense.CustomButton.Visible = false;
             this.txt_totalExpense.Lines = new string[0];
-            this.txt_totalExpense.Location = new System.Drawing.Point(232, 203);
+            this.txt_totalExpense.Location = new System.Drawing.Point(141, 203);
             this.txt_totalExpense.MaxLength = 32767;
             this.txt_totalExpense.Name = "txt_totalExpense";
             this.txt_totalExpense.PasswordChar = '\0';
@@ -1227,7 +1227,7 @@
             this.txt_otherExpense.CustomButton.Visible = false;
             this.txt_otherExpense.Lines = new string[] {
         "0"};
-            this.txt_otherExpense.Location = new System.Drawing.Point(232, 165);
+            this.txt_otherExpense.Location = new System.Drawing.Point(141, 165);
             this.txt_otherExpense.MaxLength = 32767;
             this.txt_otherExpense.Name = "txt_otherExpense";
             this.txt_otherExpense.PasswordChar = '\0';
@@ -1261,7 +1261,7 @@
             this.txt_Notary.CustomButton.Visible = false;
             this.txt_Notary.Lines = new string[] {
         "0"};
-            this.txt_Notary.Location = new System.Drawing.Point(232, 137);
+            this.txt_Notary.Location = new System.Drawing.Point(141, 137);
             this.txt_Notary.MaxLength = 32767;
             this.txt_Notary.Name = "txt_Notary";
             this.txt_Notary.PasswordChar = '\0';
@@ -1295,7 +1295,7 @@
             this.txt_backTaxes.CustomButton.Visible = false;
             this.txt_backTaxes.Lines = new string[] {
         "0"};
-            this.txt_backTaxes.Location = new System.Drawing.Point(232, 109);
+            this.txt_backTaxes.Location = new System.Drawing.Point(141, 109);
             this.txt_backTaxes.MaxLength = 32767;
             this.txt_backTaxes.Name = "txt_backTaxes";
             this.txt_backTaxes.PasswordChar = '\0';
@@ -1329,7 +1329,7 @@
             this.txt_cardProcessingFee.CustomButton.Visible = false;
             this.txt_cardProcessingFee.Lines = new string[] {
         "0"};
-            this.txt_cardProcessingFee.Location = new System.Drawing.Point(232, 80);
+            this.txt_cardProcessingFee.Location = new System.Drawing.Point(141, 80);
             this.txt_cardProcessingFee.MaxLength = 32767;
             this.txt_cardProcessingFee.Name = "txt_cardProcessingFee";
             this.txt_cardProcessingFee.PasswordChar = '\0';
@@ -1363,7 +1363,7 @@
             this.txt_recordingFee.CustomButton.Visible = false;
             this.txt_recordingFee.Lines = new string[] {
         "0"};
-            this.txt_recordingFee.Location = new System.Drawing.Point(232, 52);
+            this.txt_recordingFee.Location = new System.Drawing.Point(141, 52);
             this.txt_recordingFee.MaxLength = 32767;
             this.txt_recordingFee.Name = "txt_recordingFee";
             this.txt_recordingFee.PasswordChar = '\0';
@@ -1385,7 +1385,7 @@
             // metroLabel24
             // 
             this.metroLabel24.AutoSize = true;
-            this.metroLabel24.Location = new System.Drawing.Point(232, 16);
+            this.metroLabel24.Location = new System.Drawing.Point(141, 16);
             this.metroLabel24.Name = "metroLabel24";
             this.metroLabel24.Size = new System.Drawing.Size(59, 19);
             this.metroLabel24.TabIndex = 8;
@@ -1470,7 +1470,7 @@
             this.btn_compute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_compute.Location = new System.Drawing.Point(989, 175);
             this.btn_compute.Name = "btn_compute";
-            this.btn_compute.Size = new System.Drawing.Size(193, 95);
+            this.btn_compute.Size = new System.Drawing.Size(145, 95);
             this.btn_compute.TabIndex = 31;
             this.btn_compute.Text = "Compute";
             this.btn_compute.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1484,7 +1484,7 @@
             this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.metroButton1.Location = new System.Drawing.Point(989, 276);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(193, 95);
+            this.metroButton1.Size = new System.Drawing.Size(145, 95);
             this.metroButton1.TabIndex = 30;
             this.metroButton1.Text = "&Cancel Transaction";
             this.metroButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1497,7 +1497,7 @@
             this.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_save.Location = new System.Drawing.Point(989, 74);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(193, 95);
+            this.btn_save.Size = new System.Drawing.Size(145, 95);
             this.btn_save.TabIndex = 29;
             this.btn_save.Text = "Save";
             this.btn_save.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1509,7 +1509,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1275, 861);
+            this.ClientSize = new System.Drawing.Size(1164, 861);
             this.Controls.Add(this.btn_compute);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.btn_save);

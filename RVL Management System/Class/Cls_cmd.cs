@@ -475,6 +475,53 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void propertyInventoryAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            PropertyInventory _owner = new PropertyInventory();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO DeedAdventure(Date_Listed,APN_ID,Original_Price,Current_Market_Value,Updated_Price,Image_no,Title,URL_link_for_each_social_media,GPS_Coordinates,GPS_URL_Link,Video_Property_Link,Current_Status,Lands_Sold_Site,Date_Sold,Current_Owner_of_the_Land,Sold_To_Land_Buyer,Buyers_Email,Buyers_PhoneNumber,Terms_and_Conditions,Notes_for_the_Terms,Payment_Remarks,URL_Deeds,URL_Stamp_Deeds,URL_Moonclerk_Form,Status,County,Additional_Notes)VALUES(@dateListed,@apnID,@originalPrice,@currentMarketValue,@updatedPrice,@imageNo,@title,@urlLinkForEachSocialMedia,gpsCoordinates,@gpsUrlLink,@videoProperty,@currentStatus,@landsSoldSite,@dateSold,@currentOwnerOfTheLand,@soldToLandBuyer,@buyersEmail,@buyersPhoneNumber,@termsAndConditions,@notesForTheTerms,@paymentRemarks,@urlDeeds,@urlStampDeeds,@urlMoonclerkForm,@status,@county,@additionalNotes)";
+            cmd.Parameters.AddWithValue("dateListed", PropertyInventory.dateListed);
+            cmd.Parameters.AddWithValue("apnID", PropertyInventory.apnID);
+            cmd.Parameters.AddWithValue("originalPrice", PropertyInventory.originalPrice);
+            cmd.Parameters.AddWithValue("currentMarketValue", PropertyInventory.currentMarketValue);
+            cmd.Parameters.AddWithValue("updatedPrice", PropertyInventory.updatedPrice);
+            cmd.Parameters.AddWithValue("imageNo", PropertyInventory.imageNo);
+            cmd.Parameters.AddWithValue("title", PropertyInventory.title);
+            cmd.Parameters.AddWithValue("urlLinkForEachSocialMedia", PropertyInventory.urlLinkSocialMedia);
+            cmd.Parameters.AddWithValue("gpsCoordinates", PropertyInventory.gpsCoordinates);
+            cmd.Parameters.AddWithValue("gpsUrlLink", PropertyInventory.gpsUrlLink);
+            cmd.Parameters.AddWithValue("videoProperty", PropertyInventory.videoPropertyLink);
+            cmd.Parameters.AddWithValue("currentStatus", PropertyInventory.currentStatus);
+            cmd.Parameters.AddWithValue("landsSoldSite", PropertyInventory.landsSoldSite);
+            cmd.Parameters.AddWithValue("dateSold", PropertyInventory.dateSold);
+            cmd.Parameters.AddWithValue("currentOwnerOfTheLand", PropertyInventory.currentOwner);
+            cmd.Parameters.AddWithValue("soldToLandBuyer", PropertyInventory.soldToLandBuyer);
+            cmd.Parameters.AddWithValue("buyersEmail", PropertyInventory.buyersEmail);
+            cmd.Parameters.AddWithValue("buyersPhoneNumber", PropertyInventory.buyersPhoneNumber);
+            cmd.Parameters.AddWithValue("termsAndConditions", PropertyInventory.termsAndConditions);
+            cmd.Parameters.AddWithValue("notesForTheTerms", PropertyInventory.notesForTheTerms);
+            cmd.Parameters.AddWithValue("paymentRemarks", PropertyInventory.paymentRemarks);
+            cmd.Parameters.AddWithValue("urlDeeds", PropertyInventory.urlDeeds);
+            cmd.Parameters.AddWithValue("urlStampDeeds", PropertyInventory.urlStampDeeds);
+            cmd.Parameters.AddWithValue("urlMoonclerkForm", PropertyInventory.urlMoonClerk);
+            cmd.Parameters.AddWithValue("status", PropertyInventory.status);
+            cmd.Parameters.AddWithValue("county", PropertyInventory.county);
+            cmd.Parameters.AddWithValue("additionalNotes", PropertyInventory.additionalNotes);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Successfully Added a property information in the System.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
 
         public static void marketingUpdate()
         {

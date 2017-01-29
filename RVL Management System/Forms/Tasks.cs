@@ -124,9 +124,7 @@ namespace RVL_Management_System
 
         private void metroLink1_Click(object sender, EventArgs e)
         {
-            Frm_Main fmain = new Frm_Main();
-            fmain.Show();
-            Hide();
+           
         }
 
         private void Frm_Tasks_MouseDown(object sender, MouseEventArgs e)

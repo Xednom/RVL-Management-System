@@ -45,8 +45,7 @@ namespace RVL_Management_System.Forms
 
         private void Frm_LeadAssigned_Load(object sender, EventArgs e)
         {
-            lbl_name.Text = Frm_Main.name;
-            loadData();
+            
         }
     }
 }

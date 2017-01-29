@@ -170,36 +170,11 @@ namespace RVL_Management_System
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to save this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
-            {
-                leadReceived = dtLeadReceived.Text;
-                lastName = txt_ln.Text;
-                firstName = txt_fn.Text;
-                middleName = txt_mn.Text;
-                phoneNumber = txt_pnum.Text;
-                emailAddress = txt_email.Text;
-                issueDescription = txt_IssueDes.Text;
-                leadSource = cBoxLeadSource.Text;
-                other = txt_others.Text;
-                leadStat = cBoxLeadStats.Text;
-                leadFollow = cBoxLeadFollowUp.Text;
-                priority = cBoxPriority.Text;
-                leadAssigned = cBoxLeadAssigned.Text;
-                leadAssesment = cBoxLeadAssesment.Text;
-                memo = txt_memo.Text;
-                Class.Cls_cmd.marketingAdd();
-                clear();
-                loadData();
-            }
-            else
-            {
-                //TODO: NOTHING
-            }
+           
         }
 
         private void txt_cancel_Click(object sender, EventArgs e)
         {
-            clear();
         }
 
         private void Frm_LeadGeneration_MouseDown(object sender, MouseEventArgs e)
@@ -246,20 +221,70 @@ namespace RVL_Management_System
 
         private void metroButton1_Click_1(object sender, EventArgs e)
         {
-            MarketingView fview = new MarketingView();
-            fview.ShowDialog();
+           
         }
 
         private void metroButton2_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            if (MetroMessageBox.Show(this, "Do you want to save this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                leadReceived = dtLeadReceived.Text;
+                lastName = txt_ln.Text;
+                firstName = txt_fn.Text;
+                middleName = txt_mn.Text;
+                phoneNumber = txt_pnum.Text;
+                emailAddress = txt_email.Text;
+                issueDescription = txt_IssueDes.Text;
+                leadSource = cBoxLeadSource.Text;
+                other = txt_others.Text;
+                leadStat = cBoxLeadStats.Text;
+                leadFollow = cBoxLeadFollowUp.Text;
+                priority = cBoxPriority.Text;
+                leadAssigned = cBoxLeadAssigned.Text;
+                leadAssesment = cBoxLeadAssesment.Text;
+                memo = txt_memo.Text;
+                Class.Cls_cmd.marketingAdd();
+                clear();
+                loadData();
+            }
+            else
+            {
+                //TODO: NOTHING
+            }
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            clear();
+
+        }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            LeadAssigned flead = new LeadAssigned();
+            flead.ShowDialog();
+        }
+
+        private void metroTile1_Click_1(object sender, EventArgs e)
         {
             MarketingUpdate fupdate = new MarketingUpdate();
             fupdate.ShowDialog();
         }
 
-        private void metroButton3_Click(object sender, EventArgs e)
+        private void metroTile3_Click(object sender, EventArgs e)
         {
-            LeadAssigned flead = new LeadAssigned();
-            flead.ShowDialog();
+            MarketingView fview = new MarketingView();
+            fview.ShowDialog();
         }
     }
 }

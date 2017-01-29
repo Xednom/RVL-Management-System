@@ -190,18 +190,7 @@ namespace RVL_Management_System.Forms
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            if (cBoxSearchBy.Text == "Last name")
-            {
-                marketingLastName();
-            }
-            if (cBoxSearchBy.Text == "First name")
-            {
-                marketingFirstName();
-            }
-            if (cBoxSearchBy.Text == "Middle name")
-            {
-                marketingMiddleName();
-            }
+           
         }
 
         private void GridView_SelectionChanged(object sender, EventArgs e)
@@ -241,6 +230,32 @@ namespace RVL_Management_System.Forms
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_search_ButtonClick(object sender, EventArgs e)
+        {
+            if (cBoxSearchBy.Text == "Last name")
+            {
+                marketingLastName();
+            }
+            if (cBoxSearchBy.Text == "First name")
+            {
+                marketingFirstName();
+            }
+            if (cBoxSearchBy.Text == "Middle name")
+            {
+                marketingMiddleName();
+            }
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
             if (MetroMessageBox.Show(this, "Do you want to update this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 leadReceived = dtLeadReceived.Text;
@@ -267,7 +282,7 @@ namespace RVL_Management_System.Forms
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void txt_cancel_Click(object sender, EventArgs e)
         {
 
         }
