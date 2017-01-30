@@ -89,6 +89,39 @@ namespace RVL_Management_System.Forms
             conn.Close();
         }
 
+        public void clear()
+        {
+            txt_apn.Text = null;
+            dtDateListed.Text = null;
+            txt_originalPrice.Text = null;
+            txt_currentMarketValue.Text = null;
+            txt_updatedPrice.Text = null;
+            txt_imageNo.Text = null;
+            txt_title.Text = null;
+            txt_videoProperty.Text = null;
+            txt_buyerEmail.Text = null;
+            txt_buyerPhoneNumber.Text = null;
+            txt_notesForTheTerm.Text = null;
+            txt_urlDeeds.Text = null;
+            txt_status.Text = null;
+            txt_urlStamp.Text = null;
+            txt_county.Text = null;
+            txt_soldTo.Text = null;
+            txt_paymentTerms.Text = null;
+            txt_gpsUrl.Text = null;
+            txt_gpsCoordinates.Text = null;
+            txt_urlLinkForSocialMedia.Text = null;
+            txt_termsAndConditions.Text = null;
+            txt_additionalNotes.Text = null;
+            txt_urlMoonclerk.Text = null;
+            cBoxCurrentStatus.Text = null;
+            cBoxLandsSoldSite.Text = null;
+            dtDateSold.Text = null;
+            cBoxLandOwner.Text = null;
+            cBoxPaymentRemarks.Text = null;
+        }
+
+
         private void Frm_PropertyInventory_Load(object sender, EventArgs e)
         {
             loadLeadSource();
@@ -152,6 +185,11 @@ namespace RVL_Management_System.Forms
             currentOwner = cBoxLandOwner.Text;
             paymentRemarks = cBoxPaymentRemarks.Text;
             Class.Cls_cmd.propertyInventoryAdd();
+        }
+
+        private void btn_clear_Click_1(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

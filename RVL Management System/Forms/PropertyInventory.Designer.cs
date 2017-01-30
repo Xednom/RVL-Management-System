@@ -848,6 +848,7 @@
             this.btn_clear.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_clear.UseSelectable = true;
             this.btn_clear.UseTileImage = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click_1);
             // 
             // btn_save
             // 
