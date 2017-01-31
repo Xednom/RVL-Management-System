@@ -107,6 +107,9 @@
             this.btn_compute = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.btn_save = new MetroFramework.Controls.MetroButton();
+            this.txt_origPrice1 = new MetroFramework.Controls.MetroTextBox();
+            this.txt_totalExpense1 = new MetroFramework.Controls.MetroTextBox();
+            this.txt_origPriceExpense1 = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
@@ -173,6 +176,7 @@
             this.txt_shared40.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_shared40.CustomButton.UseSelectable = true;
             this.txt_shared40.CustomButton.Visible = false;
+            this.txt_shared40.Enabled = false;
             this.txt_shared40.Lines = new string[0];
             this.txt_shared40.Location = new System.Drawing.Point(513, 261);
             this.txt_shared40.MaxLength = 32767;
@@ -204,6 +208,7 @@
             this.txt_shared60.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_shared60.CustomButton.UseSelectable = true;
             this.txt_shared60.CustomButton.Visible = false;
+            this.txt_shared60.Enabled = false;
             this.txt_shared60.Lines = new string[0];
             this.txt_shared60.Location = new System.Drawing.Point(513, 227);
             this.txt_shared60.MaxLength = 32767;
@@ -492,6 +497,7 @@
             this.txt_balanceDue.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_balanceDue.CustomButton.UseSelectable = true;
             this.txt_balanceDue.CustomButton.Visible = false;
+            this.txt_balanceDue.Enabled = false;
             this.txt_balanceDue.Lines = new string[0];
             this.txt_balanceDue.Location = new System.Drawing.Point(167, 348);
             this.txt_balanceDue.MaxLength = 32767;
@@ -575,6 +581,8 @@
             this.txt_origPrice.UseSelectable = true;
             this.txt_origPrice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_origPrice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_origPrice.TextChanged += new System.EventHandler(this.txt_origPrice_TextChanged);
+            this.txt_origPrice.Validated += new System.EventHandler(this.txt_origPrice_Validated);
             // 
             // txt_closedSale
             // 
@@ -1110,7 +1118,7 @@
             this.GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.GridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.GridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridView.Size = new System.Drawing.Size(508, 205);
+            this.GridView.Size = new System.Drawing.Size(599, 205);
             this.GridView.TabIndex = 1;
             // 
             // metroLabel14
@@ -1160,6 +1168,7 @@
             this.txt_netProfit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_netProfit.CustomButton.UseSelectable = true;
             this.txt_netProfit.CustomButton.Visible = false;
+            this.txt_netProfit.Enabled = false;
             this.txt_netProfit.Lines = new string[0];
             this.txt_netProfit.Location = new System.Drawing.Point(141, 252);
             this.txt_netProfit.MaxLength = 32767;
@@ -1191,6 +1200,7 @@
             this.txt_totalExpense.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_totalExpense.CustomButton.UseSelectable = true;
             this.txt_totalExpense.CustomButton.Visible = false;
+            this.txt_totalExpense.Enabled = false;
             this.txt_totalExpense.Lines = new string[0];
             this.txt_totalExpense.Location = new System.Drawing.Point(141, 203);
             this.txt_totalExpense.MaxLength = 32767;
@@ -1225,8 +1235,7 @@
             this.txt_otherExpense.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_otherExpense.CustomButton.UseSelectable = true;
             this.txt_otherExpense.CustomButton.Visible = false;
-            this.txt_otherExpense.Lines = new string[] {
-        "0"};
+            this.txt_otherExpense.Lines = new string[0];
             this.txt_otherExpense.Location = new System.Drawing.Point(141, 165);
             this.txt_otherExpense.MaxLength = 32767;
             this.txt_otherExpense.Name = "txt_otherExpense";
@@ -1238,12 +1247,12 @@
             this.txt_otherExpense.ShortcutsEnabled = true;
             this.txt_otherExpense.Size = new System.Drawing.Size(158, 23);
             this.txt_otherExpense.TabIndex = 56;
-            this.txt_otherExpense.Text = "0";
             this.txt_otherExpense.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_otherExpense.UseSelectable = true;
             this.txt_otherExpense.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_otherExpense.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_otherExpense.TextChanged += new System.EventHandler(this.txt_otherExpense_TextChanged);
+            this.txt_otherExpense.Leave += new System.EventHandler(this.txt_otherExpense_Leave);
             // 
             // txt_Notary
             // 
@@ -1259,8 +1268,7 @@
             this.txt_Notary.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_Notary.CustomButton.UseSelectable = true;
             this.txt_Notary.CustomButton.Visible = false;
-            this.txt_Notary.Lines = new string[] {
-        "0"};
+            this.txt_Notary.Lines = new string[0];
             this.txt_Notary.Location = new System.Drawing.Point(141, 137);
             this.txt_Notary.MaxLength = 32767;
             this.txt_Notary.Name = "txt_Notary";
@@ -1272,12 +1280,12 @@
             this.txt_Notary.ShortcutsEnabled = true;
             this.txt_Notary.Size = new System.Drawing.Size(158, 23);
             this.txt_Notary.TabIndex = 55;
-            this.txt_Notary.Text = "0";
             this.txt_Notary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_Notary.UseSelectable = true;
             this.txt_Notary.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_Notary.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_Notary.TextChanged += new System.EventHandler(this.txt_Notary_TextChanged);
+            this.txt_Notary.Leave += new System.EventHandler(this.txt_Notary_Leave);
             // 
             // txt_backTaxes
             // 
@@ -1293,8 +1301,7 @@
             this.txt_backTaxes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_backTaxes.CustomButton.UseSelectable = true;
             this.txt_backTaxes.CustomButton.Visible = false;
-            this.txt_backTaxes.Lines = new string[] {
-        "0"};
+            this.txt_backTaxes.Lines = new string[0];
             this.txt_backTaxes.Location = new System.Drawing.Point(141, 109);
             this.txt_backTaxes.MaxLength = 32767;
             this.txt_backTaxes.Name = "txt_backTaxes";
@@ -1306,12 +1313,12 @@
             this.txt_backTaxes.ShortcutsEnabled = true;
             this.txt_backTaxes.Size = new System.Drawing.Size(158, 23);
             this.txt_backTaxes.TabIndex = 54;
-            this.txt_backTaxes.Text = "0";
             this.txt_backTaxes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_backTaxes.UseSelectable = true;
             this.txt_backTaxes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_backTaxes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_backTaxes.TextChanged += new System.EventHandler(this.txt_backTaxes_TextChanged);
+            this.txt_backTaxes.Leave += new System.EventHandler(this.txt_backTaxes_Leave);
             // 
             // txt_cardProcessingFee
             // 
@@ -1327,8 +1334,7 @@
             this.txt_cardProcessingFee.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_cardProcessingFee.CustomButton.UseSelectable = true;
             this.txt_cardProcessingFee.CustomButton.Visible = false;
-            this.txt_cardProcessingFee.Lines = new string[] {
-        "0"};
+            this.txt_cardProcessingFee.Lines = new string[0];
             this.txt_cardProcessingFee.Location = new System.Drawing.Point(141, 80);
             this.txt_cardProcessingFee.MaxLength = 32767;
             this.txt_cardProcessingFee.Name = "txt_cardProcessingFee";
@@ -1340,12 +1346,12 @@
             this.txt_cardProcessingFee.ShortcutsEnabled = true;
             this.txt_cardProcessingFee.Size = new System.Drawing.Size(158, 23);
             this.txt_cardProcessingFee.TabIndex = 53;
-            this.txt_cardProcessingFee.Text = "0";
             this.txt_cardProcessingFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_cardProcessingFee.UseSelectable = true;
             this.txt_cardProcessingFee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_cardProcessingFee.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_cardProcessingFee.TextChanged += new System.EventHandler(this.txt_cardProcessingFee_TextChanged);
+            this.txt_cardProcessingFee.Leave += new System.EventHandler(this.txt_cardProcessingFee_Leave);
             // 
             // txt_recordingFee
             // 
@@ -1361,8 +1367,7 @@
             this.txt_recordingFee.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_recordingFee.CustomButton.UseSelectable = true;
             this.txt_recordingFee.CustomButton.Visible = false;
-            this.txt_recordingFee.Lines = new string[] {
-        "0"};
+            this.txt_recordingFee.Lines = new string[0];
             this.txt_recordingFee.Location = new System.Drawing.Point(141, 52);
             this.txt_recordingFee.MaxLength = 32767;
             this.txt_recordingFee.Name = "txt_recordingFee";
@@ -1374,13 +1379,13 @@
             this.txt_recordingFee.ShortcutsEnabled = true;
             this.txt_recordingFee.Size = new System.Drawing.Size(158, 23);
             this.txt_recordingFee.TabIndex = 52;
-            this.txt_recordingFee.Text = "0";
             this.txt_recordingFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_recordingFee.UseSelectable = true;
             this.txt_recordingFee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_recordingFee.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_recordingFee.TextChanged += new System.EventHandler(this.txt_recordingFee_TextChanged);
             this.txt_recordingFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_recordingFee_KeyPress);
+            this.txt_recordingFee.Leave += new System.EventHandler(this.txt_recordingFee_Leave);
             // 
             // metroLabel24
             // 
@@ -1504,12 +1509,114 @@
             this.btn_save.UseSelectable = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
+            // txt_origPrice1
+            // 
+            // 
+            // 
+            // 
+            this.txt_origPrice1.CustomButton.Image = null;
+            this.txt_origPrice1.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.txt_origPrice1.CustomButton.Name = "";
+            this.txt_origPrice1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_origPrice1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_origPrice1.CustomButton.TabIndex = 1;
+            this.txt_origPrice1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_origPrice1.CustomButton.UseSelectable = true;
+            this.txt_origPrice1.CustomButton.Visible = false;
+            this.txt_origPrice1.Lines = new string[0];
+            this.txt_origPrice1.Location = new System.Drawing.Point(992, 779);
+            this.txt_origPrice1.MaxLength = 32767;
+            this.txt_origPrice1.Name = "txt_origPrice1";
+            this.txt_origPrice1.PasswordChar = '\0';
+            this.txt_origPrice1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_origPrice1.SelectedText = "";
+            this.txt_origPrice1.SelectionLength = 0;
+            this.txt_origPrice1.SelectionStart = 0;
+            this.txt_origPrice1.ShortcutsEnabled = true;
+            this.txt_origPrice1.Size = new System.Drawing.Size(158, 23);
+            this.txt_origPrice1.TabIndex = 59;
+            this.txt_origPrice1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_origPrice1.UseSelectable = true;
+            this.txt_origPrice1.Visible = false;
+            this.txt_origPrice1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_origPrice1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_origPrice1.TextChanged += new System.EventHandler(this.txt_origPrice1_TextChanged);
+            // 
+            // txt_totalExpense1
+            // 
+            // 
+            // 
+            // 
+            this.txt_totalExpense1.CustomButton.Image = null;
+            this.txt_totalExpense1.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.txt_totalExpense1.CustomButton.Name = "";
+            this.txt_totalExpense1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_totalExpense1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_totalExpense1.CustomButton.TabIndex = 1;
+            this.txt_totalExpense1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_totalExpense1.CustomButton.UseSelectable = true;
+            this.txt_totalExpense1.CustomButton.Visible = false;
+            this.txt_totalExpense1.Lines = new string[0];
+            this.txt_totalExpense1.Location = new System.Drawing.Point(992, 808);
+            this.txt_totalExpense1.MaxLength = 32767;
+            this.txt_totalExpense1.Name = "txt_totalExpense1";
+            this.txt_totalExpense1.PasswordChar = '\0';
+            this.txt_totalExpense1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_totalExpense1.SelectedText = "";
+            this.txt_totalExpense1.SelectionLength = 0;
+            this.txt_totalExpense1.SelectionStart = 0;
+            this.txt_totalExpense1.ShortcutsEnabled = true;
+            this.txt_totalExpense1.Size = new System.Drawing.Size(158, 23);
+            this.txt_totalExpense1.TabIndex = 60;
+            this.txt_totalExpense1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_totalExpense1.UseSelectable = true;
+            this.txt_totalExpense1.Visible = false;
+            this.txt_totalExpense1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_totalExpense1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_totalExpense1.TextChanged += new System.EventHandler(this.txt_totalExpense1_TextChanged);
+            // 
+            // txt_origPriceExpense1
+            // 
+            // 
+            // 
+            // 
+            this.txt_origPriceExpense1.CustomButton.Image = null;
+            this.txt_origPriceExpense1.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.txt_origPriceExpense1.CustomButton.Name = "";
+            this.txt_origPriceExpense1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_origPriceExpense1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_origPriceExpense1.CustomButton.TabIndex = 1;
+            this.txt_origPriceExpense1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_origPriceExpense1.CustomButton.UseSelectable = true;
+            this.txt_origPriceExpense1.CustomButton.Visible = false;
+            this.txt_origPriceExpense1.Enabled = false;
+            this.txt_origPriceExpense1.Lines = new string[0];
+            this.txt_origPriceExpense1.Location = new System.Drawing.Point(992, 837);
+            this.txt_origPriceExpense1.MaxLength = 32767;
+            this.txt_origPriceExpense1.Name = "txt_origPriceExpense1";
+            this.txt_origPriceExpense1.PasswordChar = '\0';
+            this.txt_origPriceExpense1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_origPriceExpense1.SelectedText = "";
+            this.txt_origPriceExpense1.SelectionLength = 0;
+            this.txt_origPriceExpense1.SelectionStart = 0;
+            this.txt_origPriceExpense1.ShortcutsEnabled = true;
+            this.txt_origPriceExpense1.Size = new System.Drawing.Size(158, 23);
+            this.txt_origPriceExpense1.TabIndex = 71;
+            this.txt_origPriceExpense1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_origPriceExpense1.UseSelectable = true;
+            this.txt_origPriceExpense1.Visible = false;
+            this.txt_origPriceExpense1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_origPriceExpense1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // PropertyAccountingBusiness
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1164, 861);
+            this.Controls.Add(this.txt_origPriceExpense1);
+            this.Controls.Add(this.txt_origPrice1);
+            this.Controls.Add(this.txt_totalExpense1);
             this.Controls.Add(this.btn_compute);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.btn_save);
@@ -1613,5 +1720,8 @@
         private MetroFramework.Controls.MetroTextBox txt_paymentsBalanceDue;
         private MetroFramework.Controls.MetroTextBox txt_landCost;
         private MetroFramework.Controls.MetroButton btn_compute;
+        private MetroFramework.Controls.MetroTextBox txt_origPrice1;
+        private MetroFramework.Controls.MetroTextBox txt_totalExpense1;
+        private MetroFramework.Controls.MetroTextBox txt_origPriceExpense1;
     }
 }
