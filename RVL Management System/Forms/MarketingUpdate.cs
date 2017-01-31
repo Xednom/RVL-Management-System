@@ -166,7 +166,7 @@ namespace RVL_Management_System.Forms
         {
             loadLeadSource();
             loadLeadAssigned();
-            loadData();
+            //loadData();
             cBoxLeadStats.Items.Add("Prospect");
             cBoxLeadStats.Items.Add("Qualified Lead");
             cBoxLeadStats.Items.Add("Buyer");

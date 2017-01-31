@@ -428,5 +428,10 @@ namespace RVL_Management_System.Forms
 
             
         }
+
+        private void txt_paymentsBalanceDue_TextChanged(object sender, EventArgs e)
+        {
+            txt_balanceDue.Text = txt_paymentsBalanceDue.Text;
+        }
     }
 }

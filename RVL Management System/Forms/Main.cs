@@ -141,5 +141,68 @@ namespace RVL_Management_System.Forms
             VideoTutorialsExport vExport = new VideoTutorialsExport();
             vExport.ShowDialog();
         }
+
+        private void metroTile20_Click(object sender, EventArgs e)
+        {
+            Frm_LeadGeneration fLead = new Frm_LeadGeneration();
+            fLead.ShowDialog();
+        }
+
+        private void metroTile21_Click(object sender, EventArgs e)
+        {
+            Email email = new Email();
+            email.ShowDialog();
+        }
+
+        private void metroTile22_Click(object sender, EventArgs e)
+        {
+            LandStay landstay = new LandStay();
+            landstay.ShowDialog();
+        }
+
+        private void metroTile1_Click_1(object sender, EventArgs e)
+        {
+            LandsOwnedDeedAdventure landsOwned = new LandsOwnedDeedAdventure();
+            landsOwned.ShowDialog();
+        }
+
+        private void metroTile3_Click_1(object sender, EventArgs e)
+        {
+            Frm_Tasks tasks = new Frm_Tasks();
+            tasks.ShowDialog();
+        }
+
+        private void metroTile2_Click_1(object sender, EventArgs e)
+        {
+            TrainingMaterials trainMats = new TrainingMaterials();
+            trainMats.ShowDialog();
+        }
+
+        private void metroTile4_Click_1(object sender, EventArgs e)
+        {
+            Frm_Login fLogin = new Frm_Login();
+            fLogin.Show();
+            Hide();
+        }
+
+        private void metroTile5_Click_1(object sender, EventArgs e)
+        {
+            MarketingUpdate update = new MarketingUpdate();
+            update.ShowDialog();
+        }
+
+        private void btn_exportCompany_Click(object sender, EventArgs e)
+        {
+            Frm_CompanyLoginsExport export = new Frm_CompanyLoginsExport();
+            export.ShowDialog();
+        }
+
+        private void metroTile6_Click_1(object sender, EventArgs e)
+        {
+            LeadAssigned leadAssigned = new LeadAssigned();
+            leadAssigned.ShowDialog();
+
+            name = lbl_name.Text;
+        }
     }
 }

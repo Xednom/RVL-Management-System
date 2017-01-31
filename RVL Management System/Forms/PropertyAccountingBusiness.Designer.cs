@@ -890,6 +890,7 @@
             this.txt_paymentsBalanceDue.UseSelectable = true;
             this.txt_paymentsBalanceDue.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_paymentsBalanceDue.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_paymentsBalanceDue.TextChanged += new System.EventHandler(this.txt_paymentsBalanceDue_TextChanged);
             // 
             // metroLabel35
             // 
