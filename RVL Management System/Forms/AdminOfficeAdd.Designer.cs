@@ -67,7 +67,9 @@
             this.txt_fullName.MaxLength = 32767;
             this.txt_fullName.Name = "txt_fullName";
             this.txt_fullName.PasswordChar = '\0';
+#pragma warning disable CS0618 // Type or member is obsolete
             this.txt_fullName.PromptText = "Full name";
+#pragma warning restore CS0618 // Type or member is obsolete
             this.txt_fullName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_fullName.SelectedText = "";
             this.txt_fullName.SelectionLength = 0;

@@ -80,7 +80,9 @@
             this.txt_search.MaxLength = 32767;
             this.txt_search.Name = "txt_search";
             this.txt_search.PasswordChar = '\0';
+#pragma warning disable CS0618 // Type or member is obsolete
             this.txt_search.PromptText = "Search";
+#pragma warning restore CS0618 // Type or member is obsolete
             this.txt_search.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_search.SelectedText = "";
             this.txt_search.SelectionLength = 0;
