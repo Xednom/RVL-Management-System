@@ -114,8 +114,8 @@
             this.cBoxSearchBy.ItemHeight = 23;
             this.cBoxSearchBy.Items.AddRange(new object[] {
             "User ID",
-            "Last name",
-            "First name"});
+            "Full name",
+            "Username"});
             this.cBoxSearchBy.Location = new System.Drawing.Point(94, 27);
             this.cBoxSearchBy.Name = "cBoxSearchBy";
             this.cBoxSearchBy.Size = new System.Drawing.Size(121, 29);

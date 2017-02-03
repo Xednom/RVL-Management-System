@@ -328,6 +328,35 @@ namespace RVL_Management_System.Class
             cmd.Parameters.Clear();
         }
 
+        public static void accountingPersonalAdd()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            PropertyAccountingPersonal _owner = new PropertyAccountingPersonal();
+
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["connGlobal"].ToString();
+            conn.Open();
+
+            cmd.Connection = conn;
+            string INSERT = "INSERT INTO Personal(Account,BilledFrom,BilledTo,Memo,Amount,DateRecorded,Notes,Total)VALUES(@account,@billedFrom,@billedTo,@memo,@amount,@dateRecorded,@notes,@total)";
+            cmd.Parameters.AddWithValue("account", PropertyAccountingPersonal.account);
+            cmd.Parameters.AddWithValue("billedFrom", PropertyAccountingPersonal.billedFrom);
+            cmd.Parameters.AddWithValue("billedTo", PropertyAccountingPersonal.billedTo);
+            cmd.Parameters.AddWithValue("memo", PropertyAccountingPersonal.memo);
+            cmd.Parameters.AddWithValue("amount", PropertyAccountingPersonal.amount);
+            cmd.Parameters.AddWithValue("dateRecorded", PropertyAccountingPersonal.dateRecorded);
+            cmd.Parameters.AddWithValue("notes", PropertyAccountingPersonal.notes);
+            cmd.Parameters.AddWithValue("total", PropertyAccountingPersonal.total);
+            cmd.CommandText = INSERT;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            MetroMessageBox.Show(_owner, "Saved Successfully.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            cmd.Parameters.Clear();
+        }
+
         public static void adminOfficeAdd()
         {
             SqlConnection conn = new SqlConnection();

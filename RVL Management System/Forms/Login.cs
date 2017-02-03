@@ -56,37 +56,9 @@ namespace RVL_Management_System
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            
-            
 
-            //conn.Open();
-            //cmd.Connection = conn;
-            //string LOGIN = "SELECT A.Account, L.UN, L.PW, U.Full_Name FROM tblUser AS U LEFT JOIN tblAccount AS A ON A.AcctID = U.AcctID LEFT JOIN tblLogin AS L ON L.AcctID = U.AcctID WHERE L.UN = @un AND L.PW = @pw AND A.Account = @ut";
-            //cmd.Parameters.AddWithValue("un", txt_un.Text);
-            //cmd.Parameters.AddWithValue("pw", txt_pw.Text);
-            //cmd.Parameters.AddWithValue("ut", cBoxUsertype.Text);
-            //cmd.CommandText = LOGIN;
-            //cmd.ExecuteNonQuery();
-            //SqlDataReader reader = cmd.ExecuteReader();
 
-            //if (reader.HasRows)
-            //{
-            //    MessageBox.Show("Welcome", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //    UserType = cBoxUsertype.Text;
-            //    fullName = txt_name.Text;
-            //    Frm_Main fmain = new Frm_Main();
-            //    fmain.Show();
-            //    Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Wrong username or password!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            //}
-            //conn.Close();
-
-            //cmd.Parameters.Clear();
 
         }
 
@@ -139,12 +111,47 @@ namespace RVL_Management_System
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            UserType = cBoxUsertype.Text;
-            Username = txt_un.Text;
-            Password = txt_pw.Text;
-            fullName = txt_name.Text;
-            Class.Cls_cmd.Login();
-            Hide();
+            //UserType = cBoxUsertype.Text;
+            //Username = txt_un.Text;
+            //Password = txt_pw.Text;
+            //fullName = txt_name.Text;
+            //Class.Cls_cmd.Login();
+            //Hide()
+
+
+            conn.Open();
+            cmd.Connection = conn;
+            string LOGIN = "SELECT A.Account, L.UN, L.PW, U.Full_Name FROM tblUser AS U LEFT JOIN tblAccount AS A ON A.AcctID = U.AcctID LEFT JOIN tblLogin AS L ON L.AcctID = U.AcctID WHERE L.UN = @un AND L.PW = @pw AND A.Account = @ut";
+            cmd.Parameters.AddWithValue("un", txt_un.Text);
+            cmd.Parameters.AddWithValue("pw", txt_pw.Text);
+            cmd.Parameters.AddWithValue("ut", cBoxUsertype.Text);
+            cmd.CommandText = LOGIN;
+            cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                MetroMessageBox.Show(this, "Welcome", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                UserType = cBoxUsertype.Text;
+                fullName = txt_name.Text;
+                Forms.Main fmain = new Forms.Main();
+                fmain.Show();
+                Hide();
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "Wrong username or password!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            conn.Close();
+
+            cmd.Parameters.Clear();
+        }
+
+        private void metroTile1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

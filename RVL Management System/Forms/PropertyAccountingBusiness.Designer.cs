@@ -679,6 +679,7 @@
             this.cBoxAccount.Size = new System.Drawing.Size(200, 29);
             this.cBoxAccount.TabIndex = 39;
             this.cBoxAccount.UseSelectable = true;
+            this.cBoxAccount.SelectedIndexChanged += new System.EventHandler(this.cBoxAccount_SelectedIndexChanged);
             // 
             // metroLabel13
             // 

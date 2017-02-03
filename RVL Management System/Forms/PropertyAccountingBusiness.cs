@@ -433,5 +433,19 @@ namespace RVL_Management_System.Forms
         {
             txt_balanceDue.Text = txt_paymentsBalanceDue.Text;
         }
+
+        private void cBoxAccount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBoxAccount.Text == "Personal")
+            {
+                PropertyAccountingPersonal personal = new PropertyAccountingPersonal();
+                personal.Show();
+                Hide();
+            }
+            else
+            {
+                //TODO: NOTHING
+            }
+        }
     }
 }

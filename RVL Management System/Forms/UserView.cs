@@ -27,7 +27,7 @@ namespace RVL_Management_System
         {
             conn.Open();
             cmd.Connection = conn;
-            string Show = "SELECT L.LID, U.UID, U.Last_Name, U.First_Name, U.Middle_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.UID=@uid";
+            string Show = "SELECT L.LID, U.UID, U.Full_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.UID=@uid";
             cmd.Parameters.AddWithValue("uid", txt__search.Text);
             cmd.CommandText = Show;
 
@@ -45,7 +45,7 @@ namespace RVL_Management_System
         {
             conn.Open();
             cmd.Connection = conn;
-            string Show = "SELECT L.LID, U.UID, U.Last_Name, U.First_Name, U.Middle_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.UID=@uid";
+            string Show = "SELECT L.LID, U.UID, U.Full_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.UID=@uid";
             cmd.Parameters.AddWithValue("uid", txt__search.Text);
             cmd.CommandText = Show;
 
@@ -59,12 +59,12 @@ namespace RVL_Management_System
             cmd.Parameters.Clear();
         }
 
-        public void LastNameSearch()
+        public void FullNameSearch()
         {
             conn.Open();
             cmd.Connection = conn;
-            string Show = "SELECT L.LID, U.UID, U.Last_Name, U.First_Name, U.Middle_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.Last_Name=@ln";
-            cmd.Parameters.AddWithValue("ln", txt__search.Text);
+            string Show = "SELECT L.LID, U.UID, U.Full_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.Full_Name=@fn";
+            cmd.Parameters.AddWithValue("fn", txt__search.Text);
             cmd.CommandText = Show;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -76,12 +76,12 @@ namespace RVL_Management_System
 
             cmd.Parameters.Clear();
         }
-        public void FirstNameSearch()
+        public void UsernameSearch()
         {
             conn.Open();
             cmd.Connection = conn;
-            string Show = "SELECT L.LID, U.UID, U.Last_Name, U.First_Name, U.Middle_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.First_Name=@fn";
-            cmd.Parameters.AddWithValue("fn", txt__search.Text);
+            string Show = "SELECT L.LID, U.UID, U.Full_Name, L.UN, L.PW, A.Account FROM tblUser AS U LEFT JOIN tblLogin AS L ON U.UID = L.UID LEFT JOIN tblAccount AS A ON U.AcctID = A.AcctID WHERE U.Username=@un";
+            cmd.Parameters.AddWithValue("un", txt__search.Text);
             cmd.CommandText = Show;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -105,13 +105,13 @@ namespace RVL_Management_System
             {
                 UserIDSearch();
             }
-            else if (cBoxSearchBy.Text == "Last name")
+            else if (cBoxSearchBy.Text == "Full name")
             {
-                LastNameSearch();
+                FullNameSearch();
             }
-            else if (cBoxSearchBy.Text == "First name")
+            else if (cBoxSearchBy.Text == "Username")
             {
-                FirstNameSearch();
+                UsernameSearch();
             }
 
         }
