@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms; 
+using MetroFramework.Forms;
+using MetroFramework;
 
 namespace RVL_Management_System.Forms
 {
@@ -61,17 +62,32 @@ namespace RVL_Management_System.Forms
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            apn = txt_apn.Text;
-            county = txt_county.Text;
-            originalPrice = txt_origPrice.Text;
-            marketPrice = txt_marketPrice.Text;
-            statusOfTheLand = cBoxStatus.Text;
-            typeOfSale = cBoxTypeOfSale.Text;
-            downPaymentMade = txt_downPaymentMade.Text;
-            monthlyPaymentMade = txt_monthlyPaymentMade.Text;
-            paymentPaidSoFar = txt_paymentPaidSoFar.Text;
-            amountClosed = txt_amountClosed.Text;
-            Class.Cls_cmd.deedAdventureAdd();
+            if (txt_apn.Text == string.Empty || txt_county.Text == string.Empty || txt_origPrice.Text == string.Empty || txt_marketPrice.Text == string.Empty || cBoxStatus.Text == string.Empty || cBoxTypeOfSale.Text == string.Empty || txt_downPaymentMade.Text == string.Empty || txt_monthlyPaymentMade.Text == string.Empty || txt_paymentPaidSoFar.Text == string.Empty || txt_amountClosed.Text == string.Empty)
+            {
+                MetroMessageBox.Show(this,"PLease complete the required field","RVL System",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MetroMessageBox.Show(this, "Do you want to add this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    apn = txt_apn.Text;
+                    county = txt_county.Text;
+                    originalPrice = txt_origPrice.Text;
+                    marketPrice = txt_marketPrice.Text;
+                    statusOfTheLand = cBoxStatus.Text;
+                    typeOfSale = cBoxTypeOfSale.Text;
+                    downPaymentMade = txt_downPaymentMade.Text;
+                    monthlyPaymentMade = txt_monthlyPaymentMade.Text;
+                    paymentPaidSoFar = txt_paymentPaidSoFar.Text;
+                    amountClosed = txt_amountClosed.Text;
+                    Class.Cls_cmd.deedAdventureAdd();
+                }
+                else
+                {
+                    //IF NO
+                    //TODO: NOTHING
+                }
+            }
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

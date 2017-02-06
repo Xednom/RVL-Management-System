@@ -150,24 +150,30 @@ namespace RVL_Management_System.Forms
 
         private void btn_update_Click_1(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to update these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (cBoxSearchBy.Text == string.Empty)
             {
-                fullName = txt_fullName.Text;
-                eMail = txt_email.Text;
-                phoneNumber = txt_phoneNumber.Text;
-                address = txt_address.Text;
-                county = txt_county.Text;
-                category = cBoxCategory.Text;
-                acid = txt_acid.Text;
-                Class.Cls_cmd.adminOfficeUpdate();
-                clear();
+                MetroMessageBox.Show(this, "Search first before you update", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                //IF NO
-                //TODO:NOTHING
+                if (MetroMessageBox.Show(this, "Do you want to update these information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    fullName = txt_fullName.Text;
+                    eMail = txt_email.Text;
+                    phoneNumber = txt_phoneNumber.Text;
+                    address = txt_address.Text;
+                    county = txt_county.Text;
+                    category = cBoxCategory.Text;
+                    acid = txt_acid.Text;
+                    Class.Cls_cmd.adminOfficeUpdate();
+                    clear();
+                }
+                else
+                {
+                    //IF NO
+                    //TODO:NOTHING
+                }
             }
-
         }
 
         private void btn_export_Click(object sender, EventArgs e)

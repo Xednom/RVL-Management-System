@@ -88,16 +88,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MetroFramework">
-      <HintPath>H:\Projects\metroframework-modern-ui-master\MetroFramework.Design\bin\Release\MetroFramework.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\RVL - FILES\Metro-master\metroframework-modern-ui-master\MetroFramework.Design\bin\Release\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Design">
-      <HintPath>H:\Projects\metroframework-modern-ui-master\MetroFramework.Design\bin\Release\MetroFramework.Design.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\RVL - FILES\Metro-master\metroframework-modern-ui-master\MetroFramework.Design\bin\Release\MetroFramework.Design.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Fonts">
-      <HintPath>H:\Projects\metroframework-modern-ui-master\MetroFramework.Fonts\bin\Release\MetroFramework.Fonts.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\RVL - FILES\Metro-master\metroframework-modern-ui-master\MetroFramework.Fonts\bin\Release\MetroFramework.Fonts.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MimeKit, Version=1.10.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
       <HintPath>..\packages\MimeKit.1.10.0\lib\net451\MimeKit.dll</HintPath>
       <Private>True</Private>
@@ -221,17 +219,6 @@
     <Compile Include="Forms\CompanyLoginsExport.Designer.cs">
       <DependentUpon>CompanyLoginsExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Print Forms\Frm_PrintCompanyLogins.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Print Forms\Frm_PrintCompanyLogins.Designer.cs">
-      <DependentUpon>Frm_PrintCompanyLogins.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Print\PrintCaliforniaGrantDeed.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PrintCaliforniaGrantDeed.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AddLeadSource.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,12 +320,6 @@
     </Compile>
     <Compile Include="Forms\MarketingView.Designer.cs">
       <DependentUpon>MarketingView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Print Forms\Frm_PrintCaliforniaDeed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Print Forms\Frm_PrintCaliforniaDeed.Designer.cs">
-      <DependentUpon>Frm_PrintCaliforniaDeed.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PropertyAccountingBusiness.cs">
       <SubType>Form</SubType>
@@ -448,11 +429,6 @@
     <Compile Include="Forms\AdminOfficeDelete.Designer.cs">
       <DependentUpon>AdminOfficeDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Print\PrintCompanyLogins.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PrintCompanyLogins.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AddLeadSource.resx">
@@ -551,9 +527,6 @@
     <EmbeddedResource Include="Forms\CompanyLoginsExport.resx">
       <DependentUpon>CompanyLoginsExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print Forms\Frm_PrintCaliforniaDeed.resx">
-      <DependentUpon>Frm_PrintCaliforniaDeed.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PropertyAccountingBusiness.resx">
       <DependentUpon>PropertyAccountingBusiness.cs</DependentUpon>
     </EmbeddedResource>
@@ -608,12 +581,6 @@
     <EmbeddedResource Include="Forms\AdminOfficeDelete.resx">
       <DependentUpon>AdminOfficeDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print Forms\Frm_PrintCompanyLogins.resx">
-      <DependentUpon>Frm_PrintCompanyLogins.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Print\rptCompangLogins.rdlc" />
-    <EmbeddedResource Include="Print\rptCaliforniaDeeds.rdlc" />
-    <EmbeddedResource Include="Print\CaliforniaDeed.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -624,29 +591,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Print\PrintCaliforniaGrantDeed.xsc">
-      <DependentUpon>PrintCaliforniaGrantDeed.xsd</DependentUpon>
-    </None>
-    <None Include="Print\PrintCaliforniaGrantDeed.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PrintCaliforniaGrantDeed.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Print\PrintCaliforniaGrantDeed.xss">
-      <DependentUpon>PrintCaliforniaGrantDeed.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
-    <None Include="Print\PrintCompanyLogins.xsc">
-      <DependentUpon>PrintCompanyLogins.xsd</DependentUpon>
-    </None>
-    <None Include="Print\PrintCompanyLogins.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PrintCompanyLogins.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Print\PrintCompanyLogins.xss">
-      <DependentUpon>PrintCompanyLogins.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

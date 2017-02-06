@@ -236,30 +236,37 @@ namespace RVL_Management_System
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to save this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txt_ln.Text == string.Empty || txt_fn.Text == string.Empty || txt_mn.Text == string.Empty || txt_pnum.Text == string.Empty || txt_email.Text == string.Empty || txt_IssueDes.Text == string.Empty || cBoxLeadSource.Text == string.Empty ||  )
             {
-                leadReceived = dtLeadReceived.Text;
-                lastName = txt_ln.Text;
-                firstName = txt_fn.Text;
-                middleName = txt_mn.Text;
-                phoneNumber = txt_pnum.Text;
-                emailAddress = txt_email.Text;
-                issueDescription = txt_IssueDes.Text;
-                leadSource = cBoxLeadSource.Text;
-                other = txt_others.Text;
-                leadStat = cBoxLeadStats.Text;
-                leadFollow = cBoxLeadFollowUp.Text;
-                priority = cBoxPriority.Text;
-                leadAssigned = cBoxLeadAssigned.Text;
-                leadAssesment = cBoxLeadAssesment.Text;
-                memo = txt_memo.Text;
-                Class.Cls_cmd.marketingAdd();
-                clear();
-                loadData();
+                MetroMessageBox.Show(this,"Please all required fields","RVL System",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                //TODO: NOTHING
+                if (MetroMessageBox.Show(this, "Do you want to save this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    leadReceived = dtLeadReceived.Text;
+                    lastName = txt_ln.Text;
+                    firstName = txt_fn.Text;
+                    middleName = txt_mn.Text;
+                    phoneNumber = txt_pnum.Text;
+                    emailAddress = txt_email.Text;
+                    issueDescription = txt_IssueDes.Text;
+                    leadSource = cBoxLeadSource.Text;
+                    other = txt_others.Text;
+                    leadStat = cBoxLeadStats.Text;
+                    leadFollow = cBoxLeadFollowUp.Text;
+                    priority = cBoxPriority.Text;
+                    leadAssigned = cBoxLeadAssigned.Text;
+                    leadAssesment = cBoxLeadAssesment.Text;
+                    memo = txt_memo.Text;
+                    Class.Cls_cmd.marketingAdd();
+                    clear();
+                    loadData();
+                }
+                else
+                {
+                    //TODO: NOTHING
+                }
             }
         }
 

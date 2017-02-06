@@ -50,7 +50,7 @@
             this.txt_email.CustomButton.UseSelectable = true;
             this.txt_email.CustomButton.Visible = false;
             this.txt_email.Lines = new string[0];
-            this.txt_email.Location = new System.Drawing.Point(23, 63);
+            this.txt_email.Location = new System.Drawing.Point(35, 63);
             this.txt_email.MaxLength = 32767;
             this.txt_email.Name = "txt_email";
             this.txt_email.PasswordChar = '\0';
@@ -82,7 +82,7 @@
             this.txt_pw.CustomButton.UseSelectable = true;
             this.txt_pw.CustomButton.Visible = false;
             this.txt_pw.Lines = new string[0];
-            this.txt_pw.Location = new System.Drawing.Point(23, 92);
+            this.txt_pw.Location = new System.Drawing.Point(35, 92);
             this.txt_pw.MaxLength = 32767;
             this.txt_pw.Name = "txt_pw";
             this.txt_pw.PasswordChar = '*';
@@ -114,7 +114,7 @@
             this.txt_name.CustomButton.UseSelectable = true;
             this.txt_name.CustomButton.Visible = false;
             this.txt_name.Lines = new string[0];
-            this.txt_name.Location = new System.Drawing.Point(23, 121);
+            this.txt_name.Location = new System.Drawing.Point(35, 121);
             this.txt_name.MaxLength = 32767;
             this.txt_name.Name = "txt_name";
             this.txt_name.PasswordChar = '\0';

@@ -117,36 +117,49 @@ namespace RVL_Management_System
             //fullName = txt_name.Text;
             //Class.Cls_cmd.Login();
             //Hide()
-
-
-            conn.Open();
-            cmd.Connection = conn;
-            string LOGIN = "SELECT A.Account, L.UN, L.PW, U.Full_Name FROM tblUser AS U LEFT JOIN tblAccount AS A ON A.AcctID = U.AcctID LEFT JOIN tblLogin AS L ON L.AcctID = U.AcctID WHERE L.UN = @un AND L.PW = @pw AND A.Account = @ut";
-            cmd.Parameters.AddWithValue("un", txt_un.Text);
-            cmd.Parameters.AddWithValue("pw", txt_pw.Text);
-            cmd.Parameters.AddWithValue("ut", cBoxUsertype.Text);
-            cmd.CommandText = LOGIN;
-            cmd.ExecuteNonQuery();
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
+            if (cBoxUsertype.Text == string.Empty)
             {
-                MetroMessageBox.Show(this, "Welcome", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                UserType = cBoxUsertype.Text;
-                fullName = txt_name.Text;
-                Forms.Main fmain = new Forms.Main();
-                fmain.Show();
-                Hide();
+                MetroMessageBox.Show(this, "Please Select the user type", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txt_un.Text == string.Empty || txt_pw.Text == string.Empty)
+            {
+                MetroMessageBox.Show(this, "Please Complete all the fields", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MetroMessageBox.Show(this, "Wrong username or password!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (MetroMessageBox.Show(this, "Saved Successfully", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    string LOGIN = "SELECT A.Account, L.UN, L.PW, U.Full_Name FROM tblUser AS U LEFT JOIN tblAccount AS A ON A.AcctID = U.AcctID LEFT JOIN tblLogin AS L ON L.AcctID = U.AcctID WHERE L.UN = @un AND L.PW = @pw AND A.Account = @ut";
+                    cmd.Parameters.AddWithValue("un", txt_un.Text);
+                    cmd.Parameters.AddWithValue("pw", txt_pw.Text);
+                    cmd.Parameters.AddWithValue("ut", cBoxUsertype.Text);
+                    cmd.CommandText = LOGIN;
+                    cmd.ExecuteNonQuery();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        MetroMessageBox.Show(this, "Welcome", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        UserType = cBoxUsertype.Text;
+                        fullName = txt_name.Text;
+                        Forms.Main fmain = new Forms.Main();
+                        fmain.Show();
+                        Hide();
+                    }
+                    else
+                    {
+                        MetroMessageBox.Show(this, "Wrong username or password!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+                    conn.Close();
+
+                    cmd.Parameters.Clear();
+                }
 
             }
-            conn.Close();
-
-            cmd.Parameters.Clear();
         }
 
         private void metroTile1_Click_1(object sender, EventArgs e)

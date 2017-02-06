@@ -48,21 +48,28 @@ namespace RVL_Management_System.Forms
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to save these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txt_fullName.Text == string.Empty || txt_address.Text == string.Empty || txt_email.Text == string.Empty || txt_county.Text == string.Empty || txt_phoneNumber.Text == string.Empty || cBoxCategory.Text == string.Empty)
             {
-                fullName = txt_fullName.Text;
-                email = txt_email.Text;
-                phoneNumber = txt_phoneNumber.Text;
-                address = txt_address.Text;
-                county = txt_county.Text;
-                category = cBoxCategory.Text;
-                Class.Cls_cmd.adminOfficeAdd();
-                clear();
+                MetroMessageBox.Show(this,"Please complete all fields","RVL System",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                //IF NO 
-                //TODO:NOTHING
+                if (MetroMessageBox.Show(this, "Do you want to save these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    fullName = txt_fullName.Text;
+                    email = txt_email.Text;
+                    phoneNumber = txt_phoneNumber.Text;
+                    address = txt_address.Text;
+                    county = txt_county.Text;
+                    category = cBoxCategory.Text;
+                    Class.Cls_cmd.adminOfficeAdd();
+                    clear();
+                }
+                else
+                {
+                    //IF NO 
+                    //TODO:NOTHING
+                }
             }
         }
 
