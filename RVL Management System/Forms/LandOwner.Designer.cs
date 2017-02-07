@@ -82,18 +82,18 @@
             this.btn_save.UseSelectable = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // Frm_LandOwner
+            // LandOwner
             // 
             this.AcceptButton = this.btn_save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 191);
+            this.ClientSize = new System.Drawing.Size(487, 175);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.txt_landowner);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Frm_LandOwner";
+            this.Name = "LandOwner";
             this.Resizable = false;
             this.Text = "Add Information for Land Owner";
             this.Load += new System.EventHandler(this.Frm_LandOwner_Load);

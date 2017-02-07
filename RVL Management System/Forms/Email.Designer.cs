@@ -352,9 +352,7 @@
             this.Name = "Email";
             this.Padding = new System.Windows.Forms.Padding(23, 60, 23, 20);
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Email Form";
-            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.Frm_Email_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

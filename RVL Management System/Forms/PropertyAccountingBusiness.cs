@@ -300,42 +300,23 @@ namespace RVL_Management_System.Forms
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
+            
+                txt_originalPriceExpense.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_totalExpense1.Text) + Convert.ToInt32(txt_origPrice1.Text));
 
-            txt_originalPriceExpense.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_totalExpense1.Text) + Convert.ToInt32(txt_origPrice1.Text));
+                txt_netProfit.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_totalExpense1.Text) + Convert.ToInt32(txt_origPrice1.Text));
 
-            txt_netProfit.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_totalExpense1.Text) + Convert.ToInt32(txt_origPrice1.Text));
-
-            txt_shared60.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_origPrice1.Text) * 0.60);
-            txt_shared40.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_origPrice1.Text) *0.40);
-
-
-            int a = Convert.ToInt32(txt_origPrice1.Text);
-            int b = Convert.ToInt32(txt_origPriceExpense1.Text);
-            int c = Convert.ToInt32(txt_origPrice.Text);
-            int d = Convert.ToInt32(txt_totalAmountPaid.Text);
-            //int f = Convert.ToInt32(txt_cardProcessingFee.Text);
-            //int g = Convert.ToInt32(txt_backTaxes.Text);
-            //int h = Convert.ToInt32(txt_Notary.Text);
-            //int i = Convert.ToInt32(txt_otherExpense.Text);
-
-            //txt_originalPriceExpense.Text = (a + b).ToString();
-            //int j = Convert.ToInt32(txt_netSale.Text);
-            //int k = Convert.ToInt32(txt_totalExpense.Text);
-
-            txt_netSale.Text = (a - b).ToString();
-
-            txt_paymentsBalanceDue.Text = (c - d).ToString();
-            //txt_totalExpense.Text = (d + f + g+ h + i).ToString();
-
-            //txt_netProfit.Text = (j + k).ToString();
-
-            //txt_shared60.Text = (c * 0.60).ToString();
-            //txt_shared40.Text = (c * 0.40).ToString();
+                txt_shared60.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_origPrice1.Text) * 0.60);
+                txt_shared40.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_origPrice1.Text) * 0.40);
 
 
+                int a = Convert.ToInt32(txt_origPrice1.Text);
+                int b = Convert.ToInt32(txt_origPriceExpense1.Text);
+                int c = Convert.ToInt32(txt_origPrice.Text);
+                int d = Convert.ToInt32(txt_totalAmountPaid.Text);
 
+                txt_netSale.Text = (a - b).ToString();
 
-            //txt_netProfit.Text = (b - a).ToString();
+                txt_paymentsBalanceDue.Text = (c - d).ToString();
         }
 
         private void txt_recordingFee_Leave(object sender, EventArgs e)

@@ -1615,7 +1615,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1164, 861);
+            this.ClientSize = new System.Drawing.Size(1172, 766);
             this.Controls.Add(this.txt_origPriceExpense1);
             this.Controls.Add(this.txt_origPrice1);
             this.Controls.Add(this.txt_totalExpense1);

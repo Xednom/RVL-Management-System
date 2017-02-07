@@ -31,15 +31,42 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.TabControlMain = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_viewUser = new MetroFramework.Controls.MetroTile();
+            this.btn_editUser = new MetroFramework.Controls.MetroTile();
+            this.btn_addUser = new MetroFramework.Controls.MetroTile();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.metroTile7 = new MetroFramework.Controls.MetroTile();
+            this.metroTile5 = new MetroFramework.Controls.MetroTile();
+            this.btn_marketing = new MetroFramework.Controls.MetroTile();
+            this.btn_blogsMarketing = new MetroFramework.Controls.MetroTile();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_exportCompany = new MetroFramework.Controls.MetroTile();
+            this.btn_viewCompany = new MetroFramework.Controls.MetroTile();
+            this.btn_deleteCompany = new MetroFramework.Controls.MetroTile();
+            this.btn_companyEdit = new MetroFramework.Controls.MetroTile();
+            this.btn_addCompany = new MetroFramework.Controls.MetroTile();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btn_viewSocial = new MetroFramework.Controls.MetroTile();
+            this.btn_exportSocial = new MetroFramework.Controls.MetroTile();
+            this.btn_editSocial = new MetroFramework.Controls.MetroTile();
+            this.btn_addSocial = new MetroFramework.Controls.MetroTile();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.metroTile8 = new MetroFramework.Controls.MetroTile();
+            this.btn_businessPersonal = new MetroFramework.Controls.MetroTile();
+            this.btn_accountingBusiness = new MetroFramework.Controls.MetroTile();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.btn_landstay = new MetroFramework.Controls.MetroTile();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.btn_exportVideo = new MetroFramework.Controls.MetroTile();
+            this.btn_viewVideo = new MetroFramework.Controls.MetroTile();
+            this.btn_deleteVideo = new MetroFramework.Controls.MetroTile();
+            this.btn_editVideo = new MetroFramework.Controls.MetroTile();
+            this.btn_addVideo = new MetroFramework.Controls.MetroTile();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.metroTile6 = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_Usertype = new System.Windows.Forms.ToolStripStatusLabel();
@@ -47,33 +74,6 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_name = new System.Windows.Forms.ToolStripStatusLabel();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile8 = new MetroFramework.Controls.MetroTile();
-            this.btn_businessPersonal = new MetroFramework.Controls.MetroTile();
-            this.btn_accountingBusiness = new MetroFramework.Controls.MetroTile();
-            this.btn_viewUser = new MetroFramework.Controls.MetroTile();
-            this.btn_editUser = new MetroFramework.Controls.MetroTile();
-            this.btn_addUser = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
-            this.btn_marketing = new MetroFramework.Controls.MetroTile();
-            this.btn_blogsMarketing = new MetroFramework.Controls.MetroTile();
-            this.btn_exportCompany = new MetroFramework.Controls.MetroTile();
-            this.btn_viewCompany = new MetroFramework.Controls.MetroTile();
-            this.btn_deleteCompany = new MetroFramework.Controls.MetroTile();
-            this.btn_companyEdit = new MetroFramework.Controls.MetroTile();
-            this.btn_addCompany = new MetroFramework.Controls.MetroTile();
-            this.btn_viewSocial = new MetroFramework.Controls.MetroTile();
-            this.btn_exportSocial = new MetroFramework.Controls.MetroTile();
-            this.btn_editSocial = new MetroFramework.Controls.MetroTile();
-            this.btn_addSocial = new MetroFramework.Controls.MetroTile();
-            this.btn_exportVideo = new MetroFramework.Controls.MetroTile();
-            this.btn_viewVideo = new MetroFramework.Controls.MetroTile();
-            this.btn_deleteVideo = new MetroFramework.Controls.MetroTile();
-            this.btn_editVideo = new MetroFramework.Controls.MetroTile();
-            this.btn_addVideo = new MetroFramework.Controls.MetroTile();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.TabControlMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -88,8 +88,11 @@
             // 
             // TabControlMain
             // 
-            this.TabControlMain.Controls.Add(this.tabPage1);
+            this.TabControlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControlMain.Controls.Add(this.tabPage2);
+            this.TabControlMain.Controls.Add(this.tabPage1);
             this.TabControlMain.Controls.Add(this.tabPage3);
             this.TabControlMain.Controls.Add(this.tabPage4);
             this.TabControlMain.Controls.Add(this.tabPage5);
@@ -98,7 +101,7 @@
             this.TabControlMain.Controls.Add(this.tabPage8);
             this.TabControlMain.Location = new System.Drawing.Point(23, 148);
             this.TabControlMain.Name = "TabControlMain";
-            this.TabControlMain.SelectedIndex = 1;
+            this.TabControlMain.SelectedIndex = 4;
             this.TabControlMain.Size = new System.Drawing.Size(865, 226);
             this.TabControlMain.TabIndex = 0;
             this.TabControlMain.UseSelectable = true;
@@ -113,213 +116,6 @@
             this.tabPage1.Size = new System.Drawing.Size(857, 184);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "User Information";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.metroTile7);
-            this.tabPage2.Controls.Add(this.metroTile5);
-            this.tabPage2.Controls.Add(this.btn_marketing);
-            this.tabPage2.Controls.Add(this.btn_blogsMarketing);
-            this.tabPage2.Location = new System.Drawing.Point(4, 38);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(857, 184);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Marketing";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.btn_exportCompany);
-            this.tabPage3.Controls.Add(this.btn_viewCompany);
-            this.tabPage3.Controls.Add(this.btn_deleteCompany);
-            this.tabPage3.Controls.Add(this.btn_companyEdit);
-            this.tabPage3.Controls.Add(this.btn_addCompany);
-            this.tabPage3.Location = new System.Drawing.Point(4, 38);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(857, 184);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Company Logins";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.btn_viewSocial);
-            this.tabPage4.Controls.Add(this.btn_exportSocial);
-            this.tabPage4.Controls.Add(this.btn_editSocial);
-            this.tabPage4.Controls.Add(this.btn_addSocial);
-            this.tabPage4.Location = new System.Drawing.Point(4, 38);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(857, 184);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Social Media";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.metroTile8);
-            this.tabPage5.Controls.Add(this.btn_businessPersonal);
-            this.tabPage5.Controls.Add(this.btn_accountingBusiness);
-            this.tabPage5.Location = new System.Drawing.Point(4, 38);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(857, 184);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Property Accounting";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.metroTile1);
-            this.tabPage6.Controls.Add(this.btn_landstay);
-            this.tabPage6.Location = new System.Drawing.Point(4, 38);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(857, 184);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Land Stay";
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(370, 58);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(218, 78);
-            this.metroTile1.TabIndex = 1;
-            this.metroTile1.Text = "Lands Owned by Deed Adventure";
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click_1);
-            // 
-            // btn_landstay
-            // 
-            this.btn_landstay.ActiveControl = null;
-            this.btn_landstay.Location = new System.Drawing.Point(223, 58);
-            this.btn_landstay.Name = "btn_landstay";
-            this.btn_landstay.Size = new System.Drawing.Size(137, 78);
-            this.btn_landstay.TabIndex = 0;
-            this.btn_landstay.Text = "LandStay";
-            this.btn_landstay.UseSelectable = true;
-            this.btn_landstay.Click += new System.EventHandler(this.metroTile22_Click);
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.btn_exportVideo);
-            this.tabPage7.Controls.Add(this.btn_viewVideo);
-            this.tabPage7.Controls.Add(this.btn_deleteVideo);
-            this.tabPage7.Controls.Add(this.btn_editVideo);
-            this.tabPage7.Controls.Add(this.btn_addVideo);
-            this.tabPage7.Location = new System.Drawing.Point(4, 38);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(857, 184);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Video Tutorials";
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.metroTile6);
-            this.tabPage8.Controls.Add(this.metroTile2);
-            this.tabPage8.Controls.Add(this.metroTile3);
-            this.tabPage8.Location = new System.Drawing.Point(4, 38);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(857, 184);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "Tasks And Training Materials";
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel,
-            this.lbl_Usertype,
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.lbl_name});
-            this.statusStrip.Location = new System.Drawing.Point(20, 388);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(870, 22);
-            this.statusStrip.TabIndex = 3;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel.Text = "Status:";
-            // 
-            // lbl_Usertype
-            // 
-            this.lbl_Usertype.Name = "lbl_Usertype";
-            this.lbl_Usertype.Size = new System.Drawing.Size(118, 17);
-            this.lbl_Usertype.Text = "toolStripStatusLabel1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel1.Text = "|";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel2.Text = "Name:";
-            // 
-            // lbl_name
-            // 
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(118, 17);
-            this.lbl_name.Text = "toolStripStatusLabel3";
-            // 
-            // metroTile4
-            // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(27, 63);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(112, 67);
-            this.metroTile4.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTile4.TabIndex = 4;
-            this.metroTile4.Text = "Logout";
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.metroTile4.TileImage = global::RVL_Management_System.Properties.Resources.logout_2;
-            this.metroTile4.UseSelectable = true;
-            this.metroTile4.UseTileImage = true;
-            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click_1);
-            // 
-            // metroTile8
-            // 
-            this.metroTile8.ActiveControl = null;
-            this.metroTile8.Location = new System.Drawing.Point(515, 41);
-            this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(132, 102);
-            this.metroTile8.TabIndex = 11;
-            this.metroTile8.Text = "Property Inventory";
-            this.metroTile8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile8.TileImage = global::RVL_Management_System.Properties.Resources.bag;
-            this.metroTile8.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTile8.UseSelectable = true;
-            this.metroTile8.UseTileImage = true;
-            // 
-            // btn_businessPersonal
-            // 
-            this.btn_businessPersonal.ActiveControl = null;
-            this.btn_businessPersonal.Location = new System.Drawing.Point(386, 41);
-            this.btn_businessPersonal.Name = "btn_businessPersonal";
-            this.btn_businessPersonal.Size = new System.Drawing.Size(124, 102);
-            this.btn_businessPersonal.TabIndex = 10;
-            this.btn_businessPersonal.Text = "Personal";
-            this.btn_businessPersonal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_businessPersonal.TileImage = global::RVL_Management_System.Properties.Resources.businessman;
-            this.btn_businessPersonal.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_businessPersonal.UseSelectable = true;
-            this.btn_businessPersonal.UseTileImage = true;
-            this.btn_businessPersonal.Click += new System.EventHandler(this.metroTile13_Click);
-            // 
-            // btn_accountingBusiness
-            // 
-            this.btn_accountingBusiness.ActiveControl = null;
-            this.btn_accountingBusiness.Location = new System.Drawing.Point(257, 41);
-            this.btn_accountingBusiness.Name = "btn_accountingBusiness";
-            this.btn_accountingBusiness.Size = new System.Drawing.Size(124, 102);
-            this.btn_accountingBusiness.TabIndex = 9;
-            this.btn_accountingBusiness.Text = "Business";
-            this.btn_accountingBusiness.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_accountingBusiness.TileImage = global::RVL_Management_System.Properties.Resources.briefcase;
-            this.btn_accountingBusiness.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_accountingBusiness.UseSelectable = true;
-            this.btn_accountingBusiness.UseTileImage = true;
-            this.btn_accountingBusiness.Click += new System.EventHandler(this.metroTile14_Click);
             // 
             // btn_viewUser
             // 
@@ -365,6 +161,18 @@
             this.btn_addUser.UseSelectable = true;
             this.btn_addUser.UseTileImage = true;
             this.btn_addUser.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.metroTile7);
+            this.tabPage2.Controls.Add(this.metroTile5);
+            this.tabPage2.Controls.Add(this.btn_marketing);
+            this.tabPage2.Controls.Add(this.btn_blogsMarketing);
+            this.tabPage2.Location = new System.Drawing.Point(4, 38);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(857, 184);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Marketing";
             // 
             // metroTile7
             // 
@@ -424,6 +232,19 @@
             this.btn_blogsMarketing.UseSelectable = true;
             this.btn_blogsMarketing.UseTileImage = true;
             this.btn_blogsMarketing.Click += new System.EventHandler(this.metroTile21_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.btn_exportCompany);
+            this.tabPage3.Controls.Add(this.btn_viewCompany);
+            this.tabPage3.Controls.Add(this.btn_deleteCompany);
+            this.tabPage3.Controls.Add(this.btn_companyEdit);
+            this.tabPage3.Controls.Add(this.btn_addCompany);
+            this.tabPage3.Location = new System.Drawing.Point(4, 38);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(857, 184);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Company Logins";
             // 
             // btn_exportCompany
             // 
@@ -500,6 +321,18 @@
             this.btn_addCompany.UseTileImage = true;
             this.btn_addCompany.Click += new System.EventHandler(this.metroTile5_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btn_viewSocial);
+            this.tabPage4.Controls.Add(this.btn_exportSocial);
+            this.tabPage4.Controls.Add(this.btn_editSocial);
+            this.tabPage4.Controls.Add(this.btn_addSocial);
+            this.tabPage4.Location = new System.Drawing.Point(4, 38);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(857, 184);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Social Media";
+            // 
             // btn_viewSocial
             // 
             this.btn_viewSocial.ActiveControl = null;
@@ -559,6 +392,107 @@
             this.btn_addSocial.UseSelectable = true;
             this.btn_addSocial.UseTileImage = true;
             this.btn_addSocial.Click += new System.EventHandler(this.metroTile12_Click);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.metroTile8);
+            this.tabPage5.Controls.Add(this.btn_businessPersonal);
+            this.tabPage5.Controls.Add(this.btn_accountingBusiness);
+            this.tabPage5.Location = new System.Drawing.Point(4, 38);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(857, 184);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Property Accounting";
+            // 
+            // metroTile8
+            // 
+            this.metroTile8.ActiveControl = null;
+            this.metroTile8.Location = new System.Drawing.Point(515, 41);
+            this.metroTile8.Name = "metroTile8";
+            this.metroTile8.Size = new System.Drawing.Size(132, 102);
+            this.metroTile8.TabIndex = 11;
+            this.metroTile8.Text = "Property Inventory";
+            this.metroTile8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile8.TileImage = global::RVL_Management_System.Properties.Resources.bag;
+            this.metroTile8.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroTile8.UseSelectable = true;
+            this.metroTile8.UseTileImage = true;
+            this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click_1);
+            // 
+            // btn_businessPersonal
+            // 
+            this.btn_businessPersonal.ActiveControl = null;
+            this.btn_businessPersonal.Location = new System.Drawing.Point(386, 41);
+            this.btn_businessPersonal.Name = "btn_businessPersonal";
+            this.btn_businessPersonal.Size = new System.Drawing.Size(124, 102);
+            this.btn_businessPersonal.TabIndex = 10;
+            this.btn_businessPersonal.Text = "Personal";
+            this.btn_businessPersonal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_businessPersonal.TileImage = global::RVL_Management_System.Properties.Resources.businessman;
+            this.btn_businessPersonal.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_businessPersonal.UseSelectable = true;
+            this.btn_businessPersonal.UseTileImage = true;
+            this.btn_businessPersonal.Click += new System.EventHandler(this.metroTile13_Click);
+            // 
+            // btn_accountingBusiness
+            // 
+            this.btn_accountingBusiness.ActiveControl = null;
+            this.btn_accountingBusiness.Location = new System.Drawing.Point(257, 41);
+            this.btn_accountingBusiness.Name = "btn_accountingBusiness";
+            this.btn_accountingBusiness.Size = new System.Drawing.Size(124, 102);
+            this.btn_accountingBusiness.TabIndex = 9;
+            this.btn_accountingBusiness.Text = "Business";
+            this.btn_accountingBusiness.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_accountingBusiness.TileImage = global::RVL_Management_System.Properties.Resources.briefcase;
+            this.btn_accountingBusiness.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_accountingBusiness.UseSelectable = true;
+            this.btn_accountingBusiness.UseTileImage = true;
+            this.btn_accountingBusiness.Click += new System.EventHandler(this.metroTile14_Click);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.metroTile1);
+            this.tabPage6.Controls.Add(this.btn_landstay);
+            this.tabPage6.Location = new System.Drawing.Point(4, 38);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(857, 184);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Land Stay";
+            // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(370, 58);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(218, 78);
+            this.metroTile1.TabIndex = 1;
+            this.metroTile1.Text = "Lands Owned by Deed Adventure";
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click_1);
+            // 
+            // btn_landstay
+            // 
+            this.btn_landstay.ActiveControl = null;
+            this.btn_landstay.Location = new System.Drawing.Point(223, 58);
+            this.btn_landstay.Name = "btn_landstay";
+            this.btn_landstay.Size = new System.Drawing.Size(137, 78);
+            this.btn_landstay.TabIndex = 0;
+            this.btn_landstay.Text = "LandStay";
+            this.btn_landstay.UseSelectable = true;
+            this.btn_landstay.Click += new System.EventHandler(this.metroTile22_Click);
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.btn_exportVideo);
+            this.tabPage7.Controls.Add(this.btn_viewVideo);
+            this.tabPage7.Controls.Add(this.btn_deleteVideo);
+            this.tabPage7.Controls.Add(this.btn_editVideo);
+            this.tabPage7.Controls.Add(this.btn_addVideo);
+            this.tabPage7.Location = new System.Drawing.Point(4, 38);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(857, 184);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Video Tutorials";
             // 
             // btn_exportVideo
             // 
@@ -635,6 +569,17 @@
             this.btn_addVideo.UseTileImage = true;
             this.btn_addVideo.Click += new System.EventHandler(this.metroTile19_Click);
             // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.metroTile6);
+            this.tabPage8.Controls.Add(this.metroTile2);
+            this.tabPage8.Controls.Add(this.metroTile3);
+            this.tabPage8.Location = new System.Drawing.Point(4, 38);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(857, 184);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Tasks And Training Materials";
+            // 
             // metroTile6
             // 
             this.metroTile6.ActiveControl = null;
@@ -680,6 +625,65 @@
             this.metroTile3.UseTileImage = true;
             this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click_1);
             // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel,
+            this.lbl_Usertype,
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.lbl_name});
+            this.statusStrip.Location = new System.Drawing.Point(20, 388);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(870, 22);
+            this.statusStrip.TabIndex = 3;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel.Text = "Status:";
+            // 
+            // lbl_Usertype
+            // 
+            this.lbl_Usertype.Name = "lbl_Usertype";
+            this.lbl_Usertype.Size = new System.Drawing.Size(118, 17);
+            this.lbl_Usertype.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel1.Text = "|";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel2.Text = "Name:";
+            // 
+            // lbl_name
+            // 
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(118, 17);
+            this.lbl_name.Text = "toolStripStatusLabel3";
+            // 
+            // metroTile4
+            // 
+            this.metroTile4.ActiveControl = null;
+            this.metroTile4.Location = new System.Drawing.Point(27, 63);
+            this.metroTile4.Name = "metroTile4";
+            this.metroTile4.Size = new System.Drawing.Size(112, 67);
+            this.metroTile4.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile4.TabIndex = 4;
+            this.metroTile4.Text = "Logout";
+            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.metroTile4.TileImage = global::RVL_Management_System.Properties.Resources.logout_2;
+            this.metroTile4.UseSelectable = true;
+            this.metroTile4.UseTileImage = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click_1);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -692,6 +696,7 @@
             this.Name = "Main";
             this.Resizable = false;
             this.Text = "RVL Management System";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.TabControlMain.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
