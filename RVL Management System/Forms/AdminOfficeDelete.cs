@@ -134,17 +134,24 @@ namespace RVL_Management_System
 
         private void btn_delete_Click_1(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to delete these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (cBoxSearchBy.Text == string.Empty || txt_acid.Text == string.Empty || txt_search.Text == string.Empty)
             {
-                acid = txt_acid.Text;
-                Class.Cls_cmd.adminOfficeDelete();
-                clear();
-                refresh();
+                MetroMessageBox.Show(this, "Search first before you delete", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                //IF NO
-                //TODO: NOTHING
+                if (MetroMessageBox.Show(this, "Do you want to delete these informations?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    acid = txt_acid.Text;
+                    Class.Cls_cmd.adminOfficeDelete();
+                    clear();
+                    refresh();
+                }
+                else
+                {
+                    //IF NO
+                    //TODO: NOTHING
+                }
             }
         }
 

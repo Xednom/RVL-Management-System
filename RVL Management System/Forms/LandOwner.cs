@@ -27,16 +27,23 @@ namespace RVL_Management_System.Forms
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Do you want to add this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txt_landowner.Text == string.Empty)
             {
-                landOwner = txt_landowner.Text;
-                Class.Cls_cmd.landOwnerAdd();
-                txt_landowner.Text = null;
+                MetroMessageBox.Show(this,"Please enter the name of the Land Owner","RVL System",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                //IF NO
-                //TODO: NOTHING
+                if (MetroMessageBox.Show(this, "Do you want to add this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    landOwner = txt_landowner.Text;
+                    Class.Cls_cmd.landOwnerAdd();
+                    txt_landowner.Text = null;
+                }
+                else
+                {
+                    //IF NO
+                    //TODO: NOTHING
+                }
             }
         }
     }

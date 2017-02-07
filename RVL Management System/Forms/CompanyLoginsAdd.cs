@@ -43,7 +43,7 @@ namespace RVL_Management_System.Forms
                 MetroMessageBox.Show(this, "Please fill-up the required information.", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             }
 
-            if (MetroMessageBox.Show(this, "Do you want to save this information?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MetroMessageBox.Show(this, "Do you want to save this information ?", "RVL System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 categoryName = txt_categoryName.Text;
                 URLlink = txt_url.Text;

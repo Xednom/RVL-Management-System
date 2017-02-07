@@ -75,34 +75,41 @@ namespace RVL_Management_System.Forms
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            email_send();
+            if (txt_to.Text == string.Empty || txt_cc.Text == string.Empty || txt_subject.Text == string.Empty || txt_content.Text == string.Empty || txt_attachments.Text == string.Empty)
+            {
+                MetroMessageBox.Show(this,"Please complete all the required field","RVL System",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                email_send();
 
-            //var message = new MimeMessage();
-            //message.From.Add(new MailboxAddress("Richmond B. Lacanlalay", txt_email.Text));
-            //message.To.Add(new MailboxAddress("Raymond Negro", txt_to.Text));
-            //message.Subject = txt_subject.Text;
+                //var message = new MimeMessage();
+                //message.From.Add(new MailboxAddress("Richmond B. Lacanlalay", txt_email.Text));
+                //message.To.Add(new MailboxAddress("Raymond Negro", txt_to.Text));
+                //message.Subject = txt_subject.Text;
 
-            //message.Body = new TextPart("plain")
-            //{
-            //    Text = txt_content.Text
-            //};
+                //message.Body = new TextPart("plain")
+                //{
+                //    Text = txt_content.Text
+                //};
 
-            //using (var client = new SmtpClient())
-            //{
-            //    client.Connect(txt_smtp.Text, 587);
-            //    var attachments = txt_attachments.Text;
+                //using (var client = new SmtpClient())
+                //{
+                //    client.Connect(txt_smtp.Text, 587);
+                //    var attachments = txt_attachments.Text;
 
-            //    // Note: since we don't have an OAuth2 token, disable
-            //    // the XOAUTH2 authentication mechanism.
-            //    client.AuthenticationMechanisms.Remove("XOAUTH2");
+                //    // Note: since we don't have an OAuth2 token, disable
+                //    // the XOAUTH2 authentication mechanism.
+                //    client.AuthenticationMechanisms.Remove("XOAUTH2");
 
-            //    // Note: only needed if the SMTP server requires authentication
-            //    client.Authenticate(txt_email.Text, txt_pw.Text);
-            //    client.Send(message);
-            //    client.Disconnect(true);
+                //    // Note: only needed if the SMTP server requires authentication
+                //    client.Authenticate(txt_email.Text, txt_pw.Text);
+                //    client.Send(message);
+                //    client.Disconnect(true);
 
-            //    MetroMessageBox.Show(this, "Email Sent!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+                //    MetroMessageBox.Show(this, "Email Sent!", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
+            }
         }
 
         private void metroButton1_Click_1(object sender, EventArgs e)

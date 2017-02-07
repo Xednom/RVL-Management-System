@@ -509,9 +509,9 @@ namespace RVL_Management_System.Forms
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if (lbl_lsidDelete.Text == string.Empty)
+            if (txt_searchDelete.Text == string.Empty)
             {
-                MetroMessageBox.Show(this, "Please select an information to delete.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MetroMessageBox.Show(this, "Please select an information to delete.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
