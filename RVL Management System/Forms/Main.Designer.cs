@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.TabControlMain = new MetroFramework.Controls.MetroTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btn_viewUser = new MetroFramework.Controls.MetroTile();
-            this.btn_editUser = new MetroFramework.Controls.MetroTile();
-            this.btn_addUser = new MetroFramework.Controls.MetroTile();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.btn_marketing = new MetroFramework.Controls.MetroTile();
             this.btn_blogsMarketing = new MetroFramework.Controls.MetroTile();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_viewUser = new MetroFramework.Controls.MetroTile();
+            this.btn_editUser = new MetroFramework.Controls.MetroTile();
+            this.btn_addUser = new MetroFramework.Controls.MetroTile();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btn_exportCompany = new MetroFramework.Controls.MetroTile();
             this.btn_viewCompany = new MetroFramework.Controls.MetroTile();
@@ -75,8 +75,8 @@
             this.lbl_name = new System.Windows.Forms.ToolStripStatusLabel();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.TabControlMain.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -91,8 +91,8 @@
             this.TabControlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TabControlMain.Controls.Add(this.tabPage2);
             this.TabControlMain.Controls.Add(this.tabPage1);
+            this.TabControlMain.Controls.Add(this.tabPage2);
             this.TabControlMain.Controls.Add(this.tabPage3);
             this.TabControlMain.Controls.Add(this.tabPage4);
             this.TabControlMain.Controls.Add(this.tabPage5);
@@ -101,66 +101,10 @@
             this.TabControlMain.Controls.Add(this.tabPage8);
             this.TabControlMain.Location = new System.Drawing.Point(23, 148);
             this.TabControlMain.Name = "TabControlMain";
-            this.TabControlMain.SelectedIndex = 4;
+            this.TabControlMain.SelectedIndex = 0;
             this.TabControlMain.Size = new System.Drawing.Size(865, 226);
             this.TabControlMain.TabIndex = 0;
             this.TabControlMain.UseSelectable = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.btn_viewUser);
-            this.tabPage1.Controls.Add(this.btn_editUser);
-            this.tabPage1.Controls.Add(this.btn_addUser);
-            this.tabPage1.Location = new System.Drawing.Point(4, 38);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(857, 184);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "User Information";
-            // 
-            // btn_viewUser
-            // 
-            this.btn_viewUser.ActiveControl = null;
-            this.btn_viewUser.Location = new System.Drawing.Point(296, 47);
-            this.btn_viewUser.Name = "btn_viewUser";
-            this.btn_viewUser.Size = new System.Drawing.Size(124, 102);
-            this.btn_viewUser.TabIndex = 3;
-            this.btn_viewUser.Text = "User View";
-            this.btn_viewUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_viewUser.TileImage = global::RVL_Management_System.Properties.Resources.search;
-            this.btn_viewUser.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_viewUser.UseSelectable = true;
-            this.btn_viewUser.UseTileImage = true;
-            this.btn_viewUser.Click += new System.EventHandler(this.metroTile4_Click);
-            // 
-            // btn_editUser
-            // 
-            this.btn_editUser.ActiveControl = null;
-            this.btn_editUser.Location = new System.Drawing.Point(168, 47);
-            this.btn_editUser.Name = "btn_editUser";
-            this.btn_editUser.Size = new System.Drawing.Size(124, 102);
-            this.btn_editUser.TabIndex = 1;
-            this.btn_editUser.Text = "User Edit";
-            this.btn_editUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_editUser.TileImage = global::RVL_Management_System.Properties.Resources.user;
-            this.btn_editUser.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_editUser.UseSelectable = true;
-            this.btn_editUser.UseTileImage = true;
-            this.btn_editUser.Click += new System.EventHandler(this.metroTile2_Click);
-            // 
-            // btn_addUser
-            // 
-            this.btn_addUser.ActiveControl = null;
-            this.btn_addUser.Location = new System.Drawing.Point(39, 47);
-            this.btn_addUser.Name = "btn_addUser";
-            this.btn_addUser.Size = new System.Drawing.Size(124, 102);
-            this.btn_addUser.TabIndex = 0;
-            this.btn_addUser.Text = "User Add";
-            this.btn_addUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_addUser.TileImage = global::RVL_Management_System.Properties.Resources.user_21;
-            this.btn_addUser.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_addUser.UseSelectable = true;
-            this.btn_addUser.UseTileImage = true;
-            this.btn_addUser.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // tabPage2
             // 
@@ -232,6 +176,62 @@
             this.btn_blogsMarketing.UseSelectable = true;
             this.btn_blogsMarketing.UseTileImage = true;
             this.btn_blogsMarketing.Click += new System.EventHandler(this.metroTile21_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.btn_viewUser);
+            this.tabPage1.Controls.Add(this.btn_editUser);
+            this.tabPage1.Controls.Add(this.btn_addUser);
+            this.tabPage1.Location = new System.Drawing.Point(4, 38);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(857, 184);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "User Information";
+            // 
+            // btn_viewUser
+            // 
+            this.btn_viewUser.ActiveControl = null;
+            this.btn_viewUser.Location = new System.Drawing.Point(296, 47);
+            this.btn_viewUser.Name = "btn_viewUser";
+            this.btn_viewUser.Size = new System.Drawing.Size(124, 102);
+            this.btn_viewUser.TabIndex = 3;
+            this.btn_viewUser.Text = "User View";
+            this.btn_viewUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_viewUser.TileImage = global::RVL_Management_System.Properties.Resources.search;
+            this.btn_viewUser.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_viewUser.UseSelectable = true;
+            this.btn_viewUser.UseTileImage = true;
+            this.btn_viewUser.Click += new System.EventHandler(this.metroTile4_Click);
+            // 
+            // btn_editUser
+            // 
+            this.btn_editUser.ActiveControl = null;
+            this.btn_editUser.Location = new System.Drawing.Point(168, 47);
+            this.btn_editUser.Name = "btn_editUser";
+            this.btn_editUser.Size = new System.Drawing.Size(124, 102);
+            this.btn_editUser.TabIndex = 1;
+            this.btn_editUser.Text = "User Edit";
+            this.btn_editUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_editUser.TileImage = global::RVL_Management_System.Properties.Resources.user;
+            this.btn_editUser.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_editUser.UseSelectable = true;
+            this.btn_editUser.UseTileImage = true;
+            this.btn_editUser.Click += new System.EventHandler(this.metroTile2_Click);
+            // 
+            // btn_addUser
+            // 
+            this.btn_addUser.ActiveControl = null;
+            this.btn_addUser.Location = new System.Drawing.Point(39, 47);
+            this.btn_addUser.Name = "btn_addUser";
+            this.btn_addUser.Size = new System.Drawing.Size(124, 102);
+            this.btn_addUser.TabIndex = 0;
+            this.btn_addUser.Text = "User Add";
+            this.btn_addUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_addUser.TileImage = global::RVL_Management_System.Properties.Resources.user_21;
+            this.btn_addUser.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_addUser.UseSelectable = true;
+            this.btn_addUser.UseTileImage = true;
+            this.btn_addUser.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // tabPage3
             // 
@@ -699,8 +699,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.TabControlMain.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
