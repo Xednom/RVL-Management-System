@@ -300,7 +300,12 @@ namespace RVL_Management_System.Forms
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            
+            if (txt_origPrice.Text == string.Empty || txt_recordingFee.Text == string.Empty || txt_cardProcessingFee.Text == string.Empty || txt_backTaxes.Text == string.Empty || txt_Notary.Text == string.Empty || txt_otherExpense.Text == string.Empty || txt_totalExpense.Text == string.Empty)
+            {
+                MetroMessageBox.Show(this, "Make sure to fill-up the required fields! - Original Price, Recording fee, Card processing fee, Back taxes, Notary, Other Expense.", "RVL System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
                 txt_originalPriceExpense.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_totalExpense1.Text) + Convert.ToInt32(txt_origPrice1.Text));
 
                 txt_netProfit.Text = string.Format(CultureInfo.CurrentCulture, "{0:C2}", Convert.ToInt32(txt_totalExpense1.Text) + Convert.ToInt32(txt_origPrice1.Text));
@@ -317,6 +322,7 @@ namespace RVL_Management_System.Forms
                 txt_netSale.Text = (a - b).ToString();
 
                 txt_paymentsBalanceDue.Text = (c - d).ToString();
+            }
         }
 
         private void txt_recordingFee_Leave(object sender, EventArgs e)
@@ -427,6 +433,11 @@ namespace RVL_Management_System.Forms
             {
                 //TODO: NOTHING
             }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

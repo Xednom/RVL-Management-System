@@ -444,6 +444,7 @@
             this.txt_termsLLC.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_termsLLC.CustomButton.UseSelectable = true;
             this.txt_termsLLC.CustomButton.Visible = false;
+            this.txt_termsLLC.Enabled = false;
             this.txt_termsLLC.Lines = new string[] {
         "60/40 Profit sharing"};
             this.txt_termsLLC.Location = new System.Drawing.Point(513, 198);
@@ -837,6 +838,7 @@
             this.txt_totalAmountPaid.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_totalAmountPaid.CustomButton.UseSelectable = true;
             this.txt_totalAmountPaid.CustomButton.Visible = false;
+            this.txt_totalAmountPaid.Enabled = false;
             this.txt_totalAmountPaid.Lines = new string[0];
             this.txt_totalAmountPaid.Location = new System.Drawing.Point(133, 306);
             this.txt_totalAmountPaid.MaxLength = 32767;
@@ -876,6 +878,7 @@
             this.txt_paymentsBalanceDue.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_paymentsBalanceDue.CustomButton.UseSelectable = true;
             this.txt_paymentsBalanceDue.CustomButton.Visible = false;
+            this.txt_paymentsBalanceDue.Enabled = false;
             this.txt_paymentsBalanceDue.Lines = new string[0];
             this.txt_paymentsBalanceDue.Location = new System.Drawing.Point(133, 364);
             this.txt_paymentsBalanceDue.MaxLength = 32767;
@@ -916,6 +919,7 @@
             this.txt_landCost.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_landCost.CustomButton.UseSelectable = true;
             this.txt_landCost.CustomButton.Visible = false;
+            this.txt_landCost.Enabled = false;
             this.txt_landCost.Lines = new string[0];
             this.txt_landCost.Location = new System.Drawing.Point(133, 335);
             this.txt_landCost.MaxLength = 32767;
@@ -1496,6 +1500,7 @@
             this.metroButton1.Text = "&Cancel Transaction";
             this.metroButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // btn_save
             // 
@@ -1615,7 +1620,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1172, 766);
+            this.ClientSize = new System.Drawing.Size(1172, 719);
             this.Controls.Add(this.txt_origPriceExpense1);
             this.Controls.Add(this.txt_origPrice1);
             this.Controls.Add(this.txt_totalExpense1);
