@@ -657,11 +657,9 @@ namespace RVL_Management_System.Class
             conn.Open();
 
             cmd.Connection = conn;
-            string UPDATE = "UPDATE tblUser SET AcctID = @acctID, Last_Name=@ln, First_Name = @fn, Middle_Name=@mn WHERE UID = @uid";
+            string UPDATE = "UPDATE tblUser SET AcctID = @acctID, Full_Name=@fn WHERE UID = @uid";
             cmd.Parameters.AddWithValue("acctID", Frm_UserEdit.acctID);
-            cmd.Parameters.AddWithValue("ln", Frm_UserEdit.lastName);
-            cmd.Parameters.AddWithValue("fn", Frm_UserEdit.firstName);
-            cmd.Parameters.AddWithValue("mn", Frm_UserEdit.middleName);
+            cmd.Parameters.AddWithValue("fn", Frm_UserEdit.fullName);
             cmd.Parameters.AddWithValue("uid", Frm_UserEdit.userID);
             cmd.CommandText = UPDATE;
             cmd.ExecuteNonQuery();

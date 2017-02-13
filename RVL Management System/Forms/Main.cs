@@ -204,5 +204,11 @@ namespace RVL_Management_System.Forms
 
             name = lbl_name.Text;
         }
+
+        private void metroTile8_Click_1(object sender, EventArgs e)
+        {
+            PropertyInventory inventory = new PropertyInventory();
+            inventory.ShowDialog();
+        }
     }
 }

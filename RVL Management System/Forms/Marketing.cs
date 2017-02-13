@@ -236,7 +236,7 @@ namespace RVL_Management_System
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            if (txt_ln.Text == string.Empty || txt_fn.Text == string.Empty || txt_mn.Text == string.Empty || txt_pnum.Text == string.Empty || txt_email.Text == string.Empty || txt_IssueDes.Text == string.Empty || cBoxLeadSource.Text == string.Empty ||  )
+            if (txt_ln.Text == string.Empty || txt_fn.Text == string.Empty || txt_mn.Text == string.Empty || txt_pnum.Text == string.Empty || txt_email.Text == string.Empty || txt_IssueDes.Text == string.Empty || cBoxLeadSource.Text == string.Empty)
             {
                 MetroMessageBox.Show(this,"Please all required fields","RVL System",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }

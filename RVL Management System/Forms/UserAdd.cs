@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using MetroFramework;
 using System.Data.SqlClient;
 using System.Configuration;
 
@@ -64,6 +65,17 @@ namespace RVL_Management_System
             conn.Close();
         }
 
+        public void clear()
+        {
+            txt_un.Text = null;
+            txt_pw.Text = null;
+            cBoxRole.Text = null;
+            txt_level.Text = null;
+            txt_userID.Text = null;
+            txt_fullname.Text = null;
+            txt_email.Text = null;
+        }
+
         private void Frm_UserAdd_Load(object sender, EventArgs e)
         {
             loadUID();
@@ -77,6 +89,44 @@ namespace RVL_Management_System
 
         private void cBoxRole_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txt_confirmPw_TextChanged(object sender, EventArgs e)
+        {
+            txt_confirmPw.Text.CompareTo(txt_pw.Text);
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            if (txt_un.Text == string.Empty || txt_pw.Text == string.Empty || cBoxRole.Text == string.Empty || txt_fullname.Text == string.Empty || txt_email.Text == string.Empty)
+            {
+                MetroMessageBox.Show(this, "Please fill up the required fields!", "RVL System", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+
+            }
+
+            else
+            {
+                userName = txt_un.Text;
+                Password = txt_pw.Text;
+                role = cBoxRole.Text;
+                acctID = txt_level.Text;
+                uID = txt_userID.Text;
+                fullName = txt_fullname.Text;
+                email = txt_email.Text;
+                Class.Cls_cmd.userAdd();
+                Class.Cls_cmd.userLogin();
+            }
+            
+        }
+
+        private void cBoxRole_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
             if (cBoxRole.Text == "Admin")
             {
                 txt_level.Text = "1";
@@ -87,22 +137,21 @@ namespace RVL_Management_System
             }
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void btn_clear_Click(object sender, EventArgs e)
         {
-            userName = txt_un.Text;
-            Password = txt_pw.Text;
-            role = cBoxRole.Text;
-            acctID = txt_level.Text;
-            uID = txt_userID.Text;
-            fullName = txt_fullname.Text;
-            email = txt_email.Text;
-            Class.Cls_cmd.userAdd();
-            Class.Cls_cmd.userLogin();
+            clear();
         }
 
-        private void txt_confirmPw_TextChanged(object sender, EventArgs e)
+        private void txt_confirmPw_TextChanged_1(object sender, EventArgs e)
         {
-            txt_confirmPw.Text.CompareTo(txt_pw.Text);
+            if (txt_confirmPw.Text == txt_pw.Text)
+            {
+                MetroMessageBox.Show(this, "Passwords are not equal!", "RVL System", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //TODO: NOTHING
+            }
         }
     }
 }
